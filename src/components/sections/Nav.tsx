@@ -12,7 +12,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { label: "Services", href: "/services" },
   { label: "Elite Program", href: "/elite" },
-  { label: "How It Works", href: "/#process" },
+  { label: "How It Works", href: "/how-it-works" },
   { label: "About", href: "/#founder" },
   { label: "FAQ", href: "/#faq" },
 ];
@@ -24,6 +24,7 @@ export function Nav() {
   const pathname = usePathname();
   const isActive = (href: string) => {
     if (href === "/services") return pathname.startsWith("/services");
+    if (href === "/how-it-works") return pathname.startsWith("/how-it-works");
     return pathname === href;
   };
 
