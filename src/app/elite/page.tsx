@@ -42,90 +42,198 @@ export function EliteHero() {
       </motion.div>
 
       <motion.div style={{ opacity }} className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-center">
 
-          {/* Status pill */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-            className="inline-flex items-center gap-3 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
-            </span>
-            <span className="font-display text-xs tracking-[0.22em] text-brand-yellow">
-              ACCEPTING APPLICATIONS · LIMITED SPOTS
-            </span>
-          </motion.div>
-
-          {/* Main headline */}
-          <div className="overflow-hidden mb-2">
-            <motion.h1
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="font-display text-[3rem] sm:text-[4.5rem] lg:text-[6.5rem] xl:text-[7.5rem] leading-none tracking-tight text-white"
+          {/* Left column — existing content */}
+          <div>
+            {/* Status pill */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+              className="inline-flex items-center gap-3 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
             >
-              This is not
-            </motion.h1>
-          </div>
-          <div className="overflow-hidden mb-5">
-            <motion.h1
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
-              className="font-display text-[3rem] sm:text-[4.5rem] lg:text-[6.5rem] xl:text-[7.5rem] leading-none tracking-tight text-brand-yellow"
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
+              </span>
+              <span className="font-display text-xs tracking-[0.22em] text-brand-yellow">
+                ACCEPTING APPLICATIONS · LIMITED SPOTS
+              </span>
+            </motion.div>
+
+            {/* Main headline */}
+            <div className="overflow-hidden mb-2">
+              <motion.h1
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
+                className="font-display text-[3rem] sm:text-[4.5rem] lg:text-[6.5rem] xl:text-[7.5rem] leading-none tracking-tight text-white"
+              >
+                This is not
+              </motion.h1>
+            </div>
+            <div className="overflow-hidden mb-5">
+              <motion.h1
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
+                className="font-display text-[3rem] sm:text-[4.5rem] lg:text-[6.5rem] xl:text-[7.5rem] leading-none tracking-tight text-brand-yellow"
+              >
+                a course.
+              </motion.h1>
+            </div>
+
+            {/* Sub-statement */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
+              className="text-base sm:text-lg lg:text-xl text-white/70 font-light leading-snug text-pretty max-w-3xl"
             >
-              a course.
-            </motion.h1>
+              It&rsquo;s a <span className="text-white font-semibold">fully-operated Amazon business</span> — researched,
+              launched, and scaled by our team. Built in your name. You keep 80% of the profit.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.8 }}
+              className="mt-7 flex flex-wrap items-center gap-4"
+            >
+              <Button href="#apply" size="lg" variant="primary" arrow>
+                Apply for Elite
+              </Button>
+              <Button href="#model" size="lg" variant="ghost">
+                See the model
+              </Button>
+            </motion.div>
+
+            {/* Three quick facts */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.1 }}
+              className="mt-8 grid grid-cols-3 max-w-lg gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10"
+            >
+              {[
+                { k: "3", v: "Launches" },
+                { k: "80%", v: "Your share" },
+                { k: "18mo", v: "Full cycle" },
+              ].map((item) => (
+                <div key={item.k} className="bg-brand-navy/60 backdrop-blur-sm py-5 px-4 text-center">
+                  <div className="font-display text-3xl text-brand-yellow leading-none">{item.k}</div>
+                  <div className="text-xs text-white/50 mt-1.5 font-medium">{item.v}</div>
+                </div>
+              ))}
+            </motion.div>
           </div>
 
-          {/* Sub-statement */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
-            className="text-base sm:text-lg lg:text-xl text-white/70 font-light leading-snug text-pretty max-w-3xl mx-auto"
-          >
-            It&rsquo;s a <span className="text-white font-semibold">fully-operated Amazon business</span> — researched,
-            launched, and scaled by our team. Built in your name. You keep 80% of the profit.
-          </motion.p>
-
-          {/* CTAs */}
+          {/* Right column — floating card visual composition */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.8 }}
-            className="mt-7 flex flex-wrap items-center justify-center gap-4"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.5 }}
+            className="relative hidden lg:block h-[520px] w-full"
           >
-            <Button href="#apply" size="lg" variant="primary" arrow>
-              Apply for Elite
-            </Button>
-            <Button href="#model" size="lg" variant="ghost">
-              See the model
-            </Button>
-          </motion.div>
-
-          {/* Three quick facts */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.1 }}
-            className="mt-8 grid grid-cols-3 max-w-lg mx-auto gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10"
-          >
-            {[
-              { k: "3", v: "Launches" },
-              { k: "80%", v: "Your share" },
-              { k: "18mo", v: "Full cycle" },
-            ].map((item) => (
-              <div key={item.k} className="bg-brand-navy/60 backdrop-blur-sm py-5 px-4 text-center">
-                <div className="font-display text-3xl text-brand-yellow leading-none">{item.k}</div>
-                <div className="text-xs text-white/50 mt-1.5 font-medium">{item.v}</div>
+            {/* Card 1 — Profit Share (yellow, top-right) */}
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
+            >
+              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">YOUR PROFIT SHARE</p>
+              <p className="font-black text-brand-navy text-6xl tracking-tight mt-3">80%</p>
+              {/* Profit bar */}
+              <div className="mt-3 flex h-2 w-full overflow-hidden rounded-full">
+                <div className="h-full bg-brand-navy/80" style={{ width: "80%" }} />
+                <div className="h-full bg-brand-navy/20" style={{ width: "20%" }} />
               </div>
-            ))}
+              <p className="text-xs text-brand-navy/55 mt-3">You keep 80% — we earn only after you hit ROI</p>
+            </motion.div>
+
+            {/* Card 2 — Launch Timeline (glass dark, middle-left) */}
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute top-[28%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-display text-[10px] tracking-[0.2em] text-white/50">LAUNCH TIMELINE</span>
+                <span className="rounded-full bg-brand-yellow/20 px-2 py-0.5 text-[10px] font-semibold text-brand-yellow">18 MONTHS</span>
+              </div>
+              {/* Launch rows */}
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-white font-semibold text-sm">Launch 1</p>
+                    <p className="text-white/50 text-xs">Home &amp; Kitchen · USA</p>
+                  </div>
+                  <span className="flex items-center gap-1 rounded-full bg-green-500/20 px-2 py-0.5 text-[10px] font-semibold text-green-400">
+                    <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
+                    LIVE
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-white/70 text-sm">Launch 2</p>
+                    <p className="text-white/40 text-xs">Beauty · USA</p>
+                  </div>
+                  <span className="flex items-center gap-1 rounded-full bg-brand-yellow/20 px-2 py-0.5 text-[10px] font-semibold text-brand-yellow">
+                    <span className="h-1.5 w-1.5 rounded-full border border-brand-yellow" />
+                    MONTH 7
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-white/40 text-sm">Launch 3</p>
+                    <p className="text-white/30 text-xs">Sports · CA</p>
+                  </div>
+                  <span className="flex items-center gap-1 rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold text-white/40">
+                    <span className="h-1.5 w-1.5 rounded-full border border-white/30" />
+                    PLANNED
+                  </span>
+                </div>
+              </div>
+              {/* Animated progress bar */}
+              <div className="mt-4 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "72%" }}
+                  transition={{ duration: 1.5, ease: EASE, delay: 1 }}
+                  className="h-full rounded-full bg-gradient-to-r from-brand-yellow to-brand-azure"
+                />
+              </div>
+            </motion.div>
+
+            {/* Card 3 — Capital Deployed (azure, bottom-right) */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute bottom-0 right-[5%] w-[200px] rounded-2xl bg-brand-azure p-5 shadow-2xl shadow-brand-azure/30"
+            >
+              <p className="text-white/70 text-xs font-display tracking-[0.2em]">CAPITAL DEPLOYED</p>
+              <Counter
+                to={21}
+                prefix="$"
+                suffix="K"
+                className="font-black text-white text-4xl mt-2 block"
+              />
+              <p className="text-white/60 text-xs mt-1">Across 3 product launches</p>
+            </motion.div>
+
+            {/* Decorative orbit ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none"
+            >
+              <div className="h-[380px] w-[380px] rounded-full border border-white/5" />
+            </motion.div>
           </motion.div>
+
         </div>
 
         {/* Scroll cue */}

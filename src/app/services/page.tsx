@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -15,6 +15,7 @@ import {
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { Button } from "@/components/ui/Button";
+import { Counter } from "@/components/ui/Counter";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -164,87 +165,183 @@ function ServicesHero() {
         style={{ opacity: contentOpacity }}
         className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full"
       >
-        {/* Eyebrow badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-          className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/15 px-4 py-1.5 mb-8"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
-          </span>
-          <span className="font-display text-xs tracking-[0.22em] text-white/90">
-            OUR SERVICES
-          </span>
-        </motion.div>
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
+          {/* ── LEFT COLUMN ── */}
+          <div>
+            {/* Eyebrow badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/15 px-4 py-1.5 mb-8"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
+              </span>
+              <span className="font-display text-xs tracking-[0.22em] text-white/90">
+                OUR SERVICES
+              </span>
+            </motion.div>
 
-        {/* H1 */}
-        <div className="max-w-4xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-            className="font-black tracking-tight leading-[1.0] text-4xl sm:text-5xl lg:text-[64px] text-white"
-          >
-            Six ways we build{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-brand-yellow">your</span>
-              <motion.span
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 1, ease: EASE, delay: 0.95 }}
-                className="absolute left-0 -bottom-1 h-[5px] w-full bg-brand-yellow/20 origin-left rounded-full -z-10"
+            {/* H1 */}
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
+              className="font-black tracking-tight leading-[1.0] text-4xl sm:text-5xl lg:text-[64px] text-white"
+            >
+              Six ways we build{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10 text-brand-yellow">your</span>
+                <motion.span
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1, ease: EASE, delay: 0.95 }}
+                  className="absolute left-0 -bottom-1 h-[5px] w-full bg-brand-yellow/20 origin-left rounded-full -z-10"
+                />
+              </span>{" "}
+              Amazon business.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.5 }}
+              className="mt-7 text-lg sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
+            >
+              From done-for-you launches to trained virtual assistants — pick
+              your level of involvement.
+            </motion.p>
+
+            {/* Quick nav pills */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
+              className="mt-10 flex flex-wrap gap-2.5"
+            >
+              {services.map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="group inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:border-brand-yellow/30 hover:text-white transition-all duration-300"
+                >
+                  <s.icon className="h-3.5 w-3.5 text-brand-yellow" strokeWidth={2} />
+                  {s.title}
+                </Link>
+              ))}
+            </motion.div>
+
+            {/* Scroll cue */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.4, duration: 0.8 }}
+              className="hidden lg:flex mt-14 flex-col items-start gap-2 text-white/35 text-xs font-display tracking-[0.2em]"
+            >
+              <span>SCROLL</span>
+              <motion.div
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+                className="h-8 w-[1px] bg-gradient-to-b from-white/35 to-transparent"
               />
-            </span>{" "}
-            Amazon business.
-          </motion.h1>
+            </motion.div>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.5 }}
-            className="mt-7 text-lg sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
-          >
-            From done-for-you launches to trained virtual assistants — pick
-            your level of involvement.
-          </motion.p>
-
-          {/* Quick nav pills */}
+          {/* ── RIGHT COLUMN — floating card visual ── */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
-            className="mt-10 flex flex-wrap gap-2.5"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.5 }}
+            className="relative hidden lg:block h-[520px] w-full"
           >
-            {services.map((s, i) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                className="group inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:border-brand-yellow/30 hover:text-white transition-all duration-300"
-              >
-                <s.icon className="h-3.5 w-3.5 text-brand-yellow" strokeWidth={2} />
-                {s.title}
-              </Link>
-            ))}
+            {/* Card 1 — yellow, top-right */}
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-0 right-0 w-[260px] rounded-3xl p-6 shadow-2xl shadow-brand-yellow/20 bg-gradient-to-br from-brand-yellow to-brand-yellow-dark"
+            >
+              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">
+                ACTIVE CLIENTS
+              </p>
+              <Counter
+                to={247}
+                duration={2.2}
+                className="font-black text-brand-navy text-5xl tracking-tight mt-2 block"
+              />
+              <p className="text-xs text-brand-navy/55 mt-2">
+                Businesses currently managed
+              </p>
+              <div className="mt-4 flex gap-1.5">
+                {[true, false, true, true].map((filled, idx) => (
+                  <div
+                    key={idx}
+                    className={`h-1.5 flex-1 rounded-full ${filled ? "bg-brand-navy/80" : "bg-brand-navy/20"}`}
+                  />
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Card 2 — glass dark, middle-left */}
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute top-[26%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
+            >
+              <p className="font-display text-[10px] tracking-[0.2em] text-white/50 mb-3">
+                OUR SERVICES
+              </p>
+              {(
+                [
+                  { Icon: Rocket,        name: "Elite Program",     tag: "FLAGSHIP"   },
+                  { Icon: Users,         name: "Virtual Assistants", tag: "HIRE"       },
+                  { Icon: MessageSquare, name: "Mentorship",         tag: "1:1"        },
+                  { Icon: Target,        name: "PPC & Ads",          tag: "FULL STACK" },
+                  { Icon: Megaphone,     name: "Creative",           tag: "BRAND"      },
+                  { Icon: BarChart3,     name: "Analytics",          tag: "OPS"        },
+                ] as { Icon: React.ElementType; name: string; tag: string }[]
+              ).map(({ Icon, name, tag }) => (
+                <div key={name} className="flex items-center justify-between py-1.5">
+                  <div className="flex items-center gap-2">
+                    <Icon className="h-3.5 w-3.5 text-brand-yellow" />
+                    <span className="text-xs text-white/75">{name}</span>
+                  </div>
+                  <span className="text-[10px] font-display text-brand-yellow/60">{tag}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Card 3 — azure, bottom-right */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute bottom-0 right-[5%] w-[200px] rounded-2xl bg-brand-azure p-5 shadow-2xl shadow-brand-azure/30"
+            >
+              <p className="text-white/70 text-xs font-display tracking-[0.2em]">
+                AVG ROAS
+              </p>
+              <Counter
+                to={32}
+                duration={2}
+                formatFn={(n) => (n / 10).toFixed(1) + "x"}
+                className="font-black text-white text-4xl mt-2 block"
+              />
+              <p className="text-white/60 text-xs mt-1">
+                Across managed ad accounts
+              </p>
+            </motion.div>
+
+            {/* Orbit ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none"
+            >
+              <div className="h-[380px] w-[380px] rounded-full border border-white/5" />
+            </motion.div>
           </motion.div>
         </div>
-
-        {/* Scroll cue */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4, duration: 0.8 }}
-          className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/35 text-xs font-display tracking-[0.2em]"
-        >
-          <span>SCROLL</span>
-          <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-            className="h-8 w-[1px] bg-gradient-to-b from-white/35 to-transparent"
-          />
-        </motion.div>
       </motion.div>
     </section>
   );
