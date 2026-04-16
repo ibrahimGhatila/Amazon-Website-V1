@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Link from "next/link";
 import { ArrowLeft, Check, X } from "lucide-react";
+import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { Button } from "@/components/ui/Button";
@@ -141,6 +142,21 @@ function MentorshipHero() {
             </Button>
           </motion.div>
         </div>
+      </motion.div>
+
+      {/* Scroll cue */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4, duration: 0.8 }}
+        className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/35 text-xs font-display tracking-[0.2em] z-10"
+      >
+        <span>SCROLL</span>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          className="h-8 w-[1px] bg-gradient-to-b from-white/35 to-transparent"
+        />
       </motion.div>
     </section>
   );
@@ -472,6 +488,7 @@ export default function MentorshipPage() {
         <MentorshipHero />
         <MentorshipInclusions />
         <MentorshipFit />
+        <ExploreServices current="mentorship" />
         <MentorshipCTA />
       </main>
       <Footer />

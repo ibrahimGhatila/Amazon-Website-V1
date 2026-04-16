@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Services", href: "/services" },
@@ -20,6 +21,11 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
+  const pathname = usePathname();
+  const isActive = (href: string) => {
+    if (href === "/services") return pathname.startsWith("/services");
+    return pathname === href;
+  };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 20);
@@ -60,10 +66,16 @@ export function Nav() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="relative px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors rounded-full group"
+                  className={cn(
+                    "relative px-4 py-2 text-sm font-medium transition-colors rounded-full group",
+                    isActive(item.href) ? "text-white" : "text-white/80 hover:text-white"
+                  )}
                 >
                   {item.label}
-                  <span className="absolute bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-brand-yellow transition-all duration-300 group-hover:w-6" />
+                  <span className={cn(
+                    "absolute bottom-1 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-brand-yellow transition-all duration-300",
+                    isActive(item.href) ? "w-6" : "w-0 group-hover:w-6"
+                  )} />
                 </Link>
               ))}
             </nav>
@@ -120,7 +132,10 @@ export function Nav() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center justify-between py-4 px-4 text-2xl font-bold text-white border-b border-white/10 hover:text-brand-yellow transition"
+                    className={cn(
+                      "flex items-center justify-between py-4 px-4 text-2xl font-bold border-b border-white/10 transition",
+                      isActive(item.href) ? "text-brand-yellow" : "text-white hover:text-brand-yellow"
+                    )}
                   >
                     <span>{item.label}</span>
                     <span className="text-brand-yellow font-display text-sm tracking-widest">

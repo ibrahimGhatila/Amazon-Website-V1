@@ -312,10 +312,11 @@ function ServicesGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, ease: EASE, delay: i * 0.09 }}
+                whileHover={{ y: -6, transition: { duration: 0.3, ease: EASE } }}
               >
                 <Link
                   href={service.href}
-                  className={`group relative flex flex-col h-full rounded-3xl border p-6 hover:-translate-y-1 transition-all duration-500 overflow-hidden ${cardStyles[variant]}`}
+                  className={`group relative flex flex-col h-full rounded-3xl border p-6 transition-all duration-500 overflow-hidden ${cardStyles[variant]}`}
                 >
                   {/* Navy card: decorative eX watermark */}
                   {variant === "navy" && (
