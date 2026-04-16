@@ -15,6 +15,7 @@ const navItems = [
   { label: "How It Works", href: "/how-it-works" },
   { label: "About", href: "/#founder" },
   { label: "FAQ", href: "/#faq" },
+  { label: "Apply", href: "/apply" },
 ];
 
 export function Nav() {
@@ -63,22 +64,40 @@ export function Nav() {
             <Logo variant="light" />
 
             <nav className="hidden lg:flex items-center gap-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "relative px-4 py-2 text-sm font-medium transition-colors rounded-full group",
-                    isActive(item.href) ? "text-white" : "text-white/80 hover:text-white"
-                  )}
-                >
-                  {item.label}
-                  <span className={cn(
-                    "absolute bottom-1 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-brand-yellow transition-all duration-300",
-                    isActive(item.href) ? "w-6" : "w-0 group-hover:w-6"
-                  )} />
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                if (item.href === "/apply") {
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={cn(
+                        "ml-1 px-4 py-2 text-sm font-bold rounded-full transition-all duration-200",
+                        isActive(item.href)
+                          ? "bg-brand-yellow text-brand-navy"
+                          : "bg-brand-yellow/15 text-brand-yellow hover:bg-brand-yellow hover:text-brand-navy border border-brand-yellow/30"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      "relative px-4 py-2 text-sm font-medium transition-colors rounded-full group",
+                      isActive(item.href) ? "text-white" : "text-white/80 hover:text-white"
+                    )}
+                  >
+                    {item.label}
+                    <span className={cn(
+                      "absolute bottom-1 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-brand-yellow transition-all duration-300",
+                      isActive(item.href) ? "w-6" : "w-0 group-hover:w-6"
+                    )} />
+                  </Link>
+                );
+              })}
             </nav>
 
             <div className="flex items-center gap-3">
