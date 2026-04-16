@@ -17,6 +17,7 @@ import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { Button } from "@/components/ui/Button";
+import { Counter } from "@/components/ui/Counter";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -159,107 +160,193 @@ function CreativeListingsHero() {
       </motion.div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full">
-        {/* Back link */}
-        <motion.div
-          initial={{ opacity: 0, x: -16 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
-        >
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-200"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Back to Services
-          </Link>
-        </motion.div>
-
-        {/* Eyebrow badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-          className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/15 px-4 py-1.5 mb-8"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
-          </span>
-          <span className="font-display text-xs tracking-[0.22em] text-white/90">
-            CREATIVE &amp; LISTINGS
-          </span>
-        </motion.div>
-
-        {/* H1 */}
-        <div className="max-w-4xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-            className="font-black tracking-tight leading-[1.05] text-4xl sm:text-5xl lg:text-[64px] text-white"
-          >
-            Listings that rank.
-            <br />
-            <span className="text-brand-yellow">Content that converts.</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
-            className="mt-7 text-lg sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
-          >
-            From keyword-optimised copy to A+ content and product photography —
-            we craft every listing to stop the scroll and drive the sale.
-          </motion.p>
-
-          {/* Stat pills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.55 }}
-            className="mt-8 flex flex-wrap gap-3"
-          >
-            {["Top-3 ranking", "A+ content", "Studio quality"].map((pill) => (
-              <span
-                key={pill}
-                className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/15 px-4 py-1.5 text-sm text-white/80"
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
+          {/* Left column */}
+          <div>
+            {/* Back link */}
+            <motion.div
+              initial={{ opacity: 0, x: -16 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
+              className="mb-8"
+            >
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-200"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow flex-shrink-0" />
-                {pill}
-              </span>
-            ))}
-          </motion.div>
+                <ArrowLeft className="h-3.5 w-3.5" />
+                Back to Services
+              </Link>
+            </motion.div>
 
-          {/* CTA */}
+            {/* Eyebrow badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/15 px-4 py-1.5 mb-8"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
+              </span>
+              <span className="font-display text-xs tracking-[0.22em] text-white/90">
+                CREATIVE &amp; LISTINGS
+              </span>
+            </motion.div>
+
+            {/* H1 */}
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
+              className="font-black tracking-tight leading-[1.05] text-4xl sm:text-5xl lg:text-[64px] text-white"
+            >
+              Listings that rank.
+              <br />
+              <span className="text-brand-yellow">Content that converts.</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
+              className="mt-7 text-lg sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
+            >
+              From keyword-optimised copy to A+ content and product photography —
+              we craft every listing to stop the scroll and drive the sale.
+            </motion.p>
+
+            {/* Stat pills */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.55 }}
+              className="mt-8 flex flex-wrap gap-3"
+            >
+              {["Top-3 ranking", "A+ content", "Studio quality"].map((pill) => (
+                <span
+                  key={pill}
+                  className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/15 px-4 py-1.5 text-sm text-white/80"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow flex-shrink-0" />
+                  {pill}
+                </span>
+              ))}
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
+              className="mt-10"
+            >
+              <Button href="#contact" size="lg" variant="primary" arrow>
+                Upgrade My Listings
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Right column: floating card visual */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
-            className="mt-10"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.5 }}
+            className="relative hidden lg:block h-[500px] w-full"
           >
-            <Button href="#contact" size="lg" variant="primary" arrow>
-              Upgrade My Listings
-            </Button>
+            {/* Orbit ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none"
+            >
+              <div className="h-[380px] w-[380px] rounded-full border border-white/5" />
+            </motion.div>
+
+            {/* Yellow card — top right: LISTING SCORE */}
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
+            >
+              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">
+                LISTING SCORE
+              </p>
+              <div className="flex items-baseline gap-1 mt-2">
+                <span className="font-black text-brand-navy text-5xl tracking-tight">
+                  <Counter to={94} duration={1.6} />
+                </span>
+                <span className="text-brand-navy/60 text-2xl">/100</span>
+              </div>
+              {/* Score bar */}
+              <div className="h-2 w-full rounded-full bg-brand-navy/15 mt-3">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "94%" }}
+                  transition={{ duration: 1.4, delay: 1.2, ease: EASE }}
+                  className="h-full rounded-full bg-brand-navy"
+                />
+              </div>
+              <p className="text-xs text-brand-navy/55 mt-2">
+                After full listing overhaul
+              </p>
+            </motion.div>
+
+            {/* Glass card — middle left: CONTENT CHECKLIST */}
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute top-[28%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
+            >
+              <p className="font-display text-[10px] tracking-[0.2em] text-white/50 mb-3">
+                WHAT WE DELIVER
+              </p>
+              {[
+                "Keyword copywriting",
+                "A+ Content (EBC)",
+                "Product photography",
+                "Brand storefront",
+                "Keyword research",
+                "Listing audit & fix",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2.5 py-1 text-xs text-white/75">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-brand-yellow flex-none" />
+                  {item}
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Azure card — bottom right: CTR IMPROVEMENT */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute bottom-0 right-[5%] w-[200px] rounded-2xl bg-brand-azure p-5 shadow-2xl shadow-brand-azure/30"
+            >
+              <p className="text-white/70 text-xs font-display tracking-[0.2em]">
+                CTR IMPROVEMENT
+              </p>
+              <p className="font-black text-white text-4xl mt-2">+84%</p>
+              <p className="text-white/60 text-xs mt-1">After listing overhaul</p>
+            </motion.div>
           </motion.div>
         </div>
-      </div>
 
-      {/* Scroll cue */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.8 }}
-        className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/35 text-xs font-display tracking-[0.2em] z-10"
-      >
-        <span>SCROLL</span>
+        {/* Scroll cue */}
         <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          className="h-8 w-[1px] bg-gradient-to-b from-white/35 to-transparent"
-        />
-      </motion.div>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.4, duration: 0.8 }}
+          className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/35 text-xs font-display tracking-[0.2em] z-10"
+        >
+          <span>SCROLL</span>
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="h-8 w-[1px] bg-gradient-to-b from-white/35 to-transparent"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }

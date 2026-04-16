@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { Button } from "@/components/ui/Button";
+import { Counter } from "@/components/ui/Counter";
 import {
   Settings,
   TrendingUp,
@@ -62,91 +63,197 @@ function Hero() {
           </Link>
         </motion.div>
 
-        <div className="max-w-4xl">
-          {/* Eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-            className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
-            </span>
-            <span className="font-display text-xs tracking-[0.22em] text-brand-yellow">
-              HIRE TALENT
-            </span>
-          </motion.div>
-
-          {/* H1 */}
-          <div className="overflow-hidden mb-2">
-            <motion.h1
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="font-black text-white text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
+          {/* Left column */}
+          <div>
+            {/* Eyebrow */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
             >
-              Expert Amazon VAs.
-            </motion.h1>
-          </div>
-          <div className="overflow-hidden mb-6">
-            <motion.h1
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.32 }}
-              className="font-black text-brand-yellow text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
-            >
-              Ready to deploy.
-            </motion.h1>
-          </div>
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
+              </span>
+              <span className="font-display text-xs tracking-[0.22em] text-brand-yellow">
+                HIRE TALENT
+              </span>
+            </motion.div>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.52 }}
-            className="text-base sm:text-lg text-white/65 max-w-2xl leading-relaxed mb-8"
-          >
-            Full-time or part-time. Trained on real Amazon operations. Placed
-            inside your existing setup within days.
-          </motion.p>
-
-          {/* Stat cards */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.64 }}
-            className="flex flex-wrap gap-3 mb-8"
-          >
-            {[
-              { top: "Full-time", bottom: "or Part-time" },
-              { top: "Trained", bottom: "Amazon specialists" },
-              { top: "< 7 days", bottom: "Placement time" },
-            ].map((stat) => (
-              <div
-                key={stat.top}
-                className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-3.5 min-w-[140px]"
+            {/* H1 */}
+            <div className="overflow-hidden mb-2">
+              <motion.h1
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
+                className="font-black text-white text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
               >
-                <div className="font-display text-xl text-brand-yellow leading-none">
-                  {stat.top}
-                </div>
-                <div className="text-xs text-white/50 mt-1.5 font-medium">
-                  {stat.bottom}
-                </div>
-              </div>
-            ))}
-          </motion.div>
+                Expert Amazon VAs.
+              </motion.h1>
+            </div>
+            <div className="overflow-hidden mb-6">
+              <motion.h1
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 0.32 }}
+                className="font-black text-brand-yellow text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
+              >
+                Ready to deploy.
+              </motion.h1>
+            </div>
 
-          {/* CTA */}
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.52 }}
+              className="text-base sm:text-lg text-white/65 max-w-2xl leading-relaxed mb-8"
+            >
+              Full-time or part-time. Trained on real Amazon operations. Placed
+              inside your existing setup within days.
+            </motion.p>
+
+            {/* Stat cards */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.64 }}
+              className="flex flex-wrap gap-3 mb-8"
+            >
+              {[
+                { top: "Full-time", bottom: "or Part-time" },
+                { top: "Trained", bottom: "Amazon specialists" },
+                { top: "< 7 days", bottom: "Placement time" },
+              ].map((stat) => (
+                <div
+                  key={stat.top}
+                  className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-3.5 min-w-[140px]"
+                >
+                  <div className="font-display text-xl text-brand-yellow leading-none">
+                    {stat.top}
+                  </div>
+                  <div className="text-xs text-white/50 mt-1.5 font-medium">
+                    {stat.bottom}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.76 }}
+            >
+              <Button href="#apply" size="lg" variant="primary" arrow>
+                Apply for a VA
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Right column — floating cards */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.76 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.5 }}
+            className="relative hidden lg:block h-[500px] w-full"
           >
-            <Button href="#apply" size="lg" variant="primary" arrow>
-              Apply for a VA
-            </Button>
+            {/* Yellow card — top right: Placement Time */}
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
+            >
+              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">
+                PLACEMENT TIME
+              </p>
+              <p className="font-black text-brand-navy text-6xl tracking-tight mt-2 leading-none">
+                7<span className="text-2xl"> days</span>
+              </p>
+              <p className="text-xs text-brand-navy/55 mt-2">
+                From briefing to your VA going live
+              </p>
+              <div className="flex items-center gap-1.5 mt-4">
+                {["Brief", "Match", "Onboard", "Live"].map((label, i) => (
+                  <div key={label} className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-brand-navy/50 flex-none" />
+                    <span className="text-[9px] text-brand-navy/60 font-medium">
+                      {label}
+                    </span>
+                    {i < 3 && (
+                      <span className="text-[9px] text-brand-navy/35">→</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Glass card — middle left: VA Skill Set */}
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{
+                duration: 7,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+              className="absolute top-[28%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <span className="font-display text-[10px] tracking-[0.2em] text-white/50">
+                  VA SKILL SET
+                </span>
+                <span className="text-brand-yellow font-display text-[10px]">
+                  TRAINED
+                </span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  "Account Mgmt",
+                  "PPC Campaigns",
+                  "Inventory Ops",
+                  "Listings",
+                  "Customer Service",
+                  "Reporting",
+                  "Sourcing",
+                  "Brand Reg",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="text-[10px] bg-white/10 border border-white/15 rounded-full px-2.5 py-1 text-white/75"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <p className="text-xs text-white/45 mt-3">
+                8 core Amazon disciplines
+              </p>
+            </motion.div>
+
+            {/* Azure card — bottom right: VAs Placed */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1,
+              }}
+              className="absolute bottom-0 right-[5%] w-[200px] rounded-2xl bg-brand-azure p-5 shadow-2xl shadow-brand-azure/30"
+            >
+              <p className="text-white/70 text-xs font-display tracking-[0.2em]">
+                VAs PLACED
+              </p>
+              <Counter
+                to={47}
+                duration={2}
+                className="font-black text-white text-4xl mt-2 block"
+              />
+              <p className="text-white/60 text-xs mt-1">Across 12 countries</p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

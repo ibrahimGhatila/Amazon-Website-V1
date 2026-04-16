@@ -16,6 +16,7 @@ import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { Button } from "@/components/ui/Button";
+import { Counter } from "@/components/ui/Counter";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -165,121 +166,230 @@ function PPCHero() {
         style={{ opacity: contentOpacity }}
         className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full"
       >
-        {/* Back link */}
-        <motion.div
-          initial={{ opacity: 0, x: -12 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
-        >
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Back to Services
-          </Link>
-        </motion.div>
-
-        <div className="max-w-4xl">
-          {/* Eyebrow badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-            className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
-            </span>
-            <span className="font-display text-xs tracking-[0.22em] text-brand-yellow">
-              PPC &amp; ADVERTISING
-            </span>
-          </motion.div>
-
-          {/* H1 */}
-          <div className="overflow-hidden mb-2">
-            <motion.h1
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="font-black text-white text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
+          {/* Left column */}
+          <div>
+            {/* Back link */}
+            <motion.div
+              initial={{ opacity: 0, x: -12 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
+              className="mb-8"
             >
-              Turn ad spend into
-            </motion.h1>
-          </div>
-          <div className="overflow-hidden mb-6">
-            <motion.h1
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.32 }}
-              className="font-black text-brand-yellow text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
-            >
-              profitable growth.
-            </motion.h1>
-          </div>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.5 }}
-            className="text-base sm:text-lg text-white/65 max-w-2xl leading-relaxed mb-8"
-          >
-            We build, manage, and scale Amazon advertising campaigns that
-            convert — from Sponsored Products to DSP.
-          </motion.p>
-
-          {/* Stat pills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.64 }}
-            className="flex flex-wrap gap-3 mb-8"
-          >
-            {[
-              { label: "3.2x avg ROAS" },
-              { label: "DSP certified" },
-              { label: "Daily optimization" },
-            ].map((pill) => (
-              <div
-                key={pill.label}
-                className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-3"
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors"
               >
-                <span className="font-display text-sm text-brand-yellow leading-none">
-                  {pill.label}
-                </span>
-              </div>
-            ))}
-          </motion.div>
+                <ArrowLeft className="h-3.5 w-3.5" />
+                Back to Services
+              </Link>
+            </motion.div>
 
-          {/* CTA */}
+            {/* Eyebrow badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
+              </span>
+              <span className="font-display text-xs tracking-[0.22em] text-brand-yellow">
+                PPC &amp; ADVERTISING
+              </span>
+            </motion.div>
+
+            {/* H1 */}
+            <div className="overflow-hidden mb-2">
+              <motion.h1
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
+                className="font-black text-white text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
+              >
+                Turn ad spend into
+              </motion.h1>
+            </div>
+            <div className="overflow-hidden mb-6">
+              <motion.h1
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 0.32 }}
+                className="font-black text-brand-yellow text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
+              >
+                profitable growth.
+              </motion.h1>
+            </div>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.5 }}
+              className="text-base sm:text-lg text-white/65 max-w-2xl leading-relaxed mb-8"
+            >
+              We build, manage, and scale Amazon advertising campaigns that
+              convert — from Sponsored Products to DSP.
+            </motion.p>
+
+            {/* Stat pills */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.64 }}
+              className="flex flex-wrap gap-3 mb-8"
+            >
+              {[
+                { label: "3.2x avg ROAS" },
+                { label: "DSP certified" },
+                { label: "Daily optimization" },
+              ].map((pill) => (
+                <div
+                  key={pill.label}
+                  className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-3"
+                >
+                  <span className="font-display text-sm text-brand-yellow leading-none">
+                    {pill.label}
+                  </span>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.76 }}
+            >
+              <Button href="#contact" size="lg" variant="primary" arrow>
+                Start Advertising
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Right column: floating card visual */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.76 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.5 }}
+            className="relative hidden lg:block h-[500px] w-full"
           >
-            <Button href="#contact" size="lg" variant="primary" arrow>
-              Start Advertising
-            </Button>
+            {/* Orbit ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none"
+            >
+              <div className="h-[380px] w-[380px] rounded-full border border-white/5" />
+            </motion.div>
+
+            {/* Yellow card — top right: AVERAGE ROAS */}
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
+            >
+              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">
+                AVERAGE ROAS
+              </p>
+              <div className="font-black text-brand-navy text-6xl tracking-tight mt-2">
+                <Counter to={3.2} duration={2} formatFn={(n) => n.toFixed(1) + "x"} />
+              </div>
+              <p className="text-xs text-brand-navy/55 mt-2">
+                Across all managed accounts
+              </p>
+              {/* Mini bar chart */}
+              <div className="flex items-end gap-1 mt-4 h-10">
+                {[55, 70, 65, 80, 72, 88, 95].map((h, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ height: 0 }}
+                    animate={{ height: `${h}%` }}
+                    transition={{ duration: 0.6, delay: 0.8 + i * 0.07, ease: EASE }}
+                    className="flex-1 rounded-sm bg-brand-navy/25"
+                    style={{ minHeight: 2 }}
+                  />
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Glass card — middle left: LIVE CAMPAIGNS */}
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute top-[28%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between mb-3">
+                <span className="font-display text-[10px] tracking-[0.2em] text-white/50">
+                  LIVE CAMPAIGNS
+                </span>
+                <div className="flex items-center gap-1.5">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-display tracking-[0.15em]">
+                    ACTIVE
+                  </span>
+                </div>
+              </div>
+              {/* Campaign rows */}
+              {[
+                { label: "Sponsored Products", pct: 94 },
+                { label: "Sponsored Brands", pct: 78 },
+                { label: "DSP / Display", pct: 61 },
+              ].map(({ label, pct }, i) => (
+                <div key={label} className="mb-3 last:mb-0">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs text-white/70">{label}</span>
+                    <span className="text-brand-yellow font-semibold text-xs">
+                      {pct}%
+                    </span>
+                  </div>
+                  <div className="h-1.5 w-full rounded-full bg-white/10">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${pct}%` }}
+                      transition={{ duration: 1.2, delay: 1 + i * 0.15, ease: EASE }}
+                      className="h-full rounded-full bg-gradient-to-r from-brand-yellow to-brand-azure"
+                    />
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Azure card — bottom right: AVG ACoS */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute bottom-0 right-[5%] w-[200px] rounded-2xl bg-brand-azure p-5 shadow-2xl shadow-brand-azure/30"
+            >
+              <p className="text-white/70 text-xs font-display tracking-[0.2em]">
+                AVG ACoS
+              </p>
+              <p className="font-black text-white text-4xl mt-2">18%</p>
+              <p className="text-white/60 text-xs mt-1">Below category average</p>
+            </motion.div>
           </motion.div>
         </div>
-      </motion.div>
 
-      {/* Scroll cue */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.8 }}
-        className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/35 text-xs font-display tracking-[0.2em] z-10"
-      >
-        <span>SCROLL</span>
+        {/* Scroll cue */}
         <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          className="h-8 w-[1px] bg-gradient-to-b from-white/35 to-transparent"
-        />
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.4, duration: 0.8 }}
+          className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/35 text-xs font-display tracking-[0.2em] z-10"
+        >
+          <span>SCROLL</span>
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="h-8 w-[1px] bg-gradient-to-b from-white/35 to-transparent"
+          />
+        </motion.div>
       </motion.div>
     </section>
   );
