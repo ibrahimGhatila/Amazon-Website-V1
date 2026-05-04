@@ -76,7 +76,7 @@ export function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
               <span className="font-display text-xs tracking-[0.2em] text-white/90">
-                AMAZON DONE-FOR-YOU — NOW ENROLLING
+                Amazon done for you.
               </span>
             </motion.div>
 
