@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { ArrowRight, PlayCircle, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowRight, PlayCircle, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
@@ -139,23 +139,6 @@ export function Hero() {
                 <span className="font-semibold text-sm">See how it works</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-            </motion.div>
-
-            {/* Trust row */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.1 }}
-              className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/50"
-            >
-              <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-brand-yellow" />
-                <span>Powered by data from 1,000+ launches</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="h-4 w-4 text-brand-yellow" />
-                <span>80/20 profit-share model</span>
-              </div>
             </motion.div>
           </div>
 
