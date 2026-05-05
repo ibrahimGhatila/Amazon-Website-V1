@@ -177,7 +177,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-2 text-[10px] text-brand-navy/30 font-display tracking-[0.2em] uppercase"
+            className="mt-2 text-xs text-brand-navy/45 font-display tracking-[0.2em] uppercase"
           >
             Hover cards to see account details
           </motion.p>
@@ -273,7 +273,7 @@ export function Testimonials() {
 
                       {/* Row 3: deliverables */}
                       <div>
-                        <div className={`font-display text-[10px] tracking-[0.2em] uppercase mb-2 ${s.statLabel}`}>
+                        <div className={`font-display text-xs tracking-[0.2em] uppercase mb-2 ${s.statLabel}`}>
                           What We Delivered
                         </div>
                         <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5">

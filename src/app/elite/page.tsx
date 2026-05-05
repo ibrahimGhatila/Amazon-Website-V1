@@ -124,7 +124,7 @@ export function EliteHero() {
               ].map((item) => (
                 <div key={item.k} className="bg-brand-navy/60 backdrop-blur-sm py-5 px-4 text-center">
                   <div className="font-display text-3xl text-brand-yellow leading-none">{item.k}</div>
-                  <div className="text-xs text-white/50 mt-1.5 font-medium">{item.v}</div>
+                  <div className="text-sm text-white/55 mt-1.5 font-medium">{item.v}</div>
                 </div>
               ))}
             </motion.div>

@@ -42,7 +42,7 @@ export function ExploreServices({ current }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: EASE }}
-              className="font-display text-[10px] tracking-[0.22em] text-brand-navy/35 uppercase"
+              className="font-display text-xs tracking-[0.22em] text-brand-navy/45 uppercase"
             >
               More from Extreme Commerce
             </motion.p>
@@ -95,7 +95,7 @@ export function ExploreServices({ current }: Props) {
                       <Icon className="h-5 w-5" strokeWidth={2} />
                     </div>
                     <div>
-                      <div className="font-display text-[9px] tracking-[0.2em] text-brand-navy/35 uppercase mb-0.5">
+                      <div className="font-display text-[11px] tracking-[0.18em] text-brand-navy/50 uppercase mb-0.5">
                         {s.tag}
                       </div>
                       <div className="font-bold text-sm text-brand-navy leading-tight">

@@ -134,7 +134,7 @@ function Hero() {
                   <div className="font-display text-xl text-brand-yellow leading-none">
                     {stat.top}
                   </div>
-                  <div className="text-xs text-white/50 mt-1.5 font-medium">
+                  <div className="text-sm text-white/55 mt-1.5 font-medium">
                     {stat.bottom}
                   </div>
                 </div>
