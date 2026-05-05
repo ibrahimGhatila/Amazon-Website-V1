@@ -240,15 +240,15 @@ export function EliteHero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.8 }}
-          className="mt-6 flex flex-col items-center gap-2 text-white/30"
+          transition={{ delay: 1.5, duration: 0.8 }}
+          className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40 text-xs font-display tracking-[0.2em]"
         >
+          <span>SCROLL</span>
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ChevronDown className="h-6 w-6" />
-          </motion.div>
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="h-8 w-[1px] bg-gradient-to-b from-white/40 to-transparent"
+          />
         </motion.div>
       </motion.div>
     </section>

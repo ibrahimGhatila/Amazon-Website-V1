@@ -233,20 +233,6 @@ function ServicesHero() {
               ))}
             </motion.div>
 
-            {/* Scroll cue */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.4, duration: 0.8 }}
-              className="hidden lg:flex mt-14 flex-col items-start gap-2 text-white/35 text-xs font-display tracking-[0.2em]"
-            >
-              <span>SCROLL</span>
-              <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-                className="h-8 w-[1px] bg-gradient-to-b from-white/35 to-transparent"
-              />
-            </motion.div>
           </div>
 
           {/* ── RIGHT COLUMN — floating card visual ── */}
@@ -342,6 +328,21 @@ function ServicesHero() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Scroll cue */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+          className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40 text-xs font-display tracking-[0.2em]"
+        >
+          <span>SCROLL</span>
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="h-8 w-[1px] bg-gradient-to-b from-white/40 to-transparent"
+          />
+        </motion.div>
       </motion.div>
     </section>
   );
