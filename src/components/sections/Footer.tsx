@@ -43,16 +43,6 @@ export function Footer() {
   return (
     <footer className="relative bg-brand-navy-800 text-white overflow-hidden texture-grain -mt-2">
 
-      {/* eX watermark — same style as Hero */}
-      <div
-        aria-hidden
-        className="absolute -right-16 sm:-right-24 bottom-8 pointer-events-none select-none -z-0"
-      >
-        <span className="font-display text-[14rem] sm:text-[20rem] lg:text-[26rem] leading-none text-white/[0.035] tracking-tighter">
-          eX
-        </span>
-      </div>
-
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-12">
         <div className="grid lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-8 lg:gap-10">
 
