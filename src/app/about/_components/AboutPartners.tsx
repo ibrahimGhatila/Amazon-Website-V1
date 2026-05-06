@@ -24,23 +24,23 @@ const tier1: Partner[] = [
 ];
 
 const government: Partner[] = [
-  { name: "Kamyab Jawan" },
-  { name: "NAVTTC" },
-  { name: "PVTC Punjab" },
-  { name: "PSDF" },
-  { name: "Govt. of AJK" },
+  { name: "Kamyab Jawan", logo: "https://logo.clearbit.com/kamyabjawan.gov.pk" },
+  { name: "NAVTTC", logo: "https://logo.clearbit.com/navttc.gov.pk" },
+  { name: "PVTC Punjab", logo: "https://logo.clearbit.com/pvtc.gop.pk" },
+  { name: "PSDF", logo: "https://logo.clearbit.com/psdf.org.pk" },
+  { name: "Govt. of AJK", logo: "https://upload.wikimedia.org/wikipedia/commons/3/35/Emblem_Of_Azad_Jammu_and_Kashmir.png" },
 ];
 
 const universities: Partner[] = [
-  { name: "NUML" },
-  { name: "University of Central Punjab" },
-  { name: "Iqra University" },
-  { name: "COMSATS Islamabad" },
-  { name: "Bahria University" },
-  { name: "Institute of Business Management" },
-  { name: "ICMA International" },
-  { name: "UET Lahore" },
-  { name: "National Textile University" },
+  { name: "NUML", logo: "https://upload.wikimedia.org/wikipedia/en/7/72/NUML-Logo.jpg" },
+  { name: "University of Central Punjab", logo: "https://upload.wikimedia.org/wikipedia/en/e/eb/University_of_Central_Punjab_(logo).jpg" },
+  { name: "Iqra University", logo: "https://upload.wikimedia.org/wikipedia/commons/4/43/Iqra_University_logo.png" },
+  { name: "COMSATS Islamabad", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c0/COMSATS_new_logo.jpg" },
+  { name: "Bahria University", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Bahria_University_(BU)_Islamabad.png" },
+  { name: "Institute of Business Management", logo: "https://logo.clearbit.com/iobm.edu.pk" },
+  { name: "ICMA International", logo: "https://logo.clearbit.com/icmap.com.pk" },
+  { name: "UET Lahore", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/University_of_Engineering_and_Technology_Lahore_logo.svg/200px-University_of_Engineering_and_Technology_Lahore_logo.svg.png" },
+  { name: "National Textile University", logo: "https://logo.clearbit.com/ntu.edu.pk" },
 ];
 
 const industry: Partner[] = [
