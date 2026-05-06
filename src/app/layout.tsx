@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import { ChatWidget } from "@/components/ui/ChatWidget";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -73,6 +74,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white text-brand-navy">
         {children}
+        <ChatWidget />
       </body>
     </html>
   );
