@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Quote } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Counter } from "@/components/ui/Counter";
 import { Button } from "@/components/ui/Button";
@@ -31,53 +32,71 @@ export function Founder() {
           >
             {/* Decorative frame */}
             <div className="absolute -left-4 -top-4 h-full w-full rounded-[2rem] border-2 border-brand-yellow" />
-            <div className="relative h-full w-full rounded-[2rem] bg-gradient-to-br from-brand-navy via-brand-navy-600 to-brand-navy-700 overflow-hidden p-6 flex flex-col justify-between">
+            <div className="relative h-full w-full rounded-[2rem] bg-gradient-to-br from-brand-navy via-brand-navy-600 to-brand-navy-700 overflow-hidden">
               {/* Giant watermark */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span className="font-display text-[18rem] leading-none text-brand-yellow/[0.06] tracking-tighter">
+                <span className="font-display text-[18rem] leading-none text-brand-yellow/[0.05] tracking-tighter">
                   SA
                 </span>
               </div>
 
-              <div className="relative flex items-center justify-between">
-                <span className="font-display text-xs tracking-[0.25em] text-brand-yellow">
-                  FOUNDER · CEO
-                </span>
-                <span className="flex h-3 w-3">
-                  <span className="absolute inline-flex h-3 w-3 animate-ping rounded-full bg-brand-yellow opacity-60" />
-                  <span className="relative inline-flex h-3 w-3 rounded-full bg-brand-yellow" />
-                </span>
+              {/* Sunny Ali portrait */}
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
+                <Image
+                  src="/brand/sunny-ali.png"
+                  alt="Sunny Ali, Founder & CEO of Extreme Commerce"
+                  width={520}
+                  height={780}
+                  priority
+                  className="h-[90%] w-auto object-contain object-bottom select-none mix-blend-lighten"
+                />
               </div>
 
-              <div className="relative">
-                <div className="font-display text-6xl sm:text-7xl text-white leading-none tracking-tight">
-                  Sunny
+              {/* Bottom gradient for text legibility */}
+              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-brand-navy via-brand-navy/80 to-transparent pointer-events-none" />
+
+              {/* Content overlay */}
+              <div className="relative h-full p-6 flex flex-col justify-between">
+                <div className="flex items-center justify-between">
+                  <span className="font-display text-xs tracking-[0.25em] text-brand-yellow">
+                    FOUNDER · CEO
+                  </span>
+                  <span className="relative flex h-3 w-3">
+                    <span className="absolute inline-flex h-3 w-3 animate-ping rounded-full bg-brand-yellow opacity-60" />
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-brand-yellow" />
+                  </span>
                 </div>
-                <div className="font-display text-6xl sm:text-7xl text-brand-yellow leading-none tracking-tight">
-                  Ali
-                </div>
-                <div className="mt-4 flex items-center gap-3">
-                  <Link
-                    href="#"
-                    aria-label="LinkedIn"
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
-                  >
-                    <LinkedInIcon className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="#"
-                    aria-label="Instagram"
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
-                  >
-                    <InstagramIcon className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="#"
-                    aria-label="YouTube"
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
-                  >
-                    <YouTubeIcon className="h-4 w-4" />
-                  </Link>
+
+                <div>
+                  <div className="font-display text-5xl sm:text-6xl text-white leading-none tracking-tight drop-shadow-[0_2px_12px_rgba(2,39,102,0.6)]">
+                    Sunny
+                  </div>
+                  <div className="font-display text-5xl sm:text-6xl text-brand-yellow leading-none tracking-tight drop-shadow-[0_2px_12px_rgba(2,39,102,0.6)]">
+                    Ali
+                  </div>
+                  <div className="mt-4 flex items-center gap-3">
+                    <Link
+                      href="#"
+                      aria-label="LinkedIn"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                    >
+                      <LinkedInIcon className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="#"
+                      aria-label="Instagram"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                    >
+                      <InstagramIcon className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="#"
+                      aria-label="YouTube"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                    >
+                      <YouTubeIcon className="h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
