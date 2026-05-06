@@ -48,7 +48,7 @@ export function Founder() {
                   width={520}
                   height={780}
                   priority
-                  className="h-[68%] w-auto object-contain object-bottom select-none mix-blend-lighten translate-x-16"
+                  className="h-[58%] w-auto object-contain object-bottom select-none mix-blend-lighten translate-x-16"
                 />
               </div>
 
