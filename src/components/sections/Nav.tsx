@@ -72,7 +72,7 @@ const navItems = [
   { label: "Services", href: "/services", hasDropdown: true },
   { label: "Elite Program", href: "/elite" },
   { label: "How It Works", href: "/how-it-works" },
-  { label: "About", href: "/#founder" },
+  { label: "About", href: "/about" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
 ];
@@ -89,6 +89,7 @@ export function Nav() {
   const isActive = (href: string) => {
     if (href === "/services") return pathname.startsWith("/services");
     if (href === "/how-it-works") return pathname.startsWith("/how-it-works");
+    if (href === "/about") return pathname.startsWith("/about");
     return pathname === href;
   };
 
