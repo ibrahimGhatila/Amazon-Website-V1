@@ -74,7 +74,7 @@ const navItems = [
   { label: "How It Works", href: "/how-it-works" },
   { label: "About", href: "/#founder" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Apply", href: "/apply" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Nav() {
@@ -143,23 +143,6 @@ export function Nav() {
 
             <nav className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => {
-                if (item.href === "/apply") {
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={cn(
-                        "ml-1 px-4 py-2 text-sm font-bold rounded-full transition-all duration-200",
-                        isActive(item.href)
-                          ? "bg-brand-yellow text-brand-navy"
-                          : "bg-brand-yellow/15 text-brand-yellow hover:bg-brand-yellow hover:text-brand-navy border border-brand-yellow/30"
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                }
-
                 if (item.hasDropdown) {
                   const active = isActive(item.href);
                   return (
@@ -219,13 +202,13 @@ export function Nav() {
 
             <div className="flex items-center gap-3">
               <Button
-                href="#contact"
+                href="/apply"
                 size="sm"
                 variant="primary"
                 arrow
                 className="hidden sm:inline-flex"
               >
-                Book a Call
+                Apply
               </Button>
               <button
                 aria-label="Toggle menu"
@@ -427,14 +410,14 @@ export function Nav() {
                 className="mt-8"
               >
                 <Button
-                  href="#contact"
+                  href="/apply"
                   size="lg"
                   variant="primary"
                   arrow
                   className="w-full"
                   onClick={() => setMobileOpen(false)}
                 >
-                  Book a Call
+                  Apply
                 </Button>
               </motion.div>
             </motion.nav>
