@@ -122,10 +122,6 @@ export function ChatWidget() {
                     </div>
                     <div>
                       <div className="font-bold text-white text-sm leading-tight">Extreme Commerce</div>
-                      <div className="text-emerald-400 text-[11px] font-medium flex items-center gap-1.5 mt-0.5">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        Online · Replies within 24h
-                      </div>
                     </div>
                   </div>
                 </div>
