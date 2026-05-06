@@ -112,19 +112,23 @@ export function ChatWidget() {
             <div className="rounded-3xl bg-gradient-to-b from-brand-navy via-[#011a45] to-brand-navy-800 backdrop-blur-xl border border-white/10 shadow-2xl shadow-brand-navy/40 overflow-hidden">
 
               {/* Header */}
-              <div className="relative px-6 pt-6 pb-5">
-                <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_85%_0%,rgba(244,205,29,0.14),transparent)]" />
-                <div className="relative">
-                  <div className="flex items-center gap-2.5">
-                    <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-brand-navy font-bold text-sm">
-                      EX
-                      <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-400 border-2 border-brand-navy" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-white text-sm leading-tight">Extreme Commerce</div>
-                    </div>
+              <div className="relative flex items-center justify-between px-5 pt-5 pb-4 border-b border-white/[0.06]">
+                <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_120%_at_90%_-20%,rgba(244,205,29,0.12),transparent)] pointer-events-none" />
+                <div className="relative flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-brand-navy font-bold text-[13px] shadow-lg shadow-brand-yellow/20">
+                    EX
+                  </div>
+                  <div className="font-bold text-white text-[15px] leading-none tracking-tight">
+                    Extreme Commerce
                   </div>
                 </div>
+                <button
+                  onClick={() => setOpen(false)}
+                  aria-label="Close chat"
+                  className="relative flex h-8 w-8 items-center justify-center rounded-full text-white/50 hover:text-white hover:bg-white/[0.06] transition"
+                >
+                  <X className="h-4 w-4" strokeWidth={2.25} />
+                </button>
               </div>
 
               {/* Body */}
@@ -136,10 +140,10 @@ export function ChatWidget() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="p-5"
+                    className="px-5 pt-5 pb-5"
                   >
-                    <p className="text-white/70 text-sm leading-relaxed mb-4">
-                      Hey there 👋 How would you like to reach us?
+                    <p className="text-white/70 text-[15px] leading-snug mb-5">
+                      Hi <span className="inline-block">👋</span> How can we help today?
                     </p>
 
                     {/* WhatsApp */}
@@ -147,47 +151,52 @@ export function ChatWidget() {
                       href={waHref}
                       target="_blank"
                       rel="noreferrer"
-                      className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-emerald-400/40 p-3.5 transition-all duration-200 mb-2"
+                      className="group flex items-center gap-3.5 rounded-2xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.06] hover:border-emerald-400/30 p-4 transition-all duration-200 mb-2"
                     >
-                      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-200">
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-200">
                         <WhatsAppIcon className="h-5 w-5" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="font-bold text-white text-sm leading-tight">Chat on WhatsApp</div>
-                        <div className="text-white/55 text-xs mt-0.5">Fastest reply — usually under an hour</div>
+                        <div className="font-bold text-white text-[15px] leading-tight">Chat on WhatsApp</div>
+                        <div className="text-white/55 text-[12px] mt-1 leading-tight">Fastest reply — usually under an hour</div>
                       </div>
-                      <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+                      <ArrowRight className="h-4 w-4 flex-none text-white/25 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
                     </a>
 
                     {/* Email/Form */}
                     <button
                       onClick={() => setView("form")}
-                      className="group w-full flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-brand-yellow/40 p-3.5 transition-all duration-200 text-left"
+                      className="group w-full flex items-center gap-3.5 rounded-2xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.06] hover:border-brand-yellow/30 p-4 transition-all duration-200 text-left"
                     >
-                      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-brand-yellow/15 text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-navy transition-colors duration-200">
-                        <Send className="h-4 w-4" />
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-brand-yellow/15 text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-navy transition-colors duration-200">
+                        <Send className="h-[18px] w-[18px]" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="font-bold text-white text-sm leading-tight">Send us a message</div>
-                        <div className="text-white/55 text-xs mt-0.5">We'll reply by email within 24h</div>
+                        <div className="font-bold text-white text-[15px] leading-tight">Send us a message</div>
+                        <div className="text-white/55 text-[12px] mt-1 leading-tight">We&rsquo;ll reply by email within 24h</div>
                       </div>
-                      <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+                      <ArrowRight className="h-4 w-4 flex-none text-white/25 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
                     </button>
 
-                    {/* Footer link */}
-                    <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
-                      <div className="flex items-center gap-1.5 text-white/40 text-[11px]">
-                        <Clock className="h-3 w-3" />
-                        Mon–Fri, 9am–6pm GMT
+                    {/* Apply CTA */}
+                    <Link
+                      href="/apply"
+                      onClick={() => setOpen(false)}
+                      className="group mt-4 flex items-center justify-between rounded-2xl bg-gradient-to-r from-brand-yellow to-amber-300 px-4 py-3 transition-all hover:shadow-lg hover:shadow-brand-yellow/20"
+                    >
+                      <div>
+                        <div className="font-bold text-brand-navy text-[14px] leading-tight">Apply for Elite</div>
+                        <div className="text-brand-navy/65 text-[11px] mt-0.5 leading-tight">Done-for-you Amazon brand</div>
                       </div>
-                      <Link
-                        href="/apply"
-                        onClick={() => setOpen(false)}
-                        className="text-brand-yellow text-xs font-semibold hover:text-white transition-colors flex items-center gap-1"
-                      >
-                        Apply for Elite
-                        <ArrowRight className="h-3 w-3" />
-                      </Link>
+                      <div className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-navy text-brand-yellow group-hover:translate-x-0.5 transition-transform">
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </div>
+                    </Link>
+
+                    {/* Hours footer */}
+                    <div className="mt-4 flex items-center justify-center gap-1.5 text-white/35 text-[11px] font-medium">
+                      <Clock className="h-3 w-3" />
+                      Mon–Fri · 9am–6pm GMT
                     </div>
                   </motion.div>
                 ) : (
@@ -197,11 +206,11 @@ export function ChatWidget() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="p-5"
+                    className="px-5 pt-5 pb-5"
                   >
                     <button
                       onClick={() => setView("menu")}
-                      className="text-white/50 hover:text-white text-xs font-medium mb-3 inline-flex items-center gap-1 transition-colors"
+                      className="text-white/50 hover:text-white text-xs font-semibold mb-4 inline-flex items-center gap-1.5 transition-colors"
                     >
                       <ArrowRight className="h-3 w-3 rotate-180" />
                       Back
@@ -213,7 +222,7 @@ export function ChatWidget() {
                         placeholder="Your name"
                         value={form.name}
                         onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                        className="w-full rounded-xl bg-white/5 border border-white/10 px-3.5 py-2.5 text-sm text-white placeholder-white/35 focus:outline-none focus:border-brand-yellow/50 transition"
+                        className="w-full rounded-xl bg-white/[0.04] border border-white/[0.08] px-4 py-3 text-[14px] text-white placeholder-white/35 focus:outline-none focus:border-brand-yellow/50 focus:bg-white/[0.06] transition"
                       />
                       <input
                         type="email"
@@ -221,7 +230,7 @@ export function ChatWidget() {
                         placeholder="Email address"
                         value={form.email}
                         onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                        className="w-full rounded-xl bg-white/5 border border-white/10 px-3.5 py-2.5 text-sm text-white placeholder-white/35 focus:outline-none focus:border-brand-yellow/50 transition"
+                        className="w-full rounded-xl bg-white/[0.04] border border-white/[0.08] px-4 py-3 text-[14px] text-white placeholder-white/35 focus:outline-none focus:border-brand-yellow/50 focus:bg-white/[0.06] transition"
                       />
                       <textarea
                         required
@@ -229,17 +238,17 @@ export function ChatWidget() {
                         placeholder="How can we help?"
                         value={form.message}
                         onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-                        className="w-full rounded-xl bg-white/5 border border-white/10 px-3.5 py-2.5 text-sm text-white placeholder-white/35 focus:outline-none focus:border-brand-yellow/50 transition resize-none"
+                        className="w-full rounded-xl bg-white/[0.04] border border-white/[0.08] px-4 py-3 text-[14px] text-white placeholder-white/35 focus:outline-none focus:border-brand-yellow/50 focus:bg-white/[0.06] transition resize-none"
                       />
                       <button
                         type="submit"
-                        className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-yellow text-brand-navy font-bold text-sm py-3 hover:bg-amber-400 transition-colors"
+                        className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-yellow to-amber-300 text-brand-navy font-bold text-[14px] py-3.5 hover:shadow-lg hover:shadow-brand-yellow/20 transition-all"
                       >
                         Send message
                         <Send className="h-3.5 w-3.5" />
                       </button>
-                      <p className="text-white/40 text-[10px] text-center pt-1">
-                        Opens your email client to send to {CONTACT_EMAIL}
+                      <p className="text-white/35 text-[11px] text-center pt-1.5 leading-tight">
+                        Opens your email client to {CONTACT_EMAIL}
                       </p>
                     </form>
                   </motion.div>
