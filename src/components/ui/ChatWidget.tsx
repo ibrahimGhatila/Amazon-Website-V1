@@ -107,13 +107,13 @@ export function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3, ease: EASE }}
-            className="fixed bottom-24 right-5 sm:right-6 z-[60] w-[calc(100vw-2.5rem)] sm:w-[360px] origin-bottom-right"
+            className="fixed bottom-24 right-5 sm:right-6 z-[60] w-[calc(100vw-2.5rem)] sm:w-[440px] origin-bottom-right"
           >
-            <div className="rounded-3xl bg-brand-navy/95 backdrop-blur-xl border border-white/10 shadow-2xl shadow-brand-navy/40 overflow-hidden">
+            <div className="rounded-3xl bg-gradient-to-b from-brand-navy via-[#011a45] to-brand-navy-800 backdrop-blur-xl border border-white/10 shadow-2xl shadow-brand-navy/40 overflow-hidden">
 
               {/* Header */}
-              <div className="relative px-5 pt-5 pb-4 bg-gradient-to-br from-brand-navy to-brand-navy-800">
-                <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_80%_0%,rgba(244,205,29,0.12),transparent)]" />
+              <div className="relative px-6 pt-6 pb-5">
+                <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_85%_0%,rgba(244,205,29,0.14),transparent)]" />
                 <div className="relative">
                   <div className="flex items-center gap-2.5">
                     <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-brand-navy font-bold text-sm">
@@ -140,7 +140,7 @@ export function ChatWidget() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="p-4"
+                    className="p-5"
                   >
                     <p className="text-white/70 text-sm leading-relaxed mb-4">
                       Hey there 👋 How would you like to reach us?
@@ -201,7 +201,7 @@ export function ChatWidget() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="p-4"
+                    className="p-5"
                   >
                     <button
                       onClick={() => setView("menu")}
