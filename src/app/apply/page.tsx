@@ -30,7 +30,7 @@ function ApplyHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate min-h-[85vh] flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
+      className="relative isolate min-h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
     >
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_-10%,rgba(244,205,29,0.18),transparent)]" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_40%_50%_at_85%_80%,rgba(54,128,195,0.15),transparent)]" />
