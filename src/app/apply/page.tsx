@@ -53,7 +53,7 @@ function ApplyHero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
-              <span className="font-display text-xs tracking-[0.22em] text-brand-yellow">NOW ACCEPTING APPLICATIONS</span>
+              <span className="font-display text-sm tracking-[0.22em] text-brand-yellow">NOW ACCEPTING APPLICATIONS</span>
             </motion.div>
 
             <div className="overflow-hidden mb-2">
@@ -222,7 +222,7 @@ function ApplicationForm() {
           <div className="lg:sticky lg:top-32">
             <motion.span initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-display text-xs tracking-[0.2em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10">
+              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-display text-sm tracking-[0.2em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
               YOUR APPLICATION
             </motion.span>
@@ -428,7 +428,7 @@ function WhatHappensNext() {
         <div className="text-center mb-10">
           <motion.span initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-xs tracking-[0.2em] text-brand-yellow mb-4">
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-sm tracking-[0.2em] text-brand-yellow mb-4">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             AFTER YOU APPLY
           </motion.span>
@@ -449,7 +449,7 @@ function WhatHappensNext() {
                   <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-brand-yellow text-brand-navy">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </div>
-                  <span className="font-display text-xs tracking-[0.2em] text-brand-yellow">{s.n}</span>
+                  <span className="font-display text-sm tracking-[0.2em] text-brand-yellow">{s.n}</span>
                 </div>
                 <h3 className="font-bold text-white text-base leading-tight mb-2">{s.title}</h3>
                 <p className="text-sm text-white/55 leading-relaxed">{s.desc}</p>

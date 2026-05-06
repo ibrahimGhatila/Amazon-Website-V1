@@ -89,7 +89,7 @@ function LaunchHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-xs tracking-[0.2em] text-brand-yellow mb-6"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-sm tracking-[0.2em] text-brand-yellow mb-6"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
               LAUNCH &amp; ANALYTICS
@@ -325,7 +325,7 @@ function WhatIsIncluded() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-display text-xs tracking-[0.2em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-display text-sm tracking-[0.2em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             THE SYSTEM
@@ -436,7 +436,7 @@ function WeeklyReport() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-xs tracking-[0.2em] text-brand-yellow mb-4"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-sm tracking-[0.2em] text-brand-yellow mb-4"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             WEEKLY REPORT
@@ -554,7 +554,7 @@ function LaunchCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-xs tracking-[0.2em] text-brand-yellow mb-5"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-sm tracking-[0.2em] text-brand-yellow mb-5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             GET STARTED

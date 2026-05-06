@@ -58,7 +58,7 @@ export function Founder() {
               {/* Content overlay */}
               <div className="relative h-full p-6 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
-                  <span className="font-display text-xs tracking-[0.25em] text-brand-yellow">
+                  <span className="font-display text-sm tracking-[0.25em] text-brand-yellow">
                     FOUNDER · CEO
                   </span>
                   <span className="relative flex h-3 w-3">
@@ -127,7 +127,7 @@ export function Founder() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-xs tracking-[0.2em] text-brand-navy"
+              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-sm tracking-[0.2em] text-brand-navy"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
               THE FOUNDER

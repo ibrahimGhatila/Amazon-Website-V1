@@ -90,7 +90,7 @@ export function EliteHandled() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="inline-flex items-center gap-2 rounded-full bg-brand-azure/15 border border-brand-azure/30 px-4 py-1.5 font-display text-xs tracking-[0.2em] text-brand-azure"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-azure/15 border border-brand-azure/30 px-4 py-1.5 font-display text-sm tracking-[0.2em] text-brand-azure"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
               WHAT WE RUN FOR YOU
@@ -162,7 +162,7 @@ export function EliteHandled() {
                         <Icon className="h-5 w-5" strokeWidth={2} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="font-display text-xs tracking-[0.2em] text-brand-azure">{phase.phase}</div>
+                        <div className="font-display text-sm tracking-[0.2em] text-brand-azure">{phase.phase}</div>
                         <div className="font-bold text-lg text-white mt-0.5 leading-tight">{phase.title}</div>
                         <div className="text-sm text-white/50 mt-0.5">{phase.summary}</div>
                       </div>

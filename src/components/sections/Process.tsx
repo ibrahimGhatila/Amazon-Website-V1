@@ -115,7 +115,7 @@ export function Process() {
                         {step.num}
                       </span>
                     </div>
-                    <span className="mt-3 inline-block font-display text-xs tracking-[0.25em] text-brand-azure">
+                    <span className="mt-3 inline-block font-display text-sm tracking-[0.25em] text-brand-azure">
                       {step.timeframe}
                     </span>
                   </div>

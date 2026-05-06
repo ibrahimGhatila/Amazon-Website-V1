@@ -25,7 +25,7 @@ export function AboutStats() {
           transition={{ duration: 0.6, ease: EASE }}
           className="text-center mb-12"
         >
-          <span className="font-display text-xs tracking-[0.22em] text-brand-navy/45 uppercase">
+          <span className="font-display text-sm tracking-[0.22em] text-brand-navy/45 uppercase">
             By the numbers
           </span>
           <h2 className="mt-2 font-black text-brand-navy text-3xl sm:text-4xl tracking-tight">

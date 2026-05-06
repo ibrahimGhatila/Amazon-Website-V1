@@ -67,7 +67,7 @@ export function AboutTeam() {
           transition={{ duration: 0.6, ease: EASE }}
           className="text-center mb-14 sm:mb-16"
         >
-          <span className="font-display text-xs tracking-[0.22em] text-brand-navy/45 uppercase">
+          <span className="font-display text-sm tracking-[0.22em] text-brand-navy/45 uppercase">
             Meet the team
           </span>
           <h2 className="mt-2 font-black text-brand-navy text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.05] max-w-3xl mx-auto text-balance">
@@ -87,7 +87,7 @@ export function AboutTeam() {
             <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_85%_15%,rgba(244,205,29,0.16),transparent)] pointer-events-none" />
 
             <div className="relative">
-              <span className="font-display text-xs tracking-[0.25em] text-brand-yellow">
+              <span className="font-display text-sm tracking-[0.25em] text-brand-yellow">
                 FOUNDER · CEO
               </span>
               <div className="mt-3 font-display text-5xl sm:text-6xl text-white leading-none tracking-tight">

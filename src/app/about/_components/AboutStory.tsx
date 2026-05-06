@@ -48,7 +48,7 @@ export function AboutStory() {
           transition={{ duration: 0.6, ease: EASE }}
           className="mb-14"
         >
-          <span className="font-display text-xs tracking-[0.22em] text-brand-navy/45 uppercase">
+          <span className="font-display text-sm tracking-[0.22em] text-brand-navy/45 uppercase">
             Our story
           </span>
           <h2 className="mt-2 font-black text-brand-navy text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.05] text-balance max-w-2xl">

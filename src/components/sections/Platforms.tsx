@@ -28,7 +28,7 @@ export function Platforms() {
           className="flex items-center gap-4 mb-10"
         >
           <span className="h-[1px] w-10 bg-brand-yellow" />
-          <span className="font-display text-xs tracking-[0.25em] text-brand-yellow">
+          <span className="font-display text-sm tracking-[0.25em] text-brand-yellow">
             PLATFORMS WE OPERATE ON
           </span>
         </motion.div>

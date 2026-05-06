@@ -36,7 +36,7 @@ export function EliteQualifier() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-xs tracking-[0.2em] text-brand-navy"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-sm tracking-[0.2em] text-brand-navy"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             IS THIS FOR YOU?
@@ -78,7 +78,7 @@ export function EliteQualifier() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-4 py-1.5 mb-8">
                 <Check className="h-3.5 w-3.5 text-brand-yellow" strokeWidth={3} />
-                <span className="font-display text-xs tracking-[0.2em] text-brand-yellow">BUILT FOR YOU IF...</span>
+                <span className="font-display text-sm tracking-[0.2em] text-brand-yellow">BUILT FOR YOU IF...</span>
               </div>
               <ul className="space-y-4">
                 {forYou.map((item, i) => (
@@ -112,7 +112,7 @@ export function EliteQualifier() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-4 py-1.5 mb-8">
                 <X className="h-3.5 w-3.5 text-brand-navy/50" strokeWidth={3} />
-                <span className="font-display text-xs tracking-[0.2em] text-brand-navy/60">NOT THE RIGHT FIT IF...</span>
+                <span className="font-display text-sm tracking-[0.2em] text-brand-navy/60">NOT THE RIGHT FIT IF...</span>
               </div>
               <ul className="space-y-4">
                 {notForYou.map((item, i) => (

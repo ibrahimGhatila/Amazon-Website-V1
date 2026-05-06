@@ -73,7 +73,7 @@ export function EliteLaunches() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-azure/15 border border-brand-azure/30 px-4 py-1.5 font-display text-xs tracking-[0.2em] text-brand-azure"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-azure/15 border border-brand-azure/30 px-4 py-1.5 font-display text-sm tracking-[0.2em] text-brand-azure"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             FROM THE LAUNCH ARCHIVE

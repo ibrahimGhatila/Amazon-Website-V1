@@ -34,7 +34,7 @@ export function AboutBeliefs() {
           transition={{ duration: 0.6, ease: EASE }}
           className="text-center mb-12 sm:mb-14"
         >
-          <span className="font-display text-xs tracking-[0.22em] text-brand-navy/45 uppercase">
+          <span className="font-display text-sm tracking-[0.22em] text-brand-navy/45 uppercase">
             What we believe
           </span>
           <h2 className="mt-2 font-black text-brand-navy text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.05] max-w-3xl mx-auto text-balance">
@@ -63,7 +63,7 @@ export function AboutBeliefs() {
                 <p className="mt-3 text-brand-navy/65 text-sm sm:text-base leading-relaxed text-pretty">
                   {b.body}
                 </p>
-                <div className="absolute top-7 right-7 font-display text-xs tracking-[0.2em] text-brand-navy/25">
+                <div className="absolute top-7 right-7 font-display text-sm tracking-[0.2em] text-brand-navy/25">
                   0{i + 1}
                 </div>
               </motion.div>

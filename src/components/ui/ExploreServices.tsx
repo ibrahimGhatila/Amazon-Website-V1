@@ -42,7 +42,7 @@ export function ExploreServices({ current }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: EASE }}
-              className="font-display text-xs tracking-[0.22em] text-brand-navy/45 uppercase"
+              className="font-display text-sm tracking-[0.22em] text-brand-navy/45 uppercase"
             >
               More from Extreme Commerce
             </motion.p>

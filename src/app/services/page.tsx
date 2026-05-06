@@ -179,7 +179,7 @@ function ServicesHero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
-              <span className="font-display text-xs tracking-[0.22em] text-white/90">
+              <span className="font-display text-sm tracking-[0.22em] text-white/90">
                 OUR SERVICES
               </span>
             </motion.div>
@@ -368,7 +368,7 @@ function ServicesGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-xs tracking-[0.2em] text-brand-navy mb-5"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-sm tracking-[0.2em] text-brand-navy mb-5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             WHAT WE DO
@@ -521,7 +521,7 @@ function ServicesCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-xs tracking-[0.2em] text-brand-yellow mb-6"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-sm tracking-[0.2em] text-brand-yellow mb-6"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             GET MATCHED TO THE RIGHT SERVICE
