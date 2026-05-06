@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { Mail } from "lucide-react";
 import { Counter } from "@/components/ui/Counter";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
@@ -21,44 +22,58 @@ type Member = {
   role: string;
   bio: string;
   photo: string | null;
+  linkedin: string;
+  email: string;
 };
 
 const team: Member[] = [
   {
     name: "Ayesha Khan",
     role: "Chief Operating Officer",
-    bio: "Runs day-to-day across Elite, PPC, and Creative.",
+    bio: "A decade in e-commerce ops. Runs day-to-day across Elite, PPC, and Creative — and turns chaos into weekly reports.",
     photo: "/brand/team/ayesha-khan.png",
+    linkedin: "#",
+    email: "ayesha@extremecommerce.com",
   },
   {
     name: "Hamza Ahmed",
     role: "Head of Elite Program",
-    bio: "Leads launches end-to-end, from sourcing to scale.",
+    bio: "Leads launches end-to-end, from sourcing to scale. 200+ private-label launches across US, UK, and EU marketplaces.",
     photo: "/brand/team/hamza-ahmed.png",
+    linkedin: "#",
+    email: "hamza@extremecommerce.com",
   },
   {
     name: "Bilal Hussain",
     role: "Head of PPC & Advertising",
-    bio: "Manages 8-figure ad spend across DSP and Sponsored.",
+    bio: "Manages 8-figure ad spend across DSP and Sponsored. Built the PPC playbook that runs every Elite launch.",
     photo: "/brand/team/bilal-hussain.png",
+    linkedin: "#",
+    email: "bilal@extremecommerce.com",
   },
   {
     name: "Sara Malik",
     role: "Head of Creative & Brand",
-    bio: "Storefronts, A+, photography that converts.",
+    bio: "Storefronts, A+, photography, video — that converts. Leads a 30-person studio building creative for every brand we launch.",
     photo: "/brand/team/sara-malik.png",
+    linkedin: "#",
+    email: "sara@extremecommerce.com",
   },
   {
     name: "Zain Raza",
     role: "Head of Virtual Assistants",
-    bio: "Builds and trains the operator bench.",
+    bio: "Builds and trains the operator bench. 500+ trained Amazon VAs placed with sellers across 12 countries.",
     photo: "/brand/team/zain-raza.png",
+    linkedin: "#",
+    email: "zain@extremecommerce.com",
   },
   {
     name: "Faisal Iqbal",
     role: "Head of Mentorship",
-    bio: "1:1 programs and operator community.",
+    bio: "Runs 1:1 programs and the operator community. The voice on the other end when an Elite member needs a sanity check.",
     photo: "/brand/team/faisal-iqbal.png",
+    linkedin: "#",
+    email: "faisal@extremecommerce.com",
   },
 ];
 
@@ -236,7 +251,17 @@ export function AboutTeam() {
             </span>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-8 -mt-4 text-brand-navy/45 text-xs font-display tracking-[0.2em] uppercase"
+          >
+            Hover cards to learn more
+          </motion.p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {team.map((member, i) => (
               <motion.div
                 key={member.name}
@@ -244,52 +269,100 @@ export function AboutTeam() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.6, ease: EASE, delay: i * 0.06 }}
-                className="group"
+                className="group [perspective:1200px]"
               >
-                <div className="relative aspect-[3/4] rounded-[1.5rem] bg-gradient-to-br from-brand-navy via-brand-navy-600 to-brand-navy-700 overflow-hidden">
-                  {/* Initials watermark behind */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <span className="font-display text-[10rem] sm:text-[14rem] leading-none text-brand-yellow/[0.07] tracking-tighter">
-                      {getInitials(member.name)}
-                    </span>
+                <div className="relative aspect-[3/4] transition-transform duration-[900ms] ease-[cubic-bezier(0.4,0,0.2,1)] [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+                  {/* ── FRONT ── portrait card */}
+                  <div className="absolute inset-0 rounded-[1.5rem] [backface-visibility:hidden] overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy-600 to-brand-navy-700">
+                    {/* Initials watermark */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <span className="font-display text-[10rem] sm:text-[14rem] leading-none text-brand-yellow/[0.07] tracking-tighter">
+                        {getInitials(member.name)}
+                      </span>
+                    </div>
+
+                    {/* Photo */}
+                    {member.photo && (
+                      <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
+                        <Image
+                          src={member.photo}
+                          alt={`${member.name}, ${member.role}`}
+                          width={400}
+                          height={600}
+                          className="h-full w-auto object-contain object-bottom select-none mix-blend-lighten"
+                        />
+                      </div>
+                    )}
+
+                    {/* Bottom gradient */}
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent pointer-events-none" />
+
+                    {/* Overlay content */}
+                    <div className="relative h-full p-5 flex flex-col justify-between">
+                      <span className="font-display text-[11px] tracking-[0.22em] text-brand-yellow uppercase">
+                        {member.role}
+                      </span>
+                      <div>
+                        <div className="font-display text-3xl text-white leading-none tracking-tight drop-shadow-[0_2px_8px_rgba(2,39,102,0.7)]">
+                          {member.name.split(" ")[0]}
+                        </div>
+                        <div className="font-display text-3xl text-brand-yellow leading-none tracking-tight mt-0.5 drop-shadow-[0_2px_8px_rgba(2,39,102,0.7)]">
+                          {member.name.split(" ").slice(1).join(" ")}
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Photo (renders if file exists; alt shows the role otherwise) */}
-                  {member.photo && (
-                    <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
-                      <Image
-                        src={member.photo}
-                        alt={`${member.name}, ${member.role}`}
-                        width={400}
-                        height={600}
-                        className="h-full w-auto object-contain object-bottom select-none mix-blend-lighten"
-                      />
-                    </div>
-                  )}
-
-                  {/* Bottom gradient for legibility */}
-                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent pointer-events-none" />
-
-                  {/* Overlay content */}
-                  <div className="relative h-full p-5 flex flex-col justify-between">
-                    <span className="font-display text-[11px] tracking-[0.22em] text-brand-yellow uppercase">
-                      {member.role}
+                  {/* ── BACK ── bio + contact */}
+                  <div className="absolute inset-0 rounded-[1.5rem] [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden bg-brand-navy">
+                    {/* Decorative quote mark */}
+                    <span
+                      aria-hidden
+                      className="absolute -top-6 right-5 font-display text-[9rem] leading-none text-brand-yellow/[0.07] pointer-events-none select-none"
+                    >
+                      &ldquo;
                     </span>
-                    <div>
-                      <div className="font-display text-3xl text-white leading-none tracking-tight drop-shadow-[0_2px_8px_rgba(2,39,102,0.7)]">
-                        {member.name.split(" ")[0]}
+
+                    <div className="relative h-full flex flex-col justify-between p-7">
+                      {/* Top: name + role */}
+                      <div>
+                        <div className="font-display text-[11px] tracking-[0.22em] text-brand-yellow uppercase mb-2">
+                          {member.role}
+                        </div>
+                        <div className="font-bold text-white text-xl leading-tight">
+                          {member.name}
+                        </div>
                       </div>
-                      <div className="font-display text-3xl text-brand-yellow leading-none tracking-tight mt-0.5 drop-shadow-[0_2px_8px_rgba(2,39,102,0.7)]">
-                        {member.name.split(" ").slice(1).join(" ")}
+
+                      {/* Middle: bio */}
+                      <p className="text-white/75 text-sm leading-relaxed text-pretty">
+                        {member.bio}
+                      </p>
+
+                      {/* Bottom: divider + contact icons */}
+                      <div>
+                        <div className="h-px w-full bg-white/10 mb-4" />
+                        <div className="flex items-center gap-2.5">
+                          <Link
+                            href={member.linkedin}
+                            aria-label={`${member.name} on LinkedIn`}
+                            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                          >
+                            <LinkedInIcon className="h-4 w-4" />
+                          </Link>
+                          <Link
+                            href={`mailto:${member.email}`}
+                            aria-label={`Email ${member.name}`}
+                            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                          >
+                            <Mail className="h-4 w-4" strokeWidth={2.25} />
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                {/* Bio under card */}
-                <p className="mt-4 text-brand-navy/60 text-sm leading-relaxed">
-                  {member.bio}
-                </p>
               </motion.div>
             ))}
           </div>
