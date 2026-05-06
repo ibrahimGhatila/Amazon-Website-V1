@@ -1,96 +1,163 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+import { Flag, Rocket, Users, Landmark, Crown, Globe2 } from "lucide-react";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const milestones = [
   {
-    year: "2015",
+    num: "2015",
     title: "Founded",
-    body: "Sunny Ali launches Extreme Commerce as an operator-first answer to the Amazon gold rush — built on real launches, not theory.",
+    description:
+      "Sunny Ali launches Extreme Commerce as an operator-first answer to the Amazon gold rush — built on real launches, not theory.",
+    icon: Flag,
+    timeframe: "The beginning",
   },
   {
-    year: "2017",
+    num: "2017",
     title: "First 100 launches",
-    body: "Cross 100 successful private-label launches. The playbook that becomes Elite is being written in real time.",
+    description:
+      "Cross 100 successful private-label launches. The playbook that becomes Elite is being written in real time.",
+    icon: Rocket,
+    timeframe: "Early traction",
   },
   {
-    year: "2019",
+    num: "2019",
     title: "100K community",
-    body: "Free training and operator content scale to a 100K-strong community of sellers across Pakistan, the UK, and the Gulf.",
+    description:
+      "Free training and operator content scale to a 100K-strong community of sellers across Pakistan, the UK, and the Gulf.",
+    icon: Users,
+    timeframe: "Ecosystem growth",
   },
   {
-    year: "2021",
+    num: "2021",
     title: "Government partnerships",
-    body: "Selected by NAVTTC, PVTC, and the Kamyab Jawan programme to train the next wave of national e-commerce talent.",
+    description:
+      "Selected by NAVTTC, PVTC, and the Kamyab Jawan programme to train the next wave of national e-commerce talent.",
+    icon: Landmark,
+    timeframe: "National scale",
   },
   {
-    year: "2023",
+    num: "2023",
     title: "Elite Program",
-    body: "Done-for-you Amazon brand-building productized into Elite — three launches, profit share, full ownership.",
+    description:
+      "Done-for-you Amazon brand-building productized into Elite — three launches, profit share, full ownership.",
+    icon: Crown,
+    timeframe: "Product evolution",
   },
   {
-    year: "2026",
+    num: "2026",
     title: "1M+ ecosystem",
-    body: "1M+ community members, 1,200+ launches, 50+ institutional partners — the largest e-commerce ecosystem out of South Asia.",
+    description:
+      "1M+ community members, 1,200+ launches, 50+ institutional partners — the largest e-commerce ecosystem out of South Asia.",
+    icon: Globe2,
+    timeframe: "Today",
   },
 ];
 
 export function AboutStory() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const lineHeight = useTransform(scrollYProgress, [0.15, 0.85], ["0%", "100%"]);
+
   return (
-    <section className="relative bg-white py-20 sm:py-24 overflow-hidden">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="mb-14"
-        >
-          <span className="font-display text-sm tracking-[0.22em] text-brand-navy/45 uppercase">
-            Our story
-          </span>
-          <h2 className="mt-2 font-black text-brand-navy text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.05] text-balance max-w-2xl">
-            From a single launch to a thousand brands.
-          </h2>
-        </motion.div>
+    <section
+      id="story"
+      className="relative bg-brand-navy text-white py-24 sm:py-32 overflow-hidden texture-grain"
+    >
+      {/* Ambient light */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(54,128,195,0.15)_0%,_transparent_50%)]"
+      />
+      <div aria-hidden className="absolute inset-0 bg-grid opacity-50" />
 
-        <div className="relative">
-          {/* Spine */}
-          <div aria-hidden className="absolute left-[15px] sm:left-[19px] top-2 bottom-2 w-px bg-gradient-to-b from-brand-yellow/60 via-brand-navy/15 to-transparent" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+        <SectionHeading
+          eyebrow="OUR STORY"
+          variant="dark"
+          title={
+            <>
+              From a single launch
+              <br />
+              to a <span className="text-brand-yellow">thousand brands.</span>
+            </>
+          }
+          subtitle="A decade-long arc of operator-led growth. Every year added another lane — community, capital, partnerships, products."
+        />
 
-          <div className="space-y-10">
-            {milestones.map((m, i) => (
-              <motion.div
-                key={m.year}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, ease: EASE, delay: i * 0.05 }}
-                className="relative grid grid-cols-[40px_1fr] sm:grid-cols-[60px_1fr] gap-5 sm:gap-8"
-              >
-                {/* Dot */}
-                <div className="relative pt-1.5">
-                  <div className="relative h-8 w-8 rounded-full bg-brand-yellow flex items-center justify-center shadow-md shadow-brand-yellow/40">
-                    <span className="h-2 w-2 rounded-full bg-brand-navy" />
+        <div ref={ref} className="relative mt-20 max-w-5xl mx-auto">
+          {/* Vertical progress line */}
+          <div className="absolute left-8 sm:left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px] hidden sm:block">
+            <div className="absolute inset-0 bg-white/10 rounded-full" />
+            <motion.div
+              style={{ height: lineHeight }}
+              className="absolute top-0 left-0 right-0 bg-gradient-to-b from-brand-yellow via-brand-yellow to-brand-azure rounded-full"
+            />
+          </div>
+
+          <div className="space-y-16 sm:space-y-24">
+            {milestones.map((m, i) => {
+              const Icon = m.icon;
+              const isEven = i % 2 === 0;
+              return (
+                <motion.div
+                  key={m.num}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, ease: EASE }}
+                  className={`relative grid sm:grid-cols-2 gap-6 sm:gap-12 items-center ${
+                    isEven ? "" : "sm:[&>*:first-child]:order-2"
+                  }`}
+                >
+                  {/* Number side */}
+                  <div
+                    className={`flex flex-col ${
+                      isEven ? "sm:items-end sm:text-right" : "sm:items-start"
+                    }`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="font-display text-7xl sm:text-8xl lg:text-9xl text-brand-yellow leading-none tracking-tight">
+                        {m.num}
+                      </span>
+                    </div>
+                    <span className="mt-3 inline-block font-display text-sm tracking-[0.25em] text-brand-azure">
+                      {m.timeframe}
+                    </span>
                   </div>
-                </div>
 
-                {/* Content */}
-                <div className="pb-2">
-                  <div className="font-display text-sm tracking-[0.2em] text-brand-yellow/80 mb-1">
-                    {m.year}
+                  {/* Center node */}
+                  <div className="absolute left-8 sm:left-1/2 top-8 -translate-x-1/2 z-10 hidden sm:block">
+                    <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-brand-navy border-2 border-brand-yellow shadow-[0_0_0_8px_rgba(2,39,102,1),0_0_40px_rgba(244,205,29,0.3)]">
+                      <Icon className="h-6 w-6 text-brand-yellow" strokeWidth={2} />
+                    </div>
                   </div>
-                  <h3 className="font-black text-brand-navy text-xl sm:text-2xl tracking-tight leading-tight">
-                    {m.title}
-                  </h3>
-                  <p className="mt-2 text-brand-navy/65 text-sm sm:text-base leading-relaxed text-pretty max-w-2xl">
-                    {m.body}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+
+                  {/* Content side */}
+                  <div className={`${isEven ? "" : "sm:pr-0"}`}>
+                    <div className="group relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-6 sm:p-8 hover:border-brand-yellow/40 hover:bg-white/[0.05] transition-all duration-500">
+                      <div className="sm:hidden mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-yellow/10 text-brand-yellow">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <h3 className="font-black text-2xl sm:text-3xl tracking-tight text-white">
+                        {m.title}
+                      </h3>
+                      <p className="mt-3 text-white/70 leading-relaxed text-pretty">
+                        {m.description}
+                      </p>
+                      <div className="absolute -right-1 -top-1 h-8 w-8 rounded-tr-3xl border-t-2 border-r-2 border-brand-yellow/0 group-hover:border-brand-yellow transition-all duration-500" />
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

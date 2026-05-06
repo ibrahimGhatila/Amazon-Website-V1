@@ -2,55 +2,125 @@
 
 import { motion } from "motion/react";
 import { Counter } from "@/components/ui/Counter";
+import {
+  Users,
+  TrendingUp,
+  Rocket,
+  Globe2,
+  Calendar,
+  Building2,
+} from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const stats = [
-  { value: 10, suffix: "+", label: "Years operating" },
-  { value: 1, suffix: "M+", label: "Community" },
-  { value: 1200, suffix: "+", label: "Launches" },
-  { value: 32, suffix: "", label: "Countries served" },
-  { value: 50, suffix: "+", label: "Partner orgs" },
-  { value: 420, prefix: "$", suffix: "M+", label: "Seller GMV" },
+  {
+    label: "Years operating",
+    value: 10,
+    prefix: "",
+    suffix: "+",
+    icon: Calendar,
+  },
+  {
+    label: "Community strong",
+    value: 1,
+    prefix: "",
+    suffix: "M+",
+    icon: Users,
+  },
+  {
+    label: "Product launches",
+    value: 1200,
+    prefix: "",
+    suffix: "+",
+    icon: Rocket,
+  },
+  {
+    label: "Countries served",
+    value: 32,
+    prefix: "",
+    suffix: "",
+    icon: Globe2,
+  },
+  {
+    label: "Partner organizations",
+    value: 50,
+    prefix: "",
+    suffix: "+",
+    icon: Building2,
+  },
+  {
+    label: "Seller GMV powered",
+    value: 420,
+    prefix: "$",
+    suffix: "M+",
+    icon: TrendingUp,
+  },
 ];
 
 export function AboutStats() {
   return (
-    <section className="relative bg-white py-16 sm:py-20 border-y border-brand-navy/5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section className="relative bg-brand-yellow py-16 sm:py-20 overflow-hidden texture-grain">
+      {/* Diagonal stripe pattern */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(-45deg, #022766 0 1px, transparent 1px 22px)",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: EASE }}
-          className="text-center mb-12"
+          className="flex items-center justify-between mb-10 flex-wrap gap-4"
         >
-          <span className="font-display text-sm tracking-[0.22em] text-brand-navy/45 uppercase">
-            By the numbers
-          </span>
-          <h2 className="mt-2 font-black text-brand-navy text-3xl sm:text-4xl tracking-tight">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy text-brand-yellow font-display text-sm tracking-widest">
+              01
+            </span>
+            <span className="font-display text-sm tracking-[0.25em] text-brand-navy">
+              BY THE NUMBERS
+            </span>
+          </div>
+          <h2 className="font-black text-brand-navy text-2xl sm:text-3xl lg:text-4xl tracking-tight max-w-xl text-right sm:text-left">
             A decade. Measured in outcomes.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-10 gap-x-6">
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55, ease: EASE, delay: i * 0.06 }}
-              className="text-center"
-            >
-              <div className="font-display text-4xl sm:text-5xl text-brand-navy leading-none tracking-tight">
-                <Counter to={s.value} prefix={s.prefix} suffix={s.suffix} />
-              </div>
-              <div className="mt-2 text-xs sm:text-[13px] text-brand-navy/55 tracking-wide font-medium">
-                {s.label}
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-brand-navy/10 rounded-3xl overflow-hidden border border-brand-navy/15">
+          {stats.map((stat, i) => {
+            const Icon = stat.icon;
+            return (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.7, ease: EASE, delay: i * 0.08 }}
+                className="relative bg-brand-yellow p-6 sm:p-10 group overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-brand-navy translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                <div className="relative flex flex-col h-full">
+                  <Icon className="h-7 w-7 text-brand-navy group-hover:text-brand-yellow transition-colors duration-500" />
+                  <div className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl text-brand-navy group-hover:text-brand-yellow transition-colors duration-500 leading-none tracking-tight">
+                    <Counter
+                      to={stat.value}
+                      prefix={stat.prefix}
+                      suffix={stat.suffix}
+                    />
+                  </div>
+                  <div className="mt-3 text-brand-navy/80 group-hover:text-white/70 transition-colors duration-500 text-sm sm:text-base font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

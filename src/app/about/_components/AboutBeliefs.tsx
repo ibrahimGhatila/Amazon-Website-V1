@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Compass, Coins, Target } from "lucide-react";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -25,24 +26,20 @@ const beliefs = [
 
 export function AboutBeliefs() {
   return (
-    <section className="relative bg-brand-navy/[0.02] py-20 sm:py-24 border-y border-brand-navy/5">
+    <section className="relative bg-white py-24 sm:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="text-center mb-12 sm:mb-14"
-        >
-          <span className="font-display text-sm tracking-[0.22em] text-brand-navy/45 uppercase">
-            What we believe
-          </span>
-          <h2 className="mt-2 font-black text-brand-navy text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.05] max-w-3xl mx-auto text-balance">
-            Three principles. No exceptions.
-          </h2>
-        </motion.div>
+        <SectionHeading
+          eyebrow="WHAT WE BELIEVE"
+          title={
+            <>
+              Three principles.{" "}
+              <span className="text-brand-azure">No exceptions.</span>
+            </>
+          }
+          subtitle="The operating system behind every launch, hire, and partnership we take on."
+        />
 
-        <div className="grid lg:grid-cols-3 gap-5">
+        <div className="mt-16 grid lg:grid-cols-3 gap-5">
           {beliefs.map((b, i) => {
             const Icon = b.icon;
             return (
