@@ -1,11 +1,12 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { Button } from "@/components/ui/Button";
+import { getCurrentSpots } from "@/lib/applyConfig";
 import {
   ArrowRight,
   CheckCircle2,
@@ -26,6 +27,13 @@ function ApplyHero() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const watermarkY = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
+  // Spots are computed from today's date so the card never feels static.
+  // Default mirrors what the build emits so SSR/hydration stays in sync.
+  const [spots, setSpots] = useState({ total: 8, remaining: 4, filled: 4 });
+  useEffect(() => {
+    setSpots(getCurrentSpots());
+  }, []);
 
   return (
     <section
@@ -101,14 +109,42 @@ function ApplyHero() {
             {/* Yellow — spots */}
             <motion.div animate={{ y: [0, -12, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-0 right-0 w-[250px] rounded-3xl bg-gradient-to-br from-brand-yellow to-amber-400 p-6 shadow-2xl shadow-brand-yellow/20">
-              <div className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">SPOTS AVAILABLE</div>
-              <div className="mt-3 font-black text-brand-navy text-6xl leading-none tracking-tight">4</div>
+              <div className="flex items-center justify-between">
+                <div className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">SPOTS AVAILABLE</div>
+                <span className="flex items-center gap-1 font-display text-[9px] tracking-[0.2em] text-brand-navy/55">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-navy/60 opacity-75" />
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand-navy" />
+                  </span>
+                  LIVE
+                </span>
+              </div>
+              <motion.div
+                key={spots.remaining}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: EASE }}
+                className="mt-3 font-black text-brand-navy text-6xl leading-none tracking-tight tabular-nums"
+              >
+                {spots.remaining}
+              </motion.div>
               <div className="mt-2 text-xs text-brand-navy/55">Remaining this month</div>
               <div className="mt-4 flex gap-1.5">
-                {[1,2,3,4].map(i => <div key={i} className="h-2 flex-1 rounded-full bg-brand-navy/80" />)}
-                {[5,6,7,8].map(i => <div key={i} className="h-2 flex-1 rounded-full bg-brand-navy/20" />)}
+                {Array.from({ length: spots.total }).map((_, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ scaleX: 0.6, opacity: 0 }}
+                    animate={{ scaleX: 1, opacity: 1 }}
+                    transition={{ duration: 0.4, ease: EASE, delay: i * 0.05 }}
+                    className={`h-2 flex-1 rounded-full origin-left ${
+                      i < spots.filled ? "bg-brand-navy/80" : "bg-brand-navy/20"
+                    }`}
+                  />
+                ))}
               </div>
-              <div className="mt-2 text-[10px] text-brand-navy/45">4 of 8 spots filled this cycle</div>
+              <div className="mt-2 text-[10px] text-brand-navy/45 tabular-nums">
+                {spots.filled} of {spots.total} spots filled this cycle
+              </div>
             </motion.div>
 
             {/* Glass — next steps */}
