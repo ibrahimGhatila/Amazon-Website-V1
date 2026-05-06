@@ -74,7 +74,7 @@ const navItems = [
   { label: "How It Works", href: "/how-it-works" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Nav() {
@@ -90,6 +90,7 @@ export function Nav() {
     if (href === "/services") return pathname.startsWith("/services");
     if (href === "/how-it-works") return pathname.startsWith("/how-it-works");
     if (href === "/about") return pathname.startsWith("/about");
+    if (href === "/contact") return pathname.startsWith("/contact");
     return pathname === href;
   };
 

@@ -93,7 +93,7 @@ export function AboutCTA() {
             <Button href="/apply" size="lg" variant="primary" arrow>
               Apply for Elite
             </Button>
-            <Button href="/#contact" size="lg" variant="ghost">
+            <Button href="/contact" size="lg" variant="ghost">
               Talk to us
             </Button>
           </motion.div>
