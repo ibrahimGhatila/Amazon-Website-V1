@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Counter } from "@/components/ui/Counter";
+import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { cn } from "@/lib/utils";
@@ -418,8 +419,8 @@ export default function AmazonAuditPage() {
   return (
     <>
       <Nav />
-      <main className="bg-white">
-      {/* ── Hero ── */}
+      <main>
+        {/* ── Hero ── */}
       <section className="relative bg-brand-navy overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-20">
         {/* Background texture */}
         <div aria-hidden className="absolute inset-0 bg-grid-white/[0.03] [mask-image:radial-gradient(ellipse_at_top,black_40%,transparent_80%)]" />
@@ -803,6 +804,9 @@ export default function AmazonAuditPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Explore other services ── */}
+      <ExploreServices current="amazon-audit" />
 
       {/* ── Bottom CTA ── */}
       <section className="bg-brand-navy py-16 sm:py-20 relative overflow-hidden">

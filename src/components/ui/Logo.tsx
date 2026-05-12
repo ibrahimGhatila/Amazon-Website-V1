@@ -7,53 +7,14 @@ type LogoProps = {
   href?: string | null;
 };
 
-export function Logo({ variant = "light", className, href = "/" }: LogoProps) {
-  const markBg = variant === "light" ? "bg-brand-navy" : "bg-white";
-  const markFg = variant === "light" ? "text-brand-yellow" : "text-brand-navy";
-  const textColor = variant === "light" ? "text-white" : "text-brand-navy";
-  const subColor = variant === "light" ? "text-brand-yellow" : "text-brand-azure";
-
+export function Logo({ className, href = "/" }: LogoProps) {
   const inner = (
-    <span
-      className={cn(
-        "inline-flex items-center gap-2.5 font-display tracking-wide",
-        className
-      )}
-    >
-      <span
-        className={cn(
-          "relative flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden",
-          markBg
-        )}
-      >
-        <span
-          className={cn(
-            "font-display text-[22px] leading-none translate-y-[1px]",
-            markFg
-          )}
-        >
-          eX
-        </span>
-      </span>
-      <span className="flex flex-col leading-none">
-        <span
-          className={cn(
-            "font-display text-[20px] tracking-[0.08em] leading-none",
-            textColor
-          )}
-        >
-          EXTREME
-        </span>
-        <span
-          className={cn(
-            "font-display text-[13px] tracking-[0.32em] leading-none mt-[3px]",
-            subColor
-          )}
-        >
-          COMMERCE
-        </span>
-      </span>
-    </span>
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
+      src="https://ec.com.pk/assets/img/logo.svg"
+      alt="Extreme Commerce"
+      className={cn("h-10 w-auto", className)}
+    />
   );
 
   if (href === null) return inner;
