@@ -39,12 +39,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Extreme Commerce" }],
   icons: {
     icon: [
-      { url: "/brand/logo-mark.svg", type: "image/svg+xml" },
+      { url: "/brand/SA-1-(2).png", type: "image/png" },
     ],
     apple: [
-      { url: "/brand/logo-mark.svg", type: "image/svg+xml" },
+      { url: "/brand/SA-1-(2).png", type: "image/png" },
     ],
-    shortcut: "/brand/logo-mark.svg",
+    shortcut: "/brand/SA-1-(2).png",
   },
   openGraph: {
     type: "website",
