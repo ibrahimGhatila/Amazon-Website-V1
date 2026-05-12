@@ -68,7 +68,7 @@ export function EliteHero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-display text-[3rem] sm:text-[4.5rem] lg:text-[6.5rem] xl:text-[7.5rem] leading-none tracking-tight text-white"
+                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
               >
                 This is not
               </motion.h1>
@@ -78,7 +78,7 @@ export function EliteHero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
-                className="font-display text-[3rem] sm:text-[4.5rem] lg:text-[6.5rem] xl:text-[7.5rem] leading-none tracking-tight text-brand-yellow"
+                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-brand-yellow"
               >
                 a course.
               </motion.h1>

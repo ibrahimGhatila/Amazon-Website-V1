@@ -73,7 +73,7 @@ function TikTokHero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-black text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight text-white"
+                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
               >
                 Your TikTok Shop brand.{" "}
                 <span className="text-brand-yellow">We build it.</span>

@@ -88,7 +88,7 @@ function Hero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-black text-white text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
+                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
               >
                 Expert Amazon VAs.
               </motion.h1>
@@ -98,7 +98,7 @@ function Hero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.32 }}
-                className="font-black text-brand-yellow text-4xl sm:text-5xl lg:text-[60px] leading-[0.95] tracking-tight"
+                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-brand-yellow"
               >
                 Ready to deploy.
               </motion.h1>

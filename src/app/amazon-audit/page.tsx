@@ -447,7 +447,7 @@ export default function AmazonAuditPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.65, ease: EASE, delay: 0.05 }}
-                className="font-black text-white text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.04] tracking-tight"
+                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
               >
                 Your Amazon Store Is Leaking Revenue.{" "}
                 <span className="text-brand-yellow">We'll Find Where.</span>

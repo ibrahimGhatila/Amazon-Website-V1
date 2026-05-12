@@ -67,14 +67,14 @@ function ApplyHero() {
             <div className="overflow-hidden mb-2">
               <motion.h1 initial={{ y: "100%" }} animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-black text-white text-4xl sm:text-5xl lg:text-[64px] leading-[0.95] tracking-tight">
+                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white">
                 Start your
               </motion.h1>
             </div>
             <div className="overflow-hidden mb-7">
               <motion.h1 initial={{ y: "100%" }} animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.32 }}
-                className="font-black text-brand-yellow text-4xl sm:text-5xl lg:text-[64px] leading-[0.95] tracking-tight">
+                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-brand-yellow">
                 application.
               </motion.h1>
             </div>

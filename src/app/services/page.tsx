@@ -159,7 +159,7 @@ function ServicesHero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="font-black tracking-tight leading-[1.0] text-4xl sm:text-5xl lg:text-[64px] text-white"
+              className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
             >
               Three services.{" "}
               <span className="relative inline-block">

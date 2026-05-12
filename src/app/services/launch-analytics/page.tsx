@@ -102,10 +102,10 @@ function LaunchHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
               className="font-black tracking-tight leading-[0.95] text-white"
             >
-              <span className="block text-4xl sm:text-6xl lg:text-[80px]">
+              <span className="block text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px]">
                 Launch fast.
               </span>
-              <span className="block text-4xl sm:text-6xl lg:text-[80px] text-brand-yellow mt-2">
+              <span className="block text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-brand-yellow mt-2">
                 Scale on data.
               </span>
             </motion.h1>
