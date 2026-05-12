@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
+import { motion } from "motion/react";
 import {
   Star,
   CheckCircle2,
@@ -27,7 +27,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Counter } from "@/components/ui/Counter";
-import { Button } from "@/components/ui/Button";
+import { Nav } from "@/components/sections/Nav";
+import { Footer } from "@/components/sections/Footer";
 import { cn } from "@/lib/utils";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -415,7 +416,9 @@ function AuditForm({ className }: { className?: string }) {
 /* ─── PAGE ─── */
 export default function AmazonAuditPage() {
   return (
-    <main className="bg-white">
+    <>
+      <Nav />
+      <main className="bg-white">
       {/* ── Hero ── */}
       <section className="relative bg-brand-navy overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-20">
         {/* Background texture */}
@@ -870,6 +873,8 @@ export default function AmazonAuditPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
