@@ -522,10 +522,11 @@ export default function AmazonAuditPage() {
 
             {/* Right — form (desktop: sticky-ish, positioned at top) */}
             <motion.div
+              id="request-audit"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
-              className="lg:sticky lg:top-28"
+              className="lg:sticky lg:top-28 scroll-mt-28"
             >
               <AuditForm />
             </motion.div>
@@ -806,71 +807,73 @@ export default function AmazonAuditPage() {
       {/* ── Bottom CTA ── */}
       <section className="bg-brand-navy py-16 sm:py-20 relative overflow-hidden">
         <div aria-hidden className="absolute inset-0 bg-grid-white/[0.03]" />
-        <div aria-hidden className="absolute -bottom-40 right-0 h-[500px] w-[500px] rounded-full bg-brand-yellow/5 blur-3xl pointer-events-none" />
+        <div aria-hidden className="absolute -bottom-40 left-1/2 -translate-x-1/2 h-[500px] w-[500px] rounded-full bg-brand-yellow/5 blur-3xl pointer-events-none" />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <motion.p
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: EASE }}
-                className="font-display text-sm tracking-[0.22em] text-brand-yellow/70 uppercase mb-4"
-              >
-                Ready?
-              </motion.p>
-              <motion.h2
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.65, ease: EASE, delay: 0.06 }}
-                className="font-black text-white text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.05]"
-              >
-                Stop guessing.
-                <br />
-                <span className="text-brand-yellow">Start fixing.</span>
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: EASE, delay: 0.12 }}
-                className="mt-5 text-white/60 text-lg leading-relaxed max-w-md"
-              >
-                Most sellers spend months (or years) wondering why their store isn't growing. One audit changes that. It's free. There's no catch.
-              </motion.p>
+        <div className="relative mx-auto max-w-3xl px-4 sm:px-6 text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: EASE }}
+            className="font-display text-sm tracking-[0.22em] text-brand-yellow/70 uppercase mb-4"
+          >
+            Ready?
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65, ease: EASE, delay: 0.06 }}
+            className="font-black text-white text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.05]"
+          >
+            Stop guessing.{" "}
+            <span className="text-brand-yellow">Start fixing.</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: EASE, delay: 0.12 }}
+            className="mt-5 text-white/60 text-lg leading-relaxed mx-auto max-w-xl"
+          >
+            Most sellers spend months (or years) wondering why their store isn&apos;t growing. One audit changes that. It&apos;s free. There&apos;s no catch.
+          </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
-                className="mt-8 space-y-3"
-              >
-                {[
-                  "Full 8-area audit framework",
-                  "45-minute 1:1 strategy call",
-                  "Detailed PDF report",
-                  "90-day prioritised action plan",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 text-white/75 text-sm">
-                    <CheckCircle2 className="h-5 w-5 flex-none text-brand-yellow" />
-                    {item}
-                  </div>
-                ))}
-              </motion.div>
-            </div>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
+            className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3 max-w-xl mx-auto text-left"
+          >
+            {[
+              "Full 8-area audit framework",
+              "45-minute 1:1 strategy call",
+              "Detailed PDF report",
+              "90-day prioritised action plan",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-3 text-white/75 text-sm">
+                <CheckCircle2 className="h-5 w-5 flex-none text-brand-yellow" />
+                {item}
+              </div>
+            ))}
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: EASE, delay: 0.28 }}
+            className="mt-10"
+          >
+            <Link
+              href="#request-audit"
+              className="group inline-flex items-center gap-2 rounded-full bg-brand-yellow text-brand-navy font-bold px-8 py-4 text-base hover:bg-brand-yellow-light shadow-[0_10px_30px_-8px_rgba(244,205,29,0.55)] hover:shadow-[0_15px_40px_-8px_rgba(244,205,29,0.75)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              <AuditForm />
-            </motion.div>
-          </div>
+              Request Your Free Audit
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
         </div>
       </section>
       </main>
