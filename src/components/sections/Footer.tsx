@@ -12,10 +12,9 @@ const columns = [
   {
     title: "Services",
     links: [
-      { label: "Elite Program", href: "#elite" },
-      { label: "Virtual Assistants", href: "#services" },
-      { label: "Mentorship", href: "#services" },
-      { label: "PPC & Advertising", href: "#services" },
+      { label: "Elite Program — Amazon", href: "/elite" },
+      { label: "Elite Program — TikTok", href: "/elite-tiktok" },
+      { label: "Ask Sunny Ali", href: "/ask-sunny-ali" },
     ],
   },
   {

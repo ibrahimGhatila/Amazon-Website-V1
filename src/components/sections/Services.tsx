@@ -5,11 +5,8 @@ import Link from "next/link";
 import {
   ArrowUpRight,
   Rocket,
-  Users,
-  MessageSquare,
-  Target,
-  Megaphone,
-  BarChart3,
+  Play,
+  MessageCircle,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
@@ -19,12 +16,12 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 const services = [
   {
     tag: "FLAGSHIP",
-    title: "Elite Program",
+    title: "Elite Program — Amazon",
     description:
       "Done-for-you Amazon brand. Three launches, one dedicated team, profit split only on results.",
-    href: "#elite",
+    href: "/elite",
     icon: Rocket,
-    span: "lg:col-span-2 lg:row-span-2",
+    span: "lg:col-span-1 lg:row-span-2",
     variant: "featured",
     bullets: [
       "$10K budget per launch",
@@ -33,54 +30,24 @@ const services = [
     ],
   },
   {
-    tag: "HIRE TALENT",
-    title: "Virtual Assistants",
+    tag: "NEW",
+    title: "Elite Program — TikTok",
     description:
-      "Trained Amazon VAs — full-time or part-time — ready to run your account.",
-    href: "#services",
-    icon: Users,
+      "Your TikTok Shop brand, built and operated for you. Creator commerce, done right.",
+    href: "/elite-tiktok",
+    icon: Play,
     span: "lg:col-span-2",
     variant: "yellow",
   },
   {
-    tag: "1:1",
-    title: "Mentorship with Sunny",
+    tag: "MENTORSHIP",
+    title: "Ask Sunny Ali",
     description:
-      "Direct access. Monthly Zooms. WhatsApp voice notes for strategic questions.",
-    href: "#services",
-    icon: MessageSquare,
-    span: "lg:col-span-1",
+      "Direct access to Sunny Ali. Monthly strategy Zooms, WhatsApp voice notes, and the full playbook from 1,000+ launches.",
+    href: "/ask-sunny-ali",
+    icon: MessageCircle,
+    span: "lg:col-span-2",
     variant: "azure",
-  },
-  {
-    tag: "FULL STACK",
-    title: "PPC & Advertising",
-    description:
-      "Sponsored ads, DSP, and full-funnel campaigns engineered for profitable ACoS.",
-    href: "#services",
-    icon: Target,
-    span: "lg:col-span-1",
-    variant: "outline",
-  },
-  {
-    tag: "BRAND",
-    title: "Creative & Listings",
-    description:
-      "Conversion-first A+ content, storefronts, and imagery built from market data.",
-    href: "#services",
-    icon: Megaphone,
-    span: "lg:col-span-2",
-    variant: "outline",
-  },
-  {
-    tag: "OPS",
-    title: "Launch Analytics",
-    description:
-      "Weekly reports. Monthly strategy calls. Decision memos. No blind spots.",
-    href: "#services",
-    icon: BarChart3,
-    span: "lg:col-span-2",
-    variant: "outline",
   },
 ];
 
@@ -115,15 +82,15 @@ export function Services() {
           eyebrow="WHAT WE DO"
           title={
             <>
-              Six ways we build
+              Three services.
               <br />
-              your Amazon business.
+              One mission.
             </>
           }
-          subtitle="From done-for-you launches to trained virtual assistants — pick your level of involvement."
+          subtitle="Whether you want us to run it, want TikTok Shop, or want direct access to Sunny — here's what we offer."
         />
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-[minmax(148px,auto)] gap-3">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[minmax(180px,auto)] gap-3">
           {services.map((service, i) => {
             const Icon = service.icon;
             const variant = service.variant as keyof typeof variantStyles;

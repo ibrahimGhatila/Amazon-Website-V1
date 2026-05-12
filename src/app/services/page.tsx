@@ -6,11 +6,8 @@ import Link from "next/link";
 import {
   ArrowUpRight,
   Rocket,
-  Users,
-  MessageSquare,
-  Target,
-  Megaphone,
-  BarChart3,
+  Play,
+  MessageCircle,
 } from "lucide-react";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
@@ -25,7 +22,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 const services = [
   {
     tag: "FLAGSHIP",
-    title: "Elite Program",
+    title: "Elite Program — Amazon",
     description:
       "Done-for-you Amazon brand. Three launches, one dedicated team, profit split only on results.",
     href: "/elite",
@@ -33,49 +30,22 @@ const services = [
     variant: "navy" as const,
   },
   {
-    tag: "HIRE TALENT",
-    title: "Virtual Assistants",
+    tag: "NEW",
+    title: "Elite Program — TikTok",
     description:
-      "Trained Amazon VAs — full-time or part-time — ready to run your account.",
-    href: "/services/virtual-assistants",
-    icon: Users,
+      "Your TikTok Shop brand, built and operated for you. Creator commerce, done right.",
+    href: "/elite-tiktok",
+    icon: Play,
     variant: "yellow" as const,
   },
   {
-    tag: "1:1",
-    title: "Mentorship with Sunny",
+    tag: "MENTORSHIP",
+    title: "Ask Sunny Ali",
     description:
-      "Direct access. Monthly Zooms. WhatsApp voice notes for strategic questions.",
-    href: "/services/mentorship",
-    icon: MessageSquare,
+      "Direct access to Sunny Ali. Monthly strategy Zooms, WhatsApp voice notes, and the playbook from 1,000+ launches.",
+    href: "/ask-sunny-ali",
+    icon: MessageCircle,
     variant: "azure" as const,
-  },
-  {
-    tag: "FULL STACK",
-    title: "PPC & Advertising",
-    description:
-      "Sponsored ads, DSP, and full-funnel campaigns engineered for profitable ACoS.",
-    href: "/services/ppc-advertising",
-    icon: Target,
-    variant: "outline" as const,
-  },
-  {
-    tag: "BRAND",
-    title: "Creative & Listings",
-    description:
-      "Conversion-first A+ content, storefronts, and imagery built from market data.",
-    href: "/services/creative-listings",
-    icon: Megaphone,
-    variant: "outline" as const,
-  },
-  {
-    tag: "OPS",
-    title: "Launch Analytics",
-    description:
-      "Weekly reports. Monthly strategy calls. Decision memos. No blind spots.",
-    href: "/services/launch-analytics",
-    icon: BarChart3,
-    variant: "outline" as const,
   },
 ];
 
@@ -191,9 +161,9 @@ function ServicesHero() {
               transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
               className="font-black tracking-tight leading-[1.0] text-4xl sm:text-5xl lg:text-[64px] text-white"
             >
-              Six ways we build{" "}
+              Three services.{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 text-brand-yellow">your</span>
+                <span className="relative z-10 text-brand-yellow">One</span>
                 <motion.span
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
@@ -201,7 +171,7 @@ function ServicesHero() {
                   className="absolute left-0 -bottom-1 h-[5px] w-full bg-brand-yellow/20 origin-left rounded-full -z-10"
                 />
               </span>{" "}
-              Amazon business.
+              mission.
             </motion.h1>
 
             <motion.p
@@ -210,8 +180,8 @@ function ServicesHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.5 }}
               className="mt-7 text-lg sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
             >
-              From done-for-you launches to trained virtual assistants — pick
-              your level of involvement.
+              Amazon, TikTok Shop, or direct mentorship with Sunny Ali — pick
+              the right level of involvement for you.
             </motion.p>
 
             {/* Quick nav pills */}
@@ -280,12 +250,9 @@ function ServicesHero() {
               </p>
               {(
                 [
-                  { Icon: Rocket,        name: "Elite Program",     tag: "FLAGSHIP"   },
-                  { Icon: Users,         name: "Virtual Assistants", tag: "HIRE"       },
-                  { Icon: MessageSquare, name: "Mentorship",         tag: "1:1"        },
-                  { Icon: Target,        name: "PPC & Ads",          tag: "FULL STACK" },
-                  { Icon: Megaphone,     name: "Creative",           tag: "BRAND"      },
-                  { Icon: BarChart3,     name: "Analytics",          tag: "OPS"        },
+                  { Icon: Rocket,        name: "Elite — Amazon",  tag: "FLAGSHIP"   },
+                  { Icon: Play,          name: "Elite — TikTok",  tag: "NEW"        },
+                  { Icon: MessageCircle, name: "Ask Sunny Ali",   tag: "MENTORSHIP" },
                 ] as { Icon: React.ElementType; name: string; tag: string }[]
               ).map(({ Icon, name, tag }) => (
                 <div key={name} className="flex items-center justify-between py-1.5">

@@ -7,11 +7,8 @@ import {
   X,
   ChevronDown,
   Rocket,
-  Users,
-  MessageSquare,
-  Target,
-  Megaphone,
-  BarChart3,
+  Play,
+  MessageCircle,
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
@@ -24,47 +21,26 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 const services = [
   {
-    title: "Elite Program",
+    title: "Elite Program — Amazon",
     href: "/elite",
     icon: Rocket,
     tag: "FLAGSHIP",
-    desc: "Done-for-you Amazon brand. Three launches, profit share.",
+    desc: "Done-for-you Amazon brand. Three launches, 80/20 profit share.",
     featured: true,
   },
   {
-    title: "Virtual Assistants",
-    href: "/services/virtual-assistants",
-    icon: Users,
-    tag: "HIRE TALENT",
-    desc: "Trained Amazon VAs ready to run your account.",
+    title: "Elite Program — TikTok",
+    href: "/elite-tiktok",
+    icon: Play,
+    tag: "NEW",
+    desc: "Your TikTok Shop brand, built and operated for you.",
   },
   {
-    title: "Mentorship with Sunny",
-    href: "/services/mentorship",
-    icon: MessageSquare,
-    tag: "1:1",
-    desc: "Direct access. Monthly Zooms. WhatsApp voice notes.",
-  },
-  {
-    title: "PPC & Advertising",
-    href: "/services/ppc-advertising",
-    icon: Target,
-    tag: "FULL STACK",
-    desc: "Sponsored ads, DSP, and full-funnel campaigns.",
-  },
-  {
-    title: "Creative & Listings",
-    href: "/services/creative-listings",
-    icon: Megaphone,
-    tag: "BRAND",
-    desc: "Storefront, A+, photography, video — that converts.",
-  },
-  {
-    title: "Launch Analytics",
-    href: "/services/launch-analytics",
-    icon: BarChart3,
-    tag: "OPS",
-    desc: "Forecasting, BSR tracking, P&L by ASIN.",
+    title: "Ask Sunny Ali",
+    href: "/ask-sunny-ali",
+    icon: MessageCircle,
+    tag: "MENTORSHIP",
+    desc: "Direct access to Sunny. Monthly Zooms, WhatsApp, strategy.",
   },
 ];
 
@@ -87,7 +63,7 @@ export function Nav() {
   const pathname = usePathname();
 
   const isActive = (href: string) => {
-    if (href === "/services") return pathname.startsWith("/services");
+    if (href === "/services") return pathname.startsWith("/services") || pathname.startsWith("/elite-tiktok") || pathname.startsWith("/ask-sunny-ali");
     if (href === "/how-it-works") return pathname.startsWith("/how-it-works");
     if (href === "/about") return pathname.startsWith("/about");
     if (href === "/contact") return pathname.startsWith("/contact");
@@ -233,10 +209,10 @@ export function Nav() {
                 transition={{ duration: 0.22, ease: EASE }}
                 onMouseEnter={openServices}
                 onMouseLeave={scheduleCloseServices}
-                className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[720px] origin-top"
+                className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[400px] origin-top"
               >
                 <div className="rounded-2xl bg-brand-navy/95 backdrop-blur-xl border border-white/10 shadow-2xl shadow-brand-navy/40 p-5">
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 gap-2">
                     {services.map((s) => {
                       const Icon = s.icon;
                       const featured = s.featured;
@@ -283,7 +259,7 @@ export function Nav() {
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between">
                     <span className="text-white/45 text-xs">
-                      6 services · Built for sellers at every stage
+                      3 services · Built for serious operators
                     </span>
                     <Link
                       href="/services"

@@ -5,22 +5,16 @@ import Link from "next/link";
 import {
   ArrowUpRight,
   Rocket,
-  Users,
-  MessageSquare,
-  Target,
-  Megaphone,
-  BarChart3,
+  Play,
+  MessageCircle,
 } from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const ALL_SERVICES = [
-  { title: "Elite Program", href: "/elite", icon: Rocket, tag: "FLAGSHIP", slug: "elite" },
-  { title: "Virtual Assistants", href: "/services/virtual-assistants", icon: Users, tag: "HIRE TALENT", slug: "virtual-assistants" },
-  { title: "Mentorship", href: "/services/mentorship", icon: MessageSquare, tag: "1:1", slug: "mentorship" },
-  { title: "PPC & Advertising", href: "/services/ppc-advertising", icon: Target, tag: "FULL STACK", slug: "ppc-advertising" },
-  { title: "Creative & Listings", href: "/services/creative-listings", icon: Megaphone, tag: "BRAND", slug: "creative-listings" },
-  { title: "Launch Analytics", href: "/services/launch-analytics", icon: BarChart3, tag: "OPS", slug: "launch-analytics" },
+  { title: "Elite Program — Amazon", href: "/elite", icon: Rocket, tag: "FLAGSHIP", slug: "elite" },
+  { title: "Elite Program — TikTok", href: "/elite-tiktok", icon: Play, tag: "NEW", slug: "elite-tiktok" },
+  { title: "Ask Sunny Ali", href: "/ask-sunny-ali", icon: MessageCircle, tag: "MENTORSHIP", slug: "ask-sunny-ali" },
 ];
 
 interface Props {
