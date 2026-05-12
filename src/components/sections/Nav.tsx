@@ -48,8 +48,8 @@ const navItems = [
   { label: "Services", href: "/services", hasDropdown: true },
   { label: "Elite Program", href: "/elite" },
   { label: "How It Works", href: "/how-it-works" },
+  { label: "Amazon Audit", href: "/amazon-audit", highlight: true },
   { label: "About", href: "/about" },
-  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -154,6 +154,23 @@ export function Nav() {
                         />
                       </Link>
                     </div>
+                  );
+                }
+
+                if (item.highlight) {
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={cn(
+                        "relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-full border",
+                        isActive(item.href)
+                          ? "bg-brand-yellow text-brand-navy border-brand-yellow"
+                          : "bg-brand-yellow/10 text-brand-yellow border-brand-yellow/30 hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
                   );
                 }
 
@@ -370,13 +387,23 @@ export function Nav() {
                       onClick={() => setMobileOpen(false)}
                       className={cn(
                         "flex items-center justify-between py-4 px-4 text-2xl font-bold transition",
-                        isActive(item.href) ? "text-brand-yellow" : "text-white hover:text-brand-yellow"
+                        isActive(item.href)
+                          ? "text-brand-yellow"
+                          : item.highlight
+                            ? "text-brand-yellow hover:text-white"
+                            : "text-white hover:text-brand-yellow"
                       )}
                     >
                       <span>{item.label}</span>
-                      <span className="text-brand-yellow font-display text-sm tracking-widest">
-                        0{i + 1}
-                      </span>
+                      {item.highlight ? (
+                        <span className="rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-2.5 py-1 font-display text-[10px] tracking-[0.18em] text-brand-yellow uppercase">
+                          Free
+                        </span>
+                      ) : (
+                        <span className="text-brand-yellow font-display text-sm tracking-widest">
+                          0{i + 1}
+                        </span>
+                      )}
                     </Link>
                   )}
                 </motion.div>
