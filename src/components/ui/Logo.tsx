@@ -13,7 +13,7 @@ export function Logo({ className, href = "/" }: LogoProps) {
     <img
       src="https://ec.com.pk/assets/img/logo.svg"
       alt="Extreme Commerce"
-      className={cn("h-10 w-auto", className)}
+      className={cn("h-10 w-auto brightness-0 invert", className)}
     />
   );
 
