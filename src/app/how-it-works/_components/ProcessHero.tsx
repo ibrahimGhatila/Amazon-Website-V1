@@ -179,7 +179,7 @@ export function ProcessHero() {
                 </span>
               </div>
               <div className="mt-4 font-black text-brand-navy text-6xl tracking-tight leading-none">
-                $<Counter to={7} />k
+                $<Counter to={10} />k
               </div>
               <div className="mt-3 text-brand-navy/70 text-sm font-medium">
                 Allocated strategically. Winners get reinvestment.

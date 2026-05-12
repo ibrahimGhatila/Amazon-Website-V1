@@ -4,6 +4,7 @@ import { StatsBar } from "@/components/sections/StatsBar";
 import { Services } from "@/components/sections/Services";
 import { Process } from "@/components/sections/Process";
 import { Elite } from "@/components/sections/Elite";
+import { Journey } from "@/components/sections/Journey";
 import { Platforms } from "@/components/sections/Platforms";
 import { Founder } from "@/components/sections/Founder";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <Process />
         <Elite />
+        <Journey />
         <Platforms />
         <Founder />
         <Testimonials />

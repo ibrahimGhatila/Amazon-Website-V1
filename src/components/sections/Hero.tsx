@@ -76,7 +76,7 @@ export function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
               <span className="font-display text-sm tracking-[0.2em] text-white/90">
-                Amazon done for you.
+                Yes, Amazon is saturated. We win anyway.
               </span>
             </motion.div>
 
@@ -115,9 +115,9 @@ export function Hero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
               className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
             >
-              We launch, grow, and operate Amazon businesses for entrepreneurs
-              and investors. Research, sourcing, creatives, PPC, and ops —
-              handled by the team behind thousands of launches.
+              95% of solo sellers fail within two years. Our Elite operators
+              succeed at 6× the industry rate — targeting $10,000–$25,000 per
+              month within five years. We run the operation. You own the brand.
             </motion.p>
 
             <motion.div

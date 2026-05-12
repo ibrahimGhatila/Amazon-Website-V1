@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { Counter } from "@/components/ui/Counter";
-import { Users, Rocket, Globe2, TrendingUp } from "lucide-react";
+import { Users, Rocket, TrendingUp, Award } from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -32,11 +32,11 @@ const stats = [
     accent: "text-brand-yellow",
   },
   {
-    label: "Global marketplaces",
-    value: 5,
+    label: "Elite member success rate",
+    value: 30,
     prefix: "",
-    suffix: "",
-    icon: Globe2,
+    suffix: "%",
+    icon: Award,
     accent: "text-brand-yellow",
   },
 ];

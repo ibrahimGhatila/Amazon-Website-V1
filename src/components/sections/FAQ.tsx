@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "How much capital do I need to commit?",
-    a: "We allocate $7,000 per launch, with three launches over 18 months. That's in addition to your share of cost of goods and reinvestment into winners. We'll walk you through the full capital plan in the onboarding call.",
+    a: "We allocate $10,000 per launch, with three launches over 18 months. That's in addition to your share of cost of goods and reinvestment into winners. We'll walk you through the full capital plan in the onboarding call.",
   },
   {
     q: "How does the 80/20 profit share work?",

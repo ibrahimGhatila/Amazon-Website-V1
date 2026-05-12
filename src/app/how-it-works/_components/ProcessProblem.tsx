@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Search, Flame, AlertTriangle } from "lucide-react";
+import { TrendingDown, Flame, AlertTriangle } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const failures = [
   {
-    icon: Search,
-    stat: "73%",
-    label: "Pick the wrong product",
-    body: "First-time sellers chase trending products with no defensible margin, no IP, and no path past month two. The product decision is the launch.",
+    icon: TrendingDown,
+    stat: "95%",
+    label: "Of solo sellers fail",
+    body: "Only 5% of independent Amazon sellers ever reach sustainable profitability. The market isn't broken — solo operators are. Systems beat solo hustle every time.",
   },
   {
     icon: Flame,
@@ -35,11 +35,11 @@ export function ProcessProblem() {
           eyebrow="THE REALITY"
           title={
             <>
-              Most solo sellers quit by year two.{" "}
-              <span className="text-brand-azure">It&rsquo;s not a skill problem.</span>
+              Amazon is saturated.{" "}
+              <span className="text-brand-azure">Solo sellers are losing.</span>
             </>
           }
-          subtitle="Amazon punishes guesswork. The people who win don't try harder — they operate inside a system that's already been pressure-tested."
+          subtitle="Yes, the market is over-saturated — 95% of solo sellers never reach sustainable profit. The answer isn't to quit. It's to stop operating alone."
         />
 
         <div className="mt-16 grid lg:grid-cols-3 gap-5">
@@ -104,8 +104,8 @@ export function ProcessProblem() {
                 THE FIX
               </div>
               <h3 className="font-black tracking-tight text-2xl sm:text-3xl leading-tight text-balance">
-                A team that&rsquo;s already won this fight runs it for you. You
-                stay in the loop, not in the weeds.
+                Our Elite operators succeed at 30% — 6× the industry average of
+                5%. Same marketplace. Different system.
               </h3>
             </div>
           </div>

@@ -14,7 +14,7 @@ const inclusions = [
   },
   {
     icon: Wallet,
-    title: "$7,000 per launch",
+    title: "$10,000 per launch",
     detail:
       "Testing capital allocated strategically. Winners get aggressive reinvestment.",
   },

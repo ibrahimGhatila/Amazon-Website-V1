@@ -13,7 +13,7 @@ const flow = [
     icon: Wallet,
     label: "Capital in",
     sub: "Per launch",
-    value: "$7K",
+    value: "$10K",
     detail:
       "Allocated for inventory, sample cycles, listing build, and launch-week PPC. Held in escrow.",
   },
@@ -73,7 +73,7 @@ export function ProcessMoney() {
           <NumberCard
             value={
               <span>
-                $<Counter to={7} />k
+                $<Counter to={10} />k
               </span>
             }
             label="Per-launch capital"
