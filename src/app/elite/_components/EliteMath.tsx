@@ -85,7 +85,7 @@ export function EliteMath() {
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
             className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
           >
-            Three launches. $7,000 of testing capital each. Here&rsquo;s how the math works across three scenarios — modelled from our actual launch data, not promises.
+            Three launches. $10,000 of testing capital each. Here&rsquo;s how the math works across three scenarios — modelled from our actual launch data, not promises.
           </motion.p>
         </div>
 
@@ -99,7 +99,7 @@ export function EliteMath() {
         >
           {[
             { label: "Launches", value: "3" },
-            { label: "Capital per launch", value: "$7K" },
+            { label: "Capital per launch", value: "$10K" },
             { label: "Total deployed", value: "$21K" },
             { label: "Your profit share", value: "80%" },
           ].map((item, i) => (

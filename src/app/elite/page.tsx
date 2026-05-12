@@ -404,7 +404,7 @@ export function EliteQualifier() {
 
 
 const flow = [
-  { label: "Your Capital", sub: "$7K / launch", color: "bg-brand-yellow text-brand-navy", dot: "bg-brand-yellow" },
+  { label: "Your Capital", sub: "$10K / launch", color: "bg-brand-yellow text-brand-navy", dot: "bg-brand-yellow" },
   { label: "Research", sub: "Data-led product selection", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
   { label: "Sourcing", sub: "Vetted supplier + QC", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
   { label: "Launch", sub: "Creatives, PPC, listings", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
@@ -971,10 +971,10 @@ const scenarios = [
   {
     label: "Conservative",
     tag: "50% avg ROI",
-    capital: 21,
-    revenue: 31.5,
-    gross: 10.5,
-    yourShare: 8.4,
+    capital: 30,
+    revenue: 45,
+    gross: 15,
+    yourShare: 12,
     color: "bg-white border-brand-navy/10",
     textColor: "text-brand-navy",
     subColor: "text-brand-navy/60",
@@ -984,10 +984,10 @@ const scenarios = [
   {
     label: "Base Case",
     tag: "150% avg ROI",
-    capital: 21,
-    revenue: 52.5,
-    gross: 31.5,
-    yourShare: 25.2,
+    capital: 30,
+    revenue: 75,
+    gross: 45,
+    yourShare: 36,
     color: "bg-brand-navy",
     textColor: "text-white",
     subColor: "text-white/60",
@@ -998,10 +998,10 @@ const scenarios = [
   {
     label: "Strong",
     tag: "250% avg ROI",
-    capital: 21,
-    revenue: 73.5,
-    gross: 52.5,
-    yourShare: 42,
+    capital: 30,
+    revenue: 105,
+    gross: 75,
+    yourShare: 60,
     color: "bg-white border-brand-navy/10",
     textColor: "text-brand-navy",
     subColor: "text-brand-navy/60",
@@ -1035,7 +1035,7 @@ export function EliteMath() {
             transition={{ duration: 0.7, ease: EASE, delay: 0.08 }}
             className="mt-5 font-black tracking-tight text-brand-navy text-3xl sm:text-4xl lg:text-[44px] leading-[1.05] text-balance"
           >
-            What $21K deployed
+            What $30K deployed
             <br />
             <span className="text-brand-azure">can realistically look like.</span>
           </motion.h2>
@@ -1046,7 +1046,7 @@ export function EliteMath() {
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
             className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
           >
-            Three launches. $7,000 of testing capital each. Here&rsquo;s how the math works across three scenarios — modelled from our actual launch data, not promises.
+            Three launches. $10,000 of testing capital each. Here&rsquo;s how the math works across three scenarios — modelled from our actual launch data, not promises.
           </motion.p>
         </div>
 
@@ -1060,8 +1060,8 @@ export function EliteMath() {
         >
           {[
             { label: "Launches", value: "3" },
-            { label: "Capital per launch", value: "$7K" },
-            { label: "Total deployed", value: "$21K" },
+            { label: "Capital per launch", value: "$10K" },
+            { label: "Total deployed", value: "$30K" },
             { label: "Your profit share", value: "80%" },
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-3">
@@ -1321,8 +1321,8 @@ export function EliteLaunches() {
 
 const faqs = [
   {
-    q: "How much capital do I actually need beyond the $7K per launch?",
-    a: "The $7K per launch covers our testing capital — the budget we use to source, create, and launch your product. You'll also need capital for cost of goods (typically $5–12K depending on category and MOQ) and initial inventory replenishment once a product starts selling. We walk you through the full capital plan in the onboarding call so there are no surprises.",
+    q: "How much capital do I actually need beyond the $10K per launch?",
+    a: "The $10K per launch covers our testing capital — the budget we use to source, create, and launch your product. You'll also need capital for cost of goods (typically $5–12K depending on category and MOQ) and initial inventory replenishment once a product starts selling. We walk you through the full capital plan in the onboarding call so there are no surprises.",
   },
   {
     q: "Who owns the Amazon account and the brand?",

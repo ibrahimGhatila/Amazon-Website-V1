@@ -27,7 +27,7 @@ const services = [
     span: "lg:col-span-2 lg:row-span-2",
     variant: "featured",
     bullets: [
-      "$7K budget per launch",
+      "$10K budget per launch",
       "3 launches / 18 months",
       "80/20 profit share",
     ],

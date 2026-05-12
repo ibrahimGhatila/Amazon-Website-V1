@@ -12,7 +12,7 @@ import { AboutCTA } from "../about/_components/AboutCTA";
 export const metadata: Metadata = {
   title: "How It Works — Capital, launches, and the operating system",
   description:
-    "The full Elite Program operating system: 6 phases, $7K per launch, 80/20 profit share, 18-month cycle. Who does what, how capital flows, and how risk is managed.",
+    "The full Elite Program operating system: 6 phases, $10K per launch, 80/20 profit share, 18-month cycle. Who does what, how capital flows, and how risk is managed.",
 };
 
 export default function HowItWorksPage() {

@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const flow = [
-  { label: "Your Capital", sub: "$7K / launch", color: "bg-brand-yellow text-brand-navy", dot: "bg-brand-yellow" },
+  { label: "Your Capital", sub: "$10K / launch", color: "bg-brand-yellow text-brand-navy", dot: "bg-brand-yellow" },
   { label: "Research", sub: "Data-led product selection", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
   { label: "Sourcing", sub: "Vetted supplier + QC", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
   { label: "Launch", sub: "Creatives, PPC, listings", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },

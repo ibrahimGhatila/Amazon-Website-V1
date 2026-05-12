@@ -115,9 +115,9 @@ export function Hero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
               className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
             >
-              95% of solo sellers fail within two years. Our Elite operators
-              succeed at 6× the industry rate — targeting $10,000–$25,000 per
-              month within five years. We run the operation. You own the brand.
+              95% of solo Amazon sellers fail. Our Elite operators succeed at
+              30% — targeting $10,000–$25,000 per month within five years. We
+              run the operation. You own the brand.
             </motion.p>
 
             <motion.div

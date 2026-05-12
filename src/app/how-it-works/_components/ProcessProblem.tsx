@@ -104,8 +104,8 @@ export function ProcessProblem() {
                 THE FIX
               </div>
               <h3 className="font-black tracking-tight text-2xl sm:text-3xl leading-tight text-balance">
-                Our Elite operators succeed at 30% — 6× the industry average of
-                5%. Same marketplace. Different system.
+                Our Elite operators succeed at 30%. The industry average is 5%.
+                Same marketplace. Different system.
               </h3>
             </div>
           </div>

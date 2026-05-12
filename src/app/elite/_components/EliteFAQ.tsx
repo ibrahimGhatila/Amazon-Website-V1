@@ -8,8 +8,8 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 const faqs = [
   {
-    q: "How much capital do I actually need beyond the $7K per launch?",
-    a: "The $7K per launch covers our testing capital — the budget we use to source, create, and launch your product. You'll also need capital for cost of goods (typically $5–12K depending on category and MOQ) and initial inventory replenishment once a product starts selling. We walk you through the full capital plan in the onboarding call so there are no surprises.",
+    q: "How much capital do I actually need beyond the $10K per launch?",
+    a: "The $10K per launch covers our testing capital — the budget we use to source, create, and launch your product. You'll also need capital for cost of goods (typically $5–12K depending on category and MOQ) and initial inventory replenishment once a product starts selling. We walk you through the full capital plan in the onboarding call so there are no surprises.",
   },
   {
     q: "Who owns the Amazon account and the brand?",
