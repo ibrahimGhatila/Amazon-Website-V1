@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: "Contact — Get in touch with Extreme Commerce",
   description:
     "Apply for Elite, partner with us, request press, or just send a message. Real humans reply within 24 hours on weekdays.",
+  keywords: [
+    "Contact Extreme Commerce",
+    "Amazon agency contact",
+    "Sunny Ali contact",
+    "Extreme Commerce office",
+    "Amazon partner enquiry",
+  ],
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Extreme Commerce",
+    description:
+      "Apply for Elite, partner with us, request press, or send a message. Real humans reply within 24 hours.",
+    url: "/contact",
+  },
 };
 
 export default function ContactPage() {

@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   title: "About — A decade building Amazon brands",
   description:
     "Founded in 2015 by Sunny Ali, Extreme Commerce builds and scales profitable Amazon brands. 1M+ community, 1,200+ launches, 50+ partners across government, education, and global tech.",
+  keywords: [
+    "About Extreme Commerce",
+    "Sunny Ali founder",
+    "Amazon agency Pakistan",
+    "Amazon brand builder",
+    "ecommerce company history",
+  ],
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Extreme Commerce — A decade building Amazon brands",
+    description:
+      "Founded in 2015 by Sunny Ali. 1M+ community, 1,200+ launches, 50+ partners.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {

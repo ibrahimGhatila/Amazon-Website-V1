@@ -37,14 +37,8 @@ export const metadata: Metadata = {
     "Done-for-you Amazon",
   ],
   authors: [{ name: "Extreme Commerce" }],
-  icons: {
-    icon: [
-      { url: "/brand/SA-1-(2).png", type: "image/png" },
-    ],
-    apple: [
-      { url: "/brand/SA-1-(2).png", type: "image/png" },
-    ],
-    shortcut: "/brand/SA-1-(2).png",
+  alternates: {
+    canonical: "/",
   },
   openGraph: {
     type: "website",
@@ -91,6 +85,32 @@ export default function RootLayout({
       className={`${montserrat.variable} ${bebas.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-brand-navy">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Extreme Commerce",
+              url: "https://extremecommerce.com",
+              logo: "https://ec.com.pk/assets/img/logo.svg",
+              description:
+                "We build and scale Amazon businesses for entrepreneurs, investors, and business owners.",
+              founder: { "@type": "Person", name: "Sunny Ali" },
+              sameAs: [
+                "https://www.linkedin.com/company/extreme-commerce/",
+                "https://www.instagram.com/extremecommerce/",
+                "https://www.youtube.com/@ExtremeCommerce",
+                "https://www.facebook.com/extremecommerce/",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                availableLanguage: ["English", "Urdu"],
+              },
+            }),
+          }}
+        />
         {children}
         <ChatWidget />
       </body>
