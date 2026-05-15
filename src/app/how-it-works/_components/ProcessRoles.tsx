@@ -143,7 +143,7 @@ export function ProcessRoles() {
               className={`px-4 sm:px-6 py-4 font-display text-xs sm:text-sm tracking-[0.25em] flex items-center gap-2 transition-colors duration-300 ${
                 side === "you"
                   ? "bg-brand-yellow text-brand-navy"
-                  : "bg-white text-brand-navy/40"
+                  : "bg-white text-brand-navy/70"
               }`}
             >
               <User className="h-4 w-4" />
@@ -153,7 +153,7 @@ export function ProcessRoles() {
               className={`px-4 sm:px-6 py-4 font-display text-xs sm:text-sm tracking-[0.25em] flex items-center gap-2 transition-colors duration-300 ${
                 side === "us"
                   ? "bg-brand-navy text-white"
-                  : "bg-white text-brand-navy/40"
+                  : "bg-white text-brand-navy/70"
               }`}
             >
               <Users className="h-4 w-4" />
@@ -189,14 +189,16 @@ export function ProcessRoles() {
                         ? isPrimary
                           ? "bg-brand-yellow/15"
                           : "bg-white"
-                        : "bg-white opacity-50"
+                        : "bg-brand-navy/[0.02]"
                     }`}
                   >
                     <p
                       className={`text-xs sm:text-sm leading-relaxed ${
-                        side === "you" && isPrimary
-                          ? "text-brand-navy font-medium"
-                          : "text-brand-navy/65"
+                        side === "you"
+                          ? isPrimary
+                            ? "text-brand-navy font-medium"
+                            : "text-brand-navy/75"
+                          : "text-brand-navy/70"
                       }`}
                     >
                       {r.you}
@@ -208,14 +210,16 @@ export function ProcessRoles() {
                         ? isPrimary
                           ? "bg-brand-navy text-white"
                           : "bg-white"
-                        : "bg-white opacity-50"
+                        : "bg-brand-navy/[0.02]"
                     }`}
                   >
                     <p
                       className={`text-xs sm:text-sm leading-relaxed ${
-                        side === "us" && isPrimary
-                          ? "text-white font-medium"
-                          : "text-brand-navy/65"
+                        side === "us"
+                          ? isPrimary
+                            ? "text-white font-medium"
+                            : "text-brand-navy/75"
+                          : "text-brand-navy/70"
                       }`}
                     >
                       {r.us}
