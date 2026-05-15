@@ -15,38 +15,30 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 const services = [
   {
-    tag: "FLAGSHIP",
+    tag: "AMAZON",
     title: "Elite Program — Amazon",
     description:
-      "Done-for-you Amazon brand. Three launches, one dedicated team, profit split only on results.",
+      "Done-for-you Amazon brand. We build, launch, and run it. You own the upside.",
     href: "/elite",
     icon: Rocket,
-    span: "lg:col-span-1 lg:row-span-2",
     variant: "featured",
-    bullets: [
-      "$10K budget per launch",
-      "3 launches / 18 months",
-      "80/20 profit share",
-    ],
   },
   {
-    tag: "NEW",
+    tag: "TIKTOK SHOP",
     title: "Elite Program — TikTok",
     description:
       "Your TikTok Shop brand, built and operated for you. Creator commerce, done right.",
     href: "/elite-tiktok",
     icon: Play,
-    span: "lg:col-span-2",
     variant: "yellow",
   },
   {
     tag: "MENTORSHIP",
     title: "Ask Sunny Ali",
     description:
-      "Direct access to Sunny Ali. Monthly strategy Zooms, WhatsApp voice notes, and the full playbook from 1,000+ launches.",
+      "Direct access to Sunny Ali — monthly strategy Zooms, WhatsApp voice notes, and the full playbook from a decade of launches.",
     href: "/ask-sunny-ali",
     icon: MessageCircle,
-    span: "lg:col-span-2",
     variant: "azure",
   },
 ];
@@ -87,10 +79,10 @@ export function Services() {
               One mission.
             </>
           }
-          subtitle="Whether you want us to run it, want TikTok Shop, or want direct access to Sunny — here's what we offer."
+          subtitle="Done-for-you Amazon brands, TikTok Shop builds, and direct mentorship from Sunny Ali — pick the engagement that fits your stage."
         />
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[minmax(180px,auto)] gap-3">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => {
             const Icon = service.icon;
             const variant = service.variant as keyof typeof variantStyles;
@@ -105,25 +97,15 @@ export function Services() {
                   ease: EASE,
                   delay: i * 0.08,
                 }}
-                className={cn("group", service.span)}
+                className="group"
               >
                 <Link
                   href={service.href}
                   className={cn(
-                    "relative flex flex-col h-full rounded-3xl border p-4 sm:p-5 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden",
+                    "relative flex flex-col h-full min-h-[280px] rounded-3xl border p-5 sm:p-6 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden",
                     variantStyles[variant]
                   )}
                 >
-                  {/* Decorative orbit for featured */}
-                  {service.variant === "featured" && (
-                    <>
-                      <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-brand-yellow/10 blur-3xl" />
-                      <div className="absolute right-10 bottom-10 font-display text-[14rem] leading-none text-white/[0.04] pointer-events-none select-none">
-                        eX
-                      </div>
-                    </>
-                  )}
-
                   <div className="relative flex items-start justify-between">
                     <span
                       className={cn(
@@ -147,10 +129,10 @@ export function Services() {
                     </span>
                   </div>
 
-                  <div className="relative mt-auto pt-4">
+                  <div className="relative mt-auto pt-6">
                     <Icon
                       className={cn(
-                        "h-6 w-6 mb-2",
+                        "h-7 w-7 mb-3",
                         variant === "featured"
                           ? "text-brand-yellow"
                           : variant === "azure"
@@ -161,19 +143,12 @@ export function Services() {
                       )}
                       strokeWidth={1.75}
                     />
-                    <h3
-                      className={cn(
-                        "font-black tracking-tight leading-[1.05]",
-                        service.variant === "featured"
-                          ? "text-2xl sm:text-3xl lg:text-4xl"
-                          : "text-xl sm:text-2xl"
-                      )}
-                    >
+                    <h3 className="font-black tracking-tight leading-[1.05] text-2xl sm:text-[28px]">
                       {service.title}
                     </h3>
                     <p
                       className={cn(
-                        "mt-1.5 text-sm leading-snug text-pretty max-w-md",
+                        "mt-2 text-sm leading-snug text-pretty max-w-md",
                         variant === "featured" || variant === "azure"
                           ? "text-white/70"
                           : "text-brand-navy/70"
@@ -181,32 +156,6 @@ export function Services() {
                     >
                       {service.description}
                     </p>
-
-                    {service.bullets && (
-                      <ul className="mt-2 space-y-1">
-                        {service.bullets.map((bullet) => (
-                          <li
-                            key={bullet}
-                            className="flex items-center gap-2 text-sm text-white/80"
-                          >
-                            <svg
-                              className="h-4 w-4 flex-none text-brand-yellow"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                            >
-                              <path
-                                d="M3 8l3 3 7-7"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                            {bullet}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                   </div>
                 </Link>
               </motion.div>

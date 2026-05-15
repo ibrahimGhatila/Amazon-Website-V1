@@ -115,9 +115,9 @@ export function Hero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
               className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
             >
-              95% of solo Amazon sellers fail. Our Elite operators succeed at
-              30% — targeting $10,000–$25,000 per month within five years. We
-              run the operation. You own the brand.
+              Done-for-you Amazon brands, TikTok Shop builds, and direct
+              mentorship from Sunny Ali. We run the operation. You own the
+              upside. A decade of building winning e-commerce brands.
             </motion.p>
 
             <motion.div
@@ -126,11 +126,11 @@ export function Hero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
               className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
             >
-              <Button href="#elite" size="lg" variant="primary" arrow>
-                Start with Elite
+              <Button href="#services" size="lg" variant="primary" arrow>
+                Explore services
               </Button>
               <Link
-                href="#process"
+                href="/how-it-works"
                 className="group inline-flex items-center gap-3 text-white/90 hover:text-white px-3 py-3"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 backdrop-blur-md border border-white/15 group-hover:bg-white/10 group-hover:border-brand-yellow/40 transition">
