@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { Counter } from "@/components/ui/Counter";
-import { Users, Rocket, TrendingUp, Award } from "lucide-react";
+import { Users, Rocket, TrendingUp, Handshake } from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -26,18 +26,18 @@ const stats = [
   },
   {
     label: "Product launches",
-    value: 1000,
+    value: 1200,
     prefix: "",
     suffix: "+",
     icon: Rocket,
     accent: "text-brand-yellow",
   },
   {
-    label: "Elite member success rate",
-    value: 30,
+    label: "Brand partners",
+    value: 50,
     prefix: "",
-    suffix: "%",
-    icon: Award,
+    suffix: "+",
+    icon: Handshake,
     accent: "text-brand-yellow",
   },
 ];
