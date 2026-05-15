@@ -9,28 +9,32 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 const faqs = [
   {
-    q: "Who is the Elite Program for?",
-    a: "Entrepreneurs, investors, and business owners with capital they want to deploy into a real Amazon business. It's not for beginners looking to learn — it's for operators ready to launch.",
+    q: "What does Extreme Commerce actually do?",
+    a: "We build and operate e-commerce businesses for our partners. That means product research, sourcing, listings, advertising, and day-to-day management — fully done for you. We also offer direct mentorship from Sunny Ali and trained VA placements for teams who want to run things themselves.",
   },
   {
-    q: "How much capital do I need to commit?",
-    a: "We allocate $10,000 per launch, with three launches over 18 months. That's in addition to your share of cost of goods and reinvestment into winners. We'll walk you through the full capital plan in the onboarding call.",
+    q: "Which service is right for me?",
+    a: "If you want a hands-off brand built and run for you, the Elite Program is your fit — choose Amazon or TikTok Shop. If you already have an operation and want strategic guidance, Ask Sunny Ali gives you direct access to Sunny's playbook. If you need execution capacity inside your own team, our VA service fills that gap.",
   },
   {
-    q: "How does the 80/20 profit share work?",
-    a: "You keep 80% of the profit; we retain 20%. Our share is structured to unlock at ROI milestones — we earn 10% once ROI crosses 50%, and 20% once ROI crosses 100%. We only profit when you profit first.",
+    q: "What platforms do you operate on?",
+    a: "Amazon USA, UK, Canada, and UAE — plus Walmart, TikTok Shop, Etsy, and Amazon Wholesale. We match the platform to your product and market, not the other way around.",
   },
   {
-    q: "What if a product doesn't work?",
-    a: "We build testing into the model. Not every launch succeeds. We retire losers quickly, document the lesson, and push winners aggressively. Three launches gives us a portfolio, not a single bet.",
+    q: "Do I need capital to work with you?",
+    a: "It depends on the engagement. Done-for-you brand builds require capital for inventory and launch. Mentorship and VA services don't. We'll walk you through what's needed for your specific situation on a call.",
   },
   {
-    q: "Can I hire just a virtual assistant instead?",
-    a: "Yes. Our VA service is separate and flexible — full-time or part-time, trained on Amazon operations, and placed inside your existing setup. It's the fastest way to add Amazon expertise to your team.",
+    q: "Can I hire just a virtual assistant?",
+    a: "Yes. Our VA service is standalone — full-time or part-time, trained on Amazon operations, and placed directly inside your existing setup. It's the fastest way to add Amazon expertise to your team without a full-service engagement.",
   },
   {
-    q: "Do you operate outside of Amazon?",
-    a: "Yes. We also launch and operate on Walmart, TikTok Shop, Etsy, and Amazon Wholesale. Your strategy will match your product and market, not a single platform.",
+    q: "Who is behind Extreme Commerce?",
+    a: "Extreme Commerce was founded by Sunny Ali, one of Pakistan's most recognized e-commerce entrepreneurs. The community has grown to 1.4 million members across South Asia and the Gulf. The team behind every launch has managed hundreds of Amazon brands over the past decade.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Book a free strategy call. We'll learn about your goals, walk you through the right engagement, and give you a clear picture of next steps — no pressure, no pitch deck.",
   },
 ];
 
@@ -50,7 +54,7 @@ export function FAQ() {
               Answers, before you ask.
             </>
           }
-          subtitle="The real questions capital-serious operators actually want addressed."
+          subtitle="What you need to know about working with Extreme Commerce."
         />
 
         <div className="mt-14 divide-y divide-brand-navy/10 border-y border-brand-navy/10">
