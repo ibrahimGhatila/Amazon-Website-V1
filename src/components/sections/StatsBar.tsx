@@ -9,11 +9,12 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 const stats = [
   {
     label: "Community strong",
-    value: 1,
+    value: 14,
     prefix: "",
     suffix: "M+",
     icon: Users,
     accent: "text-brand-yellow",
+    formatFn: (n: number) => (n / 10).toFixed(1),
   },
   {
     label: "Economic impact",
@@ -99,6 +100,7 @@ export function StatsBar() {
                       to={stat.value}
                       prefix={stat.prefix}
                       suffix={stat.suffix}
+                      formatFn={stat.formatFn}
                     />
                   </div>
                   <div className="mt-3 text-brand-navy/80 group-hover:text-white/70 transition-colors duration-500 text-sm sm:text-base font-medium">
