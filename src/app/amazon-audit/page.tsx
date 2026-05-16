@@ -99,8 +99,8 @@ const PROCESS_STEPS = [
   {
     num: "01",
     icon: ClipboardList,
-    title: "Submit Your Store",
-    desc: "Fill out the short form below. Your store URL, monthly revenue, and biggest pain point is all we need to get started.",
+    title: "Submit Your Listing",
+    desc: "Fill out the short form below. Your product link, listing age, review count, and current monthly numbers is all we need to get started.",
   },
   {
     num: "02",
@@ -156,24 +156,17 @@ const TESTIMONIALS = [
   },
 ];
 
-const REVENUE_RANGES = [
-  "Under $2,000/mo",
-  "$2,000 – $5,000/mo",
-  "$5,000 – $10,000/mo",
-  "$10,000 – $25,000/mo",
-  "$25,000 – $50,000/mo",
-  "$50,000+/mo",
-];
-
-const CHALLENGES = [
-  "Low organic ranking / visibility",
-  "High ACoS / unprofitable ads",
-  "Poor conversion rate",
-  "Negative reviews hurting sales",
-  "Losing the Buy Box",
-  "Stuck revenue / plateau",
-  "Just starting out",
-  "Other",
+const COUNTRY_CODES = [
+  { code: "+92", flag: "🇵🇰", country: "PK" },
+  { code: "+1", flag: "🇺🇸", country: "US" },
+  { code: "+44", flag: "🇬🇧", country: "UK" },
+  { code: "+971", flag: "🇦🇪", country: "AE" },
+  { code: "+966", flag: "🇸🇦", country: "SA" },
+  { code: "+60", flag: "🇲🇾", country: "MY" },
+  { code: "+91", flag: "🇮🇳", country: "IN" },
+  { code: "+880", flag: "🇧🇩", country: "BD" },
+  { code: "+61", flag: "🇦🇺", country: "AU" },
+  { code: "+1", flag: "🇨🇦", country: "CA" },
 ];
 
 type FormState = "idle" | "submitting" | "success" | "error";
@@ -183,21 +176,27 @@ function AuditForm({ className }: { className?: string }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    countryCode: "+92",
     phone: "",
-    storeUrl: "",
-    revenue: "",
-    challenge: "",
+    productLink: "",
+    listingAge: "",
+    reviews: "",
+    monthlyOrders: "",
+    monthlyProfit: "",
   });
   const [state, setState] = useState<FormState>("idle");
-  const [errors, setErrors] = useState<Partial<typeof form>>({});
+  const [errors, setErrors] = useState<Partial<Record<keyof typeof form, string>>>({});
 
   const validate = () => {
-    const e: Partial<typeof form> = {};
+    const e: Partial<Record<keyof typeof form, string>> = {};
     if (!form.name.trim()) e.name = "Required";
     if (!form.email.includes("@")) e.email = "Valid email required";
-    if (!form.storeUrl.trim()) e.storeUrl = "Required";
-    if (!form.revenue) e.revenue = "Required";
-    if (!form.challenge) e.challenge = "Required";
+    if (!form.phone.trim()) e.phone = "Required";
+    if (!form.productLink.trim()) e.productLink = "Required";
+    if (!form.listingAge.trim()) e.listingAge = "Required";
+    if (!form.reviews.trim()) e.reviews = "Required";
+    if (!form.monthlyOrders.trim()) e.monthlyOrders = "Required";
+    if (!form.monthlyProfit.trim()) e.monthlyProfit = "Required";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -262,10 +261,10 @@ function AuditForm({ className }: { className?: string }) {
           <span className="font-display text-[11px] tracking-[0.2em] text-brand-yellow uppercase">100% Free · No Obligation</span>
         </div>
         <h3 className="font-black text-white text-xl sm:text-2xl leading-tight">
-          Request Your Free Audit
+          Free Amazon Listing Audit
         </h3>
         <p className="text-white/55 text-sm mt-1.5 leading-snug">
-          Takes 2 minutes. We'll handle the rest.
+          Fill in the details below to get your comprehensive Amazon audit.
         </p>
       </div>
 
@@ -278,7 +277,7 @@ function AuditForm({ className }: { className?: string }) {
           <input
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            placeholder="Your name"
+            placeholder="Name"
             className={cn(
               "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.name ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
@@ -288,13 +287,13 @@ function AuditForm({ className }: { className?: string }) {
         </div>
         <div>
           <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
-            Email Address <span className="text-brand-yellow">*</span>
+            Email <span className="text-brand-yellow">*</span>
           </label>
           <input
             type="email"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            placeholder="you@email.com"
+            placeholder="Email"
             className={cn(
               "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.email ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
@@ -304,85 +303,131 @@ function AuditForm({ className }: { className?: string }) {
         </div>
       </div>
 
-      {/* Phone + Store URL */}
-      <div className="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
-            Phone / WhatsApp
-          </label>
+      {/* Phone with country code */}
+      <div>
+        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+          Phone Number <span className="text-brand-yellow">*</span>
+        </label>
+        <div
+          className={cn(
+            "flex items-stretch rounded-xl bg-white/5 border overflow-hidden focus-within:ring-2 focus-within:ring-brand-yellow/50 transition",
+            errors.phone ? "border-rose-500/70" : "border-white/10 focus-within:border-brand-yellow/40"
+          )}
+        >
+          <div className="relative flex-none">
+            <select
+              value={form.countryCode}
+              onChange={(e) => setForm({ ...form, countryCode: e.target.value })}
+              className="h-full appearance-none bg-white/[0.03] border-r border-white/10 pl-3 pr-8 text-sm text-white focus:outline-none cursor-pointer"
+            >
+              {COUNTRY_CODES.map((c, i) => (
+                <option key={`${c.code}-${c.country}-${i}`} value={c.code} className="bg-brand-navy text-white">
+                  {c.flag} {c.country} {c.code}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-white/40" />
+          </div>
           <input
             type="tel"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            placeholder="+92 300 000 0000"
-            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 focus:border-brand-yellow/40 transition"
+            placeholder={form.countryCode}
+            className="flex-1 bg-transparent px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none"
           />
+        </div>
+        {errors.phone && <p className="mt-1 text-xs text-rose-400">{errors.phone}</p>}
+      </div>
+
+      {/* Product Link */}
+      <div>
+        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+          Product Link <span className="text-brand-yellow">*</span>
+        </label>
+        <input
+          value={form.productLink}
+          onChange={(e) => setForm({ ...form, productLink: e.target.value })}
+          placeholder="Product link"
+          className={cn(
+            "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+            errors.productLink ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
+          )}
+        />
+        {errors.productLink && <p className="mt-1 text-xs text-rose-400">{errors.productLink}</p>}
+      </div>
+
+      {/* Age of listing */}
+      <div>
+        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+          Age of listing (in months) <span className="text-brand-yellow">*</span>
+        </label>
+        <input
+          type="number"
+          min="0"
+          value={form.listingAge}
+          onChange={(e) => setForm({ ...form, listingAge: e.target.value })}
+          placeholder="Age of listing (in months)"
+          className={cn(
+            "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+            errors.listingAge ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
+          )}
+        />
+        {errors.listingAge && <p className="mt-1 text-xs text-rose-400">{errors.listingAge}</p>}
+      </div>
+
+      {/* Number of Reviews */}
+      <div>
+        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+          Number of Reviews <span className="text-brand-yellow">*</span>
+        </label>
+        <input
+          type="number"
+          min="0"
+          value={form.reviews}
+          onChange={(e) => setForm({ ...form, reviews: e.target.value })}
+          placeholder="Number of Reviews"
+          className={cn(
+            "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+            errors.reviews ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
+          )}
+        />
+        {errors.reviews && <p className="mt-1 text-xs text-rose-400">{errors.reviews}</p>}
+      </div>
+
+      {/* Monthly Average Orders + Monthly Profit */}
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+            Monthly Average Orders <span className="text-brand-yellow">*</span>
+          </label>
+          <input
+            type="number"
+            min="0"
+            value={form.monthlyOrders}
+            onChange={(e) => setForm({ ...form, monthlyOrders: e.target.value })}
+            placeholder="Monthly Average Orders"
+            className={cn(
+              "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+              errors.monthlyOrders ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
+            )}
+          />
+          {errors.monthlyOrders && <p className="mt-1 text-xs text-rose-400">{errors.monthlyOrders}</p>}
         </div>
         <div>
           <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
-            Amazon Store URL <span className="text-brand-yellow">*</span>
+            Monthly Profit <span className="text-brand-yellow">*</span>
           </label>
           <input
-            value={form.storeUrl}
-            onChange={(e) => setForm({ ...form, storeUrl: e.target.value })}
-            placeholder="amazon.com/stores/..."
+            value={form.monthlyProfit}
+            onChange={(e) => setForm({ ...form, monthlyProfit: e.target.value })}
+            placeholder="Monthly Profit"
             className={cn(
               "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
-              errors.storeUrl ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
+              errors.monthlyProfit ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
             )}
           />
-          {errors.storeUrl && <p className="mt-1 text-xs text-rose-400">{errors.storeUrl}</p>}
+          {errors.monthlyProfit && <p className="mt-1 text-xs text-rose-400">{errors.monthlyProfit}</p>}
         </div>
-      </div>
-
-      {/* Monthly Revenue */}
-      <div>
-        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
-          Monthly Revenue <span className="text-brand-yellow">*</span>
-        </label>
-        <div className="relative">
-          <select
-            value={form.revenue}
-            onChange={(e) => setForm({ ...form, revenue: e.target.value })}
-            className={cn(
-              "w-full appearance-none rounded-xl bg-white/5 border px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition cursor-pointer",
-              !form.revenue && "text-white/30",
-              errors.revenue ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
-            )}
-          >
-            <option value="" className="bg-brand-navy text-white/50">Select range…</option>
-            {REVENUE_RANGES.map((r) => (
-              <option key={r} value={r} className="bg-brand-navy text-white">{r}</option>
-            ))}
-          </select>
-          <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
-        </div>
-        {errors.revenue && <p className="mt-1 text-xs text-rose-400">{errors.revenue}</p>}
-      </div>
-
-      {/* Main Challenge */}
-      <div>
-        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
-          Biggest Challenge <span className="text-brand-yellow">*</span>
-        </label>
-        <div className="relative">
-          <select
-            value={form.challenge}
-            onChange={(e) => setForm({ ...form, challenge: e.target.value })}
-            className={cn(
-              "w-full appearance-none rounded-xl bg-white/5 border px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition cursor-pointer",
-              !form.challenge && "text-white/30",
-              errors.challenge ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
-            )}
-          >
-            <option value="" className="bg-brand-navy text-white/50">Select challenge…</option>
-            {CHALLENGES.map((c) => (
-              <option key={c} value={c} className="bg-brand-navy text-white">{c}</option>
-            ))}
-          </select>
-          <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
-        </div>
-        {errors.challenge && <p className="mt-1 text-xs text-rose-400">{errors.challenge}</p>}
       </div>
 
       {/* Submit */}
