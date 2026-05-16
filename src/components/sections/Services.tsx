@@ -62,7 +62,7 @@ const tagStyles = {
 
 export function Services() {
   return (
-    <section id="services" className="relative bg-white py-10 sm:py-14 overflow-hidden">
+    <section id="services" className="relative bg-white py-20 sm:py-28 overflow-hidden">
       {/* Subtle grid */}
       <div
         aria-hidden
@@ -82,7 +82,7 @@ export function Services() {
           subtitle="Done-for-you Amazon brands, TikTok Shop builds, and direct mentorship from Sunny Ali — pick the engagement that fits your stage."
         />
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => {
             const Icon = service.icon;
             const variant = service.variant as keyof typeof variantStyles;

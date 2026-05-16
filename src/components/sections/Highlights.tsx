@@ -30,7 +30,7 @@ const highlights = [
 
 export function Highlights() {
   return (
-    <section className="relative bg-white py-12 sm:py-16">
+    <section className="relative bg-white py-20 sm:py-28">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="MORE WAYS IN"
@@ -38,7 +38,7 @@ export function Highlights() {
           subtitle="Two low-commitment ways to engage with Extreme Commerce — start with what fits."
         />
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-5">
           {highlights.map((item, i) => {
             const Icon = item.icon;
             return (

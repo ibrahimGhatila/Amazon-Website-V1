@@ -22,15 +22,7 @@ const faqs = [
   },
   {
     q: "Do I need capital to work with you?",
-    a: "It depends on the engagement. Done-for-you brand builds require capital for inventory and launch. Mentorship and VA services don't. We'll walk you through what's needed for your specific situation on a call.",
-  },
-  {
-    q: "Can I hire just a virtual assistant?",
-    a: "Yes. Our VA service is standalone — full-time or part-time, trained on Amazon operations, and placed directly inside your existing setup. It's the fastest way to add Amazon expertise to your team without a full-service engagement.",
-  },
-  {
-    q: "Who is behind Extreme Commerce?",
-    a: "Extreme Commerce was founded by Sunny Ali, one of Pakistan's most recognized e-commerce entrepreneurs. The community has grown to 1.4 million members across South Asia and the Gulf. The team behind every launch has managed hundreds of Amazon brands over the past decade.",
+    a: "It depends on the engagement. Done-for-you brand builds require capital for inventory and launch. Mentorship doesn't. We'll walk you through what's needed for your specific situation on a call.",
   },
   {
     q: "How do I get started?",

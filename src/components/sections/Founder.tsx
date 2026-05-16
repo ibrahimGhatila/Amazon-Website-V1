@@ -18,7 +18,7 @@ export function Founder() {
   return (
     <section
       id="founder"
-      className="relative bg-white py-10 sm:py-12 overflow-hidden"
+      className="relative bg-white py-20 sm:py-28 overflow-hidden"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-16 items-center">
