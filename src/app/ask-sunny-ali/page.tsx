@@ -2,8 +2,9 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Check, X, MessageCircle, Smartphone, BookOpen, Mic } from "lucide-react";
+import { ArrowLeft, Check, X, Smartphone } from "lucide-react";
 import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
@@ -105,68 +106,86 @@ function AskSunnyHero() {
             </motion.div>
           </div>
 
-          {/* Right — floating cards */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: EASE, delay: 0.5 }}
-            className="relative hidden lg:block h-[500px] w-full"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.4 }}
+            className="relative aspect-[4/5] max-w-md mx-auto lg:max-w-none w-full"
           >
-            {/* Yellow card — mentor stats */}
-            <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
-            >
-              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">SUNNY ALI</p>
-              <p className="font-black text-brand-navy text-5xl tracking-tight mt-2 leading-none">10K+</p>
-              <p className="text-xs text-brand-navy/55 mt-1">Hours of Amazon experience</p>
-              <div className="h-px bg-brand-navy/15 my-3" />
-              <div className="flex justify-between text-brand-navy/70 text-xs">
-                <span>Launches advised</span>
-                <span className="font-bold text-brand-navy">1,000+</span>
+            <div className="relative h-full w-full rounded-[2rem] bg-gradient-to-br from-brand-navy-600 via-brand-navy to-brand-navy-700 overflow-hidden border border-white/10">
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
+                <Image
+                  src="/brand/SA-1-(2).png"
+                  alt="Sunny Ali"
+                  width={640}
+                  height={960}
+                  priority
+                  className="h-[82%] w-auto object-contain object-bottom select-none mix-blend-lighten"
+                />
               </div>
-              <div className="flex justify-between text-brand-navy/70 text-xs mt-1.5">
-                <span>Revenue generated</span>
-                <span className="font-bold text-brand-navy">$2B+</span>
-              </div>
-            </motion.div>
 
-            {/* Glass card — your access */}
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute top-[28%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <span className="font-display text-[10px] tracking-[0.2em] text-white/50">YOUR ACCESS</span>
-                <span className="text-[10px] text-green-400 font-medium">● ACTIVE</span>
-              </div>
-              <div className="space-y-0">
-                {[
-                  { Icon: MessageCircle, label: "Monthly Strategy Zoom", meta: "60 min" },
-                  { Icon: Smartphone, label: "WhatsApp Voice Notes", meta: "Priority" },
-                  { Icon: BookOpen, label: "Resource Library", meta: "Full access" },
-                  { Icon: Mic, label: "Ask Anything", meta: "Async" },
-                ].map(({ Icon, label, meta }) => (
-                  <div key={label} className="flex items-center gap-3 py-2.5 border-b border-white/10 last:border-0">
-                    <Icon className="h-4 w-4 text-white/50 flex-none" strokeWidth={1.8} />
-                    <span className="text-white/80 text-sm flex-1">{label}</span>
-                    <span className="text-brand-yellow text-xs">{meta}</span>
+              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent pointer-events-none" />
+
+              <div className="relative h-full p-6 sm:p-7 flex flex-col justify-between">
+                <div className="flex items-start justify-between">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/15 px-3 py-1.5">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                    </span>
+                    <span className="font-display text-[10px] tracking-[0.22em] text-white/80 uppercase">
+                      Replies within 24h
+                    </span>
                   </div>
-                ))}
+                </div>
+
+                <div>
+                  <div className="font-display text-xs tracking-[0.3em] text-brand-yellow uppercase">
+                    Your mentor
+                  </div>
+                  <div className="mt-2 font-black text-white text-3xl sm:text-4xl tracking-tight leading-[0.95]">
+                    Sunny Ali
+                  </div>
+                  <div className="mt-1.5 text-white/65 text-sm">
+                    Founder, Extreme Commerce · 10+ years on Amazon
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 1 }}
+              className="absolute -left-3 sm:-left-6 bottom-20 max-w-[260px] rounded-2xl bg-white p-4 shadow-2xl shadow-black/40 rotate-[-3deg]"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <Smartphone className="h-3.5 w-3.5 text-emerald-600" />
+                <span className="font-display text-[10px] tracking-[0.2em] text-brand-navy/60 uppercase">
+                  Whatsapp · Yesterday
+                </span>
+              </div>
+              <div className="text-sm text-brand-navy leading-snug font-medium">
+                &ldquo;Pause the PPC on ASIN-3. Push the budget to ASIN-1 — your conversion just jumped 18%. Move now.&rdquo;
+              </div>
+              <div className="mt-2 flex items-center gap-1.5 text-[10px] text-brand-navy/45">
+                <span className="font-display tracking-[0.18em] uppercase">Voice note</span>
+                <span>· 0:47</span>
               </div>
             </motion.div>
 
-            {/* Azure card — avg growth */}
             <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-0 right-[5%] w-[200px] rounded-2xl bg-brand-azure p-5 shadow-2xl shadow-brand-azure/30"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 1.2 }}
+              className="absolute -right-3 sm:-right-5 top-12 rounded-2xl bg-brand-yellow px-4 py-3 shadow-xl shadow-brand-yellow/30 rotate-[4deg]"
             >
-              <p className="text-white/70 text-xs font-display tracking-[0.2em]">AVG REVENUE GROWTH</p>
-              <Counter to={147} suffix="%" duration={2.5} className="font-black text-white text-4xl mt-2 block" />
-              <p className="text-white/60 text-xs mt-1">Members after 6 months</p>
+              <div className="font-display text-2xl text-brand-navy leading-none font-black tracking-tight">
+                <Counter to={1000} suffix="+" />
+              </div>
+              <div className="mt-1 text-[10px] tracking-[0.18em] text-brand-navy/70 uppercase font-display">
+                Launches advised
+              </div>
             </motion.div>
           </motion.div>
         </div>
