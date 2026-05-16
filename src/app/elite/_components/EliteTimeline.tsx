@@ -128,7 +128,7 @@ export function EliteTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-            className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
+            className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
           >
             Every phase is planned, reported, and accountable. No black boxes. No vague updates.
           </motion.p>
@@ -175,7 +175,7 @@ export function EliteTimeline() {
                     </h3>
                     <ul className={`mt-3 space-y-1.5 ${isEven ? "sm:items-end" : ""}`}>
                       {m.items.map((item) => (
-                        <li key={item} className={`flex items-center gap-2 text-sm text-brand-navy/60 ${isEven ? "sm:flex-row-reverse sm:justify-start" : ""}`}>
+                        <li key={item} className={`flex items-center gap-2 text-sm text-brand-navy/75 ${isEven ? "sm:flex-row-reverse sm:justify-start" : ""}`}>
                           <span className="h-1 w-1 rounded-full bg-brand-yellow flex-none" />
                           {item}
                         </li>

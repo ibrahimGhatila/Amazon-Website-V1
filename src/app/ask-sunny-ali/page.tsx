@@ -235,7 +235,7 @@ function AskSunnyInclusions() {
                   <Check className="h-4 w-4 text-brand-yellow" strokeWidth={2.5} />
                 </div>
                 <h3 className="font-bold text-brand-navy text-base leading-tight mb-2">{card.title}</h3>
-                <p className="text-sm text-brand-navy/60 leading-relaxed">{card.body}</p>
+                <p className="text-sm text-brand-navy/75 leading-relaxed">{card.body}</p>
               </motion.div>
             ))}
           </div>
@@ -348,7 +348,7 @@ function AskSunnyFit() {
                     <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full border-2 border-brand-navy/15 text-brand-navy/40">
                       <X className="h-3.5 w-3.5" strokeWidth={2.5} />
                     </span>
-                    <span className="text-brand-navy/60 leading-snug">{item}</span>
+                    <span className="text-brand-navy/75 leading-snug">{item}</span>
                   </motion.li>
                 ))}
               </ul>

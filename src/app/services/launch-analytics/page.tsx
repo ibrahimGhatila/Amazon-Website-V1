@@ -366,7 +366,7 @@ function WhatIsIncluded() {
                       {item.bullets.map((b) => (
                         <li
                           key={b}
-                          className="flex items-start gap-2 text-sm text-brand-navy/65 leading-snug"
+                          className="flex items-start gap-2 text-sm text-brand-navy/75 leading-snug"
                         >
                           <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-yellow flex-none" />
                           {b}
@@ -456,7 +456,7 @@ function WeeklyReport() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-            className="mt-3 text-base text-white/60 leading-relaxed max-w-2xl"
+            className="mt-3 text-base text-white/80 leading-relaxed max-w-2xl"
           >
             Every week, you receive a clear snapshot of everything that matters
             — no jargon, no noise, just the numbers that drive decisions.
@@ -576,7 +576,7 @@ function LaunchCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.25 }}
-            className="mt-5 text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed text-pretty"
+            className="mt-5 text-base sm:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed text-pretty"
           >
             Book a free strategy session. We&rsquo;ll map your product, your
             market, and what a data-driven launch with us actually looks like.

@@ -236,7 +236,7 @@ function ApplicationForm() {
               <CheckCircle2 className="h-10 w-10 text-brand-navy" strokeWidth={2.5} />
             </div>
             <h2 className="font-black text-brand-navy text-3xl sm:text-4xl tracking-tight mb-3">Application received.</h2>
-            <p className="text-brand-navy/65 text-lg leading-relaxed mb-8">
+            <p className="text-brand-navy/75 text-lg leading-relaxed mb-8">
               Our team will review your application and reach out within 24 hours. Check your inbox — we reply personally.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
@@ -269,7 +269,7 @@ function ApplicationForm() {
             </motion.h2>
             <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-              className="mt-3 text-base text-brand-navy/65 leading-relaxed">
+              className="mt-3 text-base text-brand-navy/75 leading-relaxed">
               No fluff, no sales pitch. We review every application ourselves and only reach out when we believe we can genuinely help.
             </motion.p>
 

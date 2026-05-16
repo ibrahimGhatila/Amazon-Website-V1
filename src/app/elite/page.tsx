@@ -308,7 +308,7 @@ export function EliteQualifier() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-            className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
+            className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
           >
             We filter hard. Every client we take on gets our full team&rsquo;s attention.
             That means we only work with people we can genuinely win with.
@@ -378,7 +378,7 @@ export function EliteQualifier() {
                     <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full border-2 border-brand-navy/15 text-brand-navy/40">
                       <X className="h-3.5 w-3.5" strokeWidth={2.5} />
                     </span>
-                    <span className="text-brand-navy/60 leading-snug">{item}</span>
+                    <span className="text-brand-navy/75 leading-snug">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -392,7 +392,7 @@ export function EliteQualifier() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
-          className="mt-12 text-center text-brand-navy/60 text-lg"
+          className="mt-12 text-center text-brand-navy/75 text-lg"
         >
           If the left column describes you —{" "}
           <span className="text-brand-navy font-semibold">keep reading.</span>
@@ -505,7 +505,7 @@ export function EliteModel() {
           <div className="rounded-3xl bg-brand-yellow p-5 sm:p-6 text-brand-navy text-center">
             <div className="font-display text-6xl sm:text-7xl leading-none tracking-tight">80%</div>
             <div className="mt-3 font-bold text-xl">Your profit share</div>
-            <div className="mt-2 text-brand-navy/70 text-sm leading-relaxed">
+            <div className="mt-2 text-brand-navy/75 text-sm leading-relaxed">
               Paid directly to you. No delays, no ambiguity. Every dollar above the ROI threshold is tracked and distributed.
             </div>
           </div>
@@ -667,7 +667,7 @@ export function EliteTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-            className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
+            className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
           >
             Every phase is planned, reported, and accountable. No black boxes. No vague updates.
           </motion.p>
@@ -714,7 +714,7 @@ export function EliteTimeline() {
                     </h3>
                     <ul className={`mt-3 space-y-1.5 ${isEven ? "sm:items-end" : ""}`}>
                       {m.items.map((item) => (
-                        <li key={item} className={`flex items-center gap-2 text-sm text-brand-navy/60 ${isEven ? "sm:flex-row-reverse sm:justify-start" : ""}`}>
+                        <li key={item} className={`flex items-center gap-2 text-sm text-brand-navy/75 ${isEven ? "sm:flex-row-reverse sm:justify-start" : ""}`}>
                           <span className="h-1 w-1 rounded-full bg-brand-yellow flex-none" />
                           {item}
                         </li>
@@ -840,7 +840,7 @@ export function EliteMath() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-            className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
+            className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
           >
             Three launches. $10,000 of testing capital each. Here&rsquo;s how the math works across three scenarios — modelled from our actual launch data, not promises.
           </motion.p>
@@ -1219,7 +1219,7 @@ export function EliteFAQ() {
                       transition={{ duration: 0.4, ease: EASE }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-7 pl-9 sm:pl-11 pr-14 text-brand-navy/65 text-[15px] sm:text-base leading-relaxed text-pretty">
+                      <div className="pb-7 pl-9 sm:pl-11 pr-14 text-brand-navy/75 text-[15px] sm:text-base leading-relaxed text-pretty">
                         {faq.a}
                       </div>
                     </motion.div>

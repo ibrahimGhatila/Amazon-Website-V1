@@ -113,7 +113,7 @@ export function EliteHandled() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-              className="mt-5 text-lg text-white/60 leading-relaxed"
+              className="mt-5 text-lg text-white/80 leading-relaxed"
             >
               From the first data pull to the hundredth PPC optimisation — every task is handled by a dedicated, experienced team. Your job is to review, approve, and collect.
             </motion.p>

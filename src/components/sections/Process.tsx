@@ -136,7 +136,7 @@ export function Process() {
                       <h3 className="font-black text-2xl sm:text-3xl tracking-tight text-white">
                         {step.title}
                       </h3>
-                      <p className="mt-3 text-white/70 leading-relaxed text-pretty">
+                      <p className="mt-3 text-white/80 leading-relaxed text-pretty">
                         {step.description}
                       </p>
                       <div className="absolute -right-1 -top-1 h-8 w-8 rounded-tr-3xl border-t-2 border-r-2 border-brand-yellow/0 group-hover:border-brand-yellow transition-all duration-500" />

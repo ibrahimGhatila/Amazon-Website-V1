@@ -110,7 +110,7 @@ export function EliteFAQ() {
                       transition={{ duration: 0.4, ease: EASE }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-7 pl-9 sm:pl-11 pr-14 text-brand-navy/65 text-[15px] sm:text-base leading-relaxed text-pretty">
+                      <div className="pb-7 pl-9 sm:pl-11 pr-14 text-brand-navy/75 text-[15px] sm:text-base leading-relaxed text-pretty">
                         {faq.a}
                       </div>
                     </motion.div>

@@ -269,7 +269,7 @@ function MeetupWhat() {
                 <h3 className="mt-5 font-black text-brand-navy text-xl sm:text-2xl tracking-tight leading-tight">
                   {m.title}
                 </h3>
-                <p className="mt-2 text-brand-navy/65 text-sm sm:text-base leading-relaxed">
+                <p className="mt-2 text-brand-navy/75 text-sm sm:text-base leading-relaxed">
                   {m.desc}
                 </p>
               </motion.div>
@@ -466,7 +466,7 @@ function MeetupAudience() {
               <br />
               <span className="text-brand-azure">existed online.</span>
             </h2>
-            <p className="mt-5 text-lg text-brand-navy/60 leading-relaxed max-w-md">
+            <p className="mt-5 text-lg text-brand-navy/75 leading-relaxed max-w-md">
               Anyone curious about e-commerce can attend. But the room is mostly
               people who've already done it — or are seriously about to.
             </p>
@@ -491,7 +491,7 @@ function MeetupAudience() {
                     <h3 className="font-black text-brand-navy text-xl tracking-tight">
                       {a.label}
                     </h3>
-                    <p className="mt-1 text-brand-navy/65 text-sm sm:text-base leading-relaxed">
+                    <p className="mt-1 text-brand-navy/75 text-sm sm:text-base leading-relaxed">
                       {a.desc}
                     </p>
                   </div>

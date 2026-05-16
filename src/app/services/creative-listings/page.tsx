@@ -417,7 +417,7 @@ function WhatsIncluded() {
                   {item.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="flex items-start gap-2 text-sm text-brand-navy/60 leading-snug"
+                      className="flex items-start gap-2 text-sm text-brand-navy/75 leading-snug"
                     >
                       <CheckCircle2
                         className="h-3.5 w-3.5 text-brand-azure flex-shrink-0 mt-0.5"

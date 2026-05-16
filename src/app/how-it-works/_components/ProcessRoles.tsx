@@ -239,7 +239,7 @@ export function ProcessRoles() {
           transition={{ duration: 0.65, ease: EASE, delay: 0.2 }}
           className="mt-10 max-w-2xl mx-auto text-center"
         >
-          <p className="text-brand-navy/65 text-base sm:text-lg leading-relaxed">
+          <p className="text-brand-navy/75 text-base sm:text-lg leading-relaxed">
             Our promise:{" "}
             <span className="text-brand-navy font-bold">
               your time commitment is roughly 4 hours a month.

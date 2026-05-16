@@ -57,7 +57,7 @@ export function EliteQualifier() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-            className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
+            className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
           >
             We filter hard. Every client we take on gets our full team&rsquo;s attention.
             That means we only work with people we can genuinely win with.
@@ -127,7 +127,7 @@ export function EliteQualifier() {
                     <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full border-2 border-brand-navy/15 text-brand-navy/40">
                       <X className="h-3.5 w-3.5" strokeWidth={2.5} />
                     </span>
-                    <span className="text-brand-navy/60 leading-snug">{item}</span>
+                    <span className="text-brand-navy/75 leading-snug">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -141,7 +141,7 @@ export function EliteQualifier() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
-          className="mt-12 text-center text-brand-navy/60 text-lg"
+          className="mt-12 text-center text-brand-navy/75 text-lg"
         >
           If the left column describes you —{" "}
           <span className="text-brand-navy font-semibold">keep reading.</span>

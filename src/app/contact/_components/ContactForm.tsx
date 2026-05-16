@@ -66,7 +66,7 @@ export function ContactForm() {
                 <h3 className="font-black text-3xl text-brand-navy tracking-tight">
                   Message received.
                 </h3>
-                <p className="mt-3 max-w-md text-brand-navy/70 leading-relaxed">
+                <p className="mt-3 max-w-md text-brand-navy/75 leading-relaxed">
                   We&rsquo;ll get back to you within 24 hours on weekdays. If
                   it&rsquo;s urgent, the live chat in the bottom-right is the
                   fastest path.

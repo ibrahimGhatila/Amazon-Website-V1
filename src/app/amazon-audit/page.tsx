@@ -562,7 +562,7 @@ export default function AmazonAuditPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, ease: EASE, delay: 0.12 }}
-              className="mt-4 text-brand-navy/60 text-lg leading-relaxed"
+              className="mt-4 text-brand-navy/75 text-lg leading-relaxed"
             >
               Every audit covers all eight pillars of a successful Amazon store. Nothing is skipped.
             </motion.p>
@@ -748,7 +748,7 @@ export default function AmazonAuditPage() {
                   ))}
                 </div>
 
-                <blockquote className="text-brand-navy/70 text-sm leading-relaxed flex-1 mb-6">
+                <blockquote className="text-brand-navy/75 text-sm leading-relaxed flex-1 mb-6">
                   "{t.quote}"
                 </blockquote>
 

@@ -150,7 +150,7 @@ export function Founder() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.2 }}
-              className="mt-4 space-y-3 text-brand-navy/70 leading-relaxed text-base text-pretty"
+              className="mt-4 space-y-3 text-brand-navy/75 leading-relaxed text-base text-pretty"
             >
               <p>
                 Sunny Ali founded Extreme Commerce to answer a practical

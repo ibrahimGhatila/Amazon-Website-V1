@@ -358,7 +358,7 @@ function ServicesGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-            className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto leading-relaxed text-pretty"
+            className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto leading-relaxed text-pretty"
           >
             From done-for-you launches to trained virtual assistants — pick
             your level of involvement.

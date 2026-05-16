@@ -106,7 +106,7 @@ export function ContactOffices() {
                 {o.city}
               </h3>
 
-              <p className="mt-3 text-brand-navy/70 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+              <p className="mt-3 text-brand-navy/75 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                 {o.address}
               </p>
 

@@ -110,7 +110,7 @@ export function AboutHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
-              className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
+              className="mt-7 text-lg sm:text-xl max-w-xl text-white/80 leading-relaxed text-pretty"
             >
               Founded by Sunny Ali in 2015, Extreme Commerce is the operator-led
               team behind 1,200+ launches, a 1.4M+ community, and the largest
@@ -159,7 +159,7 @@ export function AboutHero() {
               <div className="mt-4 font-black text-brand-navy text-6xl tracking-tight leading-none">
                 2015
               </div>
-              <div className="mt-3 text-brand-navy/70 text-sm font-medium">
+              <div className="mt-3 text-brand-navy/75 text-sm font-medium">
                 A decade in the making
               </div>
             </motion.div>

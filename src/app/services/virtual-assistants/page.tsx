@@ -396,7 +396,7 @@ function WhatTheyHandle() {
                   {cat.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="flex items-start gap-2.5 text-sm text-brand-navy/60"
+                      className="flex items-start gap-2.5 text-sm text-brand-navy/75"
                     >
                       <span className="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-yellow flex-none" />
                       {bullet}
@@ -461,7 +461,7 @@ function WhoItsFor() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.16 }}
-              className="mt-4 text-white/60 leading-relaxed"
+              className="mt-4 text-white/80 leading-relaxed"
             >
               Our VAs are not entry-level hires. They come pre-trained and
               slot directly into your business — no ramp-up required.

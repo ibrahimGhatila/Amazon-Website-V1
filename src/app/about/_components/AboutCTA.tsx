@@ -77,7 +77,7 @@ export function AboutCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.25 }}
-            className="mt-5 text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed text-pretty"
+            className="mt-5 text-base sm:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed text-pretty"
           >
             Whether you want capital deployed for you, talent to run your
             account, or 1:1 mentorship — there&rsquo;s a path in.

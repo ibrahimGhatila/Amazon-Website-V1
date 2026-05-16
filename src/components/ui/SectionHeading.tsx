@@ -69,7 +69,7 @@ export function SectionHeading({
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
           className={cn(
             "mt-5 text-lg sm:text-xl leading-relaxed text-pretty",
-            isDark ? "text-white/70" : "text-brand-navy/70",
+            isDark ? "text-white/80" : "text-brand-navy/75",
             align === "center" && "mx-auto"
           )}
         >

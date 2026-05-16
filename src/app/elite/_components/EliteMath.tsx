@@ -83,7 +83,7 @@ export function EliteMath() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-            className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
+            className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
           >
             Three launches. $10,000 of testing capital each. Here&rsquo;s how the math works across three scenarios — modelled from our actual launch data, not promises.
           </motion.p>

@@ -453,7 +453,7 @@ function WhatWeManage() {
                   {campaign.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="flex items-start gap-2.5 text-sm text-brand-navy/60"
+                      className="flex items-start gap-2.5 text-sm text-brand-navy/75"
                     >
                       <span className="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-yellow flex-none" />
                       {bullet}
@@ -523,7 +523,7 @@ function OurProcess() {
                 {step.title}
               </h3>
 
-              <p className="text-sm text-brand-navy/60 leading-relaxed">
+              <p className="text-sm text-brand-navy/75 leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

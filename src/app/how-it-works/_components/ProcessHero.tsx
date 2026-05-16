@@ -106,7 +106,7 @@ export function ProcessHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
-              className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
+              className="mt-7 text-lg sm:text-xl max-w-xl text-white/80 leading-relaxed text-pretty"
             >
               One operating system. Three ways to engage — done-for-you Amazon
               brands, TikTok Shop builds, or direct mentorship from Sunny Ali.
@@ -180,7 +180,7 @@ export function ProcessHero() {
               <div className="mt-4 font-black text-brand-navy text-6xl tracking-tight leading-none">
                 <Counter to={14} formatFn={(n) => (n / 10).toFixed(1)} />M+
               </div>
-              <div className="mt-3 text-brand-navy/70 text-sm font-medium">
+              <div className="mt-3 text-brand-navy/75 text-sm font-medium">
                 Operators, investors, and Sunny followers across South Asia and the Gulf.
               </div>
             </motion.div>

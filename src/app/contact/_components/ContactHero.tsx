@@ -105,7 +105,7 @@ export function ContactHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
-              className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
+              className="mt-7 text-lg sm:text-xl max-w-xl text-white/80 leading-relaxed text-pretty"
             >
               Whether you&rsquo;re ready to work with us, looking for a
               partnership, or just have a question — there&rsquo;s a path in.
@@ -152,7 +152,7 @@ export function ContactHero() {
               <div className="mt-4 font-black text-brand-navy text-6xl tracking-tight leading-none">
                 &lt; 24h
               </div>
-              <div className="mt-3 text-brand-navy/70 text-sm font-medium">
+              <div className="mt-3 text-brand-navy/75 text-sm font-medium">
                 For most paths, faster than you think
               </div>
             </motion.div>

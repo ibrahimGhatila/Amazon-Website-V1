@@ -69,7 +69,7 @@ export function ProcessProblem() {
                 <div className="mt-3 font-bold text-brand-navy text-lg tracking-tight">
                   {f.label}
                 </div>
-                <p className="mt-3 text-brand-navy/65 text-sm sm:text-base leading-relaxed text-pretty">
+                <p className="mt-3 text-brand-navy/75 text-sm sm:text-base leading-relaxed text-pretty">
                   {f.body}
                 </p>
               </motion.div>

@@ -168,7 +168,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-            className="mt-3 text-base text-brand-navy/70 leading-relaxed"
+            className="mt-3 text-base text-brand-navy/75 leading-relaxed"
           >
             We filter hard for the right partners. The ones who join don&rsquo;t leave quietly.
           </motion.p>

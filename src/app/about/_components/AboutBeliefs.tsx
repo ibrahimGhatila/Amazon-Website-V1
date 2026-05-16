@@ -57,7 +57,7 @@ export function AboutBeliefs() {
                 <h3 className="font-black text-brand-navy text-xl sm:text-2xl tracking-tight leading-tight">
                   {b.title}
                 </h3>
-                <p className="mt-3 text-brand-navy/65 text-sm sm:text-base leading-relaxed text-pretty">
+                <p className="mt-3 text-brand-navy/75 text-sm sm:text-base leading-relaxed text-pretty">
                   {b.body}
                 </p>
                 <div className="absolute top-7 right-7 font-display text-sm tracking-[0.2em] text-brand-navy/25">

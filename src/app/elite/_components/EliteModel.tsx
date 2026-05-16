@@ -108,7 +108,7 @@ export function EliteModel() {
           <div className="rounded-3xl bg-brand-yellow p-8 sm:p-10 text-brand-navy text-center">
             <div className="font-display text-8xl sm:text-9xl leading-none tracking-tight">80%</div>
             <div className="mt-3 font-bold text-xl">Your profit share</div>
-            <div className="mt-2 text-brand-navy/70 text-sm leading-relaxed">
+            <div className="mt-2 text-brand-navy/75 text-sm leading-relaxed">
               Paid directly to you. No delays, no ambiguity. Every dollar above the ROI threshold is tracked and distributed.
             </div>
           </div>
