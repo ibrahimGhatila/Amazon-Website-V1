@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { ArrowRight, Wallet, Layers, BarChart3 } from "lucide-react";
+import { ArrowRight, Users, Layers, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
@@ -70,7 +70,7 @@ export function ProcessHero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
               <span className="font-display text-sm tracking-[0.2em] text-white/90">
-                How the Elite Program works
+                How Extreme Commerce works
               </span>
             </motion.div>
 
@@ -81,17 +81,16 @@ export function ProcessHero() {
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
                 className="block text-white"
               >
-                You{" "}
+                One{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 text-brand-yellow">own</span>
+                  <span className="relative z-10 text-brand-yellow">operating system.</span>
                   <motion.span
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, ease: EASE, delay: 0.9 }}
                     className="absolute left-0 -bottom-1 h-[5px] w-full bg-brand-yellow/20 origin-left rounded-full -z-10"
                   />
-                </span>{" "}
-                the brand.
+                </span>
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
@@ -99,7 +98,7 @@ export function ProcessHero() {
                 transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
                 className="block text-white"
               >
-                We build it.
+                Three ways in.
               </motion.span>
             </h1>
 
@@ -109,9 +108,9 @@ export function ProcessHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
               className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
             >
-              An end-to-end Amazon launch programme built for capital-serious
-              operators. You bring the ambition. We run the operation. The math
-              is on the table from day one.
+              One operating system. Three ways to engage — done-for-you Amazon
+              brands, TikTok Shop builds, or direct mentorship from Sunny Ali.
+              Same playbook, scaled to your stage.
             </motion.p>
 
             <motion.div
@@ -120,14 +119,14 @@ export function ProcessHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
               className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
             >
-              <Button href="/apply" size="lg" variant="primary" arrow>
-                Apply for Elite
+              <Button href="#paths" size="lg" variant="primary" arrow>
+                See your options
               </Button>
               <Link
                 href="#process"
                 className="group inline-flex items-center gap-3 text-white/90 hover:text-white px-3 py-3"
               >
-                <span className="font-semibold text-sm">See the process</span>
+                <span className="font-semibold text-sm">See the playbook</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </motion.div>
@@ -140,9 +139,9 @@ export function ProcessHero() {
               className="mt-12 grid grid-cols-3 gap-3 max-w-md"
             >
               {[
-                { value: "3", label: "Launches" },
-                { value: "18mo", label: "Cycle" },
-                { value: "80/20", label: "Profit share" },
+                { value: "3", label: "Engagements" },
+                { value: "6", label: "Phases" },
+                { value: "1.4M+", label: "Community" },
               ].map((s) => (
                 <div
                   key={s.label}
@@ -172,17 +171,17 @@ export function ProcessHero() {
               className="absolute top-0 right-0 w-[280px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
             >
               <div className="flex items-center justify-between text-brand-navy/70 text-xs font-display tracking-[0.2em]">
-                <span>PER LAUNCH</span>
+                <span>COMMUNITY</span>
                 <span className="flex items-center gap-1 text-brand-navy/80">
-                  <Wallet className="h-3 w-3" />
-                  CAPITAL
+                  <Users className="h-3 w-3" />
+                  STRONG
                 </span>
               </div>
               <div className="mt-4 font-black text-brand-navy text-6xl tracking-tight leading-none">
-                $<Counter to={10} />k
+                <Counter to={14} formatFn={(n) => (n / 10).toFixed(1)} />M+
               </div>
               <div className="mt-3 text-brand-navy/70 text-sm font-medium">
-                Allocated strategically. Winners get reinvestment.
+                Operators, investors, and Sunny followers across South Asia and the Gulf.
               </div>
             </motion.div>
 
@@ -240,14 +239,14 @@ export function ProcessHero() {
               className="absolute bottom-0 right-[10%] w-[200px] rounded-2xl bg-brand-azure p-5 shadow-2xl shadow-brand-azure/30"
             >
               <div className="text-white/70 text-xs font-display tracking-[0.2em] flex items-center gap-1.5">
-                <BarChart3 className="h-3 w-3" />
-                ROI MILESTONE
+                <TrendingUp className="h-3 w-3" />
+                ECONOMIC IMPACT
               </div>
               <div className="mt-2 font-black text-white text-4xl">
-                <Counter to={50} suffix="%" />
+                $<Counter to={200} suffix="M+" />
               </div>
               <div className="mt-1 text-white/70 text-xs">
-                Where our profit share unlocks
+                Generated across the network to date
               </div>
             </motion.div>
 

@@ -11,7 +11,7 @@ const failures = [
     icon: TrendingDown,
     stat: "95%",
     label: "Of solo sellers fail",
-    body: "Only 5% of independent Amazon sellers ever reach sustainable profitability. The market isn't broken — solo operators are. Systems beat solo hustle every time.",
+    body: "Across Amazon, Walmart, and TikTok Shop, only 5% of independent operators reach sustainable profitability. The market isn't broken — solo operators are. Systems beat solo hustle every time.",
   },
   {
     icon: Flame,
@@ -35,11 +35,11 @@ export function ProcessProblem() {
           eyebrow="THE REALITY"
           title={
             <>
-              Amazon is saturated.{" "}
+              E-commerce is saturated.{" "}
               <span className="text-brand-azure">Solo sellers are losing.</span>
             </>
           }
-          subtitle="Yes, the market is over-saturated — 95% of solo sellers never reach sustainable profit. The answer isn't to quit. It's to stop operating alone."
+          subtitle="On Amazon, Walmart, or TikTok Shop — 95% of solo operators never reach sustainable profit. The answer isn't to quit. It's to stop operating alone."
         />
 
         <div className="mt-16 grid lg:grid-cols-3 gap-5">
@@ -104,8 +104,8 @@ export function ProcessProblem() {
                 THE FIX
               </div>
               <h3 className="font-black tracking-tight text-2xl sm:text-3xl leading-tight text-balance">
-                Our Elite operators succeed at 30%. The industry average is 5%.
-                Same marketplace. Different system.
+                Our partners ship at 6&times; the industry success rate. Same marketplace.
+                Different system.
               </h3>
             </div>
           </div>

@@ -77,7 +77,7 @@ export function ProcessRoles() {
               <span className="text-brand-azure">We do the operating.</span>
             </>
           }
-          subtitle="A clear split across eight working areas. Toggle to see exactly what falls where."
+          subtitle="On a done-for-you engagement, here's exactly how work splits. Toggle to see who owns what across eight working areas."
         />
 
         {/* Toggle */}

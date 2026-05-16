@@ -3,29 +3,28 @@ import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { ProcessHero } from "./_components/ProcessHero";
 import { ProcessProblem } from "./_components/ProcessProblem";
+import { ProcessPaths } from "./_components/ProcessPaths";
 import { ProcessSteps } from "./_components/ProcessSteps";
 import { ProcessRoles } from "./_components/ProcessRoles";
-import { ProcessMoney } from "./_components/ProcessMoney";
-import { ProcessRisk } from "./_components/ProcessRisk";
 import { AboutCTA } from "../about/_components/AboutCTA";
 
 export const metadata: Metadata = {
-  title: "How It Works — Capital, launches, and the operating system",
+  title: "How It Works — One operating system, three ways to engage",
   description:
-    "The full Elite Program operating system: 6 phases, $10K per launch, 80/20 profit share, 18-month cycle. Who does what, how capital flows, and how risk is managed.",
+    "How Extreme Commerce works: one proven operating system across Amazon, Walmart, and TikTok Shop. Three engagements — done-for-you brand builds and direct mentorship from Sunny Ali.",
   keywords: [
     "How Extreme Commerce works",
-    "Amazon Elite Program process",
-    "Amazon launch capital",
-    "80/20 profit share Amazon",
-    "Amazon investment program",
-    "Sunny Ali Elite Program",
+    "Extreme Commerce operating system",
+    "Amazon agency process",
+    "TikTok Shop agency",
+    "Done-for-you Amazon brand",
+    "Sunny Ali mentorship",
   ],
   alternates: { canonical: "/how-it-works" },
   openGraph: {
-    title: "How It Works — The Elite Program operating system",
+    title: "How It Works — The Extreme Commerce operating system",
     description:
-      "6 phases, $10K per launch, 80/20 profit share, 18-month cycle. See exactly how capital flows and risk is managed.",
+      "One proven playbook across Amazon, Walmart, and TikTok Shop. Three ways to engage with Extreme Commerce.",
     url: "/how-it-works",
   },
 };
@@ -37,10 +36,9 @@ export default function HowItWorksPage() {
       <main className="flex-1">
         <ProcessHero />
         <ProcessProblem />
+        <ProcessPaths />
         <ProcessSteps />
         <ProcessRoles />
-        <ProcessMoney />
-        <ProcessRisk />
         <AboutCTA />
       </main>
       <Footer />

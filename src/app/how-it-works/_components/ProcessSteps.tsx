@@ -163,15 +163,15 @@ export function ProcessSteps() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="THE PROCESS"
+          eyebrow="THE OPERATING SYSTEM"
           variant="dark"
           title={
             <>
-              Six phases from{" "}
-              <span className="text-brand-yellow">capital to compounding.</span>
+              Six phases.{" "}
+              <span className="text-brand-yellow">One proven playbook.</span>
             </>
           }
-          subtitle="Click any phase to open the full operating detail. This is the same playbook we run for ourselves — nothing is held back."
+          subtitle="The same operating system runs every engagement — done-for-you brand builds, mentorship advice, and the playbook we apply across Amazon, Walmart, and TikTok Shop. Click any phase to open the detail."
         />
 
         {/* Phase chip nav (desktop) */}
