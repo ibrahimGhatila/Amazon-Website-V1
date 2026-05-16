@@ -113,7 +113,7 @@ export function AboutHero() {
               className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
             >
               Founded by Sunny Ali in 2015, Extreme Commerce is the operator-led
-              team behind 1,200+ launches, a 1M+ community, and the largest
+              team behind 1,200+ launches, a 1.4M+ community, and the largest
               e-commerce ecosystem out of South Asia.
             </motion.p>
 
@@ -123,8 +123,8 @@ export function AboutHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
               className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
             >
-              <Button href="/apply" size="lg" variant="primary" arrow>
-                Apply for Elite
+              <Button href="/services" size="lg" variant="primary" arrow>
+                Explore our services
               </Button>
               <Link
                 href="#story"

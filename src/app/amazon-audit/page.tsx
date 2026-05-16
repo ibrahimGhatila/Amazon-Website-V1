@@ -233,12 +233,12 @@ function AuditForm({ className }: { className?: string }) {
           transition={{ delay: 0.4 }}
           className="w-full pt-4 border-t border-white/10"
         >
-          <p className="text-white/40 text-sm">While you wait, explore what happens inside the Elite Program</p>
+          <p className="text-white/40 text-sm">While you wait, take a look at how we work and what we offer.</p>
           <Link
-            href="/elite"
+            href="/services"
             className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-yellow hover:text-white transition-colors"
           >
-            View Elite Program
+            Explore our services
             <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </motion.div>

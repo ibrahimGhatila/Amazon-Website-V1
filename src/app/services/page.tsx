@@ -21,7 +21,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 ───────────────────────────────────────── */
 const services = [
   {
-    tag: "FLAGSHIP",
+    tag: "AMAZON",
     title: "Elite Program — Amazon",
     description:
       "Done-for-you Amazon brand. Three launches, one dedicated team, profit split only on results.",
@@ -250,8 +250,8 @@ function ServicesHero() {
               </p>
               {(
                 [
-                  { Icon: Rocket,        name: "Elite — Amazon",  tag: "FLAGSHIP"   },
-                  { Icon: Play,          name: "Elite — TikTok",  tag: "NEW"        },
+                  { Icon: Rocket,        name: "Elite — Amazon",  tag: "AMAZON"     },
+                  { Icon: Play,          name: "Elite — TikTok",  tag: "TIKTOK"     },
                   { Icon: MessageCircle, name: "Ask Sunny Ali",   tag: "MENTORSHIP" },
                 ] as { Icon: React.ElementType; name: string; tag: string }[]
               ).map(({ Icon, name, tag }) => (
@@ -534,11 +534,11 @@ function ServicesCTA() {
             transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
           >
-            <Button href="#" size="lg" variant="primary" arrow>
-              Book a Call
+            <Button href="/apply" size="lg" variant="primary" arrow>
+              Start an application
             </Button>
-            <Button href="/elite" size="lg" variant="ghost">
-              See Elite Program
+            <Button href="/contact" size="lg" variant="ghost">
+              Talk to us
             </Button>
           </motion.div>
 

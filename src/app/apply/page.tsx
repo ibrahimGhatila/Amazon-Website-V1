@@ -240,7 +240,7 @@ function ApplicationForm() {
               Our team will review your application and reach out within 24 hours. Check your inbox — we reply personally.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Button href="/elite" variant="secondary" arrow>Explore Elite Program</Button>
+              <Button href="/services" variant="secondary" arrow>Explore our services</Button>
               <Button href="/" variant="outline">Back to Home</Button>
             </div>
           </motion.div>
@@ -304,7 +304,7 @@ function ApplicationForm() {
                 <div className="h-7 w-7 rounded-full bg-brand-yellow flex items-center justify-center font-bold text-brand-navy text-xs">AH</div>
                 <div>
                   <div className="text-xs font-semibold text-white">Ahmed H.</div>
-                  <div className="text-[10px] text-white/45">Elite Member · Dubai</div>
+                  <div className="text-[10px] text-white/45">Brand Partner · Dubai</div>
                 </div>
               </div>
             </motion.div>

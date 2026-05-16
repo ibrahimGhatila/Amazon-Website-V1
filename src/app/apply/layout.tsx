@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Apply for the Elite Program",
+  title: "Apply to work with Extreme Commerce",
   description:
-    "Apply to partner with Extreme Commerce. We'll review your application and respond within 48 hours. Limited intake — we only take on partners we can win with.",
+    "Apply to partner with Extreme Commerce — done-for-you Amazon, TikTok Shop, mentorship, or VA services. We review every application personally and respond within 24 hours.",
   keywords: [
-    "Apply Elite Program",
+    "Apply Extreme Commerce",
     "Amazon partnership application",
-    "Extreme Commerce apply",
-    "Amazon investment partner",
+    "TikTok Shop agency application",
+    "Sunny Ali mentorship apply",
   ],
   alternates: { canonical: "/apply" },
   openGraph: {
-    title: "Apply for the Elite Program",
+    title: "Apply to work with Extreme Commerce",
     description:
-      "Apply to partner with Extreme Commerce. Response within 48 hours.",
+      "Apply to partner with Extreme Commerce across any of our services. Response within 24 hours.",
     url: "/apply",
   },
   robots: { index: true, follow: true },

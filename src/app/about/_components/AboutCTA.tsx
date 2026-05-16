@@ -90,8 +90,8 @@ export function AboutCTA() {
             transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
           >
-            <Button href="/apply" size="lg" variant="primary" arrow>
-              Apply for Elite
+            <Button href="/services" size="lg" variant="primary" arrow>
+              Explore our services
             </Button>
             <Button href="/contact" size="lg" variant="ghost">
               Talk to us

@@ -107,7 +107,7 @@ export function ContactHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
               className="mt-7 text-lg sm:text-xl max-w-xl text-white/70 leading-relaxed text-pretty"
             >
-              Whether you&rsquo;re ready to apply for Elite, looking for a
+              Whether you&rsquo;re ready to work with us, looking for a
               partnership, or just have a question — there&rsquo;s a path in.
               Most replies within 24 hours, Mon–Fri PKT.
             </motion.p>

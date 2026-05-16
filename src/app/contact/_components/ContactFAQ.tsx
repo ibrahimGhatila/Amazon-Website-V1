@@ -10,7 +10,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 const faqs = [
   {
     q: "How quickly will you respond?",
-    a: "Most messages get a real reply within 24 hours on weekdays (Mon–Fri PKT). Elite applications are reviewed in 3–5 days. If it's urgent, the live chat in the bottom-right is the fastest path.",
+    a: "Most messages get a real reply within 24 hours on weekdays (Mon–Fri PKT). Service applications are reviewed in 3–5 days. If it's urgent, the live chat in the bottom-right is the fastest path.",
   },
   {
     q: "Can I drop in to your office?",

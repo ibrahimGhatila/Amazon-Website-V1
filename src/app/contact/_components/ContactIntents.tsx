@@ -11,8 +11,8 @@ const intents = [
   {
     icon: Rocket,
     tag: "HIGH INTENT",
-    title: "Apply for Elite",
-    body: "Capital ready to deploy. Three launches over 18 months, profit share, full ownership. Reviewed by our investment team.",
+    title: "Work with us",
+    body: "Done-for-you brand builds, TikTok Shop programmes, or direct mentorship from Sunny Ali. Every application is read personally.",
     href: "/apply",
     cta: "Start application",
     accent: "yellow",
