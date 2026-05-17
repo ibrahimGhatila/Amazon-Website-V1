@@ -38,7 +38,7 @@ function LaunchHero() {
   return (
     <section
       ref={ref}
-      className="relative h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden bg-brand-navy"
+      className="relative h-[100svh] lg:min-h-[100svh] flex items-start lg:items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden bg-brand-navy"
     >
       {/* Ambient gradients */}
       <div

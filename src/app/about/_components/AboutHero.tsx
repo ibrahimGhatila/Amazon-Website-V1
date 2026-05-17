@@ -10,7 +10,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function AboutHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-navy text-white h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain">
+    <section className="relative isolate overflow-hidden bg-brand-navy text-white h-[100svh] lg:min-h-[100svh] flex items-start lg:items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(244,205,29,0.10)_0%,_transparent_55%)]"

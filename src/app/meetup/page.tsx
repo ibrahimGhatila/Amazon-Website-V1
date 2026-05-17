@@ -38,7 +38,7 @@ function MeetupHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy h-[100svh] lg:min-h-[100svh] flex items-start lg:items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden"
     >
       <div
         aria-hidden

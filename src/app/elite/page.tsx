@@ -23,7 +23,7 @@ export function EliteHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate h-[100svh] lg:min-h-[100svh] flex items-center bg-brand-navy text-white overflow-hidden texture-grain pt-20 pb-6 lg:pt-24 lg:pb-10"
+      className="relative isolate h-[100svh] lg:min-h-[100svh] flex items-start lg:items-center bg-brand-navy text-white overflow-hidden texture-grain pt-20 pb-6 lg:pt-24 lg:pb-10"
     >
       {/* Backgrounds */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(244,205,29,0.18),transparent)]" />
