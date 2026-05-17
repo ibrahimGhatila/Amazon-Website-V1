@@ -122,7 +122,7 @@ export function AboutHero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.4 }}
-            className="hidden lg:block relative aspect-[3/4] max-w-md mx-auto lg:max-w-none w-full"
+            className="hidden lg:block relative h-[min(calc(100svh-160px),640px)] w-full"
           >
             <motion.div
               initial={{ rotate: -2, opacity: 0 }}
