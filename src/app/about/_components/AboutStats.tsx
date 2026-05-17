@@ -23,9 +23,10 @@ const stats = [
   },
   {
     label: "Community strong",
-    value: 1,
+    value: 14,
     prefix: "",
     suffix: "M+",
+    formatFn: (n: number) => (n / 10).toFixed(1),
     icon: Users,
   },
   {
@@ -50,8 +51,8 @@ const stats = [
     icon: Building2,
   },
   {
-    label: "Seller GMV powered",
-    value: 420,
+    label: "Economic impact",
+    value: 200,
     prefix: "$",
     suffix: "M+",
     icon: TrendingUp,
@@ -111,6 +112,7 @@ export function AboutStats() {
                       to={stat.value}
                       prefix={stat.prefix}
                       suffix={stat.suffix}
+                      formatFn={"formatFn" in stat ? stat.formatFn : undefined}
                     />
                   </div>
                   <div className="mt-3 text-white/60 group-hover:text-brand-navy/80 transition-colors duration-500 text-sm sm:text-base font-medium">

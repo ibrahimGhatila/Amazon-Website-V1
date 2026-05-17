@@ -14,7 +14,7 @@ import { Footer } from "@/components/sections/Footer";
 export const metadata: Metadata = {
   title: "Extreme Commerce — Build Profitable Amazon Brands",
   description:
-    "Done-for-you Amazon businesses. Launch, scale, and profit — backed by a 1M+ community and a decade of building winning brands on Amazon, Walmart, TikTok Shop, and Etsy.",
+    "Done-for-you Amazon businesses. Launch, scale, and profit — backed by a 1.4M+ community and a decade of building winning brands on Amazon, Walmart, TikTok Shop, and Etsy.",
   keywords: [
     "Amazon agency",
     "Amazon FBA agency",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Extreme Commerce — Build Profitable Amazon Brands",
     description:
-      "Done-for-you Amazon businesses. Launch, scale, and profit — backed by a 1M+ community.",
+      "Done-for-you Amazon businesses. Launch, scale, and profit — backed by a 1.4M+ community.",
     url: "/",
   },
 };

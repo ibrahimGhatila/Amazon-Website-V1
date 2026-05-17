@@ -112,7 +112,7 @@ export function Founder() {
               className="absolute -right-4 sm:-right-6 bottom-16 rounded-2xl bg-brand-yellow p-4 shadow-xl shadow-brand-yellow/30"
             >
               <div className="font-display text-2xl text-brand-navy leading-none">
-                <Counter to={1} prefix="" suffix="M+" />
+                <Counter to={14} formatFn={(n) => (n / 10).toFixed(1)} suffix="M+" />
               </div>
               <div className="text-xs text-brand-navy/70 mt-1 font-semibold">
                 Community

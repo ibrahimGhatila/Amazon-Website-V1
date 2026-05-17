@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "Extreme Commerce — Build Profitable Amazon Brands",
     description:
-      "Done-for-you Amazon businesses. Launch, scale, and profit — backed by a 1M+ community and a decade of data.",
+      "Done-for-you Amazon businesses. Launch, scale, and profit — backed by a 1.4M+ community and a decade of data.",
     siteName: "Extreme Commerce",
     images: [
       {

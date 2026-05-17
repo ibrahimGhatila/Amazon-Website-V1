@@ -24,7 +24,7 @@ function AskSunnyHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy min-h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden"
     >
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(54,128,195,0.22),transparent)]" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_40%_40%_at_85%_75%,rgba(244,205,29,0.1),transparent)]" />

@@ -64,7 +64,7 @@ const community = [
     handle: "Extreme Commerce Community",
     href: "https://www.facebook.com/extremecommerce",
     icon: FacebookIcon,
-    desc: "1M+ sellers swapping wins, asking questions.",
+    desc: "1.4M+ sellers swapping wins, asking questions.",
   },
 ];
 

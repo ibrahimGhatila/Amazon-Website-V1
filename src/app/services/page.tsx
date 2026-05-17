@@ -94,7 +94,7 @@ function ServicesHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate overflow-hidden bg-brand-navy text-white min-h-screen flex items-center pt-24 pb-12 texture-grain"
+      className="relative isolate overflow-hidden bg-brand-navy text-white h-screen flex items-center pt-24 pb-12 texture-grain"
     >
       {/* Ambient gradients */}
       <div

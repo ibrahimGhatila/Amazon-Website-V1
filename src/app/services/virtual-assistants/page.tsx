@@ -24,7 +24,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 function Hero() {
   return (
-    <section className="relative isolate bg-brand-navy min-h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden">
+    <section className="relative isolate bg-brand-navy h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden">
       {/* Ambient gradients */}
       <div
         aria-hidden

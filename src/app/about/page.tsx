@@ -12,7 +12,7 @@ import { AboutCTA } from "./_components/AboutCTA";
 export const metadata: Metadata = {
   title: "About — A decade building Amazon brands",
   description:
-    "Founded in 2015 by Sunny Ali, Extreme Commerce builds and scales profitable Amazon brands. 1M+ community, 1,200+ launches, 50+ partners across government, education, and global tech.",
+    "Founded in 2015 by Sunny Ali, Extreme Commerce builds and scales profitable Amazon brands. 1.4M+ community, 1,200+ launches, 50+ partners across government, education, and global tech.",
   keywords: [
     "About Extreme Commerce",
     "Sunny Ali founder",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Extreme Commerce — A decade building Amazon brands",
     description:
-      "Founded in 2015 by Sunny Ali. 1M+ community, 1,200+ launches, 50+ partners.",
+      "Founded in 2015 by Sunny Ali. 1.4M+ community, 1,200+ launches, 50+ partners.",
     url: "/about",
   },
 };

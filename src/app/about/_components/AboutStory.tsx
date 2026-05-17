@@ -50,9 +50,9 @@ const milestones = [
   },
   {
     num: "2026",
-    title: "1M+ ecosystem",
+    title: "1.4M+ ecosystem",
     description:
-      "1M+ community members, 1,200+ launches, 50+ institutional partners — the largest e-commerce ecosystem out of South Asia.",
+      "1.4M+ community members, 1,200+ launches, 50+ institutional partners — the largest e-commerce ecosystem out of South Asia.",
     icon: Globe2,
     timeframe: "Today",
   },

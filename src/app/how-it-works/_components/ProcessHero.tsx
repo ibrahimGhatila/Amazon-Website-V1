@@ -26,7 +26,7 @@ const phases = [
 
 export function ProcessHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-navy text-white min-h-screen flex items-center pt-24 pb-12 texture-grain">
+    <section className="relative isolate overflow-hidden bg-brand-navy text-white h-screen flex items-center pt-24 pb-12 texture-grain">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,_rgba(54,128,195,0.20)_0%,_transparent_55%)]"
@@ -126,8 +126,8 @@ export function ProcessHero() {
             transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-6 sm:p-8">
-              <div className="flex items-center justify-between mb-7 pb-5 border-b border-white/10">
+            <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-5 sm:p-6">
+              <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
                 <div>
                   <div className="font-display text-[11px] tracking-[0.3em] text-white/45 uppercase">
                     Engagement Flow
@@ -150,7 +150,7 @@ export function ProcessHero() {
               <div className="relative">
                 <div className="absolute left-[26px] top-3 bottom-3 w-px bg-gradient-to-b from-brand-yellow via-brand-yellow/40 to-brand-azure/40" />
 
-                <ul className="space-y-4">
+                <ul className="space-y-2.5">
                   {phases.map((phase, i) => {
                     const Icon = phase.icon;
                     return (
@@ -163,17 +163,17 @@ export function ProcessHero() {
                           ease: EASE,
                           delay: 0.6 + i * 0.1,
                         }}
-                        className="relative flex items-center gap-5"
+                        className="relative flex items-center gap-4"
                       >
-                        <div className="relative z-10 flex h-[54px] w-[54px] flex-none items-center justify-center rounded-2xl bg-brand-navy border border-brand-yellow/40 shadow-[0_0_20px_rgba(244,205,29,0.15)]">
-                          <Icon className="h-5 w-5 text-brand-yellow" strokeWidth={2} />
+                        <div className="relative z-10 flex h-[44px] w-[44px] flex-none items-center justify-center rounded-xl bg-brand-navy border border-brand-yellow/40 shadow-[0_0_16px_rgba(244,205,29,0.15)]">
+                          <Icon className="h-4 w-4 text-brand-yellow" strokeWidth={2} />
                         </div>
-                        <div className="flex-1 flex items-baseline justify-between gap-4 border-b border-white/5 pb-3">
-                          <div className="flex items-baseline gap-3">
-                            <span className="font-display text-sm tracking-[0.2em] text-white/40 tabular-nums">
+                        <div className="flex-1 flex items-baseline justify-between gap-4 border-b border-white/5 pb-2">
+                          <div className="flex items-baseline gap-2.5">
+                            <span className="font-display text-xs tracking-[0.2em] text-white/40 tabular-nums">
                               {phase.num}
                             </span>
-                            <span className="font-bold text-lg sm:text-xl text-white tracking-tight">
+                            <span className="font-bold text-base sm:text-lg text-white tracking-tight">
                               {phase.name}
                             </span>
                           </div>
@@ -193,7 +193,7 @@ export function ProcessHero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.4 }}
-                className="mt-7 pt-5 border-t border-white/10 grid grid-cols-3 gap-3 text-center"
+                className="mt-4 pt-4 border-t border-white/10 grid grid-cols-3 gap-3 text-center"
               >
                 <div>
                   <div className="font-display text-xl text-brand-yellow leading-none">3</div>

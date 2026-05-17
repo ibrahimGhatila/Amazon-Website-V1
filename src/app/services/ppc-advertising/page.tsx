@@ -125,7 +125,7 @@ function PPCHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate min-h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy"
+      className="relative isolate h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy"
     >
       {/* Ambient gradients */}
       <div

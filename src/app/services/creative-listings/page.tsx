@@ -122,7 +122,7 @@ function CreativeListingsHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate min-h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
+      className="relative isolate h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
     >
       {/* Ambient radial gradients */}
       <div

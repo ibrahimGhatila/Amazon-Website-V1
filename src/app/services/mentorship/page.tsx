@@ -26,7 +26,7 @@ function MentorshipHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy min-h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden"
     >
       {/* Ambient gradients */}
       <div
