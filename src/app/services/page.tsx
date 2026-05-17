@@ -335,7 +335,7 @@ function ServicesGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[15px] tracking-[0.14em] text-brand-navy mb-5"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[17px] tracking-[0.08em] text-brand-navy mb-5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             WHAT WE DO
@@ -396,7 +396,7 @@ function ServicesGrid() {
                   {/* Card header: tag + arrow */}
                   <div className="relative flex items-start justify-between">
                     <span
-                      className={`inline-flex items-center rounded-full px-3 py-1 font-display text-[12.5px] tracking-[0.14em] ${tagStyles[variant]}`}
+                      className={`inline-flex items-center rounded-full px-3 py-1 font-display text-[14px] tracking-[0.08em] ${tagStyles[variant]}`}
                     >
                       {service.tag}
                     </span>
@@ -488,7 +488,7 @@ function ServicesCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-[15px] tracking-[0.14em] text-brand-yellow mb-6"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[17px] tracking-[0.08em] text-brand-yellow mb-6"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             GET MATCHED TO THE RIGHT SERVICE

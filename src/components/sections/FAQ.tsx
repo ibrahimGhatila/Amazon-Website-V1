@@ -66,7 +66,7 @@ export function FAQ() {
                   className="group flex w-full items-start justify-between gap-6 py-6 sm:py-8 text-left"
                 >
                   <div className="flex items-start gap-4 sm:gap-6 flex-1">
-                    <span className="font-display text-[15px] tracking-[0.14em] text-brand-yellow pt-1.5 tabular-nums">
+                    <span className="font-display text-[17px] tracking-[0.08em] text-brand-yellow pt-1.5 tabular-nums">
                       0{i + 1}
                     </span>
                     <h3 className="font-bold text-lg sm:text-xl text-brand-navy tracking-tight group-hover:text-brand-azure transition-colors">

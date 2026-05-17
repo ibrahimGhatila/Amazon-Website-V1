@@ -457,7 +457,7 @@ function MeetupAudience() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start">
           <div className="lg:sticky lg:top-32">
-            <span className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-4 py-1.5 font-display text-[15px] tracking-[0.14em] text-brand-navy">
+            <span className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-5 py-2 font-display text-[17px] tracking-[0.08em] text-brand-navy">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
               WHO'S IN THE ROOM
             </span>
