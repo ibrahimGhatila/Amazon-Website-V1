@@ -23,7 +23,7 @@ export function EliteHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate h-[100svh] lg:min-h-[100svh] flex items-start lg:items-center bg-brand-navy text-white overflow-hidden texture-grain pt-20 pb-6 lg:pt-24 lg:pb-10"
+      className="relative isolate lg:min-h-[100svh] flex items-center bg-brand-navy text-white overflow-hidden texture-grain pt-24 pb-14 lg:pb-10"
     >
       {/* Backgrounds */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(244,205,29,0.18),transparent)]" />
@@ -51,7 +51,7 @@ export function EliteHero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-3 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-4 sm:mb-6"
+              className="inline-flex items-center gap-3 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
@@ -100,7 +100,7 @@ export function EliteHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.8 }}
-              className="mt-5 sm:mt-7 flex flex-wrap items-center gap-4"
+              className="mt-7 flex flex-wrap items-center gap-4"
             >
               <Button href="#apply" size="lg" variant="primary" arrow>
                 Apply for Elite
@@ -115,7 +115,7 @@ export function EliteHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1.1 }}
-              className="mt-4 sm:mt-8 grid grid-cols-3 max-w-lg gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10"
+              className="mt-8 grid grid-cols-3 max-w-lg gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10"
             >
               {[
                 { k: "3", v: "Launches" },

@@ -38,7 +38,7 @@ function LaunchHero() {
   return (
     <section
       ref={ref}
-      className="relative h-[100svh] lg:min-h-[100svh] flex items-start lg:items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden bg-brand-navy"
+      className="relative lg:min-h-[100svh] flex items-center pt-24 pb-14 lg:pb-12 texture-grain overflow-hidden bg-brand-navy"
     >
       {/* Ambient gradients */}
       <div
@@ -126,7 +126,7 @@ function LaunchHero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.35 }}
-              className="mt-4 sm:mt-7 flex flex-wrap gap-3"
+              className="mt-7 flex flex-wrap gap-3"
             >
               {["12-week launch", "Weekly reports", "Real-time data"].map((s) => (
                 <span
@@ -144,7 +144,7 @@ function LaunchHero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.45 }}
-              className="mt-4 sm:mt-8"
+              className="mt-8"
             >
               <Button href="#contact" size="lg" variant="primary" arrow>
                 Plan My Launch

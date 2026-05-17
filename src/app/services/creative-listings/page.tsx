@@ -122,7 +122,7 @@ function CreativeListingsHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate h-[100svh] lg:min-h-[100svh] flex items-start lg:items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
+      className="relative isolate lg:min-h-[100svh] flex items-center pt-24 pb-14 lg:pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
     >
       {/* Ambient radial gradients */}
       <div
@@ -168,7 +168,7 @@ function CreativeListingsHero() {
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-              className="mb-3 sm:mb-8"
+              className="mb-8"
             >
               <Link
                 href="/services"
@@ -184,7 +184,7 @@ function CreativeListingsHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/15 px-4 py-1.5 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/15 px-4 py-1.5 mb-8"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
@@ -211,7 +211,7 @@ function CreativeListingsHero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
-              className="mt-4 sm:mt-7 text-sm sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
+              className="mt-7 text-lg sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
             >
               From keyword-optimised copy to A+ content and product photography —
               we craft every listing to stop the scroll and drive the sale.
@@ -222,7 +222,7 @@ function CreativeListingsHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.55 }}
-              className="mt-4 sm:mt-8 flex flex-wrap gap-3"
+              className="mt-8 flex flex-wrap gap-3"
             >
               {["Top-3 ranking", "A+ content", "Studio quality"].map((pill) => (
                 <span

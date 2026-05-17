@@ -26,7 +26,7 @@ const phases = [
 
 export function ProcessHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-navy text-white h-[100svh] lg:min-h-[100svh] flex items-start lg:items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain">
+    <section className="relative isolate overflow-hidden bg-brand-navy text-white lg:min-h-[100svh] flex items-center pt-24 pb-14 lg:pb-12 texture-grain">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,_rgba(54,128,195,0.20)_0%,_transparent_55%)]"
@@ -53,7 +53,7 @@ export function ProcessHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-3 mb-4 sm:mb-7"
+              className="inline-flex items-center gap-3 mb-7"
             >
               <span className="font-display text-[15px] sm:text-[17px] tracking-[0.08em] text-brand-yellow uppercase">
                 The Operating System
@@ -94,7 +94,7 @@ export function ProcessHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
-              className="mt-4 sm:mt-7 text-sm sm:text-xl max-w-xl text-white/80 leading-relaxed text-pretty"
+              className="mt-7 text-lg sm:text-xl max-w-xl text-white/80 leading-relaxed text-pretty"
             >
               The same operating system runs every engagement — done-for-you
               Amazon, TikTok Shop builds, or direct mentorship from Sunny Ali.
@@ -105,7 +105,7 @@ export function ProcessHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
-              className="mt-6 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
+              className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
             >
               <Button href="#paths" size="lg" variant="primary" arrow>
                 See your options
