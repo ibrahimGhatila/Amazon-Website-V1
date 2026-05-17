@@ -42,11 +42,11 @@ export function Footer() {
   return (
     <footer className="relative bg-brand-navy-800 text-white overflow-hidden texture-grain -mt-2">
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-12">
-        <div className="grid lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-8 lg:gap-10">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-10">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-6 lg:gap-10">
 
           {/* Brand column */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <Logo variant="light" />
             <p className="mt-4 text-white/60 text-sm leading-relaxed max-w-sm">
               We build and scale Amazon businesses for entrepreneurs, investors,
@@ -114,7 +114,7 @@ export function Footer() {
         </div>
 
         {/* Meta row */}
-        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2 text-xs text-white/40">
+        <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2 text-xs text-white/40">
           <div>© {new Date().getFullYear()} Extreme Commerce. All rights reserved.</div>
           <div className="flex items-center gap-5">
             <Link href="#" className="hover:text-white transition">Privacy</Link>
