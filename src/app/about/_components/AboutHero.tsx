@@ -39,7 +39,7 @@ export function AboutHero() {
               className="flex items-center gap-4 mb-7"
             >
               <span className="h-px w-12 bg-brand-yellow" />
-              <span className="font-display text-[20px] tracking-[0.08em] text-brand-yellow uppercase">
+              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.08em] text-brand-yellow uppercase">
                 About
               </span>
             </motion.div>
