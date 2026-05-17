@@ -147,7 +147,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[17px] tracking-[0.08em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
+            className="inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[20px] tracking-[0.06em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             WHAT OPERATORS SAY
@@ -273,7 +273,7 @@ export function Testimonials() {
 
                       {/* Row 3: deliverables */}
                       <div>
-                        <div className={`font-display text-[17px] tracking-[0.08em] uppercase mb-2 ${s.statLabel}`}>
+                        <div className={`font-display text-[20px] tracking-[0.06em] uppercase mb-2 ${s.statLabel}`}>
                           What We Delivered
                         </div>
                         <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5">
