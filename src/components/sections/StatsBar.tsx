@@ -45,12 +45,27 @@ const stats = [
 export function StatsBar() {
   return (
     <section className="relative bg-brand-navy py-16 sm:py-20 overflow-hidden texture-grain">
+      {/* Hero-continuation ambient glows so the seam between sections disappears */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-72 sm:h-96 bg-[radial-gradient(ellipse_at_top_right,_rgba(244,205,29,0.10)_0%,_transparent_55%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-72 sm:h-96 bg-[radial-gradient(ellipse_at_top_left,_rgba(54,128,195,0.14)_0%,_transparent_55%)]"
+      />
+
+      {/* Diagonal stripes — fade in from the top so they don't slam in at the section boundary */}
       <div
         aria-hidden
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
             "repeating-linear-gradient(-45deg, rgba(255,255,255,0.8) 0 1px, transparent 1px 22px)",
+          maskImage:
+            "linear-gradient(to bottom, transparent 0%, black 25%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, transparent 0%, black 25%)",
         }}
       />
 

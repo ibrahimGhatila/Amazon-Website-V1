@@ -36,6 +36,12 @@ export function Hero() {
       {/* Grid overlay */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-grid opacity-60" />
 
+      {/* Bottom fade — washes out the ambient gradients so we transition cleanly into the next section */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-[5] h-40 sm:h-56 bg-gradient-to-b from-transparent to-brand-navy"
+      />
+
       {/* Giant eX watermark */}
       <motion.div
         aria-hidden
