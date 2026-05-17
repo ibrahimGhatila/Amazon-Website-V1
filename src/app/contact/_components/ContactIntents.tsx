@@ -129,7 +129,7 @@ export function ContactIntents() {
                   </div>
 
                   <div
-                    className={`absolute top-7 right-7 font-display text-sm tracking-[0.2em] ${
+                    className={`absolute top-7 right-7 font-display text-[15px] tracking-[0.14em] ${
                       isYellow ? "text-brand-navy/40" : "text-brand-navy/25"
                     }`}
                   >

@@ -55,7 +55,7 @@ export function Highlights() {
                   className="relative flex flex-col h-full min-h-[220px] rounded-3xl border border-brand-navy/10 bg-white p-6 sm:p-7 transition-all duration-500 hover:-translate-y-1 hover:border-brand-navy/25 hover:shadow-xl overflow-hidden"
                 >
                   <div className="relative flex items-start justify-between">
-                    <span className="inline-flex items-center rounded-full bg-brand-navy/5 text-brand-navy border border-brand-navy/10 px-3 py-1 font-display text-[13px] tracking-[0.2em]">
+                    <span className="inline-flex items-center rounded-full bg-brand-navy/5 text-brand-navy border border-brand-navy/10 px-3 py-1 font-display text-[14px] tracking-[0.14em]">
                       {item.tag}
                     </span>
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12 group-hover:bg-brand-yellow">

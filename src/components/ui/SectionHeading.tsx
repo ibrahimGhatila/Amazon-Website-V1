@@ -37,7 +37,7 @@ export function SectionHeading({
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className={cn(
-            "inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-display text-sm tracking-[0.2em] mb-5",
+            "inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-display text-[15px] tracking-[0.14em] mb-5",
             isDark
               ? "bg-brand-azure/15 text-brand-azure border border-brand-azure/30"
               : "bg-brand-navy/5 text-brand-navy border border-brand-navy/10"

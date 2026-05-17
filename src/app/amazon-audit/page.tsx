@@ -258,7 +258,7 @@ function AuditForm({ className }: { className?: string }) {
       <div>
         <div className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-3.5 py-1.5 mb-4">
           <Sparkles className="h-3.5 w-3.5 text-brand-yellow" />
-          <span className="font-display text-[11px] tracking-[0.2em] text-brand-yellow uppercase">100% Free · No Obligation</span>
+          <span className="font-display text-[12.5px] tracking-[0.14em] text-brand-yellow uppercase">100% Free · No Obligation</span>
         </div>
         <h3 className="font-black text-white text-xl sm:text-2xl leading-tight">
           Free Amazon Listing Audit

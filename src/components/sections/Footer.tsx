@@ -94,7 +94,7 @@ export function Footer() {
           {/* Link columns */}
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="font-display text-sm tracking-[0.2em] text-brand-yellow mb-4">
+              <h4 className="font-display text-[15px] tracking-[0.14em] text-brand-yellow mb-4">
                 {col.title.toUpperCase()}
               </h4>
               <ul className="space-y-2.5">

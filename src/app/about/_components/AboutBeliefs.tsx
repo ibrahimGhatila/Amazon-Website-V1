@@ -60,7 +60,7 @@ export function AboutBeliefs() {
                 <p className="mt-3 text-brand-navy/75 text-sm sm:text-base leading-relaxed text-pretty">
                   {b.body}
                 </p>
-                <div className="absolute top-7 right-7 font-display text-sm tracking-[0.2em] text-brand-navy/25">
+                <div className="absolute top-7 right-7 font-display text-[15px] tracking-[0.14em] text-brand-navy/25">
                   0{i + 1}
                 </div>
               </motion.div>

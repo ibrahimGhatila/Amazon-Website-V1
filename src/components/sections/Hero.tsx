@@ -75,7 +75,7 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
-              <span className="font-display text-sm tracking-[0.2em] text-white/90">
+              <span className="font-display text-[15px] tracking-[0.14em] text-white/90">
                 Yes, Amazon is saturated. We win anyway.
               </span>
             </motion.div>

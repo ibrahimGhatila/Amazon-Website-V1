@@ -140,7 +140,7 @@ function AskSunnyHero() {
                 </div>
 
                 <div>
-                  <div className="font-display text-xs tracking-[0.3em] text-brand-yellow uppercase">
+                  <div className="font-display text-[13px] tracking-[0.2em] text-brand-yellow uppercase">
                     Your mentor
                   </div>
                   <div className="mt-2 font-black text-white text-3xl sm:text-4xl tracking-tight leading-[0.95]">
@@ -223,7 +223,7 @@ function AskSunnyInclusions() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-sm tracking-[0.2em] text-brand-navy"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[15px] tracking-[0.14em] text-brand-navy"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             WHAT YOU GET
@@ -333,7 +333,7 @@ function AskSunnyFit() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-4 py-1.5 mb-6">
                 <Check className="h-3.5 w-3.5 text-brand-yellow" strokeWidth={3} />
-                <span className="font-display text-sm tracking-[0.2em] text-brand-yellow">FOR YOU</span>
+                <span className="font-display text-[15px] tracking-[0.14em] text-brand-yellow">FOR YOU</span>
               </div>
               <ul className="space-y-3">
                 {forYou.map((item, i) => (
@@ -359,7 +359,7 @@ function AskSunnyFit() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-4 py-1.5 mb-6">
                 <X className="h-3.5 w-3.5 text-brand-navy/50" strokeWidth={3} />
-                <span className="font-display text-sm tracking-[0.2em] text-brand-navy/60">NOT FOR YOU</span>
+                <span className="font-display text-[15px] tracking-[0.14em] text-brand-navy/60">NOT FOR YOU</span>
               </div>
               <ul className="space-y-3">
                 {notForYou.map((item, i) => (
