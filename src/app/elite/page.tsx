@@ -664,7 +664,7 @@ export function EliteTimeline() {
                 >
                   {/* Range side */}
                   <div className={`flex flex-col ${isEven ? "sm:items-end sm:text-right" : "sm:items-start"}`}>
-                    <span className="font-display text-4xl sm:text-5xl lg:text-6xl text-brand-yellow leading-none tracking-tight font-black">
+                    <span className="font-display text-4xl sm:text-5xl lg:text-6xl text-brand-navy leading-none tracking-tight font-black">
                       {m.range}
                     </span>
                     <span className="mt-3 inline-block font-display text-sm tracking-[0.25em] text-brand-azure">
