@@ -26,7 +26,7 @@ const phases = [
 
 export function ProcessHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-navy text-white h-screen flex items-center pt-24 pb-12 texture-grain">
+    <section className="relative isolate overflow-hidden bg-brand-navy text-white min-h-[100svh] flex items-center pt-24 pb-12 texture-grain">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,_rgba(54,128,195,0.20)_0%,_transparent_55%)]"
@@ -55,13 +55,13 @@ export function ProcessHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
               className="inline-flex items-center gap-3 mb-7"
             >
-              <span className="font-display text-[17px] tracking-[0.08em] text-brand-yellow uppercase">
+              <span className="font-display text-[13px] sm:text-[17px] tracking-[0.08em] text-brand-yellow uppercase">
                 The Operating System
               </span>
               <span className="h-px w-10 bg-brand-yellow/40" />
             </motion.div>
 
-            <h1 className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[60px] xl:text-[70px]">
+            <h1 className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[60px] xl:text-[70px]">
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ export function ProcessHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
-            className="relative"
+            className="hidden lg:block relative"
           >
             <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-5 sm:p-6">
               <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">

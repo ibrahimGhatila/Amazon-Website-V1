@@ -37,7 +37,7 @@ export function SectionHeading({
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className={cn(
-            "inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[20px] tracking-[0.06em] mb-5",
+            "inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] mb-5",
             isDark
               ? "bg-brand-azure/15 text-brand-azure border border-brand-azure/30"
               : "bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
@@ -54,7 +54,7 @@ export function SectionHeading({
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
         className={cn(
           "font-black tracking-tight text-balance",
-          "text-4xl sm:text-5xl lg:text-6xl",
+          "text-[28px] sm:text-4xl lg:text-6xl",
           "leading-[1.02]",
           isDark ? "text-white" : "text-brand-navy"
         )}

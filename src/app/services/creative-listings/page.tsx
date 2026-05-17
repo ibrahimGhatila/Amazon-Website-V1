@@ -122,7 +122,7 @@ function CreativeListingsHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
+      className="relative isolate min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
     >
       {/* Ambient radial gradients */}
       <div
@@ -200,7 +200,7 @@ function CreativeListingsHero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
+              className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-white"
             >
               Listings that rank.
               <br />
@@ -371,7 +371,7 @@ function WhatsIncluded() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[20px] tracking-[0.06em] text-brand-navy mb-5"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy mb-5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             WHAT WE DELIVER
@@ -450,7 +450,7 @@ function BeforeAfter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[20px] tracking-[0.06em] text-brand-navy mb-5"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy mb-5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             THE DIFFERENCE
@@ -573,7 +573,7 @@ function CreativeListingsCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             GET STARTED

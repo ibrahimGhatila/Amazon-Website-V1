@@ -58,7 +58,7 @@ export function ProcessProblem() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-navy text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-navy transition-colors duration-300">
                     <Icon className="h-6 w-6" strokeWidth={2} />
                   </div>
-                  <span className="font-display text-[20px] tracking-[0.06em] text-brand-navy/30">
+                  <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy/30">
                     0{i + 1}
                   </span>
                 </div>

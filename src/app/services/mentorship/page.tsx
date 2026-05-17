@@ -26,7 +26,7 @@ function MentorshipHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden"
     >
       {/* Ambient gradients */}
       <div
@@ -95,7 +95,7 @@ function MentorshipHero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
+                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-white"
               >
                 Direct access to{" "}
                 <span className="text-brand-yellow">Sunny Ali.</span>
@@ -306,7 +306,7 @@ function MentorshipInclusions() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[20px] tracking-[0.06em] text-brand-navy"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             WHAT YOU GET
@@ -441,7 +441,7 @@ function MentorshipFit() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-4 py-1.5 mb-6">
                 <Check className="h-3.5 w-3.5 text-brand-yellow" strokeWidth={3} />
-                <span className="font-display text-[20px] tracking-[0.06em] text-brand-yellow">
+                <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">
                   FOR YOU
                 </span>
               </div>
@@ -482,7 +482,7 @@ function MentorshipFit() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-4 py-1.5 mb-6">
                 <X className="h-3.5 w-3.5 text-brand-navy/50" strokeWidth={3} />
-                <span className="font-display text-[20px] tracking-[0.06em] text-brand-navy/60">
+                <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy/60">
                   NOT FOR YOU
                 </span>
               </div>

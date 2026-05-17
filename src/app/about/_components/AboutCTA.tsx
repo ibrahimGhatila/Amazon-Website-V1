@@ -46,7 +46,7 @@ export function AboutCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-yellow mb-5"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             BUILD WITH US
@@ -57,7 +57,7 @@ export function AboutCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-            className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-balance"
+            className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-6xl xl:text-7xl text-balance"
           >
             Build with the team that&rsquo;s{" "}
             <span className="relative inline-block">

@@ -10,7 +10,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function AboutHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-navy text-white h-screen flex items-center pt-24 pb-12 texture-grain">
+    <section className="relative isolate overflow-hidden bg-brand-navy text-white min-h-[100svh] flex items-center pt-24 pb-12 texture-grain">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(244,205,29,0.10)_0%,_transparent_55%)]"
@@ -44,7 +44,7 @@ export function AboutHero() {
               </span>
             </motion.div>
 
-            <h1 className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[58px] xl:text-[68px]">
+            <h1 className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[58px] xl:text-[68px]">
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ export function AboutHero() {
               <div className="relative h-full p-7 sm:p-9 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div>
-                    <div className="font-display text-[17px] tracking-[0.08em] text-white/50 uppercase">
+                    <div className="font-display text-[13px] sm:text-[17px] tracking-[0.08em] text-white/50 uppercase">
                       Founder · CEO
                     </div>
                     <div className="mt-1.5 font-display text-xs tracking-[0.2em] text-brand-yellow">
@@ -182,7 +182,7 @@ export function AboutHero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, ease: EASE, delay: 1.1 }}
-              className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-2xl shadow-black/40 max-w-[140px]"
+              className="hidden sm:block absolute -right-6 top-1/2 -translate-y-1/2 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-2xl shadow-black/40 max-w-[140px]"
             >
               <div className="font-display text-3xl text-brand-navy leading-none tracking-tight">
                 10+

@@ -23,7 +23,7 @@ export function EliteHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate h-screen flex items-center bg-brand-navy text-white overflow-hidden texture-grain pt-24 pb-10"
+      className="relative isolate min-h-[100svh] flex items-center bg-brand-navy text-white overflow-hidden texture-grain pt-24 pb-10"
     >
       {/* Backgrounds */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(244,205,29,0.18),transparent)]" />
@@ -68,7 +68,7 @@ export function EliteHero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
+                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-white"
               >
                 This is not
               </motion.h1>
@@ -78,7 +78,7 @@ export function EliteHero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
-                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-brand-yellow"
+                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-brand-yellow"
               >
                 a course.
               </motion.h1>
@@ -287,7 +287,7 @@ export function EliteQualifier() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[20px] tracking-[0.06em] text-brand-navy"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             IS THIS FOR YOU?
@@ -329,7 +329,7 @@ export function EliteQualifier() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-4 py-1.5 mb-5">
                 <Check className="h-3.5 w-3.5 text-brand-yellow" strokeWidth={3} />
-                <span className="font-display text-[20px] tracking-[0.06em] text-brand-yellow">BUILT FOR YOU IF...</span>
+                <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">BUILT FOR YOU IF...</span>
               </div>
               <ul className="space-y-3">
                 {forYou.map((item, i) => (
@@ -363,7 +363,7 @@ export function EliteQualifier() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-4 py-1.5 mb-5">
                 <X className="h-3.5 w-3.5 text-brand-navy/50" strokeWidth={3} />
-                <span className="font-display text-[20px] tracking-[0.06em] text-brand-navy/60">NOT THE RIGHT FIT IF...</span>
+                <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy/60">NOT THE RIGHT FIT IF...</span>
               </div>
               <ul className="space-y-3">
                 {notForYou.map((item, i) => (
@@ -433,7 +433,7 @@ export function EliteModel() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-azure/15 border border-brand-azure/30 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-azure"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-azure/15 border border-brand-azure/30 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-azure"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             THE MODEL, EXPLAINED
@@ -513,7 +513,7 @@ export function EliteModel() {
           {/* Divider */}
           <div className="flex lg:flex-col items-center justify-center gap-3">
             <div className="h-[1px] w-12 lg:h-12 lg:w-[1px] bg-white/15" />
-            <span className="font-display text-[20px] tracking-[0.06em] text-white/30">SPLIT</span>
+            <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-white/30">SPLIT</span>
             <div className="h-[1px] w-12 lg:h-12 lg:w-[1px] bg-white/15" />
           </div>
 
@@ -646,7 +646,7 @@ export function EliteTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[20px] tracking-[0.06em] text-brand-navy"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             YOUR 18-MONTH ROADMAP
@@ -701,7 +701,7 @@ export function EliteTimeline() {
                 >
                   {/* Text side */}
                   <div className={`${isEven ? "sm:text-right sm:pr-12" : "sm:pl-12"}`}>
-                    <span className="font-display text-[20px] tracking-[0.06em] text-brand-azure">
+                    <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-azure">
                       {m.range}
                     </span>
                     <h3 className="mt-1 font-black text-xl sm:text-2xl text-brand-navy tracking-tight">
@@ -819,7 +819,7 @@ export function EliteMath() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[20px] tracking-[0.06em] text-brand-navy"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             THE NUMBERS, HONESTLY
@@ -1010,7 +1010,7 @@ export function EliteLaunches() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-azure/15 border border-brand-azure/30 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-azure"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-azure/15 border border-brand-azure/30 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-azure"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             FROM THE LAUNCH ARCHIVE
@@ -1159,7 +1159,7 @@ export function EliteFAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[20px] tracking-[0.06em] text-brand-navy"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             ELITE PROGRAM FAQ
@@ -1195,7 +1195,7 @@ export function EliteFAQ() {
                   className="group flex w-full items-start justify-between gap-6 py-6 sm:py-7 text-left"
                 >
                   <div className="flex items-start gap-4 sm:gap-5 flex-1">
-                    <span className="font-display text-[20px] tracking-[0.06em] text-brand-yellow pt-1 tabular-nums">
+                    <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow pt-1 tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <h3 className="font-bold text-base sm:text-lg text-brand-navy tracking-tight group-hover:text-brand-azure transition-colors leading-snug">
@@ -1269,7 +1269,7 @@ export function EliteCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: EASE }}
-          className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
+          className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
           APPLICATIONS OPEN NOW
@@ -1280,7 +1280,7 @@ export function EliteCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-          className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-6xl text-balance"
+          className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-6xl text-balance"
         >
           Ready to stop
           <br />

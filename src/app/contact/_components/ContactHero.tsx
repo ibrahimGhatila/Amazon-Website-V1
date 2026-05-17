@@ -20,7 +20,7 @@ export function ContactHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate overflow-hidden bg-brand-navy text-white h-screen flex items-center pt-24 pb-12 texture-grain"
+      className="relative isolate overflow-hidden bg-brand-navy text-white min-h-[100svh] flex items-center pt-24 pb-12 texture-grain"
     >
       <div
         aria-hidden
@@ -68,12 +68,12 @@ export function ContactHero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
-              <span className="font-display text-[20px] tracking-[0.06em] text-white/90">
+              <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-white/90">
                 Get in touch
               </span>
             </motion.div>
 
-            <h1 className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px]">
+            <h1 className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px]">
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

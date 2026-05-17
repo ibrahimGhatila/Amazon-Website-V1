@@ -24,7 +24,7 @@ function AskSunnyHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden"
     >
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(54,128,195,0.22),transparent)]" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_40%_40%_at_85%_75%,rgba(244,205,29,0.1),transparent)]" />
@@ -64,7 +64,7 @@ function AskSunnyHero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
+                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-white"
               >
                 Direct access to{" "}
                 <span className="text-brand-yellow">Sunny Ali.</span>
@@ -140,7 +140,7 @@ function AskSunnyHero() {
                 </div>
 
                 <div>
-                  <div className="font-display text-[17px] tracking-[0.08em] text-brand-yellow uppercase">
+                  <div className="font-display text-[13px] sm:text-[17px] tracking-[0.08em] text-brand-yellow uppercase">
                     Your mentor
                   </div>
                   <div className="mt-2 font-black text-white text-3xl sm:text-4xl tracking-tight leading-[0.95]">
@@ -157,7 +157,7 @@ function AskSunnyHero() {
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.7, ease: EASE, delay: 1 }}
-              className="absolute -left-3 sm:-left-6 bottom-20 max-w-[260px] rounded-2xl bg-white p-4 shadow-2xl shadow-black/40 rotate-[-3deg]"
+              className="hidden sm:block absolute -left-6 bottom-20 max-w-[260px] rounded-2xl bg-white p-4 shadow-2xl shadow-black/40 rotate-[-3deg]"
             >
               <div className="flex items-center gap-2 mb-2">
                 <Smartphone className="h-3.5 w-3.5 text-emerald-600" />
@@ -178,7 +178,7 @@ function AskSunnyHero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, ease: EASE, delay: 1.2 }}
-              className="absolute -right-3 sm:-right-5 top-12 rounded-2xl bg-brand-yellow px-4 py-3 shadow-xl shadow-brand-yellow/30 rotate-[4deg]"
+              className="hidden sm:block absolute -right-5 top-12 rounded-2xl bg-brand-yellow px-4 py-3 shadow-xl shadow-brand-yellow/30 rotate-[4deg]"
             >
               <div className="font-display text-2xl text-brand-navy leading-none font-black tracking-tight">
                 <Counter to={1000} suffix="+" />
@@ -223,7 +223,7 @@ function AskSunnyInclusions() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[20px] tracking-[0.06em] text-brand-navy"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             WHAT YOU GET
@@ -333,7 +333,7 @@ function AskSunnyFit() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-4 py-1.5 mb-6">
                 <Check className="h-3.5 w-3.5 text-brand-yellow" strokeWidth={3} />
-                <span className="font-display text-[20px] tracking-[0.06em] text-brand-yellow">FOR YOU</span>
+                <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">FOR YOU</span>
               </div>
               <ul className="space-y-3">
                 {forYou.map((item, i) => (
@@ -359,7 +359,7 @@ function AskSunnyFit() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-4 py-1.5 mb-6">
                 <X className="h-3.5 w-3.5 text-brand-navy/50" strokeWidth={3} />
-                <span className="font-display text-[20px] tracking-[0.06em] text-brand-navy/60">NOT FOR YOU</span>
+                <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy/60">NOT FOR YOU</span>
               </div>
               <ul className="space-y-3">
                 {notForYou.map((item, i) => (

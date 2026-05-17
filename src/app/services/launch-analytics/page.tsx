@@ -38,7 +38,7 @@ function LaunchHero() {
   return (
     <section
       ref={ref}
-      className="relative h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy"
+      className="relative min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy"
     >
       {/* Ambient gradients */}
       <div
@@ -89,7 +89,7 @@ function LaunchHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
               LAUNCH &amp; ANALYTICS
@@ -102,10 +102,10 @@ function LaunchHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
               className="font-black tracking-tight leading-[0.95] text-white"
             >
-              <span className="block text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px]">
+              <span className="block text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px]">
                 Launch fast.
               </span>
-              <span className="block text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-brand-yellow mt-2">
+              <span className="block text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-brand-yellow mt-2">
                 Scale on data.
               </span>
             </motion.h1>
@@ -325,7 +325,7 @@ function WhatIsIncluded() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[20px] tracking-[0.06em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
+            className="inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
             THE SYSTEM
@@ -436,7 +436,7 @@ function WeeklyReport() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-yellow mb-4"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-4"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             WEEKLY REPORT
@@ -554,7 +554,7 @@ function LaunchCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-yellow mb-5"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             GET STARTED
@@ -565,7 +565,7 @@ function LaunchCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-            className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-6xl text-balance"
+            className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-6xl text-balance"
           >
             Know your numbers.{" "}
             <span className="text-brand-yellow">Grow your business.</span>

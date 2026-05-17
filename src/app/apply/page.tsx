@@ -38,7 +38,7 @@ function ApplyHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate h-screen flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
+      className="relative isolate min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy text-white"
     >
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_-10%,rgba(244,205,29,0.18),transparent)]" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_40%_50%_at_85%_80%,rgba(54,128,195,0.15),transparent)]" />
@@ -67,14 +67,14 @@ function ApplyHero() {
             <div className="overflow-hidden mb-2">
               <motion.h1 initial={{ y: "100%" }} animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white">
+                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-white">
                 Start your
               </motion.h1>
             </div>
             <div className="overflow-hidden mb-7">
               <motion.h1 initial={{ y: "100%" }} animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.32 }}
-                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-brand-yellow">
+                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-brand-yellow">
                 application.
               </motion.h1>
             </div>
@@ -258,7 +258,7 @@ function ApplicationForm() {
           <div className="lg:sticky lg:top-32">
             <motion.span initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[20px] tracking-[0.06em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10">
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
               YOUR APPLICATION
             </motion.span>
@@ -464,7 +464,7 @@ function WhatHappensNext() {
         <div className="text-center mb-10">
           <motion.span initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-yellow mb-4">
+            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-4">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
             AFTER YOU APPLY
           </motion.span>
@@ -485,7 +485,7 @@ function WhatHappensNext() {
                   <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-brand-yellow text-brand-navy">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </div>
-                  <span className="font-display text-[20px] tracking-[0.06em] text-brand-yellow">{s.n}</span>
+                  <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">{s.n}</span>
                 </div>
                 <h3 className="font-bold text-white text-base leading-tight mb-2">{s.title}</h3>
                 <p className="text-sm text-white/55 leading-relaxed">{s.desc}</p>

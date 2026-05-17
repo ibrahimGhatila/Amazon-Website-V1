@@ -98,7 +98,7 @@ function MeetupHero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] text-white"
+                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-white"
               >
                 Meet the people{" "}
                 <span className="text-brand-yellow">building real brands.</span>
@@ -457,7 +457,7 @@ function MeetupAudience() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start">
           <div className="lg:sticky lg:top-32">
-            <span className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-5 py-2 font-display text-[20px] tracking-[0.06em] text-brand-navy">
+            <span className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-navy">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
               WHO'S IN THE ROOM
             </span>

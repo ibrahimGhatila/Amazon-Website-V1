@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative isolate overflow-hidden bg-brand-navy text-white h-screen flex items-center pt-24 pb-12 texture-grain"
+      className="relative isolate overflow-hidden bg-brand-navy text-white min-h-[100svh] flex items-center pt-24 pb-12 texture-grain"
     >
       {/* Ambient gradients */}
       <div
@@ -75,12 +75,12 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
-              <span className="font-display text-[20px] tracking-[0.06em] text-white/90">
+              <span className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-white/90">
                 Yes, Amazon is saturated. We win anyway.
               </span>
             </motion.div>
 
-            <h1 className="font-black tracking-tight leading-[0.95] text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px]">
+            <h1 className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px]">
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: EASE, delay: 0.5 }}
-            className="relative aspect-[4/5] sm:aspect-[5/6] lg:aspect-auto lg:h-[600px] w-full"
+            className="hidden lg:block relative lg:h-[600px] w-full"
           >
             {/* Floating stat card — big revenue */}
             <motion.div
