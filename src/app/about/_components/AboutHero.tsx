@@ -31,7 +31,7 @@ export function AboutHero() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
-          <div className="order-2 lg:order-1">
+          <div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -51,21 +51,21 @@ export function AboutHero() {
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
                 className="block text-white"
               >
-                A decade of
+                A decade of{" "}
+                <span className="relative inline-block">
+                  <span className="relative z-10 text-brand-yellow">profitable</span>
+                  <motion.span
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 1, ease: EASE, delay: 0.9 }}
+                    className="absolute left-0 -bottom-1 h-[5px] w-full bg-brand-yellow/20 origin-left rounded-full -z-10"
+                  />
+                </span>
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
-                className="block text-brand-yellow italic"
-                style={{ fontFamily: "serif" }}
-              >
-                profitable
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, ease: EASE, delay: 0.5 }}
                 className="block text-white"
               >
                 Amazon brands.
@@ -122,7 +122,7 @@ export function AboutHero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.4 }}
-            className="order-1 lg:order-2 relative aspect-[3/4] max-w-md mx-auto lg:max-w-none w-full"
+            className="hidden lg:block relative aspect-[3/4] max-w-md mx-auto lg:max-w-none w-full"
           >
             <motion.div
               initial={{ rotate: -2, opacity: 0 }}
