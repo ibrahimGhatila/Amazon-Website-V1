@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
-import { Check, X, ArrowRight, Search, Factory, Paintbrush, Rocket, TrendingUp, RefreshCw, Info, Plus, Shield, Clock, MessageCircle } from "lucide-react";
+import { Check, X, Search, Factory, Paintbrush, Rocket, TrendingUp, RefreshCw, Info, Plus, Shield, Clock, MessageCircle } from "lucide-react";
 import { Counter } from "@/components/ui/Counter";
 import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
@@ -403,31 +403,14 @@ export function EliteQualifier() {
 }
 
 
-const flow = [
-  { label: "Your Capital", sub: "$10K / launch", color: "bg-brand-yellow text-brand-navy", dot: "bg-brand-yellow" },
-  { label: "Research", sub: "Data-led product selection", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
-  { label: "Sourcing", sub: "Vetted supplier + QC", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
-  { label: "Launch", sub: "Creatives, PPC, listings", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
-  { label: "Revenue", sub: "Optimised & scaled", color: "bg-brand-navy text-white", dot: "bg-brand-azure" },
-  { label: "Profit Split", sub: "80% yours · 20% ours", color: "bg-brand-yellow text-brand-navy", dot: "bg-brand-yellow" },
-];
-
 export function EliteModel() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const lineWidth = useTransform(scrollYProgress, [0.1, 0.6], ["0%", "100%"]);
-
   return (
     <section id="model" className="relative bg-brand-navy text-white py-10 sm:py-14 overflow-hidden texture-grain">
       <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(54,128,195,0.15),transparent_50%)]" />
       <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Heading */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -451,83 +434,59 @@ export function EliteModel() {
           </motion.h2>
         </div>
 
-        {/* Flow diagram */}
-        <div ref={ref} className="relative">
-          {/* Connecting line (desktop) */}
-          <div className="absolute top-[52px] left-0 right-0 hidden lg:block h-[2px] bg-white/10">
-            <motion.div
-              style={{ width: lineWidth }}
-              className="h-full bg-gradient-to-r from-brand-yellow via-brand-azure to-brand-yellow"
-            />
-          </div>
+        <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, ease: EASE, delay: 0 }}
+            className="rounded-3xl bg-brand-yellow p-6 sm:p-8 text-brand-navy flex flex-col"
+          >
+            <div className="font-display text-[11px] tracking-[0.22em] text-brand-navy/50 mb-3">STEP 01</div>
+            <div className="font-black text-2xl tracking-tight leading-tight">You invest</div>
+            <div className="mt-3 text-brand-navy/75 text-sm leading-relaxed">
+              Bring your capital from $10K per launch. That&apos;s your only requirement.
+            </div>
+            <div className="mt-auto pt-6 font-display text-4xl font-bold tracking-tight">$10K+</div>
+            <div className="text-xs text-brand-navy/55 mt-1">per product launch</div>
+          </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 lg:gap-3 relative">
-            {flow.map((step, i) => (
-              <motion.div
-                key={step.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.6, ease: EASE, delay: i * 0.1 }}
-                className="flex flex-col items-center text-center gap-4"
-              >
-                {/* Node */}
-                <div className={`relative z-10 flex h-[104px] w-full max-w-[160px] flex-col items-center justify-center rounded-2xl px-4 py-5 shadow-xl ${step.color}`}>
-                  <div className="font-bold text-sm leading-tight">{step.label}</div>
-                  <div className={`mt-1 text-xs leading-snug ${step.color.includes("yellow") ? "text-brand-navy/70" : "text-white/60"}`}>{step.sub}</div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
+            className="rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 sm:p-8 flex flex-col"
+          >
+            <div className="font-display text-[11px] tracking-[0.22em] text-white/40 mb-3">STEP 02</div>
+            <div className="font-black text-2xl tracking-tight leading-tight text-white">We build everything</div>
+            <div className="mt-4 space-y-2.5">
+              {["Product research & validation", "Supplier vetting & sourcing", "Brand, creative & launch", "PPC, scaling & reporting"].map((item) => (
+                <div key={item} className="flex items-center gap-2.5 text-sm text-white/75">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-azure flex-none" />
+                  {item}
                 </div>
+              ))}
+            </div>
+          </motion.div>
 
-                {/* Arrow (between nodes, desktop) */}
-                {i < flow.length - 1 && (
-                  <div className="hidden lg:block absolute top-[52px] text-white/20" style={{ left: `${(i + 1) * (100 / 6)}%`, transform: "translateX(-50%) translateY(-50%)" }}>
-                    <ArrowRight className="h-4 w-4" />
-                  </div>
-                )}
-
-                {/* Step label */}
-                <div className="font-display text-xs tracking-[0.15em] text-white/40">
-                  {i === 0 ? "YOU" : i === flow.length - 1 ? "YOU + US" : `STEP ${String(i).padStart(2, "0")}`}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
+            className="rounded-3xl border border-brand-yellow/25 bg-brand-yellow/10 p-6 sm:p-8 flex flex-col"
+          >
+            <div className="font-display text-[11px] tracking-[0.22em] text-brand-yellow/50 mb-3">STEP 03</div>
+            <div className="font-black text-2xl tracking-tight leading-tight text-white">You earn 80%</div>
+            <div className="mt-3 text-white/70 text-sm leading-relaxed">
+              Of every dollar of profit. We earn our 20% only after your ROI crosses 50%.
+            </div>
+            <div className="mt-auto pt-6 font-display text-4xl font-bold tracking-tight text-brand-yellow">80%</div>
+            <div className="text-xs text-white/50 mt-1">your profit share</div>
+          </motion.div>
         </div>
 
-        {/* Profit share breakdown */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE }}
-          className="mt-10 grid lg:grid-cols-[1fr_auto_1fr] gap-6 lg:gap-12 items-center max-w-5xl mx-auto"
-        >
-          {/* Your share */}
-          <div className="rounded-3xl bg-brand-yellow p-5 sm:p-6 text-brand-navy text-center">
-            <div className="font-display text-6xl sm:text-7xl leading-none tracking-tight">80%</div>
-            <div className="mt-3 font-bold text-xl">Your profit share</div>
-            <div className="mt-2 text-brand-navy/75 text-sm leading-relaxed">
-              Paid directly to you. No delays, no ambiguity. Every dollar above the ROI threshold is tracked and distributed.
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="flex lg:flex-col items-center justify-center gap-3">
-            <div className="h-[1px] w-12 lg:h-12 lg:w-[1px] bg-white/15" />
-            <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-white/30">SPLIT</span>
-            <div className="h-[1px] w-12 lg:h-12 lg:w-[1px] bg-white/15" />
-          </div>
-
-          {/* Our share */}
-          <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 sm:p-6 text-center">
-            <div className="font-display text-6xl sm:text-7xl leading-none tracking-tight text-brand-azure">20%</div>
-            <div className="mt-3 font-bold text-xl text-white">Our performance fee</div>
-            <div className="mt-2 text-white/50 text-sm leading-relaxed">
-              We earn nothing until your ROI crosses 50%. Our upside is tied to your success — not your fees.
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Key callout */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -551,6 +510,7 @@ const milestones = [
     title: "Research & Validation",
     icon: Search,
     color: "brand-yellow",
+    timeframe: "Foundation",
     items: [
       "Market opportunity analysis",
       "Competitor landscape deep-dive",
@@ -564,6 +524,7 @@ const milestones = [
     title: "Sourcing & Manufacturing",
     icon: Factory,
     color: "brand-azure",
+    timeframe: "Build",
     items: [
       "Supplier vetting & sample ordering",
       "Quality control inspections",
@@ -577,6 +538,7 @@ const milestones = [
     title: "Creative & Launch Prep",
     icon: Paintbrush,
     color: "brand-yellow",
+    timeframe: "Prepare",
     items: [
       "Brand identity & packaging",
       "A+ content & listing copy",
@@ -590,6 +552,7 @@ const milestones = [
     title: "Launch #1 Goes Live",
     icon: Rocket,
     color: "brand-yellow",
+    timeframe: "Go live",
     items: [
       "Day-1 launch execution",
       "Review velocity strategy",
@@ -603,6 +566,7 @@ const milestones = [
     title: "Launch #2 + Scaling",
     icon: TrendingUp,
     color: "brand-azure",
+    timeframe: "Scale",
     items: [
       "Product 2 launches",
       "Winner from L1 scaled aggressively",
@@ -616,6 +580,7 @@ const milestones = [
     title: "Launch #3 + Compound",
     icon: RefreshCw,
     color: "brand-yellow",
+    timeframe: "Compound",
     items: [
       "Product 3 launches",
       "Multi-product portfolio active",
@@ -635,12 +600,11 @@ export function EliteTimeline() {
   const lineHeight = useTransform(scrollYProgress, [0.05, 0.9], ["0%", "100%"]);
 
   return (
-    <section className="relative bg-white py-10 sm:py-14 overflow-hidden">
-      <div aria-hidden className="absolute inset-0 bg-grid-navy opacity-25 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" />
+    <section className="relative bg-white py-24 sm:py-32 overflow-hidden">
+      <div aria-hidden className="absolute inset-0 bg-grid-navy opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Heading */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-16 sm:mb-20">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -667,72 +631,81 @@ export function EliteTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
-            className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
+            className="mt-5 text-lg text-brand-navy/60 max-w-2xl mx-auto"
           >
             Every phase is planned, reported, and accountable. No black boxes. No vague updates.
           </motion.p>
         </div>
 
-        {/* Timeline */}
-        <div ref={ref} className="relative max-w-4xl mx-auto">
-          {/* Vertical line */}
-          <div className="absolute left-6 sm:left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px]">
+        <div ref={ref} className="relative max-w-5xl mx-auto">
+          {/* Vertical progress line */}
+          <div className="absolute left-8 sm:left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px] hidden sm:block">
             <div className="absolute inset-0 bg-brand-navy/10 rounded-full" />
             <motion.div
               style={{ height: lineHeight }}
-              className="absolute top-0 left-0 right-0 bg-gradient-to-b from-brand-yellow via-brand-azure to-brand-yellow rounded-full"
+              className="absolute top-0 left-0 right-0 bg-gradient-to-b from-brand-yellow via-brand-yellow to-brand-azure rounded-full"
             />
           </div>
 
-          <div className="space-y-10 sm:space-y-14">
+          <div className="space-y-16 sm:space-y-24">
             {milestones.map((m, i) => {
               const Icon = m.icon;
               const isEven = i % 2 === 0;
               return (
                 <motion.div
                   key={m.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
-                  className={`relative grid sm:grid-cols-2 gap-4 sm:gap-10 items-start pl-16 sm:pl-0 ${
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, ease: EASE }}
+                  className={`relative grid sm:grid-cols-2 gap-6 sm:gap-12 items-center ${
                     isEven ? "" : "sm:[&>*:first-child]:order-2"
                   }`}
                 >
-                  {/* Text side */}
-                  <div className={`${isEven ? "sm:text-right sm:pr-12" : "sm:pl-12"}`}>
-                    <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-azure">
+                  {/* Range side */}
+                  <div className={`flex flex-col ${isEven ? "sm:items-end sm:text-right" : "sm:items-start"}`}>
+                    <span className="font-display text-4xl sm:text-5xl lg:text-6xl text-brand-yellow leading-none tracking-tight font-black">
                       {m.range}
                     </span>
-                    <h3 className="mt-1 font-black text-xl sm:text-2xl text-brand-navy tracking-tight">
-                      {m.title}
-                      {m.launch && (
-                        <span className="ml-2 inline-flex items-center rounded-full bg-brand-yellow px-2.5 py-0.5 text-xs font-bold text-brand-navy align-middle">
-                          Launch #{m.launch}
-                        </span>
-                      )}
-                    </h3>
-                    <ul className={`mt-3 space-y-1.5 ${isEven ? "sm:items-end" : ""}`}>
-                      {m.items.map((item) => (
-                        <li key={item} className={`flex items-center gap-2 text-sm text-brand-navy/75 ${isEven ? "sm:flex-row-reverse sm:justify-start" : ""}`}>
-                          <span className="h-1 w-1 rounded-full bg-brand-yellow flex-none" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <span className="mt-3 inline-block font-display text-sm tracking-[0.25em] text-brand-azure">
+                      {m.timeframe}
+                    </span>
                   </div>
 
-                  {/* Node */}
-                  <div className="absolute left-6 sm:left-1/2 top-0 -translate-x-1/2 z-10">
-                    <div className={`flex h-12 w-12 items-center justify-center rounded-full border-4 border-white shadow-xl ${
-                      m.color === "brand-yellow" ? "bg-brand-yellow text-brand-navy" : "bg-brand-azure text-white"
+                  {/* Center node */}
+                  <div className="absolute left-8 sm:left-1/2 top-4 -translate-x-1/2 z-10 hidden sm:block">
+                    <div className={`relative flex h-16 w-16 items-center justify-center rounded-full bg-white border-2 shadow-[0_0_0_8px_rgba(255,255,255,1),0_0_30px_rgba(244,205,29,0.15)] ${
+                      m.color === "brand-yellow" ? "border-brand-yellow" : "border-brand-azure"
                     }`}>
-                      <Icon className="h-5 w-5" strokeWidth={2} />
+                      <Icon className={`h-6 w-6 ${m.color === "brand-yellow" ? "text-brand-yellow" : "text-brand-azure"}`} strokeWidth={2} />
                     </div>
                   </div>
 
-                  {/* Empty col for alternating layout */}
-                  <div className="hidden sm:block" />
+                  {/* Content card side */}
+                  <div>
+                    <div className="group relative rounded-3xl border border-brand-navy/10 bg-brand-navy/[0.02] p-6 sm:p-8 hover:border-brand-yellow/40 hover:bg-brand-yellow/[0.02] transition-all duration-500">
+                      <div className="sm:hidden mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-yellow/10">
+                        <Icon className={`h-5 w-5 ${m.color === "brand-yellow" ? "text-brand-yellow" : "text-brand-azure"}`} />
+                      </div>
+                      <h3 className="font-black text-2xl sm:text-3xl tracking-tight text-brand-navy flex flex-wrap items-center gap-3">
+                        {m.title}
+                        {m.launch && (
+                          <span className="inline-flex items-center rounded-full bg-brand-yellow px-3 py-1 text-xs font-bold text-brand-navy">
+                            Launch #{m.launch}
+                          </span>
+                        )}
+                      </h3>
+                      <ul className="mt-4 space-y-2">
+                        {m.items.map((item) => (
+                          <li key={item} className="flex items-center gap-2.5 text-sm text-brand-navy/70">
+                            <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow flex-none" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="absolute -right-1 -top-1 h-8 w-8 rounded-tr-3xl border-t-2 border-r-2 border-brand-yellow/0 group-hover:border-brand-yellow transition-all duration-500" />
+                    </div>
+                  </div>
                 </motion.div>
               );
             })}
@@ -746,7 +719,7 @@ export function EliteTimeline() {
             transition={{ duration: 0.6, ease: EASE }}
             className="relative mt-14 flex flex-col items-center"
           >
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-navy border-4 border-brand-yellow shadow-2xl shadow-brand-yellow/30">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white border-4 border-brand-yellow shadow-2xl shadow-brand-yellow/20">
               <span className="font-display text-brand-yellow text-sm tracking-widest">18M</span>
             </div>
             <p className="mt-4 font-bold text-brand-navy text-center">
