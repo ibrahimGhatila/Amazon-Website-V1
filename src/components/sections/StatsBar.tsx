@@ -45,14 +45,22 @@ const stats = [
 export function StatsBar() {
   return (
     <section className="relative bg-brand-navy py-16 sm:py-20 overflow-hidden texture-grain">
-      {/* Hero-continuation ambient glows so the seam between sections disappears */}
+      {/* Continue the hero's yellow bottom-right glow into this section so the seam disappears */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-72 sm:h-96 bg-[radial-gradient(ellipse_at_top_right,_rgba(244,205,29,0.10)_0%,_transparent_55%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-72 sm:h-96 bg-[radial-gradient(ellipse_at_top_right,_rgba(244,205,29,0.15)_0%,_transparent_50%)]"
       />
+
+      {/* Continue the hero's grid texture across the seam, fading out as we move down */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-72 sm:h-96 bg-[radial-gradient(ellipse_at_top_left,_rgba(54,128,195,0.14)_0%,_transparent_55%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-64 sm:h-80 bg-grid opacity-60"
+        style={{
+          maskImage:
+            "linear-gradient(to bottom, black 0%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black 0%, transparent 100%)",
+        }}
       />
 
       {/* Diagonal stripes — fade in from the top so they don't slam in at the section boundary */}
@@ -63,9 +71,9 @@ export function StatsBar() {
           backgroundImage:
             "repeating-linear-gradient(-45deg, rgba(255,255,255,0.8) 0 1px, transparent 1px 22px)",
           maskImage:
-            "linear-gradient(to bottom, transparent 0%, black 25%)",
+            "linear-gradient(to bottom, transparent 0%, black 35%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, transparent 0%, black 25%)",
+            "linear-gradient(to bottom, transparent 0%, black 35%)",
         }}
       />
 
