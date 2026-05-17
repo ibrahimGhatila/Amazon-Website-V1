@@ -154,7 +154,7 @@ export function AboutHero() {
               <div className="relative h-full p-7 sm:p-9 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div>
-                    <div className="font-display text-[13px] sm:text-[17px] tracking-[0.08em] text-white/50 uppercase">
+                    <div className="font-display text-[15px] sm:text-[17px] tracking-[0.08em] text-white/50 uppercase">
                       Founder · CEO
                     </div>
                     <div className="mt-1.5 font-display text-xs tracking-[0.2em] text-brand-yellow">

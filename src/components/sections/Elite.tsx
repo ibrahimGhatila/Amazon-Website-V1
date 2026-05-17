@@ -52,7 +52,7 @@ export function Elite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6, ease: EASE }}
-                className="inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[14px] sm:text-[20px] tracking-[0.06em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-2 font-display text-[17px] sm:text-[20px] tracking-[0.06em] mb-4 bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
                 THE ELITE PROGRAM
@@ -170,7 +170,7 @@ export function Elite() {
                   <Check className="h-4 w-4" strokeWidth={3} />
                 </div>
                 <div>
-                  <div className="font-display text-[14px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">
+                  <div className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">
                     ALIGNED INCENTIVES
                   </div>
                   <h4 className="mt-1 font-bold text-lg tracking-tight">

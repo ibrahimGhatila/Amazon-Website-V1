@@ -109,7 +109,7 @@ export function Services() {
                   <div className="relative flex items-start justify-between">
                     <span
                       className={cn(
-                        "inline-flex items-center rounded-full px-3 py-1 font-display text-[14px] sm:text-[20px] tracking-[0.06em]",
+                        "inline-flex items-center rounded-full px-3 py-1 font-display text-[17px] sm:text-[20px] tracking-[0.06em]",
                         tagStyles[variant]
                       )}
                     >
