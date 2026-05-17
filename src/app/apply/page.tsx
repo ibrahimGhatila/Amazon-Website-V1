@@ -509,6 +509,7 @@ export default function ApplyPage() {
         <ApplicationForm />
         <WhatHappensNext />
       </main>
+      <div aria-hidden className="h-20 sm:h-28" style={{ background: "linear-gradient(180deg, #022766 0%, #010f29 100%)", marginBottom: "-2px" }} />
       <Footer />
     </>
   );
