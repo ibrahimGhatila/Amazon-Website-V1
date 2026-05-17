@@ -24,7 +24,7 @@ function AskSunnyHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden"
     >
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(54,128,195,0.22),transparent)]" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_40%_40%_at_85%_75%,rgba(244,205,29,0.1),transparent)]" />
@@ -39,7 +39,7 @@ function AskSunnyHero() {
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
+          className="mb-3 sm:mb-8"
         >
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
             <ArrowLeft className="h-4 w-4" />
@@ -86,7 +86,7 @@ function AskSunnyHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
-              className="mt-7 flex flex-wrap gap-3"
+              className="mt-3 sm:mt-7 flex flex-wrap gap-3"
             >
               {["Monthly Zooms", "WhatsApp access", "1,000+ launches", "Direct feedback"].map((pill) => (
                 <span key={pill} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm px-4 py-2 text-sm text-white/80 font-medium">
@@ -100,7 +100,7 @@ function AskSunnyHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.78 }}
-              className="mt-8"
+              className="mt-4 sm:mt-8"
             >
               <Button href="#apply" size="lg" variant="primary" arrow>Apply for Ask Sunny Ali</Button>
             </motion.div>
@@ -110,7 +110,7 @@ function AskSunnyHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: EASE, delay: 0.4 }}
-            className="relative aspect-[4/5] max-w-md mx-auto lg:max-w-none w-full"
+            className="relative hidden lg:block h-[520px] w-full"
           >
             <div className="relative h-full w-full rounded-[2rem] bg-gradient-to-br from-brand-navy-600 via-brand-navy to-brand-navy-700 overflow-hidden border border-white/10">
               <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">

@@ -26,7 +26,7 @@ function MentorshipHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden"
     >
       {/* Ambient gradients */}
       <div
@@ -62,7 +62,7 @@ function MentorshipHero() {
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
+          className="mb-3 sm:mb-8"
         >
           <Link
             href="/services"
@@ -118,7 +118,7 @@ function MentorshipHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
-              className="mt-7 flex flex-wrap gap-3"
+              className="mt-4 sm:mt-7 flex flex-wrap gap-3"
             >
               {["Monthly Zooms", "WhatsApp access", "1,000+ launches"].map(
                 (pill) => (
@@ -138,7 +138,7 @@ function MentorshipHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.78 }}
-              className="mt-8"
+              className="mt-4 sm:mt-8"
             >
               <Button href="#apply" size="lg" variant="primary" arrow>
                 Apply for Mentorship

@@ -20,7 +20,7 @@ export function ContactHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate overflow-hidden bg-brand-navy text-white min-h-[100svh] flex items-center pt-24 pb-12 texture-grain"
+      className="relative isolate overflow-hidden bg-brand-navy text-white h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain"
     >
       <div
         aria-hidden
@@ -105,7 +105,7 @@ export function ContactHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
-              className="mt-7 text-lg sm:text-xl max-w-xl text-white/80 leading-relaxed text-pretty"
+              className="mt-4 sm:mt-7 text-sm sm:text-xl max-w-xl text-white/80 leading-relaxed text-pretty"
             >
               Whether you&rsquo;re ready to work with us, looking for a
               partnership, or just have a question — there&rsquo;s a path in.
@@ -116,7 +116,7 @@ export function ContactHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
-              className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
+              className="mt-6 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
             >
               <Button href="#intents" size="lg" variant="primary" arrow>
                 Choose your path
@@ -135,7 +135,7 @@ export function ContactHero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: EASE, delay: 0.5 }}
-            className="relative aspect-[4/5] sm:aspect-[5/6] lg:aspect-auto lg:h-[600px] w-full"
+            className="relative hidden lg:block lg:h-[600px] w-full"
           >
             <motion.div
               animate={{ y: [0, -12, 0] }}

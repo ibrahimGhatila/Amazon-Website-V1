@@ -125,7 +125,7 @@ function PPCHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden bg-brand-navy"
+      className="relative isolate h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden bg-brand-navy"
     >
       {/* Ambient gradients */}
       <div
@@ -174,7 +174,7 @@ function PPCHero() {
               initial={{ opacity: 0, x: -12 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-              className="mb-8"
+              className="mb-3 sm:mb-8"
             >
               <Link
                 href="/services"
@@ -228,7 +228,7 @@ function PPCHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.5 }}
-              className="text-base sm:text-lg text-white/65 max-w-2xl leading-relaxed mb-8"
+              className="text-base sm:text-lg text-white/65 max-w-2xl leading-relaxed mb-4 sm:mb-8"
             >
               We build, manage, and scale Amazon advertising campaigns that
               convert — from Sponsored Products to DSP.
@@ -239,7 +239,7 @@ function PPCHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.64 }}
-              className="flex flex-wrap gap-3 mb-8"
+              className="flex flex-wrap gap-3 mb-4 sm:mb-8"
             >
               {[
                 { label: "3.2x avg ROAS" },

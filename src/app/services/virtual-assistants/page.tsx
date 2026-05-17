@@ -24,7 +24,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 function Hero() {
   return (
-    <section className="relative isolate bg-brand-navy min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden">
+    <section className="relative isolate bg-brand-navy h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden">
       {/* Ambient gradients */}
       <div
         aria-hidden
@@ -52,7 +52,7 @@ function Hero() {
           initial={{ opacity: 0, x: -12 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
+          className="mb-3 sm:mb-8"
         >
           <Link
             href="/services"
@@ -109,7 +109,7 @@ function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.52 }}
-              className="text-base sm:text-lg text-white/65 max-w-2xl leading-relaxed mb-8"
+              className="text-base sm:text-lg text-white/65 max-w-2xl leading-relaxed mb-4 sm:mb-8"
             >
               Full-time or part-time. Trained on real Amazon operations. Placed
               inside your existing setup within days.
@@ -120,7 +120,7 @@ function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.64 }}
-              className="flex flex-wrap gap-3 mb-8"
+              className="flex flex-wrap gap-3 mb-4 sm:mb-8"
             >
               {[
                 { top: "Full-time", bottom: "or Part-time" },

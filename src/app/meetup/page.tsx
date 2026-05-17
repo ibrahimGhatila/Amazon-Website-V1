@@ -38,7 +38,7 @@ function MeetupHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy min-h-[88vh] flex items-center pt-24 pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden"
     >
       <div
         aria-hidden
@@ -68,7 +68,7 @@ function MeetupHero() {
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
+          className="mb-3 sm:mb-8"
         >
           <Link
             href="/"
@@ -120,7 +120,7 @@ function MeetupHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
-              className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
+              className="mt-5 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
             >
               <Button href="#upcoming" size="lg" variant="primary" arrow>
                 See upcoming meetups
@@ -138,7 +138,7 @@ function MeetupHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.75 }}
-              className="mt-10 grid grid-cols-3 gap-6 sm:gap-10 max-w-lg"
+              className="mt-4 sm:mt-10 grid grid-cols-3 gap-6 sm:gap-10 max-w-lg"
             >
               <div>
                 <div className="font-display text-3xl sm:text-4xl text-brand-yellow leading-none">
@@ -172,7 +172,7 @@ function MeetupHero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: EASE, delay: 0.5 }}
-            className="relative aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 lg:ml-auto"
+            className="relative hidden lg:block h-[520px] w-full lg:ml-auto"
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-yellow/15 via-transparent to-brand-azure/15 blur-2xl" />
             <div className="relative h-full w-full rounded-3xl overflow-hidden border border-white/10 bg-brand-navy-700">

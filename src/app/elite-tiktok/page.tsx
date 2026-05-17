@@ -33,7 +33,7 @@ function TikTokHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate bg-brand-navy min-h-[100svh] flex items-center pt-24 pb-12 texture-grain overflow-hidden"
+      className="relative isolate bg-brand-navy h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain overflow-hidden"
     >
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(54,128,195,0.25),transparent)]" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_40%_40%_at_85%_75%,rgba(244,205,29,0.12),transparent)]" />
@@ -48,7 +48,7 @@ function TikTokHero() {
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
+          className="mb-3 sm:mb-8"
         >
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
             <ArrowLeft className="h-4 w-4" />
@@ -62,7 +62,7 @@ function TikTokHero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
+              className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-4 sm:mb-6"
             >
               <Play className="h-3.5 w-3.5 text-brand-yellow fill-brand-yellow" strokeWidth={0} />
               <span className="font-display text-sm tracking-[0.22em] text-brand-yellow">ELITE PROGRAM — TIKTOK</span>
@@ -95,7 +95,7 @@ function TikTokHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
-              className="mt-7 flex flex-wrap gap-3"
+              className="mt-4 sm:mt-7 flex flex-wrap gap-3"
             >
               {["Creator collabs", "Affiliate network", "Live selling ops", "80/20 profit share"].map((pill) => (
                 <span key={pill} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm px-4 py-2 text-sm text-white/80 font-medium">
@@ -109,7 +109,7 @@ function TikTokHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.78 }}
-              className="mt-8 flex flex-wrap gap-3"
+              className="mt-4 sm:mt-8 flex flex-wrap gap-3"
             >
               <Button href="/apply" size="lg" variant="primary" arrow>Apply for TikTok Elite</Button>
               <Link href="#how-it-works" className="group inline-flex items-center gap-2 px-4 py-3 text-sm font-semibold text-white/80 hover:text-white transition">

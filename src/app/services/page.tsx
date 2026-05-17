@@ -94,7 +94,7 @@ function ServicesHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate overflow-hidden bg-brand-navy text-white min-h-[100svh] flex items-center pt-24 pb-12 texture-grain"
+      className="relative isolate overflow-hidden bg-brand-navy text-white h-[100svh] lg:min-h-[100svh] flex items-center pt-20 pb-6 lg:pt-24 lg:pb-12 texture-grain"
     >
       {/* Ambient gradients */}
       <div
@@ -178,7 +178,7 @@ function ServicesHero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.5 }}
-              className="mt-7 text-lg sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
+              className="mt-4 sm:mt-7 text-sm sm:text-xl max-w-2xl text-white/65 leading-relaxed text-pretty"
             >
               Amazon, TikTok Shop, or direct mentorship with Sunny Ali — pick
               the right level of involvement for you.
@@ -189,7 +189,7 @@ function ServicesHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
-              className="mt-10 flex flex-wrap gap-2.5"
+              className="mt-5 sm:mt-10 flex flex-wrap gap-2.5"
             >
               {services.map((s) => (
                 <Link
