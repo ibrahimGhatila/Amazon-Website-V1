@@ -16,7 +16,6 @@ import {
   Package,
   ChevronDown,
   Send,
-  Sparkles,
   ClipboardList,
   PhoneCall,
   FileText,
@@ -256,10 +255,6 @@ function AuditForm({ className }: { className?: string }) {
     >
       {/* Form header */}
       <div>
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-3 py-1 mb-2.5">
-          <Sparkles className="h-3 w-3 text-brand-yellow" />
-          <span className="font-display text-[13px] tracking-[0.06em] text-brand-yellow uppercase">100% Free · No Obligation</span>
-        </div>
         <h3 className="font-black text-white text-lg sm:text-xl leading-tight">
           Free Amazon Listing Audit
         </h3>
