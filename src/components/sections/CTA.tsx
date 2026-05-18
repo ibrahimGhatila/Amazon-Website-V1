@@ -1,131 +1,20 @@
-"use client";
-
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
-import { Button } from "@/components/ui/Button";
-
-const EASE = [0.16, 1, 0.3, 1] as const;
+import { PageCTA } from "@/components/sections/PageCTA";
 
 export function CTA() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, -60]);
-
   return (
-    <section
+    <PageCTA
       id="contact"
-      ref={ref}
-      className="relative text-white py-8 sm:py-10 overflow-hidden texture-grain"
-      style={{
-        background: "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
-        marginBottom: "-2px",
-      }}
-    >
-      {/* Backgrounds */}
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,205,29,0.15)_0%,_transparent_60%)]"
-      />
-      <motion.div
-        aria-hidden
-        style={{ y: bgY }}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
-      >
-        <span className="font-display text-[16rem] sm:text-[24rem] lg:text-[32rem] leading-none text-white/[0.04] tracking-tighter">
-          eX
-        </span>
-      </motion.div>
-      <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
-
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto text-center">
-
-          <motion.span
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-4"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
-            APPLICATIONS OPEN
-          </motion.span>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-            className="font-black tracking-tight leading-[0.95] text-[26px] sm:text-3xl lg:text-4xl xl:text-5xl text-balance"
-          >
-            Ready to build something{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-brand-yellow">profitable?</span>
-              <motion.span
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.9, ease: EASE, delay: 0.4 }}
-                className="absolute left-0 -bottom-1 h-1.5 w-full bg-brand-yellow/25 origin-left rounded-full -z-10"
-              />
-            </span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.25 }}
-            className="mt-4 text-sm sm:text-base text-white/80 max-w-2xl mx-auto leading-relaxed text-pretty"
-          >
-            Book a call with our team. We&rsquo;ll map your capital, your
-            timeline, and what a launch with us actually looks like — in under
-            30 minutes.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
-            className="mt-5 flex flex-wrap items-center justify-center gap-3"
-          >
-            <Button href="#" size="md" variant="primary" arrow>
-              Book a Call
-            </Button>
-            <Button href="#" size="md" variant="ghost">
-              Download the playbook
-            </Button>
-          </motion.div>
-
-          {/* Trust row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="mt-5 grid grid-cols-3 gap-4 max-w-2xl mx-auto"
-          >
-            {[
-              { k: "30-min", v: "Discovery call" },
-              { k: "No fee", v: "For qualified applicants" },
-              { k: "< 48h", v: "Team response" },
-            ].map((item) => (
-              <div key={item.k} className="text-center">
-                <div className="font-display text-xl sm:text-2xl text-brand-yellow tracking-tight leading-none">
-                  {item.k}
-                </div>
-                <div className="mt-1 text-[11px] text-white/50">{item.v}</div>
-              </div>
-            ))}
-          </motion.div>
-
-        </div>
-      </div>
-    </section>
+      eyebrow="APPLICATIONS OPEN"
+      heading={
+        <>
+          Ready to build something{" "}
+          <span className="text-brand-yellow">profitable?</span>
+        </>
+      }
+      primaryLabel="Book a Call"
+      primaryHref="#"
+      secondaryLabel="Download the playbook"
+      secondaryHref="#"
+    />
   );
 }

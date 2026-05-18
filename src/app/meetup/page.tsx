@@ -21,6 +21,7 @@ import { Counter } from "@/components/ui/Counter";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
+import { PageCTA } from "@/components/sections/PageCTA";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -509,79 +510,19 @@ function MeetupAudience() {
 
 function MeetupCTA() {
   return (
-    <section className="relative bg-brand-navy py-24 sm:py-28 overflow-hidden texture-grain">
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(244,205,29,0.12),transparent_60%)]"
-      />
-      <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
-
-      <div className="relative mx-auto max-w-3xl px-4 sm:px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: EASE }}
-          className="font-black tracking-tight text-white text-4xl sm:text-5xl lg:text-[56px] leading-[1.05]"
-        >
-          Get the next invite
-          <br />
+    <PageCTA
+      eyebrow="STAY IN THE LOOP"
+      heading={
+        <>
+          Get the next invite{" "}
           <span className="text-brand-yellow">before it sells out.</span>
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-          className="mt-6 text-lg text-white/65 max-w-xl mx-auto leading-relaxed"
-        >
-          Drop your details and we'll send you the date, venue, and RSVP link as
-          soon as the next meetup in your region is locked in.
-        </motion.p>
-
-        <motion.form
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.2 }}
-          onSubmit={(e) => e.preventDefault()}
-          className="mt-10 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto"
-        >
-          <input
-            type="email"
-            required
-            placeholder="you@email.com"
-            className="flex-1 rounded-full bg-white/10 border border-white/15 px-5 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow/60 transition"
-          />
-          <select
-            defaultValue=""
-            className="rounded-full bg-white/10 border border-white/15 px-5 py-3 text-white focus:outline-none focus:border-brand-yellow/60 transition appearance-none"
-          >
-            <option value="" disabled className="text-brand-navy">
-              Pick a city
-            </option>
-            {cities.map((c) => (
-              <option key={c.city} value={c.city} className="text-brand-navy">
-                {c.city}
-              </option>
-            ))}
-          </select>
-          <Button type="submit" size="lg" variant="primary" arrow>
-            Notify me
-          </Button>
-        </motion.form>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.3 }}
-          className="mt-6 text-xs text-white/45"
-        >
-          No spam. One email per meetup. Unsubscribe anytime.
-        </motion.p>
-      </div>
-    </section>
+        </>
+      }
+      primaryLabel="Notify me"
+      primaryHref="#"
+      secondaryLabel="View all services"
+      secondaryHref="/services"
+    />
   );
 }
 

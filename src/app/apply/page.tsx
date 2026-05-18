@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
+import { PageCTA } from "@/components/sections/PageCTA";
 import { Button } from "@/components/ui/Button";
 import { getCurrentSpots } from "@/lib/applyConfig";
 import {
@@ -508,8 +509,20 @@ export default function ApplyPage() {
         <ApplyHero />
         <ApplicationForm />
         <WhatHappensNext />
+        <PageCTA
+          eyebrow="QUESTIONS BEFORE YOU APPLY?"
+          heading={
+            <>
+              Talk to us{" "}
+              <span className="text-brand-yellow">before you commit.</span>
+            </>
+          }
+          primaryLabel="Talk to us"
+          primaryHref="/contact"
+          secondaryLabel="View all services"
+          secondaryHref="/services"
+        />
       </main>
-      <div aria-hidden className="h-20 sm:h-28" style={{ background: "linear-gradient(180deg, #022766 0%, #010f29 100%)", marginBottom: "-2px" }} />
       <Footer />
     </>
   );

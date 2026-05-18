@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
+import { PageCTA } from "@/components/sections/PageCTA";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
 import { ExploreServices } from "@/components/ui/ExploreServices";
@@ -389,46 +390,20 @@ function TikTokStats() {
 
 function TikTokCTA() {
   return (
-    <section
+    <PageCTA
       id="apply"
-      className="relative text-white py-16 sm:py-24 texture-grain overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)", marginBottom: "-2px" }}
-    >
-      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(244,205,29,0.1),transparent_60%)]" />
-      <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
-      <div className="relative mx-auto max-w-4xl px-4 sm:px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE }}
-          className="font-black tracking-tight text-3xl sm:text-4xl lg:text-[48px] leading-[1.05] text-balance"
-        >
+      eyebrow="LIMITED LAUNCH SLOTS"
+      heading={
+        <>
           TikTok Shop is moving fast.{" "}
           <span className="text-brand-yellow">So are we.</span>
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.12 }}
-          className="mt-6 text-lg sm:text-xl text-white/65 max-w-2xl mx-auto leading-relaxed"
-        >
-          Limited launch slots. Apply to check availability and see if your
-          product category is a fit for our TikTok programme.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.24 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
-        >
-          <Button href="/apply" size="lg" variant="primary" arrow>Apply for TikTok Elite</Button>
-          <Button href="/services" size="lg" variant="ghost">View all services</Button>
-        </motion.div>
-      </div>
-    </section>
+        </>
+      }
+      primaryLabel="Apply for TikTok Elite"
+      primaryHref="/apply"
+      secondaryLabel="View all services"
+      secondaryHref="/services"
+    />
   );
 }
 

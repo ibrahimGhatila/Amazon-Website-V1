@@ -15,6 +15,7 @@ import {
 import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
+import { PageCTA } from "@/components/sections/PageCTA";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
 
@@ -538,114 +539,21 @@ function OurProcess() {
    Section 4 — CTA
 ───────────────────────────────────────── */
 function PPCCTA() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const watermarkY = useTransform(scrollYProgress, [0, 1], [0, -60]);
-
   return (
-    <section
+    <PageCTA
       id="contact"
-      ref={ref}
-      className="relative text-white py-14 sm:py-20 overflow-hidden texture-grain"
-      style={{
-        background:
-          "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
-        marginBottom: "-2px",
-      }}
-    >
-      {/* Radial glow */}
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(244,205,29,0.14),transparent_60%)]"
-      />
-
-      {/* Grid overlay */}
-      <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
-
-      {/* eX watermark — parallax */}
-      <motion.div
-        aria-hidden
-        style={{ y: watermarkY }}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none -z-0"
-      >
-        <span className="font-display text-[16rem] sm:text-[22rem] leading-none text-white/[0.035] tracking-tighter">
-          eX
-        </span>
-      </motion.div>
-
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 text-center">
-        {/* Eyebrow */}
-        <motion.span
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
-          GET STARTED
-        </motion.span>
-
-        {/* Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-          className="font-black tracking-tight text-3xl sm:text-4xl lg:text-[44px] leading-[1.05] text-balance"
-        >
+      eyebrow="GET STARTED"
+      heading={
+        <>
           Ready to make your ad spend{" "}
           <span className="text-brand-yellow">work harder?</span>
-        </motion.h2>
-
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-          className="mt-6 text-base sm:text-lg text-white/65 max-w-2xl mx-auto leading-relaxed text-pretty"
-        >
-          Book a free 30-min audit. We&rsquo;ll review your current campaigns
-          and show you exactly where you&rsquo;re leaving money on the table.
-        </motion.p>
-
-        {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.32 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
-        >
-          <Button href="#" size="lg" variant="primary" arrow>
-            Book a Free Audit
-          </Button>
-          <Button href="/services" size="lg" variant="ghost">
-            View all services
-          </Button>
-        </motion.div>
-
-        {/* Trust micro-row */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.55 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-10"
-        >
-          {["Free audit", "No commitment", "< 48h response"].map((item) => (
-            <div key={item} className="flex items-center gap-2 text-sm text-white/50">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow flex-none" />
-              {item}
-            </div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+        </>
+      }
+      primaryLabel="Book a Free Audit"
+      primaryHref="#"
+      secondaryLabel="View all services"
+      secondaryHref="/services"
+    />
   );
 }
 

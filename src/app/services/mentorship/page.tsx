@@ -7,6 +7,7 @@ import { ArrowLeft, Check, X, MessageSquare, Smartphone, BookOpen } from "lucide
 import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
+import { PageCTA } from "@/components/sections/PageCTA";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
 
@@ -514,79 +515,22 @@ function MentorshipFit() {
 // ─── Section 4: CTA ───────────────────────────────────────────────────────────
 
 function MentorshipCTA() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, -80]);
-
   return (
-    <section
+    <PageCTA
       id="apply"
-      ref={ref}
-      className="relative text-white py-14 sm:py-20 texture-grain overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
-        marginBottom: "-2px",
-      }}
-    >
-      {/* Backgrounds */}
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(54,128,195,0.18),transparent_60%)]"
-      />
-      <motion.div
-        aria-hidden
-        style={{ y: bgY }}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
-      >
-        <span className="font-display text-[20rem] sm:text-[32rem] leading-none text-white/[0.04] tracking-tighter">
-          SA
-        </span>
-      </motion.div>
-      <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
-
-      <div className="relative mx-auto max-w-4xl px-4 sm:px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE }}
-          className="font-black tracking-tight text-3xl sm:text-4xl lg:text-[44px] leading-[1.05] text-balance"
-        >
+      eyebrow="LIMITED SPOTS"
+      heading={
+        <>
           Work directly with{" "}
           <span className="text-brand-yellow">Sunny.</span>
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.12 }}
-          className="mt-6 text-lg sm:text-xl text-white/65 max-w-2xl mx-auto leading-relaxed text-pretty"
-        >
-          Limited spots. Apply to check availability and see if this is the
-          right fit.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.24 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
-        >
-          <Button href="#" size="lg" variant="primary" arrow>
-            Apply for Mentorship
-          </Button>
-          <Button href="/services" size="lg" variant="ghost">
-            View all services
-          </Button>
-        </motion.div>
-      </div>
-    </section>
+        </>
+      }
+      primaryLabel="Apply for Mentorship"
+      primaryHref="#"
+      secondaryLabel="View all services"
+      secondaryHref="/services"
+      watermark="SA"
+    />
   );
 }
 

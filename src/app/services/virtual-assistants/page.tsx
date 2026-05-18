@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
+import { PageCTA } from "@/components/sections/PageCTA";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
 import {
@@ -522,82 +523,20 @@ function WhoItsFor() {
 
 function CTA() {
   return (
-    <section
+    <PageCTA
       id="apply"
-      className="relative text-white py-14 sm:py-20 texture-grain overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
-        marginBottom: "-2px",
-      }}
-    >
-      {/* Ambient */}
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(244,205,29,0.16),transparent_60%)]"
-      />
-      <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
-
-      {/* eX watermark */}
-      <div
-        aria-hidden
-        className="absolute -right-10 bottom-0 pointer-events-none select-none opacity-60"
-      >
-        <span className="font-display text-[20rem] sm:text-[32rem] leading-none text-white/[0.03] tracking-tighter">
-          eX
-        </span>
-      </div>
-
-      <div className="relative mx-auto max-w-5xl px-4 sm:px-6 text-center">
-        <motion.span
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
-          MATCHED WITHIN 72 HOURS
-        </motion.span>
-
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-          className="font-black tracking-tight text-3xl sm:text-4xl lg:text-[44px] leading-[1.05] text-balance"
-        >
+      eyebrow="MATCHED WITHIN 72 HOURS"
+      heading={
+        <>
           Ready to get{" "}
           <span className="text-brand-yellow">your time back?</span>
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-          className="mt-6 text-lg sm:text-xl text-white/65 max-w-2xl mx-auto leading-relaxed text-pretty"
-        >
-          Tell us your requirements. We&rsquo;ll match you with a trained VA
-          within 72 hours.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.32 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
-        >
-          <Button href="#" size="lg" variant="primary" arrow>
-            Apply for a VA
-          </Button>
-          <Button href="/services" size="lg" variant="ghost">
-            View all services
-          </Button>
-        </motion.div>
-      </div>
-    </section>
+        </>
+      }
+      primaryLabel="Apply for a VA"
+      primaryHref="#"
+      secondaryLabel="View all services"
+      secondaryHref="/services"
+    />
   );
 }
 

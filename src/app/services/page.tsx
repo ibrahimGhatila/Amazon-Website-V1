@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
-import { Button } from "@/components/ui/Button";
+import { PageCTA } from "@/components/sections/PageCTA";
 import { Counter } from "@/components/ui/Counter";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -442,130 +442,20 @@ function ServicesGrid() {
    CTA Section
 ───────────────────────────────────────── */
 function ServicesCTA() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const watermarkY = useTransform(scrollYProgress, [0, 1], [0, -60]);
-
   return (
-    <section
-      ref={ref}
-      className="relative text-white py-14 sm:py-20 overflow-hidden texture-grain"
-      style={{
-        background:
-          "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
-        marginBottom: "-2px",
-      }}
-    >
-      {/* Radial glow */}
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,205,29,0.14)_0%,_transparent_60%)]"
-      />
-
-      {/* eX watermark */}
-      <motion.div
-        aria-hidden
-        style={{ y: watermarkY }}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none -z-0"
-      >
-        <span className="font-display text-[16rem] sm:text-[22rem] leading-none text-white/[0.04] tracking-tighter">
-          eX
-        </span>
-      </motion.div>
-
-      {/* Grid overlay */}
-      <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
-
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="max-w-3xl mx-auto text-center">
-
-          {/* Eyebrow */}
-          <motion.span
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: EASE }}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-5 py-2 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-6"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
-            GET MATCHED TO THE RIGHT SERVICE
-          </motion.span>
-
-          {/* Headline */}
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-            className="font-black tracking-tight leading-[1.0] text-3xl sm:text-4xl lg:text-[44px] text-balance"
-          >
-            Not sure where to start?
-          </motion.h2>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.18 }}
-            className="font-black tracking-tight leading-[1.0] text-3xl sm:text-4xl lg:text-[44px] text-brand-yellow mt-1 text-balance"
-          >
-            We&rsquo;ll point you in the right direction.
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.28 }}
-            className="mt-6 text-base sm:text-lg text-white/65 max-w-xl mx-auto leading-relaxed text-pretty"
-          >
-            Book a free 30-minute call. We&rsquo;ll match you to the right
-            service based on your goals and capital.
-          </motion.p>
-
-          {/* Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
-          >
-            <Button href="/apply" size="lg" variant="primary" arrow>
-              Start an application
-            </Button>
-            <Button href="/contact" size="lg" variant="ghost">
-              Talk to us
-            </Button>
-          </motion.div>
-
-          {/* Trust micro-row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="mt-10 grid grid-cols-3 gap-4 max-w-sm mx-auto"
-          >
-            {[
-              { k: "Free", v: "30-min call" },
-              { k: "< 48h", v: "Response time" },
-              { k: "No pitch", v: "Just clarity" },
-            ].map((item) => (
-              <div key={item.k} className="text-center">
-                <div className="font-display text-2xl sm:text-3xl text-brand-yellow tracking-tight leading-none">
-                  {item.k}
-                </div>
-                <div className="mt-1 text-xs text-white/45">{item.v}</div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-    </section>
+    <PageCTA
+      eyebrow="GET MATCHED TO THE RIGHT SERVICE"
+      heading={
+        <>
+          Not sure where to start?{" "}
+          <span className="text-brand-yellow">We&rsquo;ll point you in the right direction.</span>
+        </>
+      }
+      primaryLabel="Start an application"
+      primaryHref="/apply"
+      secondaryLabel="Talk to us"
+      secondaryHref="/contact"
+    />
   );
 }
 
