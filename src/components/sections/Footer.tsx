@@ -42,19 +42,15 @@ export function Footer() {
   return (
     <footer className="relative bg-brand-navy-800 text-white overflow-hidden texture-grain -mt-2">
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-5 sm:py-6">
-        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-4 lg:gap-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-10">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-5 lg:gap-8">
 
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-1">
             <Logo variant="light" />
-            <p className="mt-2.5 text-white/60 text-xs leading-relaxed max-w-sm">
-              We build and scale Amazon businesses for entrepreneurs, investors,
-              and business owners. Practical, outcome-driven, no fluff.
-            </p>
 
             {/* Newsletter */}
-            <form className="mt-3 flex w-full max-w-sm items-center rounded-full bg-white/5 border border-white/10 backdrop-blur-sm p-0.5 focus-within:border-brand-yellow/50 transition">
+            <form className="mt-5 flex w-full max-w-sm items-center rounded-full bg-white/5 border border-white/10 backdrop-blur-sm p-0.5 focus-within:border-brand-yellow/50 transition">
               <div className="flex items-center gap-2 pl-3 text-white/50 flex-1">
                 <Mail className="h-3.5 w-3.5 flex-none" />
                 <input
@@ -72,7 +68,7 @@ export function Footer() {
               </button>
             </form>
 
-            <div className="mt-3 flex items-center gap-1.5">
+            <div className="mt-4 flex items-center gap-1.5">
               {[
                 { icon: LinkedInIcon, href: "#", label: "LinkedIn" },
                 { icon: InstagramIcon, href: "#", label: "Instagram" },
@@ -114,7 +110,7 @@ export function Footer() {
         </div>
 
         {/* Meta row */}
-        <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pt-3 border-t border-white/5 text-[11px] text-white/40">
+        <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pt-4 border-t border-white/5 text-[11px] text-white/40">
           <div>© {new Date().getFullYear()} Extreme Commerce. All rights reserved.</div>
           <div className="flex items-center gap-4">
             <Link href="#" className="hover:text-white transition">Privacy</Link>
