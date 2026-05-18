@@ -40,10 +40,10 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-brand-navy-800 text-white overflow-hidden texture-grain -mt-2 flex flex-col min-h-[calc(100svh-220px)]">
+    <footer className="relative bg-brand-navy-800 text-white overflow-hidden texture-grain -mt-2 flex flex-col min-h-[calc(100svh-300px)]">
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-6 sm:py-8 flex-1 flex flex-col w-full">
-        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-4 lg:gap-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-6 sm:py-8 mt-auto w-full">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-8 lg:gap-12">
 
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-1">
@@ -110,7 +110,7 @@ export function Footer() {
         </div>
 
         {/* Meta row */}
-        <div className="mt-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pt-3 border-t border-white/5 text-[11px] text-white/40">
+        <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pt-4 border-t border-white/10 text-[11px] text-white/40">
           <div>© {new Date().getFullYear()} Extreme Commerce. All rights reserved.</div>
           <div className="flex items-center gap-4">
             <Link href="#" className="hover:text-white transition">Privacy</Link>
