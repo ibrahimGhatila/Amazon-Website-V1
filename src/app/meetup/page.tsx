@@ -88,7 +88,7 @@ function MeetupHero() {
               className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
-              <span className="font-display text-sm tracking-[0.22em] text-brand-yellow">
+              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">
                 FREE COMMUNITY EVENT
               </span>
             </motion.div>

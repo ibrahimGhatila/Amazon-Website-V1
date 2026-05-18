@@ -65,7 +65,7 @@ function TikTokHero() {
               className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
             >
               <Play className="h-3.5 w-3.5 text-brand-yellow fill-brand-yellow" strokeWidth={0} />
-              <span className="font-display text-sm tracking-[0.22em] text-brand-yellow">ELITE PROGRAM — TIKTOK</span>
+              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">ELITE PROGRAM — TIKTOK</span>
             </motion.div>
 
             <div className="overflow-hidden mb-5">

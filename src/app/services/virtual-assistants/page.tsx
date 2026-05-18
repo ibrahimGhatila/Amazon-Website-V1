@@ -77,7 +77,7 @@ function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
               </span>
-              <span className="font-display text-sm tracking-[0.22em] text-brand-yellow">
+              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow">
                 HIRE TALENT
               </span>
             </motion.div>

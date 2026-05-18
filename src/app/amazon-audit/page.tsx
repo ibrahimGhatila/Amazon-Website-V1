@@ -466,11 +466,11 @@ export default function AmazonAuditPage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: EASE }}
-                className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-3 py-1 mb-4"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-4 py-1.5 mb-4"
               >
-                <Zap className="h-3 w-3 text-brand-yellow" />
-                <span className="font-display text-[10px] tracking-[0.22em] text-brand-yellow uppercase">
-                  Free · No Obligation · 48-Hour Turnaround
+                <Zap className="h-3.5 w-3.5 text-brand-yellow" />
+                <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow uppercase">
+                  Free · No Obligation
                 </span>
               </motion.div>
 

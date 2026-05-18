@@ -55,7 +55,7 @@ export function ProcessHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
               className="inline-flex items-center gap-3 mb-7"
             >
-              <span className="font-display text-[15px] sm:text-[17px] tracking-[0.08em] text-brand-yellow uppercase">
+              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow uppercase">
                 The Operating System
               </span>
               <span className="h-px w-10 bg-brand-yellow/40" />
