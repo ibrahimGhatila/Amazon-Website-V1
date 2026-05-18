@@ -17,7 +17,7 @@ export function AboutCTA() {
   return (
     <section
       ref={ref}
-      className="relative text-white py-14 sm:py-20 overflow-hidden texture-grain"
+      className="relative text-white py-10 sm:py-12 overflow-hidden texture-grain"
       style={{
         background:
           "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
@@ -57,7 +57,7 @@ export function AboutCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-            className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-6xl xl:text-7xl text-balance"
+            className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-5xl xl:text-6xl text-balance"
           >
             Build with the team that&rsquo;s{" "}
             <span className="relative inline-block">
@@ -88,7 +88,7 @@ export function AboutCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+            className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
           >
             <Button href="/services" size="lg" variant="primary" arrow>
               Explore our services
