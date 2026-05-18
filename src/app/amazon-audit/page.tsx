@@ -466,13 +466,13 @@ export default function AmazonAuditPage() {
       <Nav />
       <main>
         {/* ── Hero ── */}
-      <section className="relative bg-brand-navy overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-20">
+      <section className="relative bg-brand-navy overflow-hidden lg:min-h-[100svh] flex items-center pt-24 pb-14 lg:pb-12">
         {/* Background texture */}
         <div aria-hidden className="absolute inset-0 bg-grid-white/[0.03] [mask-image:radial-gradient(ellipse_at_top,black_40%,transparent_80%)]" />
         <div aria-hidden className="absolute -top-40 left-1/2 -translate-x-1/2 h-[600px] w-[600px] rounded-full bg-brand-yellow/5 blur-3xl pointer-events-none" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {/* Left — hero copy */}
             <div className="max-w-xl">
@@ -566,13 +566,13 @@ export default function AmazonAuditPage() {
               </motion.div>
             </div>
 
-            {/* Right — form (desktop: sticky-ish, positioned at top) */}
+            {/* Right — form (hidden on mobile, sticky on desktop) */}
             <motion.div
               id="request-audit"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
-              className="lg:sticky lg:top-28 scroll-mt-28"
+              className="hidden lg:block lg:sticky lg:top-28 scroll-mt-28"
             >
               <AuditForm />
             </motion.div>
