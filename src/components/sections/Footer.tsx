@@ -42,37 +42,37 @@ export function Footer() {
   return (
     <footer className="relative bg-brand-navy-800 text-white overflow-hidden texture-grain -mt-2">
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-10">
-        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-6 lg:gap-10">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-5 sm:py-6">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-4 lg:gap-8">
 
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-1">
             <Logo variant="light" />
-            <p className="mt-4 text-white/60 text-sm leading-relaxed max-w-sm">
+            <p className="mt-2.5 text-white/60 text-xs leading-relaxed max-w-sm">
               We build and scale Amazon businesses for entrepreneurs, investors,
               and business owners. Practical, outcome-driven, no fluff.
             </p>
 
             {/* Newsletter */}
-            <form className="mt-5 flex w-full max-w-sm items-center rounded-full bg-white/5 border border-white/10 backdrop-blur-sm p-1 focus-within:border-brand-yellow/50 transition">
+            <form className="mt-3 flex w-full max-w-sm items-center rounded-full bg-white/5 border border-white/10 backdrop-blur-sm p-0.5 focus-within:border-brand-yellow/50 transition">
               <div className="flex items-center gap-2 pl-3 text-white/50 flex-1">
-                <Mail className="h-4 w-4 flex-none" />
+                <Mail className="h-3.5 w-3.5 flex-none" />
                 <input
                   type="email"
                   placeholder="Your email"
                   aria-label="Email"
-                  className="bg-transparent flex-1 py-2 text-sm text-white placeholder-white/40 focus:outline-none"
+                  className="bg-transparent flex-1 py-1.5 text-xs text-white placeholder-white/40 focus:outline-none"
                 />
               </div>
               <button
                 type="submit"
-                className="rounded-full bg-brand-yellow text-brand-navy px-4 py-2 text-sm font-semibold hover:bg-brand-yellow-light transition"
+                className="rounded-full bg-brand-yellow text-brand-navy px-3.5 py-1.5 text-xs font-semibold hover:bg-brand-yellow-light transition"
               >
                 Subscribe
               </button>
             </form>
 
-            <div className="mt-5 flex items-center gap-2">
+            <div className="mt-3 flex items-center gap-1.5">
               {[
                 { icon: LinkedInIcon, href: "#", label: "LinkedIn" },
                 { icon: InstagramIcon, href: "#", label: "Instagram" },
@@ -83,9 +83,9 @@ export function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                  className="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
                 >
-                  <Icon className="h-4 w-4" />
+                  <Icon className="h-3 w-3" />
                 </Link>
               ))}
             </div>
@@ -94,15 +94,15 @@ export function Footer() {
           {/* Link columns */}
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-4">
+              <h4 className="font-display text-[14px] sm:text-[16px] tracking-[0.06em] text-brand-yellow mb-2.5">
                 {col.title.toUpperCase()}
               </h4>
-              <ul className="space-y-2.5">
+              <ul className="space-y-1.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-white/60 hover:text-white text-sm transition"
+                      className="text-white/60 hover:text-white text-xs transition"
                     >
                       {link.label}
                     </Link>
@@ -114,9 +114,9 @@ export function Footer() {
         </div>
 
         {/* Meta row */}
-        <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2 text-xs text-white/40">
+        <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pt-3 border-t border-white/5 text-[11px] text-white/40">
           <div>© {new Date().getFullYear()} Extreme Commerce. All rights reserved.</div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
             <Link href="#" className="hover:text-white transition">Privacy</Link>
             <Link href="#" className="hover:text-white transition">Terms</Link>
             <Link href="#" className="hover:text-white transition">Cookies</Link>

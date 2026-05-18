@@ -250,28 +250,25 @@ function AuditForm({ className }: { className?: string }) {
       onSubmit={handleSubmit}
       noValidate
       className={cn(
-        "rounded-3xl bg-brand-navy p-6 sm:p-8 space-y-5",
+        "rounded-3xl bg-brand-navy p-5 sm:p-6 space-y-3",
         className
       )}
     >
       {/* Form header */}
       <div>
-        <div className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-3.5 py-1.5 mb-4">
-          <Sparkles className="h-3.5 w-3.5 text-brand-yellow" />
-          <span className="font-display text-[16px] tracking-[0.06em] text-brand-yellow uppercase">100% Free · No Obligation</span>
+        <div className="inline-flex items-center gap-1.5 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-3 py-1 mb-2.5">
+          <Sparkles className="h-3 w-3 text-brand-yellow" />
+          <span className="font-display text-[13px] tracking-[0.06em] text-brand-yellow uppercase">100% Free · No Obligation</span>
         </div>
-        <h3 className="font-black text-white text-xl sm:text-2xl leading-tight">
+        <h3 className="font-black text-white text-lg sm:text-xl leading-tight">
           Free Amazon Listing Audit
         </h3>
-        <p className="text-white/55 text-sm mt-1.5 leading-snug">
-          Fill in the details below to get your comprehensive Amazon audit.
-        </p>
       </div>
 
       {/* Name + Email */}
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+          <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
             Full Name <span className="text-brand-yellow">*</span>
           </label>
           <input
@@ -279,14 +276,13 @@ function AuditForm({ className }: { className?: string }) {
             onChange={(e) => setForm({ ...form, name: e.target.value })}
             placeholder="Name"
             className={cn(
-              "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+              "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.name ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
             )}
           />
-          {errors.name && <p className="mt-1 text-xs text-rose-400">{errors.name}</p>}
         </div>
         <div>
-          <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+          <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
             Email <span className="text-brand-yellow">*</span>
           </label>
           <input
@@ -295,22 +291,21 @@ function AuditForm({ className }: { className?: string }) {
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             placeholder="Email"
             className={cn(
-              "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+              "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.email ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
             )}
           />
-          {errors.email && <p className="mt-1 text-xs text-rose-400">{errors.email}</p>}
         </div>
       </div>
 
       {/* Phone with country code */}
       <div>
-        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+        <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
           Phone Number <span className="text-brand-yellow">*</span>
         </label>
         <div
           className={cn(
-            "flex items-stretch rounded-xl bg-white/5 border overflow-hidden focus-within:ring-2 focus-within:ring-brand-yellow/50 transition",
+            "flex items-stretch rounded-lg bg-white/5 border overflow-hidden focus-within:ring-2 focus-within:ring-brand-yellow/50 transition",
             errors.phone ? "border-rose-500/70" : "border-white/10 focus-within:border-brand-yellow/40"
           )}
         >
@@ -318,7 +313,7 @@ function AuditForm({ className }: { className?: string }) {
             <select
               value={form.countryCode}
               onChange={(e) => setForm({ ...form, countryCode: e.target.value })}
-              className="h-full appearance-none bg-white/[0.03] border-r border-white/10 pl-3 pr-8 text-sm text-white focus:outline-none cursor-pointer"
+              className="h-full appearance-none bg-white/[0.03] border-r border-white/10 pl-2.5 pr-7 text-sm text-white focus:outline-none cursor-pointer"
             >
               {COUNTRY_CODES.map((c, i) => (
                 <option key={`${c.code}-${c.country}-${i}`} value={c.code} className="bg-brand-navy text-white">
@@ -326,22 +321,21 @@ function AuditForm({ className }: { className?: string }) {
                 </option>
               ))}
             </select>
-            <ChevronDown className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-white/40" />
+            <ChevronDown className="pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-white/40" />
           </div>
           <input
             type="tel"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
             placeholder={form.countryCode}
-            className="flex-1 bg-transparent px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none"
+            className="flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none"
           />
         </div>
-        {errors.phone && <p className="mt-1 text-xs text-rose-400">{errors.phone}</p>}
       </div>
 
       {/* Product Link */}
       <div>
-        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+        <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
           Product Link <span className="text-brand-yellow">*</span>
         </label>
         <input
@@ -349,84 +343,79 @@ function AuditForm({ className }: { className?: string }) {
           onChange={(e) => setForm({ ...form, productLink: e.target.value })}
           placeholder="Product link"
           className={cn(
-            "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+            "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
             errors.productLink ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
           )}
         />
-        {errors.productLink && <p className="mt-1 text-xs text-rose-400">{errors.productLink}</p>}
       </div>
 
-      {/* Age of listing */}
-      <div>
-        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
-          Age of listing (in months) <span className="text-brand-yellow">*</span>
-        </label>
-        <input
-          type="number"
-          min="0"
-          value={form.listingAge}
-          onChange={(e) => setForm({ ...form, listingAge: e.target.value })}
-          placeholder="Age of listing (in months)"
-          className={cn(
-            "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
-            errors.listingAge ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
-          )}
-        />
-        {errors.listingAge && <p className="mt-1 text-xs text-rose-400">{errors.listingAge}</p>}
-      </div>
-
-      {/* Number of Reviews */}
-      <div>
-        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
-          Number of Reviews <span className="text-brand-yellow">*</span>
-        </label>
-        <input
-          type="number"
-          min="0"
-          value={form.reviews}
-          onChange={(e) => setForm({ ...form, reviews: e.target.value })}
-          placeholder="Number of Reviews"
-          className={cn(
-            "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
-            errors.reviews ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
-          )}
-        />
-        {errors.reviews && <p className="mt-1 text-xs text-rose-400">{errors.reviews}</p>}
+      {/* Age + Reviews row */}
+      <div className="grid sm:grid-cols-2 gap-3">
+        <div>
+          <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
+            Listing age (months) <span className="text-brand-yellow">*</span>
+          </label>
+          <input
+            type="number"
+            min="0"
+            value={form.listingAge}
+            onChange={(e) => setForm({ ...form, listingAge: e.target.value })}
+            placeholder="e.g. 6"
+            className={cn(
+              "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+              errors.listingAge ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
+            )}
+          />
+        </div>
+        <div>
+          <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
+            Number of Reviews <span className="text-brand-yellow">*</span>
+          </label>
+          <input
+            type="number"
+            min="0"
+            value={form.reviews}
+            onChange={(e) => setForm({ ...form, reviews: e.target.value })}
+            placeholder="e.g. 120"
+            className={cn(
+              "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+              errors.reviews ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
+            )}
+          />
+        </div>
       </div>
 
       {/* Monthly Average Orders + Monthly Profit */}
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
-            Monthly Average Orders <span className="text-brand-yellow">*</span>
+          <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
+            Monthly Orders <span className="text-brand-yellow">*</span>
           </label>
           <input
             type="number"
             min="0"
             value={form.monthlyOrders}
             onChange={(e) => setForm({ ...form, monthlyOrders: e.target.value })}
-            placeholder="Monthly Average Orders"
+            placeholder="Monthly orders"
             className={cn(
-              "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+              "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.monthlyOrders ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
             )}
           />
-          {errors.monthlyOrders && <p className="mt-1 text-xs text-rose-400">{errors.monthlyOrders}</p>}
         </div>
         <div>
-          <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+          <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
             Monthly Profit <span className="text-brand-yellow">*</span>
           </label>
           <input
             value={form.monthlyProfit}
             onChange={(e) => setForm({ ...form, monthlyProfit: e.target.value })}
-            placeholder="Monthly Profit"
+            placeholder="Monthly profit"
             className={cn(
-              "w-full rounded-xl bg-white/5 border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
+              "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.monthlyProfit ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
             )}
           />
-          {errors.monthlyProfit && <p className="mt-1 text-xs text-rose-400">{errors.monthlyProfit}</p>}
         </div>
       </div>
 
@@ -434,7 +423,7 @@ function AuditForm({ className }: { className?: string }) {
       <button
         type="submit"
         disabled={state === "submitting"}
-        className="w-full flex items-center justify-center gap-2.5 rounded-2xl bg-brand-yellow text-brand-navy font-bold py-4 px-6 text-base hover:bg-brand-yellow-light shadow-[0_10px_30px_-8px_rgba(244,205,29,0.55)] hover:shadow-[0_15px_40px_-8px_rgba(244,205,29,0.75)] hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:pointer-events-none"
+        className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand-yellow text-brand-navy font-bold py-2.5 px-5 text-sm hover:bg-brand-yellow-light shadow-[0_10px_30px_-8px_rgba(244,205,29,0.55)] hover:shadow-[0_15px_40px_-8px_rgba(244,205,29,0.75)] hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:pointer-events-none"
       >
         {state === "submitting" ? (
           <>
@@ -451,10 +440,6 @@ function AuditForm({ className }: { className?: string }) {
           </>
         )}
       </button>
-
-      <p className="text-white/30 text-xs text-center leading-relaxed">
-        No credit card. No sales pitch. Just an honest audit delivered within 48 hours.
-      </p>
     </form>
   );
 }
@@ -466,13 +451,13 @@ export default function AmazonAuditPage() {
       <Nav />
       <main>
         {/* ── Hero ── */}
-      <section className="relative bg-brand-navy overflow-hidden lg:min-h-[100svh] flex items-center pt-24 pb-14 lg:pb-12">
+      <section className="relative bg-brand-navy overflow-hidden lg:min-h-[100svh] flex items-center pt-20 pb-10 lg:pb-8">
         {/* Background texture */}
         <div aria-hidden className="absolute inset-0 bg-grid-white/[0.03] [mask-image:radial-gradient(ellipse_at_top,black_40%,transparent_80%)]" />
         <div aria-hidden className="absolute -top-40 left-1/2 -translate-x-1/2 h-[600px] w-[600px] rounded-full bg-brand-yellow/5 blur-3xl pointer-events-none" />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
             {/* Left — hero copy */}
             <div className="max-w-xl">
@@ -481,10 +466,10 @@ export default function AmazonAuditPage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: EASE }}
-                className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-4 py-1.5 mb-6"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-3 py-1 mb-4"
               >
-                <Zap className="h-3.5 w-3.5 text-brand-yellow" />
-                <span className="font-display text-[11px] tracking-[0.22em] text-brand-yellow uppercase">
+                <Zap className="h-3 w-3 text-brand-yellow" />
+                <span className="font-display text-[10px] tracking-[0.22em] text-brand-yellow uppercase">
                   Free · No Obligation · 48-Hour Turnaround
                 </span>
               </motion.div>
@@ -493,7 +478,7 @@ export default function AmazonAuditPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.65, ease: EASE, delay: 0.05 }}
-                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-white"
+                className="font-black tracking-tight leading-[0.95] text-[26px] sm:text-[34px] lg:text-[44px] xl:text-[52px] text-white"
               >
                 Your Amazon Store Is Leaking Revenue.{" "}
                 <span className="text-brand-yellow">We'll Find Where.</span>
@@ -503,7 +488,7 @@ export default function AmazonAuditPage() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: EASE, delay: 0.12 }}
-                className="mt-5 text-white/65 text-lg leading-relaxed"
+                className="mt-4 text-white/65 text-base leading-relaxed"
               >
                 Our experts audit your listings, ads, rankings, pricing, reviews, and competitors. One call. A full PDF report. Zero cost.
               </motion.p>
@@ -513,20 +498,20 @@ export default function AmazonAuditPage() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, ease: EASE, delay: 0.2 }}
-                className="mt-7 flex flex-wrap items-center gap-6"
+                className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2"
               >
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-brand-yellow text-brand-yellow" />
+                      <Star key={i} className="h-3.5 w-3.5 fill-brand-yellow text-brand-yellow" />
                     ))}
                   </div>
-                  <span className="text-white/70 text-sm font-medium">4.9/5 from 200+ sellers</span>
+                  <span className="text-white/70 text-xs font-medium">4.9/5 from 200+ sellers</span>
                 </div>
                 <div className="h-4 w-px bg-white/15 hidden sm:block" />
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-brand-yellow" />
-                  <span className="text-white/70 text-sm font-medium">1,000+ audits completed</span>
+                  <CheckCircle2 className="h-3.5 w-3.5 text-brand-yellow" />
+                  <span className="text-white/70 text-xs font-medium">1,000+ audits completed</span>
                 </div>
               </motion.div>
 
@@ -535,18 +520,18 @@ export default function AmazonAuditPage() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: EASE, delay: 0.28 }}
-                className="mt-10 grid grid-cols-3 gap-4"
+                className="mt-5 grid grid-cols-3 gap-3"
               >
                 {[
                   { value: 1000, suffix: "+", label: "Audits done" },
                   { value: 8, suffix: "-point", label: "Framework" },
                   { value: 48, suffix: "hr", label: "Turnaround" },
                 ].map((stat) => (
-                  <div key={stat.label} className="rounded-2xl bg-white/5 border border-white/10 p-4 text-center">
-                    <div className="font-black text-white text-2xl leading-none">
+                  <div key={stat.label} className="rounded-xl bg-white/5 border border-white/10 px-3 py-2.5 text-center">
+                    <div className="font-black text-white text-xl leading-none">
                       <Counter to={stat.value} suffix={stat.suffix} />
                     </div>
-                    <div className="text-white/45 text-xs mt-1 font-medium">{stat.label}</div>
+                    <div className="text-white/45 text-[11px] mt-0.5 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </motion.div>
@@ -556,12 +541,12 @@ export default function AmazonAuditPage() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, ease: EASE, delay: 0.36 }}
-                className="mt-8 flex items-start gap-3 rounded-2xl border border-rose-500/25 bg-rose-500/8 p-4"
+                className="mt-4 flex items-start gap-2.5 rounded-xl border border-rose-500/25 bg-rose-500/8 p-3"
               >
-                <AlertTriangle className="h-5 w-5 flex-none text-rose-400 mt-0.5" />
-                <p className="text-white/70 text-sm leading-relaxed">
-                  <span className="text-white font-semibold">95% of Amazon sellers are leaving money on the table.</span> The average audit we complete uncovers{" "}
-                  <span className="text-rose-300 font-semibold">3–5 critical revenue leaks</span> the seller had no idea existed.
+                <AlertTriangle className="h-4 w-4 flex-none text-rose-400 mt-0.5" />
+                <p className="text-white/70 text-xs leading-relaxed">
+                  <span className="text-white font-semibold">95% of sellers leave money on the table.</span> Our average audit uncovers{" "}
+                  <span className="text-rose-300 font-semibold">3–5 critical revenue leaks</span>.
                 </p>
               </motion.div>
             </div>

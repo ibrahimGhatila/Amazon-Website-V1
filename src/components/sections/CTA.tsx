@@ -18,7 +18,7 @@ export function CTA() {
     <section
       id="contact"
       ref={ref}
-      className="relative text-white py-10 sm:py-12 overflow-hidden texture-grain"
+      className="relative text-white py-8 sm:py-10 overflow-hidden texture-grain"
       style={{
         background: "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
         marginBottom: "-2px",
@@ -60,7 +60,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-            className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-5xl xl:text-6xl text-balance"
+            className="font-black tracking-tight leading-[0.95] text-[26px] sm:text-3xl lg:text-4xl xl:text-5xl text-balance"
           >
             Ready to build something{" "}
             <span className="relative inline-block">
@@ -80,7 +80,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.25 }}
-            className="mt-5 text-base sm:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed text-pretty"
+            className="mt-4 text-sm sm:text-base text-white/80 max-w-2xl mx-auto leading-relaxed text-pretty"
           >
             Book a call with our team. We&rsquo;ll map your capital, your
             timeline, and what a launch with us actually looks like — in under
@@ -92,12 +92,12 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
-            className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+            className="mt-5 flex flex-wrap items-center justify-center gap-3"
           >
-            <Button href="#" size="lg" variant="primary" arrow>
+            <Button href="#" size="md" variant="primary" arrow>
               Book a Call
             </Button>
-            <Button href="#" size="lg" variant="ghost">
+            <Button href="#" size="md" variant="ghost">
               Download the playbook
             </Button>
           </motion.div>
@@ -108,7 +108,7 @@ export function CTA() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="mt-8 grid grid-cols-3 gap-4 max-w-2xl mx-auto"
+            className="mt-5 grid grid-cols-3 gap-4 max-w-2xl mx-auto"
           >
             {[
               { k: "30-min", v: "Discovery call" },
@@ -116,10 +116,10 @@ export function CTA() {
               { k: "< 48h", v: "Team response" },
             ].map((item) => (
               <div key={item.k} className="text-center">
-                <div className="font-display text-2xl sm:text-3xl text-brand-yellow tracking-tight leading-none">
+                <div className="font-display text-xl sm:text-2xl text-brand-yellow tracking-tight leading-none">
                   {item.k}
                 </div>
-                <div className="mt-1 text-xs text-white/50">{item.v}</div>
+                <div className="mt-1 text-[11px] text-white/50">{item.v}</div>
               </div>
             ))}
           </motion.div>
