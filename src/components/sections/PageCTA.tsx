@@ -39,7 +39,7 @@ export function PageCTA({
     <section
       id={id}
       ref={ref}
-      className="relative text-white py-8 sm:py-10 overflow-hidden texture-grain"
+      className="relative text-white py-6 sm:py-8 overflow-hidden texture-grain"
       style={{
         background:
           "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
@@ -55,7 +55,7 @@ export function PageCTA({
         style={{ y: bgY }}
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
       >
-        <span className="font-display text-[16rem] sm:text-[24rem] lg:text-[32rem] leading-none text-white/[0.04] tracking-tighter">
+        <span className="font-display text-[9rem] sm:text-[11rem] lg:text-[13rem] leading-none text-white/[0.04] tracking-tighter">
           {watermark}
         </span>
       </motion.div>
@@ -69,7 +69,7 @@ export function PageCTA({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-4"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 px-4 py-1.5 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow mb-3"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
               {eyebrow}
@@ -91,7 +91,7 @@ export function PageCTA({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: EASE, delay: 0.25 }}
-            className="mt-5 flex flex-wrap items-center justify-center gap-3"
+            className="mt-4 flex flex-wrap items-center justify-center gap-3"
           >
             <Button href={primaryHref} size="md" variant="primary" arrow>
               {primaryLabel}
