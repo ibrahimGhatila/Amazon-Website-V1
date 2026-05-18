@@ -40,7 +40,7 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-brand-navy-800 text-white overflow-hidden texture-grain -mt-2 flex flex-col min-h-[calc(100svh-300px)]">
+    <footer className="relative bg-brand-navy-800 text-white overflow-hidden texture-grain -mt-2 flex flex-col min-h-[calc(100svh-360px)]">
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-6 sm:py-8 mt-auto w-full">
         <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-8 lg:gap-12">

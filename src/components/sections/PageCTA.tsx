@@ -33,13 +33,13 @@ export function PageCTA({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const bgY = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
     <section
       id={id}
       ref={ref}
-      className="relative text-white py-6 sm:py-8 overflow-hidden texture-grain"
+      className="relative text-white pt-20 pb-6 sm:pt-24 sm:pb-8 overflow-hidden texture-grain"
       style={{
         background:
           "linear-gradient(180deg, #022766 0%, #011d52 40%, #010f29 100%)",
@@ -55,7 +55,7 @@ export function PageCTA({
         style={{ y: bgY }}
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
       >
-        <span className="font-display text-[9rem] sm:text-[11rem] lg:text-[13rem] leading-none text-white/[0.04] tracking-tighter">
+        <span className="font-display text-[11rem] sm:text-[13rem] lg:text-[15rem] leading-none text-white/[0.04] tracking-tighter">
           {watermark}
         </span>
       </motion.div>
