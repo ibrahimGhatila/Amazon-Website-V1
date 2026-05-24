@@ -145,7 +145,7 @@ export function AboutHero() {
                   width={640}
                   height={960}
                   priority
-                  className="h-full w-auto object-contain object-bottom select-none mix-blend-lighten"
+                  className="h-full w-auto object-contain object-bottom select-none"
                 />
               </div>
 
