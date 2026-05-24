@@ -131,7 +131,7 @@ function TikTokHero() {
             <motion.div
               animate={{ y: [0, -14, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-full max-w-[520px]"
+              className="relative flex items-center justify-center"
             >
               <Image
                 src="/brand/tiktok-shop.png"
@@ -139,7 +139,7 @@ function TikTokHero() {
                 width={823}
                 height={1020}
                 priority
-                className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]"
+                className="w-auto max-h-[min(500px,calc(100svh-220px))] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]"
               />
             </motion.div>
           </motion.div>
