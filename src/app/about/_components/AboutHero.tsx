@@ -138,14 +138,14 @@ export function AboutHero() {
                 </span>
               </div>
 
-              <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
+              <div className="absolute inset-0 pointer-events-none">
                 <Image
                   src="/brand/SA-1-(7).png"
                   alt="Sunny Ali, Founder & CEO of Extreme Commerce"
                   width={640}
                   height={960}
                   priority
-                  className="h-full w-auto object-contain object-bottom select-none"
+                  className="h-full w-full object-cover object-top select-none"
                 />
               </div>
 
