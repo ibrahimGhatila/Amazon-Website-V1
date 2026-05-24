@@ -3,8 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, Check, X, Smartphone } from "lucide-react";
+import { Check, X, Smartphone } from "lucide-react";
 import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
@@ -36,18 +35,6 @@ function AskSunnyHero() {
       </motion.div>
 
       <motion.div style={{ opacity }} className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full">
-        <motion.div
-          initial={{ opacity: 0, x: -16 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
-        >
-          <Link href="/services" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
-            <ArrowLeft className="h-4 w-4" />
-            Back to Services
-          </Link>
-        </motion.div>
-
         <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
             <motion.div
@@ -114,14 +101,14 @@ function AskSunnyHero() {
             className="relative hidden lg:block h-[520px] w-full"
           >
             <div className="relative h-full w-full rounded-[2rem] bg-gradient-to-br from-brand-navy-600 via-brand-navy to-brand-navy-700 overflow-hidden border border-white/10">
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
+              <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
                 <Image
                   src="/brand/SA-1-(2).png"
                   alt="Sunny Ali"
                   width={640}
                   height={960}
                   priority
-                  className="h-[82%] w-auto object-contain object-bottom select-none mix-blend-lighten"
+                  className="h-[78%] w-auto object-contain object-bottom select-none mix-blend-lighten"
                 />
               </div>
 
@@ -158,21 +145,14 @@ function AskSunnyHero() {
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.7, ease: EASE, delay: 1 }}
-              className="hidden sm:block absolute -left-6 bottom-20 max-w-[260px] rounded-2xl bg-white p-4 shadow-2xl shadow-black/40 rotate-[-3deg]"
+              className="hidden sm:flex absolute -left-4 bottom-24 items-center gap-2.5 rounded-full bg-white px-3.5 py-2 shadow-2xl shadow-black/40 rotate-[-3deg]"
             >
-              <div className="flex items-center gap-2 mb-2">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/15">
                 <Smartphone className="h-3.5 w-3.5 text-emerald-600" />
-                <span className="font-display text-[10px] tracking-[0.2em] text-brand-navy/60 uppercase">
-                  Whatsapp · Yesterday
-                </span>
-              </div>
-              <div className="text-sm text-brand-navy leading-snug font-medium">
-                &ldquo;Pause the PPC on ASIN-3. Push the budget to ASIN-1 — your conversion just jumped 18%. Move now.&rdquo;
-              </div>
-              <div className="mt-2 flex items-center gap-1.5 text-[10px] text-brand-navy/45">
-                <span className="font-display tracking-[0.18em] uppercase">Voice note</span>
-                <span>· 0:47</span>
-              </div>
+              </span>
+              <span className="font-display text-[10px] tracking-[0.18em] text-brand-navy/55 uppercase">
+                Voice note · 0:47
+              </span>
             </motion.div>
 
             <motion.div
