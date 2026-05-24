@@ -49,6 +49,7 @@ const navItems = [
   { label: "Elite Program", href: "/elite" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Amazon Audit", href: "/amazon-audit", highlight: true },
+  { label: "Meetup", href: "/meetup" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -65,6 +66,7 @@ export function Nav() {
   const isActive = (href: string) => {
     if (href === "/services") return pathname.startsWith("/services") || pathname.startsWith("/elite-tiktok") || pathname.startsWith("/ask-sunny-ali");
     if (href === "/how-it-works") return pathname.startsWith("/how-it-works");
+    if (href === "/meetup") return pathname.startsWith("/meetup");
     if (href === "/about") return pathname.startsWith("/about");
     if (href === "/contact") return pathname.startsWith("/contact");
     return pathname === href;
