@@ -108,7 +108,7 @@ function AskSunnyHero() {
                   width={640}
                   height={960}
                   priority
-                  className="h-[78%] w-auto object-contain object-bottom select-none mix-blend-lighten"
+                  className="h-[88%] w-auto object-contain object-bottom select-none"
                 />
               </div>
 
