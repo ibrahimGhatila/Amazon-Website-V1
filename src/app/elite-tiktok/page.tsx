@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -120,70 +121,26 @@ function TikTokHero() {
             </motion.div>
           </div>
 
-          {/* Right — floating cards */}
+          {/* Right — TikTok mockup */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: EASE, delay: 0.5 }}
-            className="relative hidden lg:block h-[500px] w-full"
+            className="relative hidden lg:flex justify-center items-center"
           >
-            {/* GMV card */}
             <motion.div
-              animate={{ y: [0, -12, 0] }}
+              animate={{ y: [0, -14, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
+              className="relative w-full max-w-[520px]"
             >
-              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">MONTHLY GMV</p>
-              <div className="font-black text-brand-navy text-5xl tracking-tight mt-2 leading-none">
-                $<Counter to={84} />K
-              </div>
-              <p className="text-xs text-brand-navy/55 mt-1">Average across active shops</p>
-              <div className="h-px bg-brand-navy/15 my-3" />
-              <div className="flex justify-between text-brand-navy/70 text-xs">
-                <span>Creator collabs</span>
-                <span className="font-bold text-brand-navy">200+</span>
-              </div>
-            </motion.div>
-
-            {/* Creator network card */}
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute top-[30%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <span className="font-display text-[10px] tracking-[0.2em] text-white/50">YOUR SHOP</span>
-                <span className="text-[10px] text-green-400 font-medium">● LIVE</span>
-              </div>
-              <div className="space-y-0">
-                {[
-                  { label: "Product research", pct: 100 },
-                  { label: "Creator outreach", pct: 100 },
-                  { label: "Affiliate setup", pct: 100 },
-                  { label: "Live selling", pct: 78 },
-                ].map((step) => (
-                  <div key={step.label} className="py-2.5 border-b border-white/10 last:border-0">
-                    <div className="flex justify-between text-xs mb-1.5">
-                      <span className="text-white/70">{step.label}</span>
-                      <span className="text-brand-yellow font-semibold">{step.pct}%</span>
-                    </div>
-                    <div className="h-1 w-full rounded-full bg-white/10">
-                      <div className="h-full rounded-full bg-gradient-to-r from-brand-yellow to-brand-azure" style={{ width: `${step.pct}%` }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Profit share card */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-0 right-[5%] w-[190px] rounded-2xl bg-brand-azure p-5 shadow-2xl shadow-brand-azure/30"
-            >
-              <p className="text-white/70 text-xs font-display tracking-[0.2em]">YOUR SHARE</p>
-              <div className="font-black text-white text-4xl mt-2 leading-none">80%</div>
-              <p className="text-white/60 text-xs mt-1">Of all profit generated</p>
+              <Image
+                src="/brand/tiktok-shop.png"
+                alt="TikTok Shop interface — discovery, video, and product search across three phones"
+                width={823}
+                height={1020}
+                priority
+                className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]"
+              />
             </motion.div>
           </motion.div>
         </div>
