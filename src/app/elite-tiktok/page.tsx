@@ -5,7 +5,6 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowLeft,
   Play,
   Check,
   X,
@@ -46,18 +45,6 @@ function TikTokHero() {
       </motion.div>
 
       <motion.div style={{ opacity }} className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full">
-        <motion.div
-          initial={{ opacity: 0, x: -16 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
-          className="mb-8"
-        >
-          <Link href="/services" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
-            <ArrowLeft className="h-4 w-4" />
-            Back to Services
-          </Link>
-        </motion.div>
-
         <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
             <motion.div
