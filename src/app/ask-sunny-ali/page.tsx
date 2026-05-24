@@ -370,7 +370,7 @@ function AskSunnyCTA() {
       heading={
         <>
           Work directly with{" "}
-          <span className="text-brand-yellow">Sunny.</span>
+          <span className="text-brand-yellow">Sunny Ali.</span>
         </>
       }
       primaryLabel="Apply for Ask Sunny Ali"
