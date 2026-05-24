@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -9,10 +10,6 @@ import type { Meetup } from "../../_data/meetups";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function MeetupDetailHero({ meetup }: { meetup: Meetup }) {
-  const viaClass = meetup.gradient.via ?? "";
-  const visualClass =
-    `bg-gradient-to-br ${meetup.gradient.from} ${viaClass} ${meetup.gradient.to}`.trim();
-
   return (
     <section className="relative isolate overflow-hidden bg-brand-navy text-white pt-28 pb-16 texture-grain">
       <div
@@ -132,16 +129,19 @@ export function MeetupDetailHero({ meetup }: { meetup: Meetup }) {
             transition={{ duration: 1, ease: EASE, delay: 0.4 }}
             className="relative aspect-[4/5] max-w-sm w-full mx-auto lg:mx-0 lg:ml-auto"
           >
-            <div className={`relative h-full w-full overflow-hidden rounded-[2.5rem] border-4 border-white/15 shadow-2xl shadow-black/40 ${visualClass}`}>
+            <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] border-4 border-white/15 shadow-2xl shadow-black/40 bg-brand-navy-700">
+              <Image
+                src={meetup.image}
+                alt={meetup.imageAlt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 90vw, 420px"
+                className="object-cover"
+              />
               <div
                 aria-hidden
-                className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_60%)]"
+                className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/30 to-brand-navy/20"
               />
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-                <span className="font-display text-[14rem] leading-none text-white/10 tracking-tighter uppercase">
-                  {meetup.city.charAt(0)}
-                </span>
-              </div>
 
               <div className="absolute top-5 left-5 flex flex-col items-center rounded-2xl bg-white/95 backdrop-blur-sm px-4 py-3 text-brand-navy shadow-lg shadow-black/20">
                 <span className="font-display text-[11px] tracking-[0.18em] text-brand-navy/55 uppercase">
@@ -159,11 +159,11 @@ export function MeetupDetailHero({ meetup }: { meetup: Meetup }) {
                 <div className={`font-display text-[11px] tracking-[0.22em] ${meetup.accent} uppercase`}>
                   {meetup.country}
                 </div>
-                <div className="mt-1 font-black text-white text-3xl tracking-tight leading-none drop-shadow-lg">
+                <div className="mt-1 font-black text-white text-3xl tracking-tight leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
                   {meetup.city}
                 </div>
                 {meetup.highlight && (
-                  <div className="mt-2 text-white/75 text-sm">
+                  <div className="mt-2 text-white/85 text-sm drop-shadow-md">
                     {meetup.highlight}
                   </div>
                 )}

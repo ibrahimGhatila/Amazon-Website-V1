@@ -49,7 +49,10 @@ const expectations = [
 
 export function MeetupExpect() {
   return (
-    <section className="relative bg-white py-20 sm:py-24 overflow-hidden">
+    <section
+      id="what-to-expect"
+      className="relative bg-white py-20 sm:py-24 overflow-hidden"
+    >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="WHAT TO EXPECT"

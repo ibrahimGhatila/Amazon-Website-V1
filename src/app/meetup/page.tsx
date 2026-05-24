@@ -13,7 +13,7 @@ export default function MeetupPage() {
     <>
       <Nav />
       <main>
-        <MeetupHero />
+        <MeetupHero featured={meetups[0]} />
         <MeetupGrid meetups={meetups} />
         <MeetupFounder />
         <MeetupBanner />

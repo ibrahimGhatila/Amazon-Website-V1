@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -9,9 +10,6 @@ import type { Meetup } from "../_data/meetups";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 function MeetupCard({ meetup, i }: { meetup: Meetup; i: number }) {
-  const viaClass = meetup.gradient.via ?? "";
-  const visualClass = `bg-gradient-to-br ${meetup.gradient.from} ${viaClass} ${meetup.gradient.to}`.trim();
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 28 }}
@@ -23,21 +21,18 @@ function MeetupCard({ meetup, i }: { meetup: Meetup; i: number }) {
         href={`/meetup/${meetup.slug}`}
         className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-brand-navy/10 bg-white shadow-sm hover:shadow-2xl hover:shadow-brand-navy/10 hover:-translate-y-1 hover:border-brand-navy/20 transition-all duration-500"
       >
-        <div className={`relative h-44 sm:h-52 w-full overflow-hidden ${visualClass}`}>
-          <div
-            aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_60%)]"
+        <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-brand-navy-700">
+          <Image
+            src={meetup.image}
+            alt={meetup.imageAlt}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div
             aria-hidden
-            className="absolute inset-0 opacity-30 mix-blend-overlay bg-[linear-gradient(to_top,rgba(0,0,0,0.6),transparent_60%)]"
+            className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/30 to-transparent"
           />
-
-          <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none">
-            <span className="font-display text-[7rem] sm:text-[8.5rem] leading-none text-white/10 tracking-tighter uppercase">
-              {meetup.city.charAt(0)}
-            </span>
-          </div>
 
           <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3 py-1.5 border border-white/25">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
@@ -55,14 +50,12 @@ function MeetupCard({ meetup, i }: { meetup: Meetup; i: number }) {
             </span>
           </div>
 
-          <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-            <div>
-              <div className="font-black text-white text-2xl sm:text-3xl tracking-tight leading-none drop-shadow-md">
-                {meetup.city}
-              </div>
-              <div className={`mt-1 text-xs sm:text-sm font-medium ${meetup.accent} drop-shadow-md`}>
-                {meetup.country}
-              </div>
+          <div className="absolute bottom-4 left-4 right-4">
+            <div className="font-black text-white text-2xl sm:text-3xl tracking-tight leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+              {meetup.city}
+            </div>
+            <div className="mt-1 text-xs sm:text-sm font-medium text-white/85 drop-shadow-md">
+              {meetup.country}
             </div>
           </div>
         </div>

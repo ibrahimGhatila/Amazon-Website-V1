@@ -3,11 +3,15 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { Counter } from "@/components/ui/Counter";
+import type { Meetup } from "../_data/meetups";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-export function MeetupHero() {
+export function MeetupHero({ featured }: { featured: Meetup }) {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -19,90 +23,230 @@ export function MeetupHero() {
   return (
     <section
       ref={ref}
-      className="relative isolate overflow-hidden bg-brand-navy text-white lg:min-h-[100svh] flex items-center pt-28 pb-16 texture-grain"
+      className="relative isolate overflow-hidden bg-brand-navy text-white lg:min-h-[100svh] flex items-center pt-24 pb-14 lg:pb-12 texture-grain"
     >
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 opacity-[0.18]"
-      >
-        <Image
-          src="/brand/SA-1-(2).png"
-          alt=""
-          fill
-          priority
-          className="object-cover object-top scale-110 blur-sm"
-        />
-      </div>
-
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-navy via-brand-navy/95 to-brand-navy"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(54,128,195,0.22),transparent)]"
       />
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(54,128,195,0.35),transparent)]"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_40%_40%_at_85%_75%,rgba(244,205,29,0.1),transparent)]"
       />
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_50%_40%_at_50%_120%,rgba(244,205,29,0.18),transparent)]"
-      />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-grid opacity-30" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-grid opacity-40" />
 
       <motion.div
         aria-hidden
         style={{ y }}
         className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none select-none"
       >
-        <span className="font-display text-[20rem] sm:text-[30rem] leading-none text-white/[0.04] tracking-tighter">
-          SA
+        <span className="font-display text-[22rem] sm:text-[32rem] leading-none text-white/[0.04] tracking-tighter uppercase">
+          Meetup
         </span>
       </motion.div>
 
       <motion.div
         style={{ opacity }}
-        className="relative mx-auto max-w-5xl px-4 sm:px-6 w-full text-center"
+        className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-          className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-10"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
-          <span className="font-display text-[15px] sm:text-[17px] tracking-[0.12em] text-brand-yellow uppercase">
-            Free Community Event
-          </span>
-        </motion.div>
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
+              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow uppercase">
+                Free Community Event
+              </span>
+            </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 26 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-          className="font-black tracking-tight leading-[0.92] text-[34px] sm:text-6xl lg:text-[88px] xl:text-[104px] uppercase"
-        >
-          <span className="block text-white">Launch your own</span>
-          <span className="block text-brand-yellow">Amazon Brand</span>
-        </motion.h1>
+            <div className="overflow-hidden mb-5">
+              <motion.h1
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
+                className="font-black tracking-tight leading-[0.95] text-[28px] sm:text-4xl lg:text-[56px] xl:text-[66px] text-white"
+              >
+                Launch your own{" "}
+                <span className="text-brand-yellow">Amazon brand.</span>
+              </motion.h1>
+            </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.45 }}
-          className="mt-7 font-display text-sm sm:text-base tracking-[0.22em] text-white/75 uppercase"
-        >
-          Join Sunny Ali&rsquo;s Exclusive Ecommerce Meetup
-        </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.45 }}
+              className="text-base sm:text-lg lg:text-xl text-white/65 font-light leading-snug text-pretty max-w-2xl"
+            >
+              Join Sunny Ali&rsquo;s exclusive ecommerce meetup. Practical Amazon
+              brand-building strategy, e-commerce growth playbooks, and a live
+              Q&amp;A — all in one afternoon.
+            </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-3"
-        >
-          <Button href="#upcoming" size="lg" variant="primary" arrow>
-            Register Now
-          </Button>
-        </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
+              className="mt-7 flex flex-wrap items-center gap-3"
+            >
+              <Button href="#upcoming" size="lg" variant="primary" arrow>
+                Register Now
+              </Button>
+              <Link
+                href="#what-to-expect"
+                className="group inline-flex items-center gap-2 text-white/80 hover:text-white px-3 py-3 font-semibold text-sm"
+              >
+                What to expect
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.78 }}
+              className="mt-10 grid grid-cols-3 gap-6 sm:gap-10 max-w-md"
+            >
+              <div>
+                <div className="font-display text-3xl sm:text-4xl text-brand-yellow leading-none font-black tracking-tight">
+                  <Counter to={10} suffix="+" duration={2} />
+                </div>
+                <div className="mt-2 text-[11px] text-white/55 font-display tracking-[0.18em] uppercase">
+                  Years
+                </div>
+              </div>
+              <div>
+                <div className="font-display text-3xl sm:text-4xl text-brand-yellow leading-none font-black tracking-tight">
+                  <Counter
+                    to={14}
+                    formatFn={(n) => (n / 10).toFixed(1)}
+                    suffix="M+"
+                    duration={2.2}
+                  />
+                </div>
+                <div className="mt-2 text-[11px] text-white/55 font-display tracking-[0.18em] uppercase">
+                  Community
+                </div>
+              </div>
+              <div>
+                <div className="font-display text-3xl sm:text-4xl text-brand-yellow leading-none font-black tracking-tight">
+                  <Counter to={100} suffix="+" duration={2.2} />
+                </div>
+                <div className="mt-2 text-[11px] text-white/55 font-display tracking-[0.18em] uppercase">
+                  Events
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.4 }}
+            className="relative hidden lg:block h-[520px] w-full"
+          >
+            <div className="relative h-full w-full rounded-[2rem] overflow-hidden border border-white/10 bg-brand-navy-700">
+              <Image
+                src={featured.image}
+                alt={featured.imageAlt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 520px"
+                className="object-cover"
+              />
+
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-brand-navy/30"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-brand-navy/60"
+              />
+
+              <div className="relative h-full p-6 sm:p-7 flex flex-col justify-between">
+                <div className="flex items-start justify-between">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/15 px-3 py-1.5">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
+                    </span>
+                    <span className="font-display text-[10px] tracking-[0.22em] text-white/85 uppercase">
+                      Next up
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col items-center rounded-2xl bg-white/95 backdrop-blur-sm px-3.5 py-2.5 text-brand-navy shadow-lg shadow-black/30">
+                    <span className="font-display text-[10px] tracking-[0.18em] text-brand-navy/55 uppercase">
+                      {featured.monthLabel}
+                    </span>
+                    <span className="font-black text-3xl leading-none tracking-tight">
+                      {featured.dayNumber}
+                    </span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-display text-[15px] sm:text-[17px] tracking-[0.08em] text-brand-yellow uppercase">
+                    {featured.country}
+                  </div>
+                  <div className="mt-2 font-black text-white text-3xl sm:text-4xl tracking-tight leading-[0.95] drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
+                    {featured.city}
+                  </div>
+                  <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-white/80 text-sm">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Calendar className="h-3.5 w-3.5 text-brand-yellow" />
+                      {featured.dateLabel}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <MapPin className="h-3.5 w-3.5 text-brand-yellow" />
+                      {featured.time}
+                    </span>
+                  </div>
+
+                  <Link
+                    href={`/meetup/${featured.slug}`}
+                    className="group mt-4 inline-flex items-center gap-2 rounded-full bg-brand-yellow px-4 py-2 font-display text-xs tracking-[0.16em] text-brand-navy uppercase font-bold hover:bg-white transition-colors"
+                  >
+                    Register
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 1 }}
+              className="hidden sm:flex absolute -left-5 bottom-20 items-center gap-2.5 rounded-2xl bg-white px-3.5 py-2.5 shadow-2xl shadow-black/40 rotate-[-3deg]"
+            >
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-rose-500/15 text-rose-600 font-display text-[11px] font-bold">
+                $0
+              </span>
+              <span className="font-display text-[10px] tracking-[0.18em] text-brand-navy/55 uppercase">
+                Free registration
+              </span>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 1.15 }}
+              className="hidden sm:block absolute -right-5 top-12 rounded-2xl bg-brand-yellow px-4 py-3 shadow-xl shadow-brand-yellow/30 rotate-[4deg]"
+            >
+              <div className="font-display text-xl text-brand-navy leading-none font-black tracking-tight">
+                4 Cities
+              </div>
+              <div className="mt-1 text-[10px] tracking-[0.18em] text-brand-navy/70 uppercase font-display">
+                Across SE Asia
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );
