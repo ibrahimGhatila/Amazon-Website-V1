@@ -101,14 +101,14 @@ function AskSunnyHero() {
             className="relative hidden lg:block h-[520px] w-full"
           >
             <div className="relative h-full w-full rounded-[2rem] bg-gradient-to-br from-brand-navy-600 via-brand-navy to-brand-navy-700 overflow-hidden border border-white/10">
-              <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
+              <div className="absolute inset-0 pointer-events-none">
                 <Image
                   src="/brand/SA-1-(2).png"
                   alt="Sunny Ali"
                   width={640}
                   height={960}
                   priority
-                  className="h-[88%] w-auto object-contain object-bottom select-none"
+                  className="h-full w-full object-cover object-top select-none"
                 />
               </div>
 
