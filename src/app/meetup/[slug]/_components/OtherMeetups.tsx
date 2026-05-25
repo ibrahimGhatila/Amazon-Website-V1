@@ -17,7 +17,7 @@ export function OtherMeetups({ meetups }: { meetups: Meetup[] }) {
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white border border-brand-navy/10 px-4 py-1.5 font-display text-[13px] tracking-[0.18em] text-brand-navy uppercase">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-azure" />
               Other cities
             </span>
             <h2 className="mt-4 font-black tracking-tight text-brand-navy text-2xl sm:text-3xl lg:text-4xl leading-tight">
@@ -75,7 +75,7 @@ export function OtherMeetups({ meetups }: { meetups: Meetup[] }) {
                     {meetup.country}
                   </div>
                   <div className="mt-1.5 flex items-center gap-1.5 text-xs text-brand-navy/55">
-                    <Calendar className="h-3 w-3 text-brand-yellow" />
+                    <Calendar className="h-3 w-3 text-brand-azure" />
                     {meetup.time}
                   </div>
                 </div>

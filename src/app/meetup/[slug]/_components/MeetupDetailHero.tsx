@@ -40,10 +40,10 @@ export function MeetupDetailHero({ meetup }: { meetup: Meetup }) {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-4 py-1.5 mb-6"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-sm px-4 py-1.5 mb-6"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
-              <span className="font-display text-[13px] sm:text-[15px] tracking-[0.16em] text-brand-yellow uppercase">
+              <span className="h-1.5 w-1.5 rounded-full bg-white/60" />
+              <span className="font-display text-[13px] sm:text-[15px] tracking-[0.16em] text-white/85 uppercase">
                 Free Community Event
               </span>
             </motion.div>
@@ -74,7 +74,7 @@ export function MeetupDetailHero({ meetup }: { meetup: Meetup }) {
               className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3"
             >
               <div className="rounded-2xl border border-white/15 bg-white/[0.04] backdrop-blur-sm p-4">
-                <div className="flex items-center gap-2 text-brand-yellow">
+                <div className="flex items-center gap-2 text-white/60">
                   <Calendar className="h-4 w-4" />
                   <span className="font-display text-[10px] tracking-[0.22em] uppercase">
                     Date
@@ -85,7 +85,7 @@ export function MeetupDetailHero({ meetup }: { meetup: Meetup }) {
                 </div>
               </div>
               <div className="rounded-2xl border border-white/15 bg-white/[0.04] backdrop-blur-sm p-4">
-                <div className="flex items-center gap-2 text-brand-yellow">
+                <div className="flex items-center gap-2 text-white/60">
                   <Clock className="h-4 w-4" />
                   <span className="font-display text-[10px] tracking-[0.22em] uppercase">
                     Time
@@ -96,7 +96,7 @@ export function MeetupDetailHero({ meetup }: { meetup: Meetup }) {
                 </div>
               </div>
               <div className="rounded-2xl border border-white/15 bg-white/[0.04] backdrop-blur-sm p-4">
-                <div className="flex items-center gap-2 text-brand-yellow">
+                <div className="flex items-center gap-2 text-white/60">
                   <MapPin className="h-4 w-4" />
                   <span className="font-display text-[10px] tracking-[0.22em] uppercase">
                     Location

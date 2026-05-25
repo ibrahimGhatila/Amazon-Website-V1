@@ -54,7 +54,7 @@ export function Hero() {
       />
       <div
         aria-hidden
-        className="absolute bottom-[15%] right-[25%] h-56 w-56 rounded-full bg-brand-yellow/15 blur-3xl animate-blob -z-10"
+        className="absolute bottom-[15%] right-[25%] h-56 w-56 rounded-full bg-brand-yellow/8 blur-3xl animate-blob -z-10"
         style={{ animationDelay: "-8s" }}
       />
 
@@ -133,8 +133,8 @@ export function Hero() {
                 href="/how-it-works"
                 className="group inline-flex items-center gap-3 text-white/90 hover:text-white px-3 py-3"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 backdrop-blur-md border border-white/15 group-hover:bg-white/10 group-hover:border-brand-yellow/40 transition">
-                  <PlayCircle className="h-5 w-5 text-brand-yellow" />
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 backdrop-blur-md border border-white/15 group-hover:bg-white/10 group-hover:border-brand-azure/40 transition">
+                  <PlayCircle className="h-5 w-5 text-brand-azure" />
                 </span>
                 <span className="font-semibold text-sm">See how it works</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

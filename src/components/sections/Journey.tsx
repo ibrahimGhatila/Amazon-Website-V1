@@ -46,7 +46,7 @@ export function Journey() {
     <section className="relative bg-brand-navy text-white py-24 sm:py-32 overflow-hidden texture-grain">
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(244,205,29,0.1)_0%,_transparent_50%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(54,128,195,0.1)_0%,_transparent_50%)]"
       />
       <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
 
@@ -57,7 +57,7 @@ export function Journey() {
           title={
             <>
               Where you&rsquo;re going,{" "}
-              <span className="text-brand-yellow">phase by phase.</span>
+              <span className="text-brand-azure">phase by phase.</span>
             </>
           }
           subtitle="Amazon success isn't a sprint — it's a compounding system. Here's the realistic path from first launch to $10k–$25k/month."
@@ -77,7 +77,7 @@ export function Journey() {
             viewport={{ once: true }}
             transition={{ duration: 1.6, ease: EASE, delay: 0.3 }}
             style={{ transformOrigin: "left" }}
-            className="absolute top-[52px] left-[12.5%] right-[12.5%] h-[2px] bg-gradient-to-r from-brand-yellow via-brand-azure to-brand-yellow"
+            className="absolute top-[52px] left-[12.5%] right-[12.5%] h-[2px] bg-gradient-to-r from-brand-azure/50 via-brand-azure to-brand-azure/50"
           />
 
           {phases.map((phase, i) => (
@@ -93,7 +93,7 @@ export function Journey() {
               <div
                 className={`relative z-10 flex h-[52px] w-[52px] flex-none items-center justify-center rounded-full border-2 ${
                   phase.accent === "yellow"
-                    ? "border-brand-yellow bg-brand-yellow text-brand-navy"
+                    ? "border-white/30 bg-white/10 text-white"
                     : "border-brand-azure bg-brand-azure text-white"
                 } font-display text-xs tracking-[0.15em] shadow-lg`}
               >
@@ -103,7 +103,7 @@ export function Journey() {
               {/* Year label */}
               <div
                 className={`mt-5 font-display text-xs tracking-[0.25em] ${
-                  phase.accent === "yellow" ? "text-brand-yellow" : "text-brand-azure"
+                  phase.accent === "yellow" ? "text-white/55" : "text-brand-azure"
                 }`}
               >
                 {phase.year.toUpperCase()}
@@ -121,7 +121,7 @@ export function Journey() {
               <div
                 className={`mt-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-display tracking-[0.15em] border ${
                   phase.accent === "yellow"
-                    ? "border-brand-yellow/30 bg-brand-yellow/10 text-brand-yellow"
+                    ? "border-white/15 bg-white/[0.05] text-white/65"
                     : "border-brand-azure/30 bg-brand-azure/10 text-brand-azure"
                 }`}
               >
@@ -163,7 +163,7 @@ export function Journey() {
               <div className="pb-6 flex-1">
                 <div
                   className={`font-display text-[10px] tracking-[0.25em] ${
-                    phase.accent === "yellow" ? "text-brand-yellow" : "text-brand-azure"
+                    phase.accent === "yellow" ? "text-white/55" : "text-brand-azure"
                   }`}
                 >
                   {phase.year.toUpperCase()}
@@ -198,7 +198,7 @@ export function Journey() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-3xl border border-white/10 bg-white/[0.03] p-8 sm:p-10"
         >
           <div>
-            <div className="font-display text-xs tracking-[0.25em] text-brand-yellow mb-2">
+            <div className="font-display text-xs tracking-[0.25em] text-brand-azure mb-2">
               THE GOAL
             </div>
             <p className="font-black text-white text-2xl sm:text-3xl tracking-tight leading-tight text-balance">
@@ -208,7 +208,7 @@ export function Journey() {
           </div>
           <a
             href="/apply"
-            className="group flex items-center gap-3 rounded-2xl bg-brand-yellow px-7 py-4 font-bold text-brand-navy text-sm whitespace-nowrap hover:bg-brand-yellow/90 transition"
+            className="group flex items-center gap-3 rounded-2xl bg-white text-brand-navy px-7 py-4 font-bold text-sm whitespace-nowrap hover:bg-white/90 transition"
           >
             Start the journey
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

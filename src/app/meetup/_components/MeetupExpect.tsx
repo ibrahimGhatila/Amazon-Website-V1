@@ -78,7 +78,7 @@ export function MeetupExpect() {
                   transition={{ duration: 0.55, ease: EASE, delay: i * 0.06 }}
                   className="group flex gap-4 items-start rounded-2xl border border-brand-navy/8 bg-white p-5 hover:border-brand-navy/20 hover:bg-brand-navy/[0.02] transition-all"
                 >
-                  <span className="flex h-11 w-11 flex-none items-center justify-center rounded-2xl bg-brand-yellow/15 text-brand-navy group-hover:bg-brand-yellow/25 transition-colors">
+                  <span className="flex h-11 w-11 flex-none items-center justify-center rounded-2xl bg-brand-navy/8 text-brand-navy group-hover:bg-brand-azure/10 group-hover:text-brand-azure transition-colors">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </span>
                   <div className="pt-1">
@@ -101,7 +101,7 @@ export function MeetupExpect() {
             transition={{ duration: 0.8, ease: EASE }}
             className="relative lg:sticky lg:top-32"
           >
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-yellow/15 via-brand-azure/10 to-brand-yellow/10 blur-xl" />
+            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-azure/15 via-brand-azure/8 to-brand-navy/10 blur-xl" />
 
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-navy-600 via-brand-navy to-brand-navy-700 border-4 border-white shadow-2xl shadow-brand-navy/20 rotate-[1.5deg]">
               <Image
@@ -112,7 +112,7 @@ export function MeetupExpect() {
               />
               <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-brand-navy via-brand-navy/50 to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="font-display text-[11px] tracking-[0.22em] text-brand-yellow uppercase">
+                <div className="font-display text-[11px] tracking-[0.22em] text-white/60 uppercase">
                   Hosted by
                 </div>
                 <div className="mt-1 font-black text-white text-2xl tracking-tight">

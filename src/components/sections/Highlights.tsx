@@ -58,7 +58,7 @@ export function Highlights() {
                     <span className="inline-flex items-center rounded-full bg-brand-navy/5 text-brand-navy border border-brand-navy/10 px-3 py-1 font-display text-[15px] sm:text-[18px] tracking-[0.06em]">
                       {item.tag}
                     </span>
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12 group-hover:bg-brand-yellow">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12 group-hover:bg-brand-azure group-hover:text-white">
                       <ArrowUpRight className="h-5 w-5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>
                   </div>

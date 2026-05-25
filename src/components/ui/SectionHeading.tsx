@@ -43,7 +43,7 @@ export function SectionHeading({
               : "bg-brand-navy/5 text-brand-navy border border-brand-navy/10"
           )}
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
+          <span className={cn("h-1.5 w-1.5 rounded-full", isDark ? "bg-brand-yellow" : "bg-brand-azure")} />
           {eyebrow}
         </motion.span>
       )}

@@ -55,10 +55,10 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm px-5 py-2 mb-6"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-sm px-5 py-2 mb-6"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
-              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-yellow uppercase">
+              <span className="h-1.5 w-1.5 rounded-full bg-white/60" />
+              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-white/85 uppercase">
                 Free Community Event
               </span>
             </motion.div>
@@ -111,7 +111,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
               className="mt-10 grid grid-cols-3 gap-6 sm:gap-10 max-w-md"
             >
               <div>
-                <div className="font-display text-3xl sm:text-4xl text-brand-yellow leading-none font-black tracking-tight">
+                <div className="font-display text-3xl sm:text-4xl text-white leading-none font-black tracking-tight">
                   <Counter to={10} suffix="+" duration={2} />
                 </div>
                 <div className="mt-2 text-[11px] text-white/55 font-display tracking-[0.18em] uppercase">
@@ -119,7 +119,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                 </div>
               </div>
               <div>
-                <div className="font-display text-3xl sm:text-4xl text-brand-yellow leading-none font-black tracking-tight">
+                <div className="font-display text-3xl sm:text-4xl text-white leading-none font-black tracking-tight">
                   <Counter
                     to={14}
                     formatFn={(n) => (n / 10).toFixed(1)}
@@ -132,7 +132,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                 </div>
               </div>
               <div>
-                <div className="font-display text-3xl sm:text-4xl text-brand-yellow leading-none font-black tracking-tight">
+                <div className="font-display text-3xl sm:text-4xl text-white leading-none font-black tracking-tight">
                   <Counter to={100} suffix="+" duration={2.2} />
                 </div>
                 <div className="mt-2 text-[11px] text-white/55 font-display tracking-[0.18em] uppercase">
@@ -171,8 +171,8 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                 <div className="flex items-start justify-between">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/15 px-3 py-1.5">
                     <span className="relative flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-70" />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-yellow" />
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                     </span>
                     <span className="font-display text-[10px] tracking-[0.22em] text-white/85 uppercase">
                       Next up
@@ -190,7 +190,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                 </div>
 
                 <div>
-                  <div className="font-display text-[15px] sm:text-[17px] tracking-[0.08em] text-brand-yellow uppercase">
+                  <div className="font-display text-[15px] sm:text-[17px] tracking-[0.08em] text-white/65 uppercase">
                     {featured.country}
                   </div>
                   <div className="mt-2 font-black text-white text-3xl sm:text-4xl tracking-tight leading-[0.95] drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
@@ -198,11 +198,11 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                   </div>
                   <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-white/80 text-sm">
                     <span className="inline-flex items-center gap-1.5">
-                      <Calendar className="h-3.5 w-3.5 text-brand-yellow" />
+                      <Calendar className="h-3.5 w-3.5 text-white/60" />
                       {featured.dateLabel}
                     </span>
                     <span className="inline-flex items-center gap-1.5">
-                      <MapPin className="h-3.5 w-3.5 text-brand-yellow" />
+                      <MapPin className="h-3.5 w-3.5 text-white/60" />
                       {featured.time}
                     </span>
                   </div>
@@ -236,12 +236,12 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, ease: EASE, delay: 1.15 }}
-              className="hidden sm:block absolute -right-5 top-12 rounded-2xl bg-brand-yellow px-4 py-3 shadow-xl shadow-brand-yellow/30 rotate-[4deg]"
+              className="hidden sm:block absolute -right-5 top-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 px-4 py-3 shadow-xl rotate-[4deg]"
             >
-              <div className="font-display text-xl text-brand-navy leading-none font-black tracking-tight">
+              <div className="font-display text-xl text-white leading-none font-black tracking-tight">
                 4 Cities
               </div>
-              <div className="mt-1 text-[10px] tracking-[0.18em] text-brand-navy/70 uppercase font-display">
+              <div className="mt-1 text-[10px] tracking-[0.18em] text-white/60 uppercase font-display">
                 Across SE Asia
               </div>
             </motion.div>

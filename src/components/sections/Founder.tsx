@@ -31,7 +31,7 @@ export function Founder() {
             className="relative aspect-[3/4] max-w-sm mx-auto lg:mx-0 w-full"
           >
             {/* Decorative frame */}
-            <div className="absolute -left-4 -top-4 h-full w-full rounded-[2rem] border-2 border-brand-yellow" />
+            <div className="absolute -left-4 -top-4 h-full w-full rounded-[2rem] border-2 border-brand-navy/15" />
             <div className="relative h-full w-full rounded-[2rem] bg-gradient-to-br from-brand-navy via-brand-navy-600 to-brand-navy-700 overflow-hidden">
               {/* Giant watermark */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -58,12 +58,12 @@ export function Founder() {
               {/* Content overlay */}
               <div className="relative h-full p-6 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
-                  <span className="font-display text-sm tracking-[0.25em] text-brand-yellow">
+                  <span className="font-display text-sm tracking-[0.25em] text-white/60">
                     FOUNDER · CEO
                   </span>
                   <span className="relative flex h-3 w-3">
-                    <span className="absolute inline-flex h-3 w-3 animate-ping rounded-full bg-brand-yellow opacity-60" />
-                    <span className="relative inline-flex h-3 w-3 rounded-full bg-brand-yellow" />
+                    <span className="absolute inline-flex h-3 w-3 animate-ping rounded-full bg-emerald-400 opacity-60" />
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
                   </span>
                 </div>
 
@@ -71,28 +71,28 @@ export function Founder() {
                   <div className="font-display text-5xl sm:text-6xl text-white leading-none tracking-tight drop-shadow-[0_2px_12px_rgba(2,39,102,0.6)]">
                     Sunny
                   </div>
-                  <div className="font-display text-5xl sm:text-6xl text-brand-yellow leading-none tracking-tight drop-shadow-[0_2px_12px_rgba(2,39,102,0.6)]">
+                  <div className="font-display text-5xl sm:text-6xl text-white leading-none tracking-tight drop-shadow-[0_2px_12px_rgba(2,39,102,0.6)]">
                     Ali
                   </div>
                   <div className="mt-4 flex items-center gap-3">
                     <Link
                       href="#"
                       aria-label="LinkedIn"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-white/20 hover:border-white/30 transition"
                     >
                       <LinkedInIcon className="h-4 w-4" />
                     </Link>
                     <Link
                       href="#"
                       aria-label="Instagram"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-white/20 hover:border-white/30 transition"
                     >
                       <InstagramIcon className="h-4 w-4" />
                     </Link>
                     <Link
                       href="#"
                       aria-label="YouTube"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white hover:bg-white/20 hover:border-white/30 transition"
                     >
                       <YouTubeIcon className="h-4 w-4" />
                     </Link>
@@ -109,12 +109,12 @@ export function Founder() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -right-4 sm:-right-6 bottom-16 rounded-2xl bg-brand-yellow p-4 shadow-xl shadow-brand-yellow/30"
+              className="absolute -right-4 sm:-right-6 bottom-16 rounded-2xl bg-brand-azure p-4 shadow-xl shadow-brand-azure/30"
             >
-              <div className="font-display text-2xl text-brand-navy leading-none">
+              <div className="font-display text-2xl text-white leading-none">
                 <Counter to={14} formatFn={(n) => (n / 10).toFixed(1)} suffix="M+" />
               </div>
-              <div className="text-xs text-brand-navy/70 mt-1 font-semibold">
+              <div className="text-xs text-white/70 mt-1 font-semibold">
                 Community
               </div>
             </motion.div>
@@ -129,7 +129,7 @@ export function Founder() {
               transition={{ duration: 0.6, ease: EASE }}
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-azure" />
               THE FOUNDER
             </motion.span>
 
@@ -171,9 +171,9 @@ export function Founder() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.3 }}
-              className="mt-5 relative rounded-2xl border-l-4 border-brand-yellow bg-brand-navy/[0.03] p-4 sm:p-5"
+              className="mt-5 relative rounded-2xl border-l-4 border-brand-azure/40 bg-brand-navy/[0.03] p-4 sm:p-5"
             >
-              <Quote className="absolute -top-3 left-6 h-5 w-5 rotate-180 text-brand-yellow fill-brand-yellow" />
+              <Quote className="absolute -top-3 left-6 h-5 w-5 rotate-180 text-brand-azure fill-brand-azure" />
               <blockquote className="font-display text-base sm:text-lg text-brand-navy tracking-tight leading-snug">
                 &ldquo;We don&rsquo;t teach people how to start from zero. We
                 deploy capital, build real brands, and share the upside. That&rsquo;s

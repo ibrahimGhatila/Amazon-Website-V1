@@ -48,7 +48,7 @@ export function PageCTA({
     >
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,205,29,0.15)_0%,_transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,205,29,0.08)_0%,_transparent_60%)]"
       />
       <motion.div
         aria-hidden

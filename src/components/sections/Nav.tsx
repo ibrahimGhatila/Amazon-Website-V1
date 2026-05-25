@@ -46,7 +46,6 @@ const services = [
 
 const navItems = [
   { label: "Services", href: "/services", hasDropdown: true },
-  { label: "Elite Program", href: "/elite" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Amazon Audit", href: "/amazon-audit", highlight: true },
   { label: "Meetup", href: "/meetup" },
@@ -150,7 +149,7 @@ export function Nav() {
                         />
                         <span
                           className={cn(
-                            "absolute bottom-1 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-brand-yellow transition-all duration-300",
+                            "absolute bottom-1 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-brand-azure transition-all duration-300",
                             active ? "w-6" : "w-0 group-hover:w-6"
                           )}
                         />
@@ -188,7 +187,7 @@ export function Nav() {
                     {item.label}
                     <span
                       className={cn(
-                        "absolute bottom-1 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-brand-yellow transition-all duration-300",
+                        "absolute bottom-1 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-brand-azure transition-all duration-300",
                         isActive(item.href) ? "w-6" : "w-0 group-hover:w-6"
                       )}
                     />

@@ -80,7 +80,7 @@ export function AboutStats() {
           className="flex items-center justify-between mb-10 flex-wrap gap-4"
         >
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-yellow text-brand-navy font-display text-sm tracking-widest">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-azure text-white font-display text-sm tracking-widest">
               01
             </span>
             <span className="font-display text-sm tracking-[0.25em] text-white/60">
@@ -104,10 +104,10 @@ export function AboutStats() {
                 transition={{ duration: 0.7, ease: EASE, delay: i * 0.08 }}
                 className="relative bg-white/[0.04] p-6 sm:p-10 group overflow-hidden"
               >
-                <div className="absolute inset-0 bg-brand-yellow translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                <div className="absolute inset-0 bg-brand-azure translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
                 <div className="relative flex flex-col h-full">
-                  <Icon className="h-7 w-7 text-brand-yellow group-hover:text-brand-navy transition-colors duration-500" />
-                  <div className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl text-brand-yellow group-hover:text-brand-navy transition-colors duration-500 leading-none tracking-tight">
+                  <Icon className="h-7 w-7 text-brand-azure group-hover:text-white transition-colors duration-500" />
+                  <div className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl text-white group-hover:text-white transition-colors duration-500 leading-none tracking-tight">
                     <Counter
                       to={stat.value}
                       prefix={stat.prefix}
@@ -115,7 +115,7 @@ export function AboutStats() {
                       formatFn={"formatFn" in stat ? stat.formatFn : undefined}
                     />
                   </div>
-                  <div className="mt-3 text-white/60 group-hover:text-brand-navy/80 transition-colors duration-500 text-sm sm:text-base font-medium">
+                  <div className="mt-3 text-white/60 group-hover:text-white/90 transition-colors duration-500 text-sm sm:text-base font-medium">
                     {stat.label}
                   </div>
                 </div>

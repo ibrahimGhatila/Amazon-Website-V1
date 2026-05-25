@@ -12,7 +12,7 @@ export function MeetupBanner() {
       <div className="relative bg-brand-azure text-white overflow-hidden">
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(244,205,29,0.18),transparent_60%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.08),transparent_60%)]"
         />
         <div
           aria-hidden
@@ -30,7 +30,7 @@ export function MeetupBanner() {
           >
             Amazon Brand Building. E-commerce Growth.
             <br className="hidden sm:block" /> Real Business Insights.{" "}
-            <span className="text-brand-yellow">All in One Meetup.</span>
+            <span className="text-white/85">All in One Meetup.</span>
           </motion.h2>
 
           <motion.p

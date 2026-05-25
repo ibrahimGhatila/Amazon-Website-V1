@@ -35,7 +35,7 @@ function MeetupCard({ meetup, i }: { meetup: Meetup; i: number }) {
           />
 
           <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3 py-1.5 border border-white/25">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span className="font-display text-[10px] tracking-[0.22em] text-white uppercase">
               Free
             </span>
@@ -63,16 +63,16 @@ function MeetupCard({ meetup, i }: { meetup: Meetup; i: number }) {
         <div className="flex flex-1 flex-col p-6">
           <div className="space-y-2.5">
             <div className="flex items-center gap-2.5 text-sm text-brand-navy/80">
-              <Calendar className="h-4 w-4 text-brand-yellow flex-none" />
+              <Calendar className="h-4 w-4 text-brand-azure flex-none" />
               <span className="font-semibold">{meetup.dateLabel}</span>
             </div>
             <div className="flex items-center gap-2.5 text-sm text-brand-navy/70">
-              <Clock className="h-4 w-4 text-brand-yellow flex-none" />
+              <Clock className="h-4 w-4 text-brand-azure flex-none" />
               <span>{meetup.time}</span>
             </div>
             {meetup.highlight && (
               <div className="flex items-center gap-2.5 text-sm text-brand-navy/60">
-                <MapPin className="h-4 w-4 text-brand-yellow flex-none" />
+                <MapPin className="h-4 w-4 text-brand-azure flex-none" />
                 <span>{meetup.highlight}</span>
               </div>
             )}

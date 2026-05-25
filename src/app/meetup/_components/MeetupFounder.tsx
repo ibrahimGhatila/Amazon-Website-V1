@@ -63,7 +63,7 @@ export function MeetupFounder() {
             transition={{ duration: 0.8, ease: EASE }}
             className="relative"
           >
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-azure/15 via-brand-yellow/10 to-brand-azure/10 blur-xl" />
+            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-azure/15 via-brand-azure/8 to-brand-navy/10 blur-xl" />
 
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-navy-600 via-brand-navy to-brand-navy-700 border-4 border-white shadow-2xl shadow-brand-navy/20 rotate-[-1.5deg]">
               <Image
@@ -75,7 +75,7 @@ export function MeetupFounder() {
               />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-navy/80 via-brand-navy/30 to-transparent pointer-events-none" />
               <div className="absolute bottom-5 left-6">
-                <div className="font-display text-[11px] tracking-[0.22em] text-brand-yellow uppercase">
+                <div className="font-display text-[11px] tracking-[0.22em] text-white/60 uppercase">
                   Live Meetup
                 </div>
                 <div className="mt-1 font-black text-white text-xl tracking-tight">
