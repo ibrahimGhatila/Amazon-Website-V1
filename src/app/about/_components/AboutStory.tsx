@@ -12,7 +12,7 @@ const milestones = [
     num: "2015",
     title: "Founded",
     description:
-      "Sunny Ali launches Extreme Commerce as an operator-first answer to the Amazon gold rush — built on real launches, not theory.",
+      "Sunny Ali launches Extreme Commerce as an operator-first answer to the Amazon gold rush.",
     icon: Flag,
     timeframe: "The beginning",
   },
@@ -20,7 +20,7 @@ const milestones = [
     num: "2017",
     title: "First 100 launches",
     description:
-      "Cross 100 successful private-label launches. The playbook that becomes Elite is being written in real time.",
+      "100 successful private-label launches. The Elite playbook is being written in real time.",
     icon: Rocket,
     timeframe: "Early traction",
   },
@@ -28,7 +28,7 @@ const milestones = [
     num: "2019",
     title: "100K community",
     description:
-      "Free training and operator content scale to a 100K-strong community of sellers across Pakistan, the UK, and the Gulf.",
+      "Free training and operator content scale to a 100K-strong community of sellers.",
     icon: Users,
     timeframe: "Ecosystem growth",
   },
@@ -36,7 +36,7 @@ const milestones = [
     num: "2021",
     title: "Government partnerships",
     description:
-      "Selected by NAVTTC, PVTC, and the Kamyab Jawan programme to train the next wave of national e-commerce talent.",
+      "Selected by NAVTTC, PVTC, and Kamyab Jawan to train national e-commerce talent.",
     icon: Landmark,
     timeframe: "National scale",
   },
@@ -44,7 +44,7 @@ const milestones = [
     num: "2023",
     title: "Elite Program",
     description:
-      "Done-for-you Amazon brand-building productized into Elite — three launches, profit share, full ownership.",
+      "Done-for-you Amazon brand-building productized into Elite.",
     icon: Crown,
     timeframe: "Product evolution",
   },
@@ -52,7 +52,7 @@ const milestones = [
     num: "2026",
     title: "1.4M+ ecosystem",
     description:
-      "1.4M+ community members, 1,200+ launches, 50+ institutional partners — the largest e-commerce ecosystem out of South Asia.",
+      "South Asia's largest e-commerce ecosystem — community, partners, and portfolio.",
     icon: Globe2,
     timeframe: "Today",
   },
@@ -89,7 +89,7 @@ export function AboutStory() {
               to a <span className="text-brand-yellow">thousand brands.</span>
             </>
           }
-          subtitle="A decade-long arc of operator-led growth. Every year added another lane — community, capital, partnerships, products."
+          subtitle="A decade-long arc of operator-led growth."
         />
 
         <div ref={ref} className="relative mt-20 max-w-5xl mx-auto">

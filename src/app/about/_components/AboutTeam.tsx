@@ -30,7 +30,7 @@ const team: Member[] = [
   {
     name: "Ayesha Khan",
     role: "Chief Operating Officer",
-    bio: "A decade in e-commerce ops. Runs day-to-day across Elite, PPC, and Creative — and turns chaos into weekly reports.",
+    bio: "A decade in e-commerce ops. Runs day-to-day across Elite, PPC, and Creative.",
     photo: "/brand/team/ayesha-khan.png",
     linkedin: "#",
     email: "ayesha@extremecommerce.com",
@@ -38,7 +38,7 @@ const team: Member[] = [
   {
     name: "Hamza Ahmed",
     role: "Head of Elite Program",
-    bio: "Leads launches end-to-end, from sourcing to scale. 200+ private-label launches across US, UK, and EU marketplaces.",
+    bio: "Leads launches end-to-end, from sourcing to scale. 200+ private-label launches.",
     photo: "/brand/team/hamza-ahmed.png",
     linkedin: "#",
     email: "hamza@extremecommerce.com",
@@ -46,7 +46,7 @@ const team: Member[] = [
   {
     name: "Bilal Hussain",
     role: "Head of PPC & Advertising",
-    bio: "Manages 8-figure ad spend across DSP and Sponsored. Built the PPC playbook that runs every Elite launch.",
+    bio: "Manages 8-figure ad spend. Built the PPC playbook that runs every Elite launch.",
     photo: "/brand/team/bilal-hussain.png",
     linkedin: "#",
     email: "bilal@extremecommerce.com",
@@ -54,7 +54,7 @@ const team: Member[] = [
   {
     name: "Sara Malik",
     role: "Head of Creative & Brand",
-    bio: "Storefronts, A+, photography, video — that converts. Leads a 30-person studio building creative for every brand we launch.",
+    bio: "Leads a 30-person studio. Storefronts, A+, photography, video — that converts.",
     photo: "/brand/team/sara-malik.png",
     linkedin: "#",
     email: "sara@extremecommerce.com",
@@ -62,7 +62,7 @@ const team: Member[] = [
   {
     name: "Zain Raza",
     role: "Head of Virtual Assistants",
-    bio: "Builds and trains the operator bench. 500+ trained Amazon VAs placed with sellers across 12 countries.",
+    bio: "Builds the operator bench. 500+ trained Amazon VAs placed with sellers.",
     photo: "/brand/team/zain-raza.png",
     linkedin: "#",
     email: "zain@extremecommerce.com",
@@ -70,7 +70,7 @@ const team: Member[] = [
   {
     name: "Faisal Iqbal",
     role: "Head of Mentorship",
-    bio: "Runs 1:1 programs and the operator community. The voice on the other end when an Elite member needs a sanity check.",
+    bio: "Runs 1:1 programs and the operator community.",
     photo: "/brand/team/faisal-iqbal.png",
     linkedin: "#",
     email: "faisal@extremecommerce.com",
@@ -97,7 +97,7 @@ export function AboutTeam() {
               <span className="text-brand-azure">behind every launch.</span>
             </>
           }
-          subtitle="A founder who's been on Amazon for a decade, plus the leaders running each lane of the business."
+          subtitle="A founder and the leaders running each lane of the business."
         />
 
         {/* Founder featured row — mirrors homepage Founder.tsx portrait card */}
@@ -228,14 +228,9 @@ export function AboutTeam() {
               className="mt-4 space-y-3 text-brand-navy/75 leading-relaxed text-base text-pretty"
             >
               <p>
-                Sunny Ali founded Extreme Commerce in 2015 to answer a
-                practical question: how do we move capital efficiently into
-                real, profitable Amazon businesses — without gambling.
-              </p>
-              <p>
-                Nearly a decade later, that discipline has compounded into the
-                largest e-commerce operator community of its kind, measurable
-                economic impact in the hundreds of millions, and a playbook
+                Sunny Ali founded Extreme Commerce in 2015 on one question:
+                how do we move capital into profitable Amazon businesses
+                without gambling. A decade later, the answer is a playbook
                 refined across a thousand launches.
               </p>
             </motion.div>

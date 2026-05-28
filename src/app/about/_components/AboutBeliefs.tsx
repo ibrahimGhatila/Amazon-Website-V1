@@ -10,17 +10,17 @@ const beliefs = [
   {
     icon: Compass,
     title: "Operators, not gurus",
-    body: "Everything we ship is built by people who launch products on Amazon every week. No theory, no hype — just the playbook we run for ourselves.",
+    body: "Everything we ship is built by people who launch products every week. The playbook we run for ourselves.",
   },
   {
     icon: Coins,
     title: "Capital + capability",
-    body: "We don't sell courses to people starting from zero. We deploy capital, build real brands, and share the upside with people who can match it.",
+    body: "We deploy capital, build real brands, and share the upside with people who can match it.",
   },
   {
     icon: Target,
     title: "Outcomes, not promises",
-    body: "Every relationship is measured by P&L, BSR, and exit value — not testimonials. If a launch underperforms, the math is on the table.",
+    body: "Every relationship is measured by P&L, BSR, and exit value — not testimonials.",
   },
 ];
 
