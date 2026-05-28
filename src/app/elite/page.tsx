@@ -93,7 +93,7 @@ export function EliteHero() {
               className="text-base sm:text-lg lg:text-xl text-white/70 font-light leading-snug text-pretty max-w-3xl"
             >
               It&rsquo;s a <span className="text-white font-semibold">fully-operated Amazon business</span> — researched,
-              launched, and scaled by our team. Built in your name. You keep 80% of the profit.
+              launched, and scaled by our team. You own the brand.
             </motion.p>
 
             {/* CTAs */}
@@ -151,7 +151,7 @@ export function EliteHero() {
                 <div className="h-full bg-brand-navy/80" style={{ width: "80%" }} />
                 <div className="h-full bg-brand-navy/20" style={{ width: "20%" }} />
               </div>
-              <p className="text-xs text-brand-navy/55 mt-3">You keep 80% — we earn only after you hit ROI</p>
+              <p className="text-xs text-brand-navy/55 mt-3">We earn only after you hit ROI</p>
             </motion.div>
 
             {/* Card 2 — Launch Timeline (glass dark, middle-left) */}
@@ -259,20 +259,16 @@ export function EliteHero() {
 
 const forYou = [
   "You have capital to deploy and want it working harder",
-  "You want a real business asset, not just a side hustle",
+  "You want a real business asset, not a side hustle",
   "You understand that real returns take 12–18 months",
   "You value delegation over micromanagement",
-  "You're comfortable with a results-based partnership",
-  "You want a team that has done this 1,000+ times",
 ];
 
 const notForYou = [
   "You're looking for a course to learn Amazon yourself",
   "You need returns within 90 days to cover living costs",
   "You want full daily control of every decision",
-  "You're not comfortable with a profit-share model",
   "You have under $25,000 in deployable capital",
-  "You're testing ideas rather than building a business",
 ];
 
 export function EliteQualifier() {
@@ -311,8 +307,7 @@ export function EliteQualifier() {
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
             className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
           >
-            We filter hard. Every client we take on gets our full team&rsquo;s attention.
-            That means we only work with people we can genuinely win with.
+            Every client gets our full team&rsquo;s attention. We only work with people we can win with.
           </motion.p>
         </div>
 
@@ -481,7 +476,7 @@ export function EliteModel() {
             <div className="font-display text-[11px] tracking-[0.22em] text-brand-yellow/50 mb-3">STEP 03</div>
             <div className="font-black text-2xl tracking-tight leading-tight text-white">You earn 80%</div>
             <div className="mt-3 text-white/70 text-sm leading-relaxed">
-              Of every dollar of profit. We earn our 20% only after your ROI crosses 50%.
+              Of every dollar of net profit.
             </div>
             <div className="mt-auto pt-6 font-display text-4xl font-bold tracking-tight text-brand-yellow">80%</div>
             <div className="text-xs text-white/50 mt-1">your profit share</div>
@@ -496,7 +491,7 @@ export function EliteModel() {
           className="mt-8 text-center"
         >
           <p className="text-white/50 text-sm max-w-xl mx-auto leading-relaxed">
-            <span className="text-brand-yellow font-semibold">Milestone-based unlock:</span> We earn 10% once ROI crosses 50%, and the full 20% once ROI crosses 100%. We only win when you win first.
+            <span className="text-brand-yellow font-semibold">Milestone-based:</span> we earn 10% at 50% ROI, the full 20% at 100% ROI.
           </p>
         </motion.div>
       </div>
@@ -816,7 +811,7 @@ export function EliteMath() {
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
             className="mt-5 text-lg text-brand-navy/75 max-w-2xl mx-auto"
           >
-            Three launches. $10,000 of testing capital each. Here&rsquo;s how the math works across three scenarios — modelled from our actual launch data, not promises.
+            Three scenarios modelled from real launch data.
           </motion.p>
         </div>
 
@@ -832,14 +827,13 @@ export function EliteMath() {
             { label: "Launches", value: "3" },
             { label: "Capital per launch", value: "$10K" },
             { label: "Total deployed", value: "$30K" },
-            { label: "Your profit share", value: "80%" },
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-3">
               <div className="text-center">
                 <div className="font-display text-3xl text-brand-navy leading-none">{item.value}</div>
                 <div className="text-xs text-brand-navy/50 mt-1">{item.label}</div>
               </div>
-              {i < 3 && <span className="text-brand-navy/20 text-2xl hidden sm:block">×</span>}
+              {i < 2 && <span className="text-brand-navy/20 text-2xl hidden sm:block">×</span>}
             </div>
           ))}
         </motion.div>
@@ -908,7 +902,7 @@ export function EliteMath() {
         >
           <Info className="h-4 w-4 text-brand-navy/30 mt-0.5 flex-none" />
           <p className="text-xs text-brand-navy/40 leading-relaxed text-pretty">
-            Figures are illustrative projections based on historical launch data from our portfolio. Past performance does not guarantee future results. Actual returns depend on product selection, market conditions, and execution quality.
+            Illustrative projections from portfolio data. Past results don&rsquo;t guarantee future returns.
           </p>
         </motion.div>
       </div>
@@ -1007,7 +1001,7 @@ export function EliteLaunches() {
             transition={{ duration: 0.7, ease: EASE, delay: 0.14 }}
             className="mt-5 text-lg text-white/60 max-w-2xl mx-auto"
           >
-            Anonymised launch snapshots from our active portfolio. Categories, timelines, and returns — no embellishment.
+            Anonymised snapshots from our portfolio. No embellishment.
           </motion.p>
         </div>
 
@@ -1092,31 +1086,31 @@ export function EliteLaunches() {
 const faqs = [
   {
     q: "How much capital do I actually need beyond the $10K per launch?",
-    a: "The $10K per launch covers our testing capital — the budget we use to source, create, and launch your product. You'll also need capital for cost of goods (typically $5–12K depending on category and MOQ) and initial inventory replenishment once a product starts selling. We walk you through the full capital plan in the onboarding call so there are no surprises.",
+    a: "The $10K covers sourcing, creation, and launch — you'll also need $5–12K for inventory depending on category and MOQ. We walk you through the full capital plan on your onboarding call.",
   },
   {
     q: "Who owns the Amazon account and the brand?",
-    a: "You do, entirely. The Amazon Seller Central account is in your name, the brand is registered to you, and all the intellectual property is yours. We operate inside your account as an authorised team. At any point, you have full access and ownership.",
+    a: "You do, entirely — the Seller Central account, brand registration, and all IP are in your name. We operate inside your account as an authorised team.",
   },
   {
     q: "What happens if a launch fails?",
-    a: "We build a portfolio, not a single bet. Across three launches, the data shows diversification absorbs individual product failures. We retire underperformers fast — within 60–90 days if the signals aren't there — and redirect energy and budget toward the winners. We document every lesson and apply it to subsequent launches.",
+    a: "Three launches means no single bet sinks the model — underperformers are retired within 60–90 days and budget redirected to what's working. Diversification is built into the programme by design.",
   },
   {
     q: "When do I start seeing returns?",
-    a: "Realistically, your first product reaches profitability around week 9–14 post-launch, meaning month 8–10 from your start date once you factor in sourcing and production timelines. We set explicit expectations in your onboarding. Anyone telling you they'll have you profitable in 30 days is not being honest.",
+    a: "First profitability typically arrives around week 9–14 post-launch — month 8–10 from your start date once sourcing is factored in. Anyone promising 30-day results isn't being honest.",
   },
   {
     q: "How is the 80/20 split tracked and distributed?",
-    a: "Every client gets a monthly financial report showing gross revenue, cost of goods, Amazon fees, PPC spend, and net profit. Your 80% is calculated from net profit and transferred to you monthly once the account is in a profitable state. The 10% milestone unlocks at 50% ROI; the full 20% at 100% ROI — documented in your agreement.",
+    a: "You receive a monthly P&L showing revenue, fees, ad spend, and net profit — your 80% is transferred monthly once profitable. Split milestones and timings are documented in your agreement.",
   },
   {
     q: "Can I be involved in product decisions?",
-    a: "Absolutely. We run the research and present you with a validated product brief at every stage. You have approval rights on the product selection, brand direction, and major creative decisions. What you won't be doing is the day-to-day operational work — that's entirely on us.",
+    a: "Yes — you approve product selection, brand direction, and major creative decisions at every stage. Day-to-day operations are entirely on us.",
   },
   {
     q: "What happens after the 18 months?",
-    a: "You own a portfolio of Amazon products generating ongoing revenue. At that point you have three paths: continue working with us under an ongoing management model, take over operations with your own team, or explore a sale (Amazon FBA businesses routinely sell for 3–5x annual net profit multiples). We help you evaluate all three.",
+    a: "You own a revenue-generating portfolio with three options: continue under our management, take over with your own team, or sell — FBA businesses typically trade at 3–5× annual net profit.",
   },
 ];
 
