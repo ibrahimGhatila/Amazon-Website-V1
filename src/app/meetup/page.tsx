@@ -6,6 +6,7 @@ import { MeetupGrid } from "./_components/MeetupGrid";
 import { MeetupFounder } from "./_components/MeetupFounder";
 import { MeetupBanner } from "./_components/MeetupBanner";
 import { MeetupExpect } from "./_components/MeetupExpect";
+import { PastMeetups } from "./_components/PastMeetups";
 import { meetups } from "./_data/meetups";
 
 export default function MeetupPage() {
@@ -15,6 +16,7 @@ export default function MeetupPage() {
       <main>
         <MeetupHero featured={meetups[0]} />
         <MeetupGrid meetups={meetups} />
+        <PastMeetups />
         <MeetupFounder />
         <MeetupBanner />
         <MeetupExpect />
