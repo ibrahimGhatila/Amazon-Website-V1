@@ -10,11 +10,11 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 const faqs = [
   {
     q: "What does Extreme Commerce actually do?",
-    a: "We build and operate e-commerce businesses for our partners. That means product research, sourcing, listings, advertising, and day-to-day management — fully done for you. We also offer direct mentorship from Sunny Ali and trained VA placements for teams who want to run things themselves.",
+    a: "We build and operate Amazon and TikTok Shop brands for our partners — research, sourcing, listings, ads, and daily management, fully done for you. We also offer mentorship and VA placements for teams running things themselves.",
   },
   {
     q: "Which service is right for me?",
-    a: "If you want a hands-off brand built and run for you, the Elite Program is your fit — choose Amazon or TikTok Shop. If you already have an operation and want strategic guidance, Ask Sunny Ali gives you direct access to Sunny's playbook. If you need execution capacity inside your own team, our VA service fills that gap.",
+    a: "Want it built for you? Elite Program (Amazon or TikTok). Already running and need strategy? Ask Sunny Ali.",
   },
   {
     q: "What platforms do you operate on?",
@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     q: "Do I need capital to work with you?",
-    a: "It depends on the engagement. Done-for-you brand builds require capital for inventory and launch. Mentorship doesn't. We'll walk you through what's needed for your specific situation on a call.",
+    a: "Done-for-you brand builds need capital for inventory and launch. Mentorship doesn't.",
   },
   {
     q: "How do I get started?",
-    a: "Book a free strategy call. We'll learn about your goals, walk you through the right engagement, and give you a clear picture of next steps — no pressure, no pitch deck.",
+    a: "Book a free strategy call. We'll match you to the right engagement and outline next steps — no pitch deck.",
   },
 ];
 
@@ -41,12 +41,7 @@ export function FAQ() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="FREQUENTLY ASKED"
-          title={
-            <>
-              Answers, before you ask.
-            </>
-          }
-          subtitle="What you need to know about working with Extreme Commerce."
+          title={<>Answers, before you ask.</>}
         />
 
         <div className="mt-14 divide-y divide-brand-navy/10 border-y border-brand-navy/10">

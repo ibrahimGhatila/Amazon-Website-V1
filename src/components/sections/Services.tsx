@@ -17,8 +17,7 @@ const services = [
   {
     tag: "AMAZON",
     title: "Elite Program — Amazon",
-    description:
-      "Done-for-you Amazon brand. We build, launch, and run it. You own the upside.",
+    description: "We build, launch, and run it. You own the brand.",
     href: "/elite",
     icon: Rocket,
     variant: "featured",
@@ -26,8 +25,7 @@ const services = [
   {
     tag: "TIKTOK SHOP",
     title: "Elite Program — TikTok",
-    description:
-      "Your TikTok Shop brand, built and operated for you. Creator commerce, done right.",
+    description: "Your TikTok Shop brand, built and operated for you.",
     href: "/elite-tiktok",
     icon: Play,
     variant: "yellow",
@@ -35,8 +33,7 @@ const services = [
   {
     tag: "MENTORSHIP",
     title: "Ask Sunny Ali",
-    description:
-      "Direct access to Sunny Ali — monthly strategy Zooms, WhatsApp voice notes, and the full playbook from a decade of launches.",
+    description: "Monthly strategy Zooms, WhatsApp access, and the full playbook.",
     href: "/ask-sunny-ali",
     icon: MessageCircle,
     variant: "azure",
@@ -79,7 +76,7 @@ export function Services() {
               One mission.
             </>
           }
-          subtitle="Done-for-you Amazon brands, TikTok Shop builds, and direct mentorship from Sunny Ali — pick the engagement that fits your stage."
+          subtitle="Pick the engagement that fits your stage."
         />
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -11,8 +11,7 @@ const highlights = [
   {
     tag: "FREE AUDIT",
     title: "Get a free Amazon audit",
-    description:
-      "We'll surface the wasted ad spend, weak listings, and conversion gaps that are costing you sales. No fluff, no obligation.",
+    description: "We'll find the wasted ad spend and conversion gaps costing you sales.",
     cta: "Request your audit",
     href: "/amazon-audit",
     icon: ClipboardCheck,
@@ -20,8 +19,7 @@ const highlights = [
   {
     tag: "COMMUNITY",
     title: "Join an Extreme Commerce meetup",
-    description:
-      "Real conversations with operators, investors, and Sunny Ali — across Karachi, Lahore, Dubai, and more. Free to attend.",
+    description: "Free in-person sessions with Sunny Ali across SE Asia.",
     cta: "See upcoming meetups",
     href: "/meetup",
     icon: Users,
@@ -35,7 +33,7 @@ export function Highlights() {
         <SectionHeading
           eyebrow="MORE WAYS IN"
           title="Not ready for done-for-you?"
-          subtitle="Two low-commitment ways to engage with Extreme Commerce — start with what fits."
+          subtitle="Two low-commitment ways in."
         />
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-5">

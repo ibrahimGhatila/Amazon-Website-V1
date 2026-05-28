@@ -153,15 +153,10 @@ export function Founder() {
               className="mt-4 space-y-3 text-brand-navy/75 leading-relaxed text-base text-pretty"
             >
               <p>
-                Sunny Ali founded Extreme Commerce to answer a practical
-                question: how do we move capital efficiently into real,
-                profitable Amazon businesses — without gambling.
-              </p>
-              <p>
-                Nearly a decade later, that discipline has compounded into the
-                largest e-commerce operator community of its kind, measurable
-                economic impact in the hundreds of millions, and a playbook
-                refined across a thousand launches.
+                Sunny Ali built Extreme Commerce on one question: how do we
+                move capital into profitable Amazon businesses — without
+                gambling. A decade later, the answer is a playbook refined
+                across a thousand launches.
               </p>
             </motion.div>
 
@@ -175,9 +170,8 @@ export function Founder() {
             >
               <Quote className="absolute -top-3 left-6 h-5 w-5 rotate-180 text-brand-azure fill-brand-azure" />
               <blockquote className="font-display text-base sm:text-lg text-brand-navy tracking-tight leading-snug">
-                &ldquo;We don&rsquo;t teach people how to start from zero. We
-                deploy capital, build real brands, and share the upside. That&rsquo;s
-                the entire model.&rdquo;
+                &ldquo;We deploy capital, build real brands, and share the
+                upside. That&rsquo;s the entire model.&rdquo;
               </blockquote>
               <figcaption className="mt-3 text-sm font-semibold text-brand-navy/80">
                 — Sunny Ali, Founder &amp; CEO

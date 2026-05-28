@@ -115,9 +115,7 @@ export function Hero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.7 }}
               className="mt-7 text-lg sm:text-xl max-w-xl text-white/80 leading-relaxed text-pretty"
             >
-              Done-for-you Amazon brands, TikTok Shop builds, and direct
-              mentorship from Sunny Ali. We run the operation. You own the
-              upside. A decade of building winning e-commerce brands.
+              We run the operation. You own the upside.
             </motion.p>
 
             <motion.div
