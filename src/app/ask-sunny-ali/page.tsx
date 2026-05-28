@@ -65,9 +65,7 @@ function AskSunnyHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.45 }}
               className="text-base sm:text-lg lg:text-xl text-white/65 font-light leading-snug text-pretty max-w-2xl"
             >
-              Monthly strategy sessions. WhatsApp voice notes. The playbook from
-              1,000+ launches — applied directly to your business, not a generic
-              framework.
+              Monthly strategy Zooms and WhatsApp access — specific advice on your business, not a generic framework.
             </motion.p>
 
             <motion.div
@@ -76,7 +74,7 @@ function AskSunnyHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
               className="mt-7 flex flex-wrap gap-3"
             >
-              {["Monthly Zooms", "WhatsApp access", "1,000+ launches", "Direct feedback"].map((pill) => (
+              {["Monthly Zooms", "WhatsApp access", "Direct feedback"].map((pill) => (
                 <span key={pill} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm px-4 py-2 text-sm text-white/80 font-medium">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow flex-none" />
                   {pill}
@@ -188,10 +186,10 @@ function AskSunnyHero() {
 // ─── What's Included ──────────────────────────────────────────────────────────
 
 const inclusions = [
-  { title: "Monthly Strategy Zoom", body: "60-minute 1:1 session. Recorded. Action-item driven. No fluff." },
-  { title: "WhatsApp Voice Notes", body: "Direct strategic guidance between sessions. Async but fast." },
-  { title: "Launch Review", body: "Sunny reviews your active or upcoming launch and gives direct feedback." },
-  { title: "Resource Access", body: "Playbooks, SOP templates, supplier checklists from the EC operation." },
+  { title: "Monthly Strategy Zoom", body: "60-minute 1:1 session. Recorded. Action-item driven." },
+  { title: "WhatsApp Voice Notes", body: "Async strategic guidance between sessions." },
+  { title: "Launch Review", body: "Direct feedback on your active or upcoming launch." },
+  { title: "Resource Access", body: "Playbooks, SOPs, and supplier checklists from EC." },
 ];
 
 function AskSunnyInclusions() {
