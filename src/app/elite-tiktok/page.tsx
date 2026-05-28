@@ -75,9 +75,7 @@ function TikTokHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.45 }}
               className="text-base sm:text-lg lg:text-xl text-white/65 font-light leading-snug text-pretty max-w-2xl"
             >
-              TikTok Shop is the fastest-growing commerce channel in the world.
-              We run your product launches — creator strategy, affiliate network,
-              live selling, and fulfilment — end to end.
+              Creator strategy, affiliate network, live selling, and fulfilment — run end to end.
             </motion.p>
 
             <motion.div
@@ -86,7 +84,7 @@ function TikTokHero() {
               transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
               className="mt-7 flex flex-wrap gap-3"
             >
-              {["Creator collabs", "Affiliate network", "Live selling ops", "80/20 profit share"].map((pill) => (
+              {["Creator collabs", "Affiliate network", "Live selling ops"].map((pill) => (
                 <span key={pill} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm px-4 py-2 text-sm text-white/80 font-medium">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow flex-none" />
                   {pill}
@@ -149,12 +147,12 @@ function TikTokHero() {
 // ─── What's Included ──────────────────────────────────────────────────────────
 
 const inclusions = [
-  { icon: ShoppingBag, title: "Product Research & Sourcing", body: "We find products with TikTok-native demand, high viral potential, and healthy margins. Full supplier vetting included." },
-  { icon: Users, title: "Creator & Affiliate Network", body: "Access to our network of TikTok creators. We handle outreach, contracts, content briefs, and commission structures." },
-  { icon: Play, title: "Live Selling Operations", body: "Scripted live sessions, host coordination, and real-time performance management — the fastest route to TikTok Shop GMV." },
-  { icon: TrendingUp, title: "Growth & Scaling", body: "PPC on TikTok, Spark Ads, trending audio strategy, and weekly performance reviews. Winners get aggressive reinvestment." },
-  { icon: Zap, title: "Fulfilment & Ops", body: "Inventory planning, FBT (Fulfilled by TikTok) coordination, and returns management — handled by our ops team." },
-  { icon: Check, title: "80/20 Profit Share", body: "Same model as Amazon Elite. You keep 80%. Our share unlocks only once your ROI crosses 50%." },
+  { icon: ShoppingBag, title: "Product Research & Sourcing", body: "Products with TikTok-native demand and healthy margins." },
+  { icon: Users, title: "Creator & Affiliate Network", body: "Outreach, contracts, content briefs, and commissions — handled." },
+  { icon: Play, title: "Live Selling Operations", body: "Scripted lives and real-time performance management." },
+  { icon: TrendingUp, title: "Growth & Scaling", body: "Spark Ads, trending audio strategy, and weekly reviews." },
+  { icon: Zap, title: "Fulfilment & Ops", body: "Inventory, FBT coordination, and returns — fully managed." },
+  { icon: Check, title: "Aligned Incentives", body: "Same profit-share model as Amazon Elite. We earn after you do." },
 ];
 
 function TikTokInclusions() {
