@@ -6,7 +6,6 @@ import { AboutStats } from "./_components/AboutStats";
 import { AboutStory } from "./_components/AboutStory";
 import { AboutBeliefs } from "./_components/AboutBeliefs";
 import { AboutPartners } from "./_components/AboutPartners";
-import { AboutTeam } from "./_components/AboutTeam";
 import { AboutCTA } from "./_components/AboutCTA";
 
 export const metadata: Metadata = {
@@ -39,7 +38,6 @@ export default function AboutPage() {
         <AboutStory />
         <AboutBeliefs />
         <AboutPartners />
-        <AboutTeam />
         <AboutCTA />
       </main>
       <Footer />
