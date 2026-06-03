@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
-import { Check, X, Smartphone, Clock, CalendarDays, Target, DollarSign } from "lucide-react";
+import { Check, X, Smartphone, Clock, CalendarDays, Target, DollarSign, Quote } from "lucide-react";
 import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
@@ -367,6 +367,113 @@ function AskSunnyInclusions() {
   );
 }
 
+// ─── Industry Leaders ─────────────────────────────────────────────────────────
+
+const leaderTestimonials = [
+  {
+    name: "Rehan Allahwala",
+    title: "Founder, Rehan School · Pakistan tech entrepreneur",
+    initials: "RA",
+    quote:
+      "Sunny Ali doesn't just focus on running e-commerce businesses on various platforms — he is dedicated to revealing fresh income streams and guiding you in the art of wealth creation. Armed with this knowledge, you'll not only chase your life's dreams but also pave a path to true prosperity.",
+    accent: "azure",
+  },
+  {
+    name: "Dennis Yu",
+    title: "CEO, BlitzMetrics · Former Yahoo Search engineer",
+    initials: "DY",
+    quote:
+      "Founder of Extreme Commerce Sunny Ali is the God Father of E-Commerce who enhanced the $200 million economic impact in Pakistan.",
+    accent: "yellow",
+  },
+];
+
+function AskSunnyLeaders() {
+  return (
+    <section className="relative bg-white py-20 sm:py-28 overflow-hidden">
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_50%_40%_at_50%_0%,rgba(54,128,195,0.06),transparent)]"
+      />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="text-center mb-14">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: EASE }}
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-azure" />
+            INDUSTRY VOICES
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: EASE, delay: 0.08 }}
+            className="mt-5 font-black tracking-tight text-brand-navy text-3xl sm:text-4xl lg:text-[46px] leading-[1.05] text-balance"
+          >
+            What industry leaders{" "}
+            <span className="text-brand-azure">are saying.</span>
+          </motion.h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+          {leaderTestimonials.map((t, i) => {
+            const isYellow = t.accent === "yellow";
+            return (
+              <motion.figure
+                key={t.name}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.7, ease: EASE, delay: i * 0.12 }}
+                className="relative rounded-3xl border border-brand-navy/10 bg-white p-8 sm:p-10 hover:border-brand-navy/25 hover:shadow-xl hover:shadow-brand-navy/5 transition-all duration-300"
+              >
+                <div
+                  aria-hidden
+                  className={`absolute -top-5 left-8 flex h-12 w-12 items-center justify-center rounded-2xl shadow-lg ${
+                    isYellow
+                      ? "bg-brand-yellow text-brand-navy shadow-brand-yellow/30"
+                      : "bg-brand-navy text-brand-yellow shadow-brand-navy/20"
+                  }`}
+                >
+                  <Quote className="h-5 w-5" strokeWidth={2.5} />
+                </div>
+
+                <blockquote className="mt-4 text-brand-navy/85 text-base sm:text-lg leading-relaxed font-light text-pretty">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+
+                <figcaption className="mt-7 flex items-center gap-4 pt-6 border-t border-brand-navy/10">
+                  <div
+                    className={`flex h-12 w-12 flex-none items-center justify-center rounded-full font-display font-black text-sm tracking-tight ${
+                      isYellow
+                        ? "bg-brand-yellow text-brand-navy"
+                        : "bg-brand-navy text-brand-yellow"
+                    }`}
+                  >
+                    {t.initials}
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-black text-brand-navy text-base sm:text-lg tracking-tight">
+                      {t.name}
+                    </div>
+                    <div className="text-brand-navy/55 text-sm truncate">
+                      {t.title}
+                    </div>
+                  </div>
+                </figcaption>
+              </motion.figure>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ─── Who It's For ─────────────────────────────────────────────────────────────
 
 function AskSunnyFit() {
@@ -489,6 +596,7 @@ export default function AskSunnyAliPage() {
         <AskSunnyHero />
         <AskSunnyExpect />
         <AskSunnyInclusions />
+        <AskSunnyLeaders />
         <AskSunnyFit />
         <ExploreServices current="ask-sunny-ali" />
         <AskSunnyCTA />
