@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
-import { Check, X, Smartphone } from "lucide-react";
+import { Check, X, Smartphone, Clock, CalendarDays, MessageCircle, Target } from "lucide-react";
 import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
@@ -180,6 +180,152 @@ function AskSunnyHero() {
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }} className="h-8 w-[1px] bg-gradient-to-b from-white/40 to-transparent" />
       </motion.div>
     </section>
+  );
+}
+
+// ─── What To Expect ───────────────────────────────────────────────────────────
+
+const sessionItems = [
+  { icon: Clock, label: "60-minute strategy session", sub: "Recorded and action-item driven." },
+  { icon: CalendarDays, label: "Flexible scheduling", sub: "Pick a time that works for you." },
+  { icon: MessageCircle, label: "WhatsApp follow-up access", sub: "Async guidance between sessions." },
+  { icon: Target, label: "Product-specific feedback", sub: "On your numbers, listing, and next move." },
+];
+
+function AskSunnyExpect() {
+  return (
+    <section className="relative bg-brand-navy text-white py-20 sm:py-28 overflow-hidden texture-grain">
+      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_0%_50%,rgba(54,128,195,0.15),transparent)]" />
+      <div aria-hidden className="absolute inset-0 bg-grid opacity-30" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+          <div>
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: EASE }}
+              className="inline-flex items-center gap-2 rounded-full border border-brand-azure/30 bg-brand-azure/10 backdrop-blur-sm px-5 py-2 mb-6 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-azure"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
+              WHAT TO EXPECT
+            </motion.span>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.08 }}
+              className="font-black tracking-tight leading-[1.05] text-3xl sm:text-4xl lg:text-[46px] text-white text-balance mb-8"
+            >
+              One session.{" "}
+              <span className="text-brand-yellow">Real answers.</span>
+            </motion.h2>
+
+            <ul className="space-y-4 mb-10">
+              {sessionItems.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <motion.li
+                    key={item.label}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: EASE, delay: i * 0.08 }}
+                    className="flex items-start gap-4"
+                  >
+                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-white/[0.07] border border-white/10">
+                      <Icon className="h-4 w-4 text-brand-azure" />
+                    </span>
+                    <div>
+                      <div className="font-semibold text-white text-sm">{item.label}</div>
+                      <div className="text-white/55 text-sm">{item.sub}</div>
+                    </div>
+                  </motion.li>
+                );
+              })}
+            </ul>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: EASE, delay: 0.35 }}
+              className="inline-flex items-center gap-4 rounded-2xl border border-brand-yellow/25 bg-brand-yellow/10 px-6 py-4 mb-8"
+            >
+              <div>
+                <div className="font-display text-3xl font-black text-brand-yellow leading-none">$130</div>
+                <div className="text-white/50 text-xs mt-1 tracking-wide uppercase font-display">per session</div>
+              </div>
+              <div className="h-10 w-px bg-white/15" />
+              <div className="text-white/70 text-sm leading-snug max-w-[180px]">One-to-one Zoom consultation with Sunny directly.</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: EASE, delay: 0.45 }}
+            >
+              <Button href="#apply" size="lg" variant="primary" arrow>Book a session</Button>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
+            className="relative h-[420px] lg:h-[560px] rounded-3xl overflow-hidden"
+          >
+            <Image
+              src="/brand/SA-event-podium.jpeg"
+              alt="Sunny Ali speaking at an Extreme Commerce event"
+              fill
+              className="object-cover object-[center_15%]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/70 via-brand-navy/10 to-transparent" />
+            <div className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-60" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand-yellow" />
+              </span>
+              <span className="font-display text-[11px] tracking-[0.2em] text-white/80 uppercase">Live at EC Summit</span>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── In Action photo strip ─────────────────────────────────────────────────────
+
+function AskSunnyInAction() {
+  return (
+    <div className="relative h-[260px] sm:h-[360px] overflow-hidden">
+      <Image
+        src="/brand/SA-event-stage.jpeg"
+        alt="Sunny Ali presenting at a 2025 event"
+        fill
+        className="object-cover object-[center_25%]"
+      />
+      <div className="absolute inset-0 bg-brand-navy/55" />
+      <div className="relative h-full flex items-center justify-center text-center px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: EASE }}
+        >
+          <p className="font-display text-[13px] tracking-[0.25em] text-brand-yellow uppercase mb-3">Trusted by serious sellers</p>
+          <h3 className="font-black text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight text-balance">
+            1,000+ launches advised. <span className="text-brand-azure">Still counting.</span>
+          </h3>
+        </motion.div>
+      </div>
+    </div>
   );
 }
 
@@ -388,7 +534,9 @@ export default function AskSunnyAliPage() {
       <Nav />
       <main>
         <AskSunnyHero />
+        <AskSunnyExpect />
         <AskSunnyInclusions />
+        <AskSunnyInAction />
         <AskSunnyFit />
         <ExploreServices current="ask-sunny-ali" />
         <AskSunnyCTA />
