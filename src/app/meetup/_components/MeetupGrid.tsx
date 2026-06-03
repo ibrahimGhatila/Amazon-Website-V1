@@ -79,7 +79,7 @@ function MeetupCard({ meetup, i }: { meetup: Meetup; i: number }) {
           </div>
 
           <div className="mt-5 pt-5 border-t border-brand-navy/8">
-            <span className="font-display text-sm tracking-[0.2em] text-rose-600 uppercase font-bold">
+            <span className="font-display text-base sm:text-lg tracking-[0.15em] text-rose-600 uppercase font-black">
               Free Registration
             </span>
           </div>
