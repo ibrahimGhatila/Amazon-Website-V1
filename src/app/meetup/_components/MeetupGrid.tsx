@@ -78,16 +78,17 @@ function MeetupCard({ meetup, i }: { meetup: Meetup; i: number }) {
             )}
           </div>
 
-          <div className="mt-5 pt-5 border-t border-brand-navy/8 flex items-center justify-between">
-            <span className="font-display text-xs tracking-[0.2em] text-rose-600 uppercase font-bold">
+          <div className="mt-5 pt-5 border-t border-brand-navy/8">
+            <span className="font-display text-sm tracking-[0.2em] text-rose-600 uppercase font-bold">
               Free Registration
-            </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-yellow px-4 py-2 font-display text-xs tracking-[0.16em] text-brand-navy uppercase font-bold group-hover:bg-brand-yellow/90 transition-colors">
-              Register
-              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </span>
           </div>
         </div>
+
+        <span className="flex items-center justify-center gap-2 bg-brand-yellow px-6 py-4 font-semibold text-base text-brand-navy group-hover:bg-brand-yellow-light transition-colors">
+          Register Now
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </span>
       </Link>
     </motion.div>
   );
