@@ -28,7 +28,7 @@ export function MeetupRegister({ meetup }: { meetup: Meetup }) {
           transition={{ duration: 0.7, ease: EASE }}
           className="text-center"
         >
-          <span className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-4 py-1.5 font-display text-[13px] tracking-[0.18em] text-brand-navy uppercase">
+          <span className="inline-flex items-center gap-2 rounded-full bg-brand-navy/5 border border-brand-navy/10 px-4 py-1.5 font-display text-sm tracking-[0.18em] text-brand-navy uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-azure" />
             Reserve your seat
           </span>

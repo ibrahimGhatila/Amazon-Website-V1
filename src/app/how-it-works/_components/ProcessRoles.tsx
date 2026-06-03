@@ -45,7 +45,7 @@ export function ProcessRoles() {
             transition={{ duration: 0.6, ease: EASE }}
             className="rounded-3xl border-2 border-brand-navy/10 bg-white p-7 sm:p-8"
           >
-            <div className="font-display text-[11px] tracking-[0.22em] text-brand-navy/40 mb-4">YOUR ROLE</div>
+            <div className="font-display text-xs tracking-[0.22em] text-brand-navy/40 mb-4">YOUR ROLE</div>
             <div className="font-black text-4xl sm:text-5xl text-brand-navy tracking-tight leading-tight">
               3 things.<br />That&apos;s it.
             </div>
@@ -68,7 +68,7 @@ export function ProcessRoles() {
             transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
             className="rounded-3xl bg-brand-navy p-7 sm:p-8"
           >
-            <div className="font-display text-[11px] tracking-[0.22em] text-brand-yellow/60 mb-4">OUR ROLE</div>
+            <div className="font-display text-xs tracking-[0.22em] text-brand-yellow/60 mb-4">OUR ROLE</div>
             <div className="font-black text-4xl sm:text-5xl text-white tracking-tight leading-tight">
               Everything<br />else.
             </div>

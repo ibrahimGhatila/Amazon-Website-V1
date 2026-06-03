@@ -119,7 +119,7 @@ function AskSunnyHero() {
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
                       <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                     </span>
-                    <span className="font-display text-[10px] tracking-[0.22em] text-white/80 uppercase">
+                    <span className="font-display text-xs tracking-[0.22em] text-white/80 uppercase">
                       Replies within 24h
                     </span>
                   </div>
@@ -148,7 +148,7 @@ function AskSunnyHero() {
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/15">
                 <Smartphone className="h-3.5 w-3.5 text-emerald-600" />
               </span>
-              <span className="font-display text-[10px] tracking-[0.18em] text-brand-navy/55 uppercase">
+              <span className="font-display text-xs tracking-[0.18em] text-brand-navy/55 uppercase">
                 Voice note · 0:47
               </span>
             </motion.div>
@@ -162,7 +162,7 @@ function AskSunnyHero() {
               <div className="font-display text-2xl text-brand-navy leading-none font-black tracking-tight">
                 <Counter to={1000} suffix="+" />
               </div>
-              <div className="mt-1 text-[10px] tracking-[0.18em] text-brand-navy/70 uppercase font-display">
+              <div className="mt-1 text-xs tracking-[0.18em] text-brand-navy/70 uppercase font-display">
                 Launches advised
               </div>
             </motion.div>
@@ -186,10 +186,10 @@ function AskSunnyHero() {
 // ─── What To Expect ───────────────────────────────────────────────────────────
 
 const sessionItems = [
-  { icon: Clock, label: "60-minute strategy session", sub: "Recorded and action-item driven." },
-  { icon: CalendarDays, label: "Flexible scheduling", sub: "Pick a time that works for you." },
-  { icon: MessageCircle, label: "WhatsApp follow-up access", sub: "Async guidance between sessions." },
-  { icon: Target, label: "Product-specific feedback", sub: "On your numbers, listing, and next move." },
+  { icon: Clock, label: "60-minute strategy session" },
+  { icon: CalendarDays, label: "Flexible scheduling" },
+  { icon: MessageCircle, label: "WhatsApp follow-up access" },
+  { icon: Target, label: "Product-specific feedback" },
 ];
 
 function AskSunnyExpect() {
@@ -233,15 +233,12 @@ function AskSunnyExpect() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, ease: EASE, delay: i * 0.08 }}
-                    className="flex items-start gap-4"
+                    className="flex items-center gap-4"
                   >
                     <span className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-white/[0.07] border border-white/10">
                       <Icon className="h-4 w-4 text-brand-azure" />
                     </span>
-                    <div>
-                      <div className="font-semibold text-white text-sm">{item.label}</div>
-                      <div className="text-white/55 text-sm">{item.sub}</div>
-                    </div>
+                    <span className="font-medium text-white/90 text-base">{item.label}</span>
                   </motion.li>
                 );
               })}
@@ -258,8 +255,6 @@ function AskSunnyExpect() {
                 <div className="font-display text-3xl font-black text-brand-yellow leading-none">$130</div>
                 <div className="text-white/50 text-xs mt-1 tracking-wide uppercase font-display">per session</div>
               </div>
-              <div className="h-10 w-px bg-white/15" />
-              <div className="text-white/70 text-sm leading-snug max-w-[180px]">One-to-one Zoom consultation with Sunny directly.</div>
             </motion.div>
 
             <motion.div
@@ -291,7 +286,7 @@ function AskSunnyExpect() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-yellow opacity-60" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand-yellow" />
               </span>
-              <span className="font-display text-[11px] tracking-[0.2em] text-white/80 uppercase">Live at EC Summit</span>
+              <span className="font-display text-xs tracking-[0.2em] text-white/80 uppercase">Live at EC Summit</span>
             </div>
           </motion.div>
         </div>
@@ -319,7 +314,7 @@ function AskSunnyInAction() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
         >
-          <p className="font-display text-[13px] tracking-[0.25em] text-brand-yellow uppercase mb-3">Trusted by serious sellers</p>
+          <p className="font-display text-sm tracking-[0.25em] text-brand-yellow uppercase mb-3">Trusted by serious sellers</p>
           <h3 className="font-black text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight text-balance">
             1,000+ launches advised. <span className="text-brand-azure">Still counting.</span>
           </h3>
@@ -332,10 +327,10 @@ function AskSunnyInAction() {
 // ─── What's Included ──────────────────────────────────────────────────────────
 
 const inclusions = [
-  { title: "Monthly Strategy Zoom", body: "60-minute 1:1 session. Recorded. Action-item driven." },
-  { title: "WhatsApp Voice Notes", body: "Async strategic guidance between sessions." },
-  { title: "Launch Review", body: "Direct feedback on your active or upcoming launch." },
-  { title: "Resource Access", body: "Playbooks, SOPs, and supplier checklists from EC." },
+  { title: "Monthly Strategy Zoom", body: "60-min 1:1. Recorded." },
+  { title: "WhatsApp Voice Notes", body: "Async between sessions." },
+  { title: "Launch Review", body: "Feedback on your live listing." },
+  { title: "Resource Access", body: "EC playbooks and SOPs." },
 ];
 
 function AskSunnyInclusions() {

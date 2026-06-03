@@ -148,7 +148,7 @@ export function ProcessHero() {
                         <Icon className="h-5 w-5 text-brand-yellow" strokeWidth={2} />
                       </div>
                       <div>
-                        <div className="font-display text-[11px] tracking-[0.28em] text-white/40 tabular-nums">
+                        <div className="font-display text-xs tracking-[0.28em] text-white/40 tabular-nums">
                           PHASE {phase.num}
                         </div>
                         <div className="mt-1 font-bold text-xl xl:text-2xl text-white tracking-tight">

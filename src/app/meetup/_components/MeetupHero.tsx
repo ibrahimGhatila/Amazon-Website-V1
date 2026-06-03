@@ -114,7 +114,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                 <div className="font-display text-3xl sm:text-4xl text-white leading-none font-black tracking-tight">
                   <Counter to={10} suffix="+" duration={2} />
                 </div>
-                <div className="mt-2 text-[11px] text-white/55 font-display tracking-[0.18em] uppercase">
+                <div className="mt-2 text-xs text-white/55 font-display tracking-[0.18em] uppercase">
                   Years
                 </div>
               </div>
@@ -127,7 +127,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                     duration={2.2}
                   />
                 </div>
-                <div className="mt-2 text-[11px] text-white/55 font-display tracking-[0.18em] uppercase">
+                <div className="mt-2 text-xs text-white/55 font-display tracking-[0.18em] uppercase">
                   Community
                 </div>
               </div>
@@ -135,7 +135,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                 <div className="font-display text-3xl sm:text-4xl text-white leading-none font-black tracking-tight">
                   <Counter to={100} suffix="+" duration={2.2} />
                 </div>
-                <div className="mt-2 text-[11px] text-white/55 font-display tracking-[0.18em] uppercase">
+                <div className="mt-2 text-xs text-white/55 font-display tracking-[0.18em] uppercase">
                   Events
                 </div>
               </div>
@@ -174,13 +174,13 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
                       <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                     </span>
-                    <span className="font-display text-[10px] tracking-[0.22em] text-white/85 uppercase">
+                    <span className="font-display text-xs tracking-[0.22em] text-white/85 uppercase">
                       Next up
                     </span>
                   </div>
 
                   <div className="flex flex-col items-center rounded-2xl bg-white/95 backdrop-blur-sm px-3.5 py-2.5 text-brand-navy shadow-lg shadow-black/30">
-                    <span className="font-display text-[10px] tracking-[0.18em] text-brand-navy/55 uppercase">
+                    <span className="font-display text-xs tracking-[0.18em] text-brand-navy/55 uppercase">
                       {featured.monthLabel}
                     </span>
                     <span className="font-black text-3xl leading-none tracking-tight">
@@ -224,10 +224,10 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
               transition={{ duration: 0.7, ease: EASE, delay: 1 }}
               className="hidden sm:flex absolute -left-5 bottom-20 items-center gap-2.5 rounded-2xl bg-white px-3.5 py-2.5 shadow-2xl shadow-black/40 rotate-[-3deg]"
             >
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-rose-500/15 text-rose-600 font-display text-[11px] font-bold">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-rose-500/15 text-rose-600 font-display text-xs font-bold">
                 $0
               </span>
-              <span className="font-display text-[10px] tracking-[0.18em] text-brand-navy/55 uppercase">
+              <span className="font-display text-xs tracking-[0.18em] text-brand-navy/55 uppercase">
                 Free registration
               </span>
             </motion.div>
@@ -241,7 +241,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
               <div className="font-display text-xl text-white leading-none font-black tracking-tight">
                 4 Cities
               </div>
-              <div className="mt-1 text-[10px] tracking-[0.18em] text-white/60 uppercase font-display">
+              <div className="mt-1 text-xs tracking-[0.18em] text-white/60 uppercase font-display">
                 Across SE Asia
               </div>
             </motion.div>

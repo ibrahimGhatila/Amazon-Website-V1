@@ -41,10 +41,10 @@ function PastMeetupCard({ meetup, i }: { meetup: PastMeetup; i: number }) {
 
           {/* Date badge — top right */}
           <div className="absolute top-3 right-3 flex flex-col items-center rounded-xl bg-white/95 backdrop-blur-sm px-2.5 py-2 text-brand-navy shadow-lg shadow-black/20">
-            <span className="font-display text-[9px] tracking-[0.2em] text-brand-navy/50 uppercase leading-none">
+            <span className="font-display text-xs tracking-[0.2em] text-brand-navy/50 uppercase leading-none">
               {meetup.monthLabel}
             </span>
-            <span className="font-display text-[10px] tracking-[0.15em] text-brand-navy/70 uppercase leading-none mt-0.5">
+            <span className="font-display text-xs tracking-[0.15em] text-brand-navy/70 uppercase leading-none mt-0.5">
               {meetup.yearLabel}
             </span>
           </div>

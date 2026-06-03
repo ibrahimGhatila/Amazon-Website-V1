@@ -115,7 +115,7 @@ export function ChatWidget() {
               <div className="relative flex items-center justify-between px-5 pt-5 pb-4 border-b border-white/[0.06]">
                 <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_120%_at_90%_-20%,rgba(244,205,29,0.12),transparent)] pointer-events-none" />
                 <div className="relative flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-brand-navy font-bold text-[13px] shadow-lg shadow-brand-yellow/20">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-brand-navy font-bold text-sm shadow-lg shadow-brand-yellow/20">
                     EX
                   </div>
                   <div className="font-bold text-white text-[15px] leading-none tracking-tight">
@@ -158,7 +158,7 @@ export function ChatWidget() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="font-bold text-white text-[15px] leading-tight">Chat on WhatsApp</div>
-                        <div className="text-white/55 text-[12px] mt-1 leading-tight">Fastest reply — usually under an hour</div>
+                        <div className="text-white/55 text-xs mt-1 leading-tight">Fastest reply — usually under an hour</div>
                       </div>
                       <ArrowRight className="h-4 w-4 flex-none text-white/25 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
                     </a>
@@ -173,7 +173,7 @@ export function ChatWidget() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="font-bold text-white text-[15px] leading-tight">Send us a message</div>
-                        <div className="text-white/55 text-[12px] mt-1 leading-tight">We&rsquo;ll reply by email within 24h</div>
+                        <div className="text-white/55 text-xs mt-1 leading-tight">We&rsquo;ll reply by email within 24h</div>
                       </div>
                       <ArrowRight className="h-4 w-4 flex-none text-white/25 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
                     </button>
@@ -186,7 +186,7 @@ export function ChatWidget() {
                     >
                       <div>
                         <div className="font-bold text-brand-navy text-[14px] leading-tight">Apply for Elite</div>
-                        <div className="text-brand-navy/65 text-[11px] mt-0.5 leading-tight">Done-for-you Amazon brand</div>
+                        <div className="text-brand-navy/65 text-xs mt-0.5 leading-tight">Done-for-you Amazon brand</div>
                       </div>
                       <div className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-navy text-brand-yellow group-hover:translate-x-0.5 transition-transform">
                         <ArrowRight className="h-3.5 w-3.5" />
@@ -194,7 +194,7 @@ export function ChatWidget() {
                     </Link>
 
                     {/* Hours footer */}
-                    <div className="mt-4 flex items-center justify-center gap-1.5 text-white/35 text-[11px] font-medium">
+                    <div className="mt-4 flex items-center justify-center gap-1.5 text-white/35 text-xs font-medium">
                       <Clock className="h-3 w-3" />
                       Mon–Fri · 9am–6pm GMT
                     </div>
@@ -247,7 +247,7 @@ export function ChatWidget() {
                         Send message
                         <Send className="h-3.5 w-3.5" />
                       </button>
-                      <p className="text-white/35 text-[11px] text-center pt-1.5 leading-tight">
+                      <p className="text-white/35 text-xs text-center pt-1.5 leading-tight">
                         Opens your email client to {CONTACT_EMAIL}
                       </p>
                     </form>

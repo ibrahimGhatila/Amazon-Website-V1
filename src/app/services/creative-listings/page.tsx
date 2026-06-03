@@ -271,7 +271,7 @@ function CreativeListingsHero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
             >
-              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">
+              <p className="font-display text-xs tracking-[0.22em] text-brand-navy/60">
                 LISTING SCORE
               </p>
               <div className="flex items-baseline gap-1 mt-2">
@@ -300,7 +300,7 @@ function CreativeListingsHero() {
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               className="absolute top-[28%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
             >
-              <p className="font-display text-[10px] tracking-[0.2em] text-white/50 mb-3">
+              <p className="font-display text-xs tracking-[0.2em] text-white/50 mb-3">
                 WHAT WE DELIVER
               </p>
               {[

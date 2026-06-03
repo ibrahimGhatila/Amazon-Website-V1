@@ -258,7 +258,7 @@ export function Nav() {
                           <div className="min-w-0">
                             <div
                               className={cn(
-                                "font-display text-[10px] tracking-[0.22em] uppercase mb-0.5",
+                                "font-display text-xs tracking-[0.22em] uppercase mb-0.5",
                                 featured ? "text-brand-yellow" : "text-brand-yellow/70"
                               )}
                             >
@@ -347,7 +347,7 @@ export function Nav() {
                                       <Icon className="h-4 w-4" strokeWidth={2} />
                                     </div>
                                     <div className="min-w-0">
-                                      <div className="font-display text-[10px] tracking-[0.22em] text-brand-yellow/70 uppercase">
+                                      <div className="font-display text-xs tracking-[0.22em] text-brand-yellow/70 uppercase">
                                         {s.tag}
                                       </div>
                                       <div className="font-bold text-white text-base leading-tight">
@@ -385,7 +385,7 @@ export function Nav() {
                     >
                       <span>{item.label}</span>
                       {item.highlight ? (
-                        <span className="rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-2.5 py-1 font-display text-[10px] tracking-[0.18em] text-brand-yellow uppercase">
+                        <span className="rounded-full bg-brand-yellow/15 border border-brand-yellow/30 px-2.5 py-1 font-display text-xs tracking-[0.18em] text-brand-yellow uppercase">
                           Free
                         </span>
                       ) : (

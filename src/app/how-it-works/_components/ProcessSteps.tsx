@@ -122,7 +122,7 @@ export function ProcessSteps() {
                   {step.short}
                 </p>
 
-                <div className="mt-5 inline-flex items-center gap-2 text-[11px] font-display tracking-[0.22em] text-brand-azure">
+                <div className="mt-5 inline-flex items-center gap-2 text-xs font-display tracking-[0.22em] text-brand-azure">
                   <span className="h-px w-6 bg-brand-azure/50" />
                   {step.timeframe}
                 </div>

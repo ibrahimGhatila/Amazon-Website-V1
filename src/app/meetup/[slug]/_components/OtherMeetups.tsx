@@ -16,7 +16,7 @@ export function OtherMeetups({ meetups }: { meetups: Meetup[] }) {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white border border-brand-navy/10 px-4 py-1.5 font-display text-[13px] tracking-[0.18em] text-brand-navy uppercase">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white border border-brand-navy/10 px-4 py-1.5 font-display text-sm tracking-[0.18em] text-brand-navy uppercase">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-azure" />
               Other cities
             </span>
@@ -59,7 +59,7 @@ export function OtherMeetups({ meetups }: { meetups: Meetup[] }) {
                     className="absolute inset-0 bg-gradient-to-t from-brand-navy/70 to-transparent"
                   />
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                    <span className="font-display text-[9px] tracking-[0.18em] uppercase opacity-90">
+                    <span className="font-display text-xs tracking-[0.18em] uppercase opacity-90">
                       {meetup.monthLabel}
                     </span>
                     <span className="font-black text-xl leading-none tracking-tight drop-shadow-md">

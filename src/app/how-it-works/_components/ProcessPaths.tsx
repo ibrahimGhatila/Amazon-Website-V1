@@ -116,7 +116,7 @@ export function ProcessPaths() {
                 >
                   <div className="relative flex items-start justify-between">
                     <span
-                      className={`inline-flex items-center rounded-full px-3 py-1 font-display text-[11px] tracking-[0.22em] ${styles.tag}`}
+                      className={`inline-flex items-center rounded-full px-3 py-1 font-display text-xs tracking-[0.22em] ${styles.tag}`}
                     >
                       {p.tag}
                     </span>

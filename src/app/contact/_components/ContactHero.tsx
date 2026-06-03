@@ -190,7 +190,7 @@ export function ContactHero() {
                 {["APPLY", "PARTNER", "PRESS"].map((c) => (
                   <div
                     key={c}
-                    className="rounded-lg bg-white/[0.05] border border-white/10 px-2 py-1.5 text-center text-[11px] font-display tracking-widest text-white/70"
+                    className="rounded-lg bg-white/[0.05] border border-white/10 px-2 py-1.5 text-center text-xs font-display tracking-widest text-white/70"
                   >
                     {c}
                   </div>

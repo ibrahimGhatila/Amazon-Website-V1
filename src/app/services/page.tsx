@@ -218,7 +218,7 @@ function ServicesHero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-0 right-0 w-[260px] rounded-3xl p-6 shadow-2xl shadow-brand-yellow/20 bg-gradient-to-br from-brand-yellow to-brand-yellow-dark"
             >
-              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">
+              <p className="font-display text-xs tracking-[0.22em] text-brand-navy/60">
                 ACTIVE CLIENTS
               </p>
               <Counter
@@ -245,7 +245,7 @@ function ServicesHero() {
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               className="absolute top-[26%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
             >
-              <p className="font-display text-[10px] tracking-[0.2em] text-white/50 mb-3">
+              <p className="font-display text-xs tracking-[0.2em] text-white/50 mb-3">
                 OUR SERVICES
               </p>
               {(
@@ -260,7 +260,7 @@ function ServicesHero() {
                     <Icon className="h-3.5 w-3.5 text-brand-yellow" />
                     <span className="text-xs text-white/75">{name}</span>
                   </div>
-                  <span className="text-[10px] font-display text-brand-yellow/60">{tag}</span>
+                  <span className="text-xs font-display text-brand-yellow/60">{tag}</span>
                 </div>
               ))}
             </motion.div>

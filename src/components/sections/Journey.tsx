@@ -119,7 +119,7 @@ export function Journey() {
 
               {/* Milestone badge */}
               <div
-                className={`mt-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-display tracking-[0.15em] border ${
+                className={`mt-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-display tracking-[0.15em] border ${
                   phase.accent === "yellow"
                     ? "border-white/15 bg-white/[0.05] text-white/65"
                     : "border-brand-azure/30 bg-brand-azure/10 text-brand-azure"
@@ -146,7 +146,7 @@ export function Journey() {
               {/* Left: node + line */}
               <div className="flex flex-col items-center">
                 <div
-                  className={`flex h-10 w-10 flex-none items-center justify-center rounded-full border-2 font-display text-[10px] tracking-[0.15em] ${
+                  className={`flex h-10 w-10 flex-none items-center justify-center rounded-full border-2 font-display text-xs tracking-[0.15em] ${
                     phase.accent === "yellow"
                       ? "border-brand-yellow bg-brand-yellow text-brand-navy"
                       : "border-brand-azure bg-brand-azure text-white"
@@ -162,7 +162,7 @@ export function Journey() {
               {/* Right: content */}
               <div className="pb-6 flex-1">
                 <div
-                  className={`font-display text-[10px] tracking-[0.25em] ${
+                  className={`font-display text-xs tracking-[0.25em] ${
                     phase.accent === "yellow" ? "text-white/55" : "text-brand-azure"
                   }`}
                 >
@@ -175,7 +175,7 @@ export function Journey() {
                   {phase.description}
                 </p>
                 <div
-                  className={`mt-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-display tracking-[0.15em] border ${
+                  className={`mt-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-display tracking-[0.15em] border ${
                     phase.accent === "yellow"
                       ? "border-brand-yellow/30 bg-brand-yellow/10 text-brand-yellow"
                       : "border-brand-azure/30 bg-brand-azure/10 text-brand-azure"

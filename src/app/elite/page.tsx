@@ -144,7 +144,7 @@ export function EliteHero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
             >
-              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">YOUR PROFIT SHARE</p>
+              <p className="font-display text-xs tracking-[0.22em] text-brand-navy/60">YOUR PROFIT SHARE</p>
               <p className="font-black text-brand-navy text-6xl tracking-tight mt-3">80%</p>
               {/* Profit bar */}
               <div className="mt-3 flex h-2 w-full overflow-hidden rounded-full">
@@ -162,8 +162,8 @@ export function EliteHero() {
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
-                <span className="font-display text-[10px] tracking-[0.2em] text-white/50">LAUNCH TIMELINE</span>
-                <span className="rounded-full bg-brand-yellow/20 px-2 py-0.5 text-[10px] font-semibold text-brand-yellow">18 MONTHS</span>
+                <span className="font-display text-xs tracking-[0.2em] text-white/50">LAUNCH TIMELINE</span>
+                <span className="rounded-full bg-brand-yellow/20 px-2 py-0.5 text-xs font-semibold text-brand-yellow">18 MONTHS</span>
               </div>
               {/* Launch rows */}
               <div className="flex flex-col gap-3">
@@ -172,7 +172,7 @@ export function EliteHero() {
                     <p className="text-white font-semibold text-sm">Launch 1</p>
                     <p className="text-white/50 text-xs">Home &amp; Kitchen · USA</p>
                   </div>
-                  <span className="flex items-center gap-1 rounded-full bg-green-500/20 px-2 py-0.5 text-[10px] font-semibold text-green-400">
+                  <span className="flex items-center gap-1 rounded-full bg-green-500/20 px-2 py-0.5 text-xs font-semibold text-green-400">
                     <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
                     LIVE
                   </span>
@@ -182,7 +182,7 @@ export function EliteHero() {
                     <p className="text-white/70 text-sm">Launch 2</p>
                     <p className="text-white/40 text-xs">Beauty · USA</p>
                   </div>
-                  <span className="flex items-center gap-1 rounded-full bg-brand-yellow/20 px-2 py-0.5 text-[10px] font-semibold text-brand-yellow">
+                  <span className="flex items-center gap-1 rounded-full bg-brand-yellow/20 px-2 py-0.5 text-xs font-semibold text-brand-yellow">
                     <span className="h-1.5 w-1.5 rounded-full border border-brand-yellow" />
                     MONTH 7
                   </span>
@@ -192,7 +192,7 @@ export function EliteHero() {
                     <p className="text-white/40 text-sm">Launch 3</p>
                     <p className="text-white/30 text-xs">Sports · CA</p>
                   </div>
-                  <span className="flex items-center gap-1 rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold text-white/40">
+                  <span className="flex items-center gap-1 rounded-full bg-white/10 px-2 py-0.5 text-xs font-semibold text-white/40">
                     <span className="h-1.5 w-1.5 rounded-full border border-white/30" />
                     PLANNED
                   </span>
@@ -438,7 +438,7 @@ export function EliteModel() {
             transition={{ duration: 0.6, ease: EASE, delay: 0 }}
             className="rounded-3xl bg-brand-yellow p-6 sm:p-8 text-brand-navy flex flex-col"
           >
-            <div className="font-display text-[11px] tracking-[0.22em] text-brand-navy/50 mb-3">STEP 01</div>
+            <div className="font-display text-xs tracking-[0.22em] text-brand-navy/50 mb-3">STEP 01</div>
             <div className="font-black text-2xl tracking-tight leading-tight">You invest</div>
             <div className="mt-3 text-brand-navy/75 text-sm leading-relaxed">
               Bring your capital from $10K per launch. That&apos;s your only requirement.
@@ -454,7 +454,7 @@ export function EliteModel() {
             transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
             className="rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 sm:p-8 flex flex-col"
           >
-            <div className="font-display text-[11px] tracking-[0.22em] text-white/40 mb-3">STEP 02</div>
+            <div className="font-display text-xs tracking-[0.22em] text-white/40 mb-3">STEP 02</div>
             <div className="font-black text-2xl tracking-tight leading-tight text-white">We build everything</div>
             <div className="mt-4 space-y-2.5">
               {["Product research & validation", "Supplier vetting & sourcing", "Brand, creative & launch", "PPC, scaling & reporting"].map((item) => (
@@ -473,7 +473,7 @@ export function EliteModel() {
             transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
             className="rounded-3xl border border-brand-yellow/25 bg-brand-yellow/10 p-6 sm:p-8 flex flex-col"
           >
-            <div className="font-display text-[11px] tracking-[0.22em] text-brand-yellow/50 mb-3">STEP 03</div>
+            <div className="font-display text-xs tracking-[0.22em] text-brand-yellow/50 mb-3">STEP 03</div>
             <div className="font-black text-2xl tracking-tight leading-tight text-white">You earn 80%</div>
             <div className="mt-3 text-white/70 text-sm leading-relaxed">
               Of every dollar of net profit.

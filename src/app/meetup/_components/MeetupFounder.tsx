@@ -75,7 +75,7 @@ export function MeetupFounder() {
               />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-navy/80 via-brand-navy/30 to-transparent pointer-events-none" />
               <div className="absolute bottom-5 left-6">
-                <div className="font-display text-[11px] tracking-[0.22em] text-white/60 uppercase">
+                <div className="font-display text-xs tracking-[0.22em] text-white/60 uppercase">
                   Live Meetup
                 </div>
                 <div className="mt-1 font-black text-white text-xl tracking-tight">

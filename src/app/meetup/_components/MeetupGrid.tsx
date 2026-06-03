@@ -36,13 +36,13 @@ function MeetupCard({ meetup, i }: { meetup: Meetup; i: number }) {
 
           <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3 py-1.5 border border-white/25">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-display text-[10px] tracking-[0.22em] text-white uppercase">
+            <span className="font-display text-xs tracking-[0.22em] text-white uppercase">
               Free
             </span>
           </div>
 
           <div className="absolute top-4 right-4 flex flex-col items-center rounded-2xl bg-white/95 backdrop-blur-sm px-3 py-2 text-brand-navy shadow-lg shadow-black/20">
-            <span className="font-display text-[10px] tracking-[0.18em] text-brand-navy/55 uppercase">
+            <span className="font-display text-xs tracking-[0.18em] text-brand-navy/55 uppercase">
               {meetup.monthLabel}
             </span>
             <span className="font-black text-2xl leading-none tracking-tight">

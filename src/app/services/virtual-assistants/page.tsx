@@ -167,7 +167,7 @@ function Hero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
             >
-              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">
+              <p className="font-display text-xs tracking-[0.22em] text-brand-navy/60">
                 PLACEMENT TIME
               </p>
               <p className="font-black text-brand-navy text-6xl tracking-tight mt-2 leading-none">
@@ -180,11 +180,11 @@ function Hero() {
                 {["Brief", "Match", "Onboard", "Live"].map((label, i) => (
                   <div key={label} className="flex items-center gap-1.5">
                     <span className="h-2 w-2 rounded-full bg-brand-navy/50 flex-none" />
-                    <span className="text-[9px] text-brand-navy/60 font-medium">
+                    <span className="text-xs text-brand-navy/60 font-medium">
                       {label}
                     </span>
                     {i < 3 && (
-                      <span className="text-[9px] text-brand-navy/35">→</span>
+                      <span className="text-xs text-brand-navy/35">→</span>
                     )}
                   </div>
                 ))}
@@ -203,10 +203,10 @@ function Hero() {
               className="absolute top-[28%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl"
             >
               <div className="flex items-center justify-between mb-3">
-                <span className="font-display text-[10px] tracking-[0.2em] text-white/50">
+                <span className="font-display text-xs tracking-[0.2em] text-white/50">
                   VA SKILL SET
                 </span>
-                <span className="text-brand-yellow font-display text-[10px]">
+                <span className="text-brand-yellow font-display text-xs">
                   TRAINED
                 </span>
               </div>
@@ -223,7 +223,7 @@ function Hero() {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="text-[10px] bg-white/10 border border-white/15 rounded-full px-2.5 py-1 text-white/75"
+                    className="text-xs bg-white/10 border border-white/15 rounded-full px-2.5 py-1 text-white/75"
                   >
                     {skill}
                   </span>

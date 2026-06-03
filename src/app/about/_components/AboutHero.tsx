@@ -186,7 +186,7 @@ export function AboutHero() {
               <div className="font-display text-3xl text-brand-navy leading-none tracking-tight">
                 10+
               </div>
-              <div className="mt-1.5 text-[11px] tracking-[0.18em] text-brand-navy/60 uppercase font-display">
+              <div className="mt-1.5 text-xs tracking-[0.18em] text-brand-navy/60 uppercase font-display">
                 Years building
               </div>
             </motion.div>

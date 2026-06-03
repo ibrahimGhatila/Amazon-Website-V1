@@ -175,7 +175,7 @@ function LaunchHero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-0 right-0 w-[260px] rounded-3xl bg-gradient-to-br from-brand-yellow to-brand-yellow-dark p-6 shadow-2xl shadow-brand-yellow/20"
             >
-              <p className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">
+              <p className="font-display text-xs tracking-[0.22em] text-brand-navy/60">
                 WEEK 8 REVENUE
               </p>
               <Counter
@@ -211,10 +211,10 @@ function LaunchHero() {
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-2">
-                <span className="font-display text-[10px] tracking-[0.2em] text-white/50">
+                <span className="font-display text-xs tracking-[0.2em] text-white/50">
                   BSR TRACKER
                 </span>
-                <span className="text-brand-yellow text-[10px] font-display tracking-[0.15em]">
+                <span className="text-brand-yellow text-xs font-display tracking-[0.15em]">
                   #1,240 NOW
                 </span>
               </div>

@@ -111,8 +111,8 @@ function ApplyHero() {
             <motion.div animate={{ y: [0, -12, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-0 right-0 w-[250px] rounded-3xl bg-gradient-to-br from-brand-yellow to-amber-400 p-6 shadow-2xl shadow-brand-yellow/20">
               <div className="flex items-center justify-between">
-                <div className="font-display text-[10px] tracking-[0.22em] text-brand-navy/60">SPOTS AVAILABLE</div>
-                <span className="flex items-center gap-1 font-display text-[9px] tracking-[0.2em] text-brand-navy/55">
+                <div className="font-display text-xs tracking-[0.22em] text-brand-navy/60">SPOTS AVAILABLE</div>
+                <span className="flex items-center gap-1 font-display text-xs tracking-[0.2em] text-brand-navy/55">
                   <span className="relative flex h-1.5 w-1.5">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-navy/60 opacity-75" />
                     <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand-navy" />
@@ -143,7 +143,7 @@ function ApplyHero() {
                   />
                 ))}
               </div>
-              <div className="mt-2 text-[10px] text-brand-navy/45 tabular-nums">
+              <div className="mt-2 text-xs text-brand-navy/45 tabular-nums">
                 {spots.filled} of {spots.total} spots filled this cycle
               </div>
             </motion.div>
@@ -151,7 +151,7 @@ function ApplyHero() {
             {/* Glass — next steps */}
             <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               className="absolute top-[26%] left-0 w-[300px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/15 p-5 shadow-2xl">
-              <div className="font-display text-[10px] tracking-[0.2em] text-white/50 mb-4">WHAT HAPPENS NEXT</div>
+              <div className="font-display text-xs tracking-[0.2em] text-white/50 mb-4">WHAT HAPPENS NEXT</div>
               {[
                 { step: "01", label: "Submit application", time: "Today", done: false, active: true },
                 { step: "02", label: "Team review", time: "< 24 hours", done: false, active: false },
@@ -159,12 +159,12 @@ function ApplyHero() {
                 { step: "04", label: "Get started", time: "Week 1", done: false, active: false },
               ].map((s) => (
                 <div key={s.step} className="flex items-center gap-3 py-2 border-b border-white/8 last:border-0">
-                  <div className={`flex h-6 w-6 flex-none items-center justify-center rounded-full font-display text-[10px] font-bold
+                  <div className={`flex h-6 w-6 flex-none items-center justify-center rounded-full font-display text-xs font-bold
                     ${s.active ? "bg-brand-yellow text-brand-navy" : "bg-white/10 text-white/40"}`}>
                     {s.step}
                   </div>
                   <div className="flex-1 text-xs text-white/75">{s.label}</div>
-                  <div className="text-[10px] text-white/35">{s.time}</div>
+                  <div className="text-xs text-white/35">{s.time}</div>
                 </div>
               ))}
             </motion.div>
@@ -305,7 +305,7 @@ function ApplicationForm() {
                 <div className="h-7 w-7 rounded-full bg-brand-yellow flex items-center justify-center font-bold text-brand-navy text-xs">AH</div>
                 <div>
                   <div className="text-xs font-semibold text-white">Ahmed H.</div>
-                  <div className="text-[10px] text-white/45">Brand Partner · Dubai</div>
+                  <div className="text-xs text-white/45">Brand Partner · Dubai</div>
                 </div>
               </div>
             </motion.div>

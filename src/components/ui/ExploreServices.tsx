@@ -89,7 +89,7 @@ export function ExploreServices({ current }: Props) {
                       <Icon className="h-5 w-5" strokeWidth={2} />
                     </div>
                     <div>
-                      <div className="font-display text-[11px] tracking-[0.18em] text-brand-navy/50 uppercase mb-0.5">
+                      <div className="font-display text-xs tracking-[0.18em] text-brand-navy/50 uppercase mb-0.5">
                         {s.tag}
                       </div>
                       <div className="font-bold text-sm text-brand-navy leading-tight">

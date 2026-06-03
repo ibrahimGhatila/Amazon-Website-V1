@@ -295,7 +295,7 @@ export function AboutTeam() {
 
                     {/* Overlay content */}
                     <div className="relative h-full p-5 flex flex-col justify-between">
-                      <span className="font-display text-[11px] tracking-[0.22em] text-brand-yellow uppercase">
+                      <span className="font-display text-xs tracking-[0.22em] text-brand-yellow uppercase">
                         {member.role}
                       </span>
                       <div>
@@ -322,7 +322,7 @@ export function AboutTeam() {
                     <div className="relative h-full flex flex-col justify-between p-7">
                       {/* Top: name + role */}
                       <div>
-                        <div className="font-display text-[11px] tracking-[0.22em] text-brand-yellow uppercase mb-2">
+                        <div className="font-display text-xs tracking-[0.22em] text-brand-yellow uppercase mb-2">
                           {member.role}
                         </div>
                         <div className="font-bold text-white text-xl leading-tight">

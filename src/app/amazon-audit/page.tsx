@@ -527,7 +527,7 @@ export default function AmazonAuditPage() {
                     <div className="font-black text-white text-xl leading-none">
                       <Counter to={stat.value} suffix={stat.suffix} />
                     </div>
-                    <div className="text-white/45 text-[11px] mt-0.5 font-medium">{stat.label}</div>
+                    <div className="text-white/45 text-xs mt-0.5 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </motion.div>
@@ -695,7 +695,7 @@ export default function AmazonAuditPage() {
                 >
                   <div className="relative z-10 flex h-[5.25rem] w-[5.25rem] flex-col items-center justify-center rounded-full bg-brand-navy text-brand-yellow mb-5 shadow-xl shadow-brand-navy/20">
                     <Icon className="h-6 w-6" strokeWidth={1.75} />
-                    <span className="font-display text-[10px] tracking-widest text-brand-yellow/60 mt-0.5">{step.num}</span>
+                    <span className="font-display text-xs tracking-widest text-brand-yellow/60 mt-0.5">{step.num}</span>
                   </div>
                   <h3 className="font-black text-brand-navy text-lg mb-2 leading-tight">{step.title}</h3>
                   <p className="text-brand-navy/55 text-sm leading-relaxed">{step.desc}</p>
@@ -720,7 +720,7 @@ export default function AmazonAuditPage() {
                 >
                   <div className="relative z-10 flex h-14 w-14 flex-none flex-col items-center justify-center rounded-full bg-brand-navy text-brand-yellow shadow-lg shadow-brand-navy/20 shrink-0">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
-                    <span className="font-display text-[9px] tracking-widest text-brand-yellow/60 mt-0.5">{step.num}</span>
+                    <span className="font-display text-xs tracking-widest text-brand-yellow/60 mt-0.5">{step.num}</span>
                   </div>
                   <div className="pt-1.5">
                     <h3 className="font-black text-brand-navy text-lg mb-1.5">{step.title}</h3>
