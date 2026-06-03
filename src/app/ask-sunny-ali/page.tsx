@@ -429,7 +429,7 @@ function AskSunnyLeaders() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, ease: EASE, delay: i * 0.12 }}
-                className="relative rounded-3xl border border-brand-navy/10 bg-white p-8 sm:p-10 hover:border-brand-navy/25 hover:shadow-xl hover:shadow-brand-navy/5 transition-all duration-300"
+                className="relative flex flex-col rounded-3xl border border-brand-navy/10 bg-white p-8 sm:p-10 hover:border-brand-navy/25 hover:shadow-xl hover:shadow-brand-navy/5 transition-all duration-300"
               >
                 <div
                   aria-hidden
@@ -442,7 +442,7 @@ function AskSunnyLeaders() {
                   <Quote className="h-5 w-5" strokeWidth={2.5} />
                 </div>
 
-                <blockquote className="mt-4 text-brand-navy/85 text-base sm:text-lg leading-relaxed font-light text-pretty">
+                <blockquote className="mt-4 flex-1 text-brand-navy/85 text-base sm:text-lg leading-relaxed font-light text-pretty">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
 
