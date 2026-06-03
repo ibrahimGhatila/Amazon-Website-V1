@@ -373,7 +373,7 @@ const leaderTestimonials = [
   {
     name: "Rehan Allahwala",
     title: "Founder, Rehan School · Pakistan tech entrepreneur",
-    initials: "RA",
+    photo: "/brand/testimonial-rehan.jpg",
     quote:
       "Sunny Ali doesn't just focus on running e-commerce businesses on various platforms — he is dedicated to revealing fresh income streams and guiding you in the art of wealth creation. Armed with this knowledge, you'll not only chase your life's dreams but also pave a path to true prosperity.",
     accent: "azure",
@@ -381,7 +381,7 @@ const leaderTestimonials = [
   {
     name: "Dennis Yu",
     title: "CEO, BlitzMetrics · Former Yahoo Search engineer",
-    initials: "DY",
+    photo: "/brand/testimonial-dennis.jpg",
     quote:
       "Founder of Extreme Commerce Sunny Ali is the God Father of E-Commerce who enhanced the $200 million economic impact in Pakistan.",
     accent: "yellow",
@@ -448,13 +448,17 @@ function AskSunnyLeaders() {
 
                 <figcaption className="mt-7 flex items-center gap-4 pt-6 border-t border-brand-navy/10">
                   <div
-                    className={`flex h-12 w-12 flex-none items-center justify-center rounded-full font-display font-black text-sm tracking-tight ${
-                      isYellow
-                        ? "bg-brand-yellow text-brand-navy"
-                        : "bg-brand-navy text-brand-yellow"
+                    className={`relative h-14 w-14 flex-none rounded-full overflow-hidden ring-2 ring-offset-2 ring-offset-white ${
+                      isYellow ? "ring-brand-yellow" : "ring-brand-navy/15"
                     }`}
                   >
-                    {t.initials}
+                    <Image
+                      src={t.photo}
+                      alt={t.name}
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
                   </div>
                   <div className="min-w-0">
                     <div className="font-black text-brand-navy text-base sm:text-lg tracking-tight">
