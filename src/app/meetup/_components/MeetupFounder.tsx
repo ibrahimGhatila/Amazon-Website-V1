@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -11,6 +12,20 @@ const bullets = [
   "Early educator in the Amazon Private Label business model.",
   "Empowered 1.4M+ individuals worldwide to start and grow online businesses.",
   "Known for his practical, no-nonsense approach to ecommerce and entrepreneurship.",
+];
+
+const collageImages = [
+  { src: "/brand/683456307_1404886618342525_7555992081329593247_n.jpg", alt: "Sunny Ali at meetup" },
+  { src: "/brand/297058953_5260252007424911_4778814269138912055_n.jpg", alt: "Extreme Commerce community meetup" },
+  { src: "/brand/79496533_2533983786718427_1372615313794793472_n.jpg", alt: "Meetup crowd" },
+  { src: "/brand/347091808_782933143416028_1413365909313538873_n.jpg", alt: "Sunny Ali with community members" },
+];
+
+const stripImages = [
+  { src: "/brand/IF-ROW-SunnyAli-22-scaled.jpg", alt: "Sunny Ali on stage" },
+  { src: "/brand/464525453_8538885066228239_2017629518444573891_n.jpg", alt: "Meetup event" },
+  { src: "/brand/489489648_9507927632657306_5400665798598451494_n.jpg", alt: "Community gathering" },
+  { src: "/brand/meetup1.jpeg", alt: "Extreme Commerce meetup" },
 ];
 
 export function MeetupFounder() {
@@ -55,34 +70,64 @@ export function MeetupFounder() {
             ))}
           </motion.ul>
 
+          {/* 2×2 photo collage */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="relative"
+            className="grid grid-cols-2 gap-3"
           >
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-azure/15 via-brand-azure/8 to-brand-navy/10 blur-xl" />
-
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] border-4 border-white shadow-2xl shadow-brand-navy/20 rotate-[-1.5deg]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://www.extremecommerce.com/wp-content/uploads/2026/03/meetup1.jpeg"
-                alt="Sunny Ali hosting a large Extreme Commerce meetup"
-                className="w-full h-full object-cover object-top"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-navy/80 via-brand-navy/30 to-transparent pointer-events-none" />
-              <div className="absolute bottom-5 left-6">
-                <div className="font-display text-xs tracking-[0.22em] text-white/60 uppercase">
-                  Live Meetup
-                </div>
-                <div className="mt-1 font-black text-white text-xl tracking-tight">
-                  Sunny Ali
-                </div>
-              </div>
-            </div>
+            {collageImages.map((img, i) => (
+              <motion.div
+                key={img.src}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: EASE, delay: i * 0.07 }}
+                className={`relative overflow-hidden rounded-2xl shadow-lg ${
+                  i === 0 ? "aspect-[4/3]" : i === 3 ? "aspect-[4/3]" : "aspect-square"
+                }`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </motion.div>
+            ))}
           </motion.div>
         </div>
+
+        {/* Full-width photo strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
+          className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3"
+        >
+          {stripImages.map((img, i) => (
+            <motion.div
+              key={img.src}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, ease: EASE, delay: i * 0.07 }}
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 640px) 50vw, 25vw"
+                className="object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
