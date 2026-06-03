@@ -41,14 +41,14 @@ export function Founder() {
               </div>
 
               {/* Sunny Ali portrait */}
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
+              <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
                 <Image
                   src="/brand/SA-1-(2).png"
                   alt="Sunny Ali, Founder & CEO of Extreme Commerce"
                   width={520}
                   height={780}
                   priority
-                  className="h-[58%] w-auto object-contain object-bottom select-none translate-x-16"
+                  className="h-[78%] w-auto object-contain object-bottom select-none translate-x-16"
                 />
               </div>
 
