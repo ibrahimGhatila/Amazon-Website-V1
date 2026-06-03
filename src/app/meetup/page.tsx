@@ -4,6 +4,7 @@ import { PageCTA } from "@/components/sections/PageCTA";
 import { MeetupHero } from "./_components/MeetupHero";
 import { MeetupGrid } from "./_components/MeetupGrid";
 import { MeetupFounder } from "./_components/MeetupFounder";
+import { MeetupGallery } from "./_components/MeetupGallery";
 import { MeetupBanner } from "./_components/MeetupBanner";
 import { MeetupExpect } from "./_components/MeetupExpect";
 import { PastMeetups } from "./_components/PastMeetups";
@@ -18,6 +19,7 @@ export default function MeetupPage() {
         <MeetupGrid meetups={meetups} />
         <PastMeetups />
         <MeetupFounder />
+        <MeetupGallery />
         <MeetupBanner />
         <MeetupExpect />
         <PageCTA

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -65,13 +64,12 @@ export function MeetupFounder() {
           >
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-azure/15 via-brand-azure/8 to-brand-navy/10 blur-xl" />
 
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-navy-600 via-brand-navy to-brand-navy-700 border-4 border-white shadow-2xl shadow-brand-navy/20 rotate-[-1.5deg]">
-              <Image
-                src="/brand/SA-1-(7).png"
-                alt="Sunny Ali hosting an Extreme Commerce meetup"
-                fill
-                priority
-                className="object-cover object-top"
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] border-4 border-white shadow-2xl shadow-brand-navy/20 rotate-[-1.5deg]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://www.extremecommerce.com/wp-content/uploads/2026/03/meetup1.jpeg"
+                alt="Sunny Ali hosting a large Extreme Commerce meetup"
+                className="w-full h-full object-cover object-top"
               />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-navy/80 via-brand-navy/30 to-transparent pointer-events-none" />
               <div className="absolute bottom-5 left-6">
