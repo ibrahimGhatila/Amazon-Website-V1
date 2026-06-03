@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
-import { Check, X, Smartphone, Clock, CalendarDays, MessageCircle, Target } from "lucide-react";
+import { Check, X, Smartphone, Clock, CalendarDays, Target, DollarSign } from "lucide-react";
 import { ExploreServices } from "@/components/ui/ExploreServices";
 import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
@@ -186,10 +186,10 @@ function AskSunnyHero() {
 // ─── What To Expect ───────────────────────────────────────────────────────────
 
 const sessionItems = [
-  { icon: Clock, label: "60-minute strategy session" },
-  { icon: CalendarDays, label: "Flexible scheduling" },
-  { icon: MessageCircle, label: "WhatsApp follow-up access" },
-  { icon: Target, label: "Product-specific feedback" },
+  { icon: Clock, label: "20 minutes", sub: "Reserve up to 20 minutes for one to one zoom video session." },
+  { icon: CalendarDays, label: "Instant Schedule", sub: "You'll be able to pick a time." },
+  { icon: Target, label: "Achieve your business goals", sub: "Ideal for startup founders, entrepreneurs, and business owners." },
+  { icon: DollarSign, label: "Pricing", sub: "Just $130 for direct guidance from an industry leader." },
 ];
 
 function AskSunnyExpect() {
@@ -230,27 +230,19 @@ function AskSunnyExpect() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, ease: EASE, delay: i * 0.08 }}
-                    className="flex items-center gap-4"
+                    className="flex items-start gap-4"
                   >
-                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-brand-navy/5 border border-brand-navy/10">
+                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-brand-navy/5 border border-brand-navy/10 mt-0.5">
                       <Icon className="h-4 w-4 text-brand-azure" />
                     </span>
-                    <span className="font-medium text-brand-navy text-base">{item.label}</span>
+                    <div>
+                      <div className="font-bold text-brand-navy text-base">{item.label}</div>
+                      <div className="text-brand-navy/60 text-sm leading-snug mt-0.5">{item.sub}</div>
+                    </div>
                   </motion.li>
                 );
               })}
             </ul>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: EASE, delay: 0.35 }}
-              className="mb-8"
-            >
-              <div className="font-display font-black text-brand-navy leading-none text-[72px] sm:text-[96px]">$130</div>
-              <div className="text-brand-navy/50 text-sm mt-2 tracking-widest uppercase font-display">per session</div>
-            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
