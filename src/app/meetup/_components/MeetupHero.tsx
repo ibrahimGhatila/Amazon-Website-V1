@@ -195,20 +195,6 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
               </div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 1 }}
-              className="hidden sm:flex absolute -left-5 bottom-20 items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-2xl shadow-black/40"
-            >
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 font-black text-base">
-                $0
-              </span>
-              <div>
-                <div className="font-bold text-brand-navy text-sm leading-none">Free Registration</div>
-                <div className="text-brand-navy/50 text-xs mt-0.5">No cost to attend</div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </motion.div>
