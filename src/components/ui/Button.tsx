@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import type { ComponentPropsWithoutRef, ReactNode, MouseEventHandler } from "react";
 
 type Variant = "primary" | "secondary" | "ghost" | "outline";
-type Size = "sm" | "md" | "lg";
+type Size = "sm" | "md" | "lg" | "xl";
 
 const base =
   "group relative inline-flex items-center justify-center gap-2 font-semibold tracking-tight rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-yellow disabled:opacity-50 disabled:pointer-events-none";
@@ -24,6 +24,7 @@ const sizes: Record<Size, string> = {
   sm: "px-4 py-2 text-sm",
   md: "px-6 py-3 text-[15px]",
   lg: "px-8 py-4 text-base",
+  xl: "px-10 py-5 text-lg",
 };
 
 type ButtonOwnProps = {

@@ -246,12 +246,10 @@ function AskSunnyExpect() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.35 }}
-              className="inline-flex items-center gap-4 rounded-2xl border border-brand-navy/10 bg-brand-navy/[0.03] px-6 py-4 mb-8"
+              className="mb-8"
             >
-              <div>
-                <div className="font-display text-3xl font-black text-brand-navy leading-none">$130</div>
-                <div className="text-brand-navy/50 text-xs mt-1 tracking-wide uppercase font-display">per session</div>
-              </div>
+              <div className="font-display font-black text-brand-navy leading-none text-[72px] sm:text-[96px]">$130</div>
+              <div className="text-brand-navy/50 text-sm mt-2 tracking-widest uppercase font-display">per session</div>
             </motion.div>
 
             <motion.div
@@ -260,7 +258,7 @@ function AskSunnyExpect() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.45 }}
             >
-              <Button href="#apply" size="lg" variant="primary" arrow>Book a session</Button>
+              <Button href="#apply" size="xl" variant="primary" arrow>Book a session</Button>
             </motion.div>
           </div>
 
