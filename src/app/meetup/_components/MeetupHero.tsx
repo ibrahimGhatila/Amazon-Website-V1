@@ -167,29 +167,7 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
                 className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-brand-navy/60"
               />
 
-              <div className="relative h-full p-6 sm:p-7 flex flex-col justify-between">
-                <div className="flex items-start justify-between">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/15 px-3 py-1.5">
-                    <span className="relative flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-                    </span>
-                    <span className="font-display text-xs tracking-[0.22em] text-white/85 uppercase">
-                      Next up
-                    </span>
-                  </div>
-
-                  <div className="flex flex-col items-center rounded-2xl bg-white/95 backdrop-blur-sm px-3.5 py-2.5 text-brand-navy shadow-lg shadow-black/30">
-                    <span className="font-display text-xs tracking-[0.18em] text-brand-navy/55 uppercase">
-                      {featured.monthLabel}
-                    </span>
-                    <span className="font-black text-3xl leading-none tracking-tight">
-                      {featured.dayNumber}
-                    </span>
-                  </div>
-                </div>
-
-                <div>
+              <div className="relative h-full p-6 sm:p-7 flex flex-col justify-end">
                   <div className="font-display text-[15px] sm:text-[17px] tracking-[0.08em] text-white/65 uppercase">
                     {featured.country}
                   </div>
@@ -209,12 +187,11 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
 
                   <Link
                     href={`/meetup/${featured.slug}`}
-                    className="group mt-4 inline-flex items-center gap-2 rounded-full bg-brand-yellow px-4 py-2 font-display text-xs tracking-[0.16em] text-brand-navy uppercase font-bold hover:bg-white transition-colors"
+                    className="group mt-4 inline-flex items-center gap-2 rounded-full bg-brand-yellow px-5 py-2.5 font-semibold text-sm text-brand-navy hover:bg-white transition-colors"
                   >
                     Register
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </Link>
-                </div>
               </div>
             </div>
 
@@ -222,27 +199,14 @@ export function MeetupHero({ featured }: { featured: Meetup }) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, ease: EASE, delay: 1 }}
-              className="hidden sm:flex absolute -left-5 bottom-20 items-center gap-2.5 rounded-2xl bg-white px-3.5 py-2.5 shadow-2xl shadow-black/40 rotate-[-3deg]"
+              className="hidden sm:flex absolute -left-5 bottom-20 items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-2xl shadow-black/40"
             >
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-rose-500/15 text-rose-600 font-display text-xs font-bold">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 font-black text-base">
                 $0
               </span>
-              <span className="font-display text-xs tracking-[0.18em] text-brand-navy/55 uppercase">
-                Free registration
-              </span>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 1.15 }}
-              className="hidden sm:block absolute -right-5 top-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 px-4 py-3 shadow-xl rotate-[4deg]"
-            >
-              <div className="font-display text-xl text-white leading-none font-black tracking-tight">
-                4 Cities
-              </div>
-              <div className="mt-1 text-xs tracking-[0.18em] text-white/60 uppercase font-display">
-                Across SE Asia
+              <div>
+                <div className="font-bold text-brand-navy text-sm leading-none">Free Registration</div>
+                <div className="text-brand-navy/50 text-xs mt-0.5">No cost to attend</div>
               </div>
             </motion.div>
           </motion.div>
