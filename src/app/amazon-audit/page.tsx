@@ -441,6 +441,79 @@ function AuditForm({ className }: { className?: string }) {
 }
 
 /* ─── PAGE ─── */
+/* ─── FAQ ─── */
+const AUDIT_FAQS = [
+  { q: "Is the audit completely free?", a: "Yes, qualified Amazon sellers will receive a free audit from our team." },
+  { q: "How long does the review process take?", a: "Most submissions are reviewed within a few business days." },
+  { q: "Will I receive feedback if I do not qualify?", a: "Qualified accounts receive detailed follow-up." },
+  { q: "Is my business information confidential?", a: "Yes. Your information will remain private and secure." },
+  { q: "Can new Amazon sellers apply?", a: "Yes, but audits are prioritized for sellers meeting qualification criteria." },
+  { q: "What kind of businesses can apply?", a: "Amazon Private Label brands." },
+];
+
+function AuditFAQ() {
+  const [open, setOpen] = useState<number | null>(0);
+
+  return (
+    <section className="relative bg-brand-navy/[0.02] py-20 sm:py-24">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: EASE }}
+          className="text-center font-black tracking-tight text-brand-navy text-3xl sm:text-4xl lg:text-[44px] leading-tight mb-12"
+        >
+          Frequently Asked Questions
+        </motion.h2>
+
+        <div className="space-y-3">
+          {AUDIT_FAQS.map((item, i) => {
+            const isOpen = open === i;
+            return (
+              <motion.div
+                key={item.q}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, ease: EASE, delay: i * 0.04 }}
+                className="rounded-2xl border border-brand-navy/10 bg-white shadow-sm overflow-hidden"
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="w-full flex items-center justify-between gap-4 px-6 sm:px-7 py-5 text-left"
+                  aria-expanded={isOpen}
+                >
+                  <span className="font-bold text-brand-navy text-base sm:text-lg">{item.q}</span>
+                  <ChevronDown
+                    className={cn(
+                      "h-5 w-5 flex-none text-brand-navy/40 transition-transform duration-300",
+                      isOpen && "rotate-180",
+                    )}
+                  />
+                </button>
+                <div
+                  className={cn(
+                    "grid transition-all duration-300 ease-out",
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <p className="px-6 sm:px-7 pb-6 text-brand-navy/70 text-base leading-relaxed">
+                      {item.a}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function AmazonAuditPage() {
   return (
     <>
@@ -476,8 +549,8 @@ export default function AmazonAuditPage() {
                 transition={{ duration: 0.65, ease: EASE, delay: 0.05 }}
                 className="font-black tracking-tight leading-[0.95] text-[26px] sm:text-[34px] lg:text-[44px] xl:text-[52px] text-white"
               >
-                Your Amazon Store Is Leaking Revenue.{" "}
-                <span className="text-brand-yellow">We'll Find Where.</span>
+                Let&rsquo;s Put Your Amazon Store{" "}
+                <span className="text-brand-yellow">on Steroids.</span>
               </motion.h1>
 
               <motion.p
@@ -909,6 +982,9 @@ export default function AmazonAuditPage() {
           </div>
         </div>
       </section>
+
+      {/* ── FAQ ── */}
+      <AuditFAQ />
 
       {/* ── Explore other services ── */}
       <ExploreServices current="amazon-audit" />
