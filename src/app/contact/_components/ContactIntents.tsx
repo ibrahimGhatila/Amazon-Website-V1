@@ -22,8 +22,8 @@ const intents = [
     tag: "B2B",
     title: "Partnerships",
     body: "Brand collabs, institutional programmes, co-marketing, supplier and platform partnerships. Routed straight to leadership.",
-    href: "mailto:partners@extremecommerce.com",
-    cta: "Email partners@",
+    href: "mailto:info@extremecommerce.com",
+    cta: "Email info@",
     accent: "azure",
   },
   {
@@ -31,8 +31,8 @@ const intents = [
     tag: "MEDIA",
     title: "Press & speaking",
     body: "Interviews, panels, podcasts, and conference invites. Sunny does ~2 of these a month — get in early.",
-    href: "mailto:press@extremecommerce.com",
-    cta: "Email press@",
+    href: "mailto:info@extremecommerce.com",
+    cta: "Email info@",
     accent: "azure",
   },
   {

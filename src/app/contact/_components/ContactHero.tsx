@@ -180,7 +180,7 @@ export function ContactHero() {
               <div className="mt-3 flex items-baseline gap-2">
                 <Mail className="h-5 w-5 text-brand-yellow" />
                 <span className="font-display text-xl text-white tracking-tight leading-none">
-                  hello@extremecommerce.com
+                  info@extremecommerce.com
                 </span>
               </div>
               <div className="mt-3 text-white/60 text-sm leading-relaxed">

@@ -18,15 +18,15 @@ const faqs = [
   },
   {
     q: "Do you take cold-call partnership pitches?",
-    a: "We read everything sent to partners@. The ones that get a response open with a clear ask, what you bring, and one paragraph on commercial terms. Decks are fine. Generic outreach gets archived.",
+    a: "We read everything sent to info@. The ones that get a response open with a clear ask, what you bring, and one paragraph on commercial terms. Decks are fine. Generic outreach gets archived.",
   },
   {
     q: "Are you hiring?",
-    a: "Always — for senior operators, designers, PPC analysts, and engineers. We don't list every role publicly. Email careers@extremecommerce.com with a one-line summary and your portfolio or résumé.",
+    a: "Always — for senior operators, designers, PPC analysts, and engineers. We don't list every role publicly. Email info@extremecommerce.com with a one-line summary and your portfolio or résumé.",
   },
   {
     q: "I'm a journalist on deadline. Who do I reach?",
-    a: "press@extremecommerce.com — flag the deadline in the subject line and we'll route to Sunny or our comms lead within hours.",
+    a: "info@extremecommerce.com — flag the deadline in the subject line and we'll route to Sunny or our comms lead within hours.",
   },
 ];
 

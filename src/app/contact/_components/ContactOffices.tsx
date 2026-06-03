@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
+import { MapPin, Mail, ArrowUpRight } from "lucide-react";
 import {
   LinkedInIcon,
   InstagramIcon,
@@ -15,25 +15,10 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 const offices = [
   {
-    city: "Lahore",
+    city: "Stafford, TX",
     role: "HQ",
-    address: "Plaza 21, MM Alam Road,\nGulberg III, Lahore 54660",
-    phone: "+92 42 0000 0000",
-    email: "lahore@extremecommerce.com",
-  },
-  {
-    city: "Karachi",
-    role: "South operations",
-    address: "Office 4B, Khayaban-e-Shahbaz,\nDHA Phase VI, Karachi 75500",
-    phone: "+92 21 0000 0000",
-    email: "karachi@extremecommerce.com",
-  },
-  {
-    city: "London",
-    role: "UK liaison",
-    address: "Mappin House, 4 Winsley Street,\nLondon W1W 8HF, United Kingdom",
-    phone: "+44 20 0000 0000",
-    email: "uk@extremecommerce.com",
+    address: "13000 Murphy Road, STE 112,\nStafford, TX 77477, USA",
+    email: "info@extremecommerce.com",
   },
 ];
 
@@ -76,14 +61,14 @@ export function ContactOffices() {
           eyebrow="WHERE WE ARE"
           title={
             <>
-              Three offices.{" "}
+              Our office.{" "}
               <span className="text-brand-azure">One global team.</span>
             </>
           }
           subtitle="Drop by, send a courier, or follow along online — all the ways to find us."
         />
 
-        <div className="mt-16 grid lg:grid-cols-3 gap-5">
+        <div className="mt-16 grid lg:grid-cols-1 max-w-2xl mx-auto gap-5">
           {offices.map((o, i) => (
             <motion.div
               key={o.city}
@@ -111,13 +96,6 @@ export function ContactOffices() {
               </p>
 
               <div className="mt-6 space-y-2 text-sm">
-                <a
-                  href={`tel:${o.phone.replace(/\s/g, "")}`}
-                  className="flex items-center gap-2 text-brand-navy/75 hover:text-brand-azure transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>{o.phone}</span>
-                </a>
                 <a
                   href={`mailto:${o.email}`}
                   className="flex items-center gap-2 text-brand-navy/75 hover:text-brand-azure transition-colors"
