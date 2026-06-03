@@ -831,6 +831,85 @@ export default function AmazonAuditPage() {
         </div>
       </section>
 
+      {/* ── Who Should Apply + Qualification Criteria ── */}
+      <section className="relative bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-6">
+            {/* Left: Who Should Apply */}
+            <motion.div
+              initial={{ opacity: 0, x: -24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, ease: EASE }}
+              className="rounded-3xl border border-brand-navy/10 bg-white p-8 sm:p-10 shadow-sm"
+            >
+              <h2 className="font-black text-brand-navy text-2xl sm:text-3xl tracking-tight mb-8">
+                Who Should Apply?
+              </h2>
+              <ul className="space-y-5">
+                {[
+                  { icon: Package, text: "Amazon Private Label Sellers" },
+                  { icon: Users, text: "Brand Owners" },
+                  { icon: AlertTriangle, text: "Sellers struggling with sales or profitability" },
+                  { icon: Zap, text: "Sellers looking to scale faster" },
+                  { icon: Shield, text: "Established businesses seeking expert feedback" },
+                ].map(({ icon: Icon, text }) => (
+                  <li key={text} className="flex items-center gap-4">
+                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-xl border border-brand-navy/10 bg-brand-navy/[0.03] text-brand-navy/60">
+                      <Icon className="h-5 w-5" strokeWidth={1.5} />
+                    </span>
+                    <span className="text-brand-navy/85 text-base font-medium">{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Right: Qualification Criteria */}
+            <motion.div
+              initial={{ opacity: 0, x: 24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+              className="rounded-3xl bg-brand-navy p-8 sm:p-10 flex flex-col"
+            >
+              <h2 className="font-black text-white text-2xl sm:text-3xl tracking-tight">
+                Qualification Criteria
+              </h2>
+              <p className="mt-2 text-white/60 text-base italic">Priority review for accounts with:</p>
+
+              <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-7">
+                {[
+                  { value: "500+", label: "REVIEWS" },
+                  { value: "1500+", label: "MONTH AVG ORDERS" },
+                  { value: "2+ Years", label: "LISTING HISTORY" },
+                  { value: "Profit", label: "CONSISTENCY" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <div className="font-black text-brand-yellow text-3xl sm:text-4xl leading-none tracking-tight">
+                      {stat.value}
+                    </div>
+                    <div className="mt-2 font-display text-xs tracking-[0.2em] text-white/60 uppercase">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <blockquote className="mt-8 rounded-2xl border border-white/10 bg-white/[0.05] p-5 text-white/75 text-sm leading-relaxed italic flex-1">
+                &ldquo;You can still apply even if your business does not meet these benchmarks. Our team manually reviews selected applications as well.&rdquo;
+              </blockquote>
+
+              <Link
+                href="#request-audit"
+                className="mt-6 flex items-center justify-center rounded-2xl bg-brand-yellow px-6 py-4 font-bold text-brand-navy text-base hover:bg-brand-yellow-light transition-colors"
+              >
+                Get My Free Audit
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Explore other services ── */}
       <ExploreServices current="amazon-audit" />
 
