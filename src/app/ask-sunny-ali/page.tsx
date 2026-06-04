@@ -571,13 +571,13 @@ function AskSunnyFit() {
 // ─── Voices of Satisfaction ───────────────────────────────────────────────────
 
 const communityVoices = [
-  "https://ec.com.pk/assets/img/asa-voice9.jpeg",
-  "https://ec.com.pk/assets/img/asa-voice10.jpeg",
-  "https://ec.com.pk/assets/img/asa-voice11.jpeg",
-  "https://ec.com.pk/assets/img/asa-voice12.jpeg",
-  "https://ec.com.pk/assets/img/asa-voice5.jpeg",
-  "https://ec.com.pk/assets/img/asa-voice1.jpeg",
-  "https://ec.com.pk/assets/img/asa-voice3.jpeg",
+  "/brand/asa-voice9.jpeg",
+  "/brand/asa-voice10.jpeg",
+  "/brand/asa-voice11.jpeg",
+  "/brand/asa-voice12.jpeg",
+  "/brand/asa-voice5.jpeg",
+  "/brand/asa-voice1.jpeg",
+  "/brand/asa-voice3.jpeg",
 ];
 
 function AskSunnyVoices() {
