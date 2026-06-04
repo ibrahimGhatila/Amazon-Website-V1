@@ -111,24 +111,6 @@ export function EliteHero() {
               </Button>
             </motion.div>
 
-            {/* Three quick facts */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.1 }}
-              className="mt-8 grid grid-cols-3 max-w-lg gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10"
-            >
-              {[
-                { k: "3", v: "Launches" },
-                { k: "80%", v: "Your share" },
-                { k: "18mo", v: "Full cycle" },
-              ].map((item) => (
-                <div key={item.k} className="bg-brand-navy/60 backdrop-blur-sm py-5 px-4 text-center">
-                  <div className="font-display text-3xl text-brand-yellow leading-none">{item.k}</div>
-                  <div className="text-sm text-white/55 mt-1.5 font-medium">{item.v}</div>
-                </div>
-              ))}
-            </motion.div>
           </div>
 
           {/* Right column — floating card visual composition */}
@@ -222,7 +204,7 @@ export function EliteHero() {
                 suffix="K"
                 className="font-black text-white text-4xl mt-2 block"
               />
-              <p className="text-white/60 text-xs mt-1">Across 3 product launches</p>
+              <p className="text-white/60 text-xs mt-1">Total capital deployed</p>
             </motion.div>
 
             {/* Decorative orbit ring */}
