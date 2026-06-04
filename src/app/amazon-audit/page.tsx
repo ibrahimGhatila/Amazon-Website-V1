@@ -182,7 +182,9 @@ function AuditForm({ className }: { className?: string }) {
     listingAge: "",
     reviews: "",
     monthlyOrders: "",
+    monthlyStatus: "profit" as "profit" | "loss",
     monthlyProfit: "",
+    notes: "",
   });
   const [state, setState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<Partial<Record<keyof typeof form, string>>>({});
@@ -257,7 +259,7 @@ function AuditForm({ className }: { className?: string }) {
       {/* Form header */}
       <div>
         <h3 className="font-black text-white text-lg sm:text-xl leading-tight">
-          Free Amazon Listing Audit
+          Fill in the details below to get your comprehensive Amazon audit.
         </h3>
       </div>
 
@@ -338,6 +340,7 @@ function AuditForm({ className }: { className?: string }) {
           value={form.productLink}
           onChange={(e) => setForm({ ...form, productLink: e.target.value })}
           placeholder="Product link"
+          type="url"
           className={cn(
             "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
             errors.productLink ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
@@ -349,14 +352,14 @@ function AuditForm({ className }: { className?: string }) {
       <div className="grid sm:grid-cols-2 gap-3">
         <div>
           <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
-            Listing age (months) <span className="text-brand-yellow">*</span>
+            Age of listing (in months) <span className="text-brand-yellow">*</span>
           </label>
           <input
             type="number"
             min="0"
             value={form.listingAge}
             onChange={(e) => setForm({ ...form, listingAge: e.target.value })}
-            placeholder="e.g. 6"
+            placeholder="Age of listing (in months)"
             className={cn(
               "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.listingAge ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
@@ -372,7 +375,7 @@ function AuditForm({ className }: { className?: string }) {
             min="0"
             value={form.reviews}
             onChange={(e) => setForm({ ...form, reviews: e.target.value })}
-            placeholder="e.g. 120"
+            placeholder="Number of Reviews"
             className={cn(
               "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.reviews ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
@@ -385,14 +388,14 @@ function AuditForm({ className }: { className?: string }) {
       <div className="grid sm:grid-cols-2 gap-3">
         <div>
           <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
-            Monthly Orders <span className="text-brand-yellow">*</span>
+            Monthly Average Orders <span className="text-brand-yellow">*</span>
           </label>
           <input
             type="number"
             min="0"
             value={form.monthlyOrders}
             onChange={(e) => setForm({ ...form, monthlyOrders: e.target.value })}
-            placeholder="Monthly orders"
+            placeholder="Monthly Average Orders"
             className={cn(
               "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.monthlyOrders ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
@@ -406,13 +409,55 @@ function AuditForm({ className }: { className?: string }) {
           <input
             value={form.monthlyProfit}
             onChange={(e) => setForm({ ...form, monthlyProfit: e.target.value })}
-            placeholder="Monthly profit"
+            placeholder="Monthly Profit"
             className={cn(
               "w-full rounded-lg bg-white/5 border px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-yellow/50 transition",
               errors.monthlyProfit ? "border-rose-500/70" : "border-white/10 focus:border-brand-yellow/40"
             )}
           />
         </div>
+      </div>
+
+      {/* Monthly Profit / Loss radio */}
+      <div>
+        <label className="block text-white/60 text-xs font-medium mb-1.5 tracking-wide">
+          Monthly <span className="text-brand-yellow">*</span>
+        </label>
+        <div className="flex items-center gap-5">
+          {(["profit", "loss"] as const).map((opt) => (
+            <label
+              key={opt}
+              className="inline-flex items-center gap-2 cursor-pointer group"
+            >
+              <input
+                type="radio"
+                name="monthlyStatus"
+                value={opt}
+                checked={form.monthlyStatus === opt}
+                onChange={() => setForm({ ...form, monthlyStatus: opt })}
+                className="peer sr-only"
+              />
+              <span className="flex h-4 w-4 items-center justify-center rounded-full border border-white/30 peer-checked:border-brand-yellow transition">
+                <span className="h-2 w-2 rounded-full bg-brand-yellow scale-0 peer-checked:scale-100 transition-transform" />
+              </span>
+              <span className="text-sm text-white/85 capitalize group-hover:text-white">{opt}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Notes */}
+      <div>
+        <label className="block text-white/60 text-xs font-medium mb-1 tracking-wide">
+          Notes
+        </label>
+        <textarea
+          value={form.notes}
+          onChange={(e) => setForm({ ...form, notes: e.target.value })}
+          placeholder="Share additional details about your request..."
+          rows={4}
+          className="w-full rounded-lg bg-white/5 border border-white/10 focus:border-brand-yellow/40 focus:ring-2 focus:ring-brand-yellow/50 px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none transition resize-y"
+        />
       </div>
 
       {/* Submit */}
@@ -432,7 +477,7 @@ function AuditForm({ className }: { className?: string }) {
         ) : (
           <>
             <Send className="h-4 w-4" />
-            Get My Free Audit
+            Submit
           </>
         )}
       </button>
