@@ -568,6 +568,85 @@ function AskSunnyFit() {
   );
 }
 
+// ─── Voices of Satisfaction ───────────────────────────────────────────────────
+
+const communityVoices = [
+  "https://ec.com.pk/assets/img/asa-voice9.jpeg",
+  "https://ec.com.pk/assets/img/asa-voice10.jpeg",
+  "https://ec.com.pk/assets/img/asa-voice11.jpeg",
+  "https://ec.com.pk/assets/img/asa-voice12.jpeg",
+  "https://ec.com.pk/assets/img/asa-voice5.jpeg",
+  "https://ec.com.pk/assets/img/asa-voice1.jpeg",
+  "https://ec.com.pk/assets/img/asa-voice3.jpeg",
+];
+
+function AskSunnyVoices() {
+  return (
+    <section className="relative bg-brand-navy/[0.02] py-20 sm:py-28 border-y border-brand-navy/5 overflow-hidden">
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(244,205,29,0.06),transparent)]"
+      />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="text-center mb-14">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: EASE }}
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-brand-navy/5 border border-brand-navy/10 font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-brand-navy"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
+            COMMUNITY
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: EASE, delay: 0.08 }}
+            className="mt-5 font-black tracking-tight text-brand-navy text-3xl sm:text-4xl lg:text-[46px] leading-[1.05] text-balance"
+          >
+            Voices of{" "}
+            <span className="text-brand-azure">Satisfaction.</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: EASE, delay: 0.18 }}
+            className="mt-5 max-w-2xl mx-auto text-brand-navy/65 text-base sm:text-lg leading-relaxed"
+          >
+            Real messages from the 1.4M+ community Sunny has mentored over the years.
+          </motion.p>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.8, ease: EASE }}
+          className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-5 [column-fill:_balance]"
+        >
+          {communityVoices.map((src, i) => (
+            <div
+              key={src}
+              className="mb-4 sm:mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-brand-navy/10 bg-white shadow-sm hover:shadow-xl hover:shadow-brand-navy/10 hover:-translate-y-0.5 transition-all duration-300"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={src}
+                alt={`Community testimonial ${i + 1}`}
+                loading="lazy"
+                className="w-full h-auto block"
+              />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 // ─── CTA ──────────────────────────────────────────────────────────────────────
 
 function AskSunnyCTA() {
@@ -601,6 +680,7 @@ export default function AskSunnyAliPage() {
         <AskSunnyExpect />
         <AskSunnyInclusions />
         <AskSunnyLeaders />
+        <AskSunnyVoices />
         <AskSunnyFit />
         <ExploreServices current="ask-sunny-ali" />
         <AskSunnyCTA />
