@@ -35,17 +35,17 @@ export function WebinarHero() {
           </p>
         </motion.div>
 
-        <div className="flex-1 grid lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-12 items-center py-8">
+        <div className="flex-1 grid lg:grid-cols-[0.9fr_1.15fr] gap-8 lg:gap-10 items-center py-8">
           {/* Left — title + CTA */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-sm px-4 py-1.5 mb-5"
+              className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-sm px-5 py-2 mb-5"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-rose-400 animate-pulse" />
-              <span className="font-display text-xs sm:text-sm tracking-[0.16em] text-white/85 uppercase">
+              <span className="h-2 w-2 rounded-full bg-rose-400 animate-pulse" />
+              <span className="font-display text-[17px] sm:text-[20px] tracking-[0.06em] text-white/90">
                 Free Live Webinar · For Serious Investors Only
               </span>
             </motion.div>
@@ -54,7 +54,7 @@ export function WebinarHero() {
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="font-black tracking-tight leading-[0.98] text-[34px] sm:text-5xl lg:text-[58px]"
+              className="font-black tracking-tight leading-[0.98] text-[32px] sm:text-5xl lg:text-[50px]"
             >
               <span className="block text-white">Build an Amazon Brand That</span>
               <span className="block text-brand-yellow">
