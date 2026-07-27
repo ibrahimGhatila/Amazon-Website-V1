@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/services/virtual-assistants", changeFrequency: "monthly", priority: 0.8 },
     { path: "/services/mentorship", changeFrequency: "monthly", priority: 0.8 },
     { path: "/ask-sunny-ali", changeFrequency: "monthly", priority: 0.75 },
+    { path: "/webinar", changeFrequency: "weekly", priority: 0.85 },
     { path: "/meetup", changeFrequency: "weekly", priority: 0.75 },
     { path: "/how-it-works", changeFrequency: "monthly", priority: 0.7 },
     { path: "/about", changeFrequency: "monthly", priority: 0.7 },
